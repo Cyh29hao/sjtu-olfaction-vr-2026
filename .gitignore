@@ -1,0 +1,13 @@
+# Temporary office files and local working state
+~$*
+*.tmp
+*.bak
+Thumbs.db
+.DS_Store
+__pycache__/
+.venv/
+.env
+.env.*
+!.env.example
+.local/
+work/
