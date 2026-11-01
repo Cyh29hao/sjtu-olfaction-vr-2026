@@ -1,0 +1,20 @@
+[
+  {
+    "id": "P02-Fig5",
+    "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-37678-4/MediaObjects/41467_2023_37678_Fig5_HTML.jpg",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 3038,
+    "error": "not an image",
+    "snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta\n      http-equiv=\"Content-Security-Policy\"\n      content=\"default-src 'self'; img-src 'self' data:; media-src 'self' data:; object-src 'none'; style-src 'self' 'sha256-o4vzfmmUENEg4chMjjRP9EuW9ucGnGIGVdbl8d0SHQQ='; script-src 'self' 'sha256-a9bHdQGvRzDwDVzx8m+Rzw+0FHZad8L0zjtBwkxOIz4=';\"\n    />\n    <link\n      href=\"/_fs-ch-1T1wmsGaOgGaSxcX/assets/inter-var.woff2\"\n      rel=\"preload\"\n      as=\"font\"\n      type=\"font/woff2\"\n      crossorigin\n    />\n    <link href=\"/_fs-ch-1T1wmsGaOgGaSxcX/assets/styles.css\" rel=\"stylesheet\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Client Challenge</title>\n    <style>\n      #loading-error {\n        font-size: 16px;\n        font-family: 'Inter', sans-serif;\n   "
+  },
+  {
+    "id": "P14-oa",
+    "url": "https://pmc.ncbi.nlm.nih.gov/utils/oa/oa.fcgi?id=PMC8020408",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "P14-Fig6",
+    "url": "https://europepmc.org/articles/PMC8020408/bin/10.1177_2041669521989731-fig6.jpg",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

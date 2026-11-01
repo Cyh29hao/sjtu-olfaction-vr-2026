@@ -1,0 +1,78 @@
+[
+  {
+    "paper": "P05",
+    "pdf_page": 1,
+    "xref": 855,
+    "path": "research\\2026-11-01\\deep-review\\assets\\P05-page1-image1.jpeg",
+    "width": 236,
+    "height": 298,
+    "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+    "license": "CC BY4.0; figure mapping needs visual check"
+  },
+  {
+    "paper": "P05",
+    "pdf_page": 1,
+    "xref": 858,
+    "path": "research\\2026-11-01\\deep-review\\assets\\P05-page1-image2.jpeg",
+    "width": 248,
+    "height": 271,
+    "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+    "license": "CC BY4.0; figure mapping needs visual check"
+  },
+  {
+    "paper": "P05",
+    "pdf_page": 1,
+    "xref": 863,
+    "path": "research\\2026-11-01\\deep-review\\assets\\P05-page1-image3.png",
+    "width": 119,
+    "height": 119,
+    "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+    "license": "CC BY4.0; figure mapping needs visual check"
+  },
+  {
+    "paper": "P05",
+    "pdf_page": 7,
+    "xref": 144,
+    "path": "research\\2026-11-01\\deep-review\\assets\\P05-page7-image1.png",
+    "width": 2000,
+    "height": 503,
+    "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+    "license": "CC BY4.0",
+    "figure": "Fig.5: a酒窖，b真实参与者，c选答案，d难度",
+    "visual_check": "PDF第7页及Fig5、Fig6提取图实际查看"
+  },
+  {
+    "paper": "P05",
+    "pdf_page": 7,
+    "xref": 148,
+    "path": "research\\2026-11-01\\deep-review\\assets\\P05-page7-image2.png",
+    "width": 2000,
+    "height": 586,
+    "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+    "license": "CC BY4.0",
+    "figure": "Fig.6: performance数据图",
+    "visual_check": "PDF第7页及Fig5、Fig6提取图实际查看"
+  },
+  {
+    "paper": "P05",
+    "pdf_page": 7,
+    "xref": 152,
+    "path": "research\\2026-11-01\\deep-review\\assets\\P05-page7-image3.png",
+    "width": 1750,
+    "height": 604,
+    "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+    "license": "CC BY4.0",
+    "figure": "Fig.4: sensor稳定性图",
+    "visual_check": "PDF第7页及Fig5、Fig6提取图实际查看"
+  },
+  {
+    "paper": "P05",
+    "pdf_page": 9,
+    "xref": 180,
+    "path": "research\\2026-11-01\\deep-review\\assets\\P05-page9-image1.png",
+    "width": 2000,
+    "height": 564,
+    "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+    "license": "CC BY4.0; figure mapping needs visual check"
+  }
+]

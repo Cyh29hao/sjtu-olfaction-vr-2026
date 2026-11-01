@@ -1,0 +1,266 @@
+{
+  "version": "v1",
+  "title": "让 VR 有气味",
+  "subtitle": "气味、VR与虚拟感官",
+  "template": "诗意校园·2022蓝绿青春",
+  "speaker_count": 4,
+  "presentation_seconds": 720,
+  "sources": {
+    "P02": {
+      "title": "Soft, miniaturized, wireless olfactory interface for virtual reality",
+      "authors": "Liu et al.",
+      "year": 2023,
+      "url": "https://www.nature.com/articles/s41467-023-37678-4",
+      "doi": "10.1038/s41467-023-37678-4",
+      "location": "Concepts and design; Demonstrations; Figs. 1, 5; Supplementary Movie 3",
+      "license": "CC BY 4.0，具体材料另有creditline者除外"
+    },
+    "P05": {
+      "title": "A graspable olfactory display for virtual reality",
+      "authors": "Niedenthal et al.",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
+      "fulltext": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+      "doi": "10.1016/j.ijhcs.2022.102928",
+      "location": "Fig. 5; User study; Discussion",
+      "license": "CC BY 4.0"
+    },
+    "P09": {
+      "title": "Combinatorial Receptor Codes for Odors",
+      "authors": "Malnic et al.",
+      "year": 1999,
+      "url": "https://doi.org/10.1016/S0092-8674(00)80581-4",
+      "doi": "10.1016/S0092-8674(00)80581-4",
+      "location": "Abstract; receptor response combinations",
+      "license": "仅引用事实，教学示意由本组重绘"
+    },
+    "P10": {
+      "title": "A principal odor map unifies diverse tasks in olfactory perception",
+      "authors": "Lee et al.",
+      "year": 2023,
+      "url": "https://doi.org/10.1126/science.ade4401",
+      "doi": "10.1126/science.ade4401",
+      "location": "Abstract，分子结构到感知描述预测",
+      "license": "仅引用事实，不复制原图"
+    },
+    "P15": {
+      "title": "Virtual reality and stimulation of touch and smell for inducing relaxation: A randomized controlled trial",
+      "authors": "Serrano, Baños & Botella",
+      "year": 2016,
+      "url": "https://doi.org/10.1016/j.chb.2015.08.007",
+      "fulltext": "https://repositori.uji.es/server/api/core/bitstreams/cb77edc0-dd07-406d-a9e4-7f69082cb44a/content",
+      "doi": "10.1016/j.chb.2015.08.007",
+      "location": "§2.2, §2.4–2.7; Results; Table 1; Fig. 3",
+      "license": "数据按原表重绘，作者稿仅作本地核查"
+    },
+    "P14": {
+      "title": "Smells Influence Perceived Pleasantness but Not Memorization of a Visual Virtual Environment",
+      "authors": "Sabiniewicz et al.",
+      "year": 2021,
+      "url": "https://doi.org/10.1177/2041669521989731",
+      "doi": "10.1177/2041669521989731",
+      "location": "Methods; Pilot Study; Results; correction仅改作者姓名",
+      "correction": "https://doi.org/10.1177/20416695211028757",
+      "license": "CC BY 4.0"
+    },
+    "P03": {
+      "title": "Intelligent wearable olfactory interface for latency-free mixed reality and fast olfactory enhancement",
+      "authors": "Liu et al.",
+      "year": 2024,
+      "url": "https://www.nature.com/articles/s41467-024-48884-z",
+      "doi": "10.1038/s41467-024-48884-z",
+      "location": "Olfactory training demonstration; Fig. 5; latency definitions",
+      "license": "CC BY 4.0，具体材料另有creditline者除外"
+    },
+    "P35": {
+      "title": "Olfactory Stimuli Increase Presence in Virtual Environments",
+      "authors": "Munyan et al.",
+      "year": 2016,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157568",
+      "doi": "10.1371/journal.pone.0157568",
+      "location": "Participants; Design and Procedure; Results",
+      "license": "CC BY"
+    },
+    "OVR": {
+      "title": "Omara FAQ and press kit",
+      "authors": "OVR Technology",
+      "year": 2026,
+      "url": "https://ovrtechnology.com/pages/faqs",
+      "press_kit": "https://ovrtechnology.com/pages/press-kit",
+      "location": "What stage of development; When does the Omara ship",
+      "license": "仅引用事实，不复制营销图",
+      "accessed": "2026-11-01"
+    }
+  },
+  "slides": [
+    {
+      "id": "A01",
+      "group": "03",
+      "role": "main",
+      "title": "在虚拟酒窖里练习辨香",
+      "layout": "photo",
+      "seconds": 40,
+      "image": "assets/wine-cellar-task.jpg",
+      "caption": "拿起酒杯，闻香，再选择气味成分",
+      "body": "一项真实应用：交互式气味辨认练习",
+      "script": "这是研究者做的虚拟酒窖游戏。玩家拿起酒杯、闻香，再判断里面有什么气味，之后逐步挑战更复杂的混合物。12名参与者完成了探索性测试，研究检查装置能否稳定输出、玩家能否使用它。它给我们一个很具体的应用：把气味辨认做成可以操作、可以反馈的练习。要接触这一类技术，可以从这样的研究原型、开放设计或开发演示找入口。",
+      "source_ids": [
+        "P05"
+      ],
+      "source_locations": [
+        "P05 Fig.5; User study; Discussion，N12"
+      ],
+      "footer": "Niedenthal等，IJHCS，2023，Fig.5；探索性用户测试N=12"
+    },
+    {
+      "id": "A02",
+      "group": "03",
+      "role": "main",
+      "title": "加一股香，能让人更放松吗？",
+      "layout": "experiment",
+      "seconds": 55,
+      "conditions": [
+        {
+          "label": "VR",
+          "text": "34人"
+        },
+        {
+          "label": "VR＋香味",
+          "text": "36人"
+        },
+        {
+          "label": "VR＋触觉",
+          "text": "33人"
+        },
+        {
+          "label": "VR＋香味＋触觉",
+          "text": "33人"
+        }
+      ],
+      "body": "136名健康参与者，随机分到四组",
+      "script": "从练习走到健康应用，我们问一个大家更熟悉的问题：在虚拟自然环境里放松，再加一点香味，会更有效吗？这项2016年的随机对照研究用了同一套放松程序，把136名参与者分成四组，分别体验VR、加香、加触觉，以及两者都加。这是投影式VR房间，香味来自薰衣草扩香。这样比较，可以把“做完以后更放松”和“多加了香味带来的改善”分开看。",
+      "source_ids": [
+        "P15"
+      ],
+      "source_locations": [
+        "P15 Methods §2.4–2.7; Fig.3; Table1，N34/36/33/33"
+      ],
+      "footer": "Serrano等，Computers in Human Behavior，2016；投影式VR，健康样本",
+      "table": {
+        "headers": [
+          "气味条件",
+          "无触觉",
+          "有触觉"
+        ],
+        "rows": [
+          [
+            "无香",
+            "34人",
+            "33人"
+          ],
+          [
+            "有香",
+            "36人",
+            "33人"
+          ]
+        ]
+      },
+      "caption": "136人随机分组，同一套VR放松程序"
+    },
+    {
+      "id": "A03",
+      "group": "03",
+      "role": "main",
+      "title": "四组的平均放松评分都上升了",
+      "layout": "results",
+      "seconds": 55,
+      "chart": {
+        "type": "bar",
+        "categories": [
+          "VR",
+          "加香",
+          "加触觉",
+          "两者都加"
+        ],
+        "series": [
+          {
+            "name": "体验前",
+            "values": [
+              6.06,
+              6.17,
+              6.76,
+              6.7
+            ],
+            "color": "#A7BBC8"
+          },
+          {
+            "name": "体验后",
+            "values": [
+              7.78,
+              8.14,
+              8.33,
+              7.88
+            ],
+            "color": "#175F8B"
+          }
+        ],
+        "yTitle": "放松评分（0–10）",
+        "yMin": 0,
+        "yMax": 10
+      },
+      "takeaways": [
+        "整体前后评分提高",
+        "研究未检出加香的额外改善"
+      ],
+      "script": "横轴是四组，浅色是体验前，蓝色是体验后，纵轴是零到十分的放松评分。每组平均分都往上走，整个程序前后也有显著变化。可研究没有检出加香对放松或在场感的额外改善。如果只拿加香组体验前后比，就很容易把整套程序的效果，都算给那股香。对我们来说，这个实验最好用的地方，就是提醒我们：问“有没有用”的时候，还要问“比什么更有用”。",
+      "source_ids": [
+        "P15"
+      ],
+      "source_locations": [
+        "P15 Table1 relaxation VAS均值；Results；整体前后F(1,132)=90.31,p<.001；原文未给组间确切F/p"
+      ],
+      "footer": "Serrano等，2016，Table1／Results；图示均值，SD与检验见备课"
+    },
+    {
+      "id": "A04",
+      "group": "03",
+      "role": "main",
+      "title": "加香，得帮上一件具体的事",
+      "layout": "evidence",
+      "seconds": 40,
+      "table": {
+        "headers": [
+          "想解决的事",
+          "先看什么结果"
+        ],
+        "rows": [
+          [
+            "练习辨认气味",
+            "能否稳定呈现、给出反馈"
+          ],
+          [
+            "营造放松体验",
+            "比同样的VR多改善多少"
+          ],
+          [
+            "用于患者康复",
+            "症状、随访与合适的对照"
+          ]
+        ]
+      },
+      "takeaways": [
+        "使用方式，跟着具体目标选"
+      ],
+      "script": "所以，实际意义要跟任务放在一起看。想练习辨香，装置就得稳定呈现，还能让人作答、得到反馈。想帮助放松，就要和同样的VR程序比较。走到患者康复，还要看症状和随访。虚拟嗅觉最值得期待的，是把特定气味安排进合适的练习或场景。接下来需要研究清楚的，是它在哪一步帮上忙，以及这份收益值不值得设备和使用成本。",
+      "source_ids": [
+        "P05",
+        "P15",
+        "P03"
+      ],
+      "source_locations": [
+        "P05 User study; P15 Results; P03 Olfactory training demonstration；后两列为本组据研究设计归纳的判断问题"
+      ],
+      "footer": "依据P05／P15／P03归纳；判断问题为本组分析"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "source_id": "P15",
+  "title": "Virtual reality and stimulation of touch and smell for inducing relaxation: A randomized controlled trial",
+  "authors": ["Berenice Serrano", "Rosa M. Baños", "Cristina Botella"],
+  "year": 2016,
+  "doi": "10.1016/j.chb.2015.08.007",
+  "original_url": "https://doi.org/10.1016/j.chb.2015.08.007",
+  "author_manuscript_url": "https://repositori.uji.es/bitstreams/cb77edc0-dd07-406d-a9e4-7f69082cb44a/download?download=1",
+  "checked_date": "2026-11-01",
+  "reading_scope": "Author manuscript: Methods 2.1–2.7, Results 3, Discussion and Conclusions, Figure 3, Table 1. Table 1 pages 22–23 and Figure 3 page 20 rendered and visually checked.",
+  "sample": {"total_n": 136, "age_range": [18, 63], "age_mean": 27.05, "age_sd": 8.01, "population": "Adults screened to exclude clinical anxiety/depression symptoms", "allocation": "Random Allocation Software"},
+  "outcome": "Self-reported relaxation",
+  "scale": {"type": "VAS", "minimum": 0, "maximum": 10, "higher": "Feeling the emotion more strongly", "location": "Methods 2.2; manuscript page 6"},
+  "data_location": "Table 1; manuscript pages 22–23",
+  "dispersion": "SD, not SE or CI",
+  "groups": [
+    {"id": "vr", "label": "VR", "label_zh": "视听VR", "n": 34, "pre_mean": 6.06, "pre_sd": 2.28, "post_mean": 7.78, "post_sd": 1.75},
+    {"id": "vr_smell", "label": "VR + Smell", "label_zh": "视听VR＋香味", "n": 36, "pre_mean": 6.17, "pre_sd": 2.23, "post_mean": 8.14, "post_sd": 1.79},
+    {"id": "vr_touch", "label": "VR + Touch", "label_zh": "视听VR＋触觉", "n": 33, "pre_mean": 6.76, "pre_sd": 1.98, "post_mean": 8.33, "post_sd": 1.68},
+    {"id": "vr_touch_smell", "label": "VR + Touch & Smell", "label_zh": "视听VR＋触觉和香味", "n": 33, "pre_mean": 6.70, "pre_sd": 2.22, "post_mean": 7.88, "post_sd": 1.98}
+  ],
+  "reported_tests": [
+    {"contrast": "Overall pre-post relaxation change", "test": "F", "df": [1,132], "statistic": 90.31, "p": "<0.001", "location": "Results 3; manuscript page 10"},
+    {"contrast": "Between-group relaxation differences", "result": "No statistically significant differences reported", "exact_test_statistic": null, "exact_p": null, "location": "Results 3; manuscript page 10; precise F/p not printed for this comparison"},
+    {"contrast": "Between-group presence differences", "test": "One-way ANOVA", "result": "No statistically significant differences reported", "exact_test_statistic": null, "exact_p": null, "location": "Results 3; manuscript pages 10–11"}
+  ],
+  "presence": {"scale": "Presence-SAM 1–9 pictorial scale", "means": {"vr":5.87,"vr_smell":6.35,"vr_touch":6.47,"vr_touch_smell":6.35}, "location": "Results 3; manuscript page 11; Figure 5 page 24"},
+  "implementation": {
+    "vr": "4×3 m projected screen, HD projector, 5.1 surround sound, Wiimote; not a head-mounted display",
+    "olfactory": "Lavender scent with ceramic diffuser, unscented candle and water; ambient presentation",
+    "tactile": "Artificial grass, 2×1 m, 50 mm thick",
+    "session": "Approximately 60 min for the whole session including assessments and training; not a verified 60 min VR exposure",
+    "location": "Methods 2.4–2.7; manuscript pages 8–9"
+  },
+  "interpretation": "The whole procedure was followed by higher reported relaxation in all four groups. This experiment did not establish extra relaxation or presence benefit from its additional scent/touch conditions. It does not establish equivalence or rule out benefit from different delivery, populations or tasks.",
+  "limitations": [
+    "Non-clinical population and initially fairly high relaxation scores",
+    "No non-VR/no-intervention arm; pre-post change cannot isolate VR itself from music, narrative and the rest of the procedure",
+    "Projection-based VR with simple ambient diffusion, rather than modern precisely synchronized wearable output",
+    "Only one emotion-induction procedure, short-term subjective outcomes",
+    "No precise between-group F/p supplied for relaxation in the manuscript Results"
+  ],
+  "manuscript_note": "Methods 2.6 prose interchanges tactile/olfactory explanations of the Smell and Touch labels. Figure 3 and Methods 2.7 clearly match Smell with lavender and Touch with artificial grass; labels/data above follow those unambiguous descriptions. Preserve this note in source verification.",
+  "reuse": "Numeric facts may be redrawn with attribution. The downloaded author manuscript and page images remain in private/; no redistribution licence was confirmed for those scans."
+}

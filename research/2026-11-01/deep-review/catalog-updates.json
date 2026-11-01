@@ -1,0 +1,12 @@
+{
+  "updates": {
+    "P02": {"reading_scope":"开放正文局部深读；Fig.1/5实际查看；补充视频3取真实帧核对动作", "original_location":"Concepts and design; electrical performance; Demonstrations; Fig.1/5; Supplementary Movie3", "analysis_zh":"真实抓花近鼻演示可作贯穿。加热预存材料与鼻端感知分开解释；原文承认残留使频繁切味受限。"},
+    "P03": {"reading_scope":"正文训练与响应定义局部核读", "original_location":"器件响应／乙醇浓度测量；Olfactory training demonstration", "analysis_zh":"约70ms是特定器件／浓度测量指标，不等于整套鼻端感知或退味时间；志愿者与一位患者案例分别理解。"},
+    "P05": {"reading_scope":"大学库12页全文已取得；设计、User study和Discussion核读；Fig.5与PDF实页核对", "original_location":"PDF pp.3/6脚注；p.7 Fig.5；User study/Discussion", "summary_zh":"四种气味材料、阀门与手持VR控制器；虚拟酒窖中闻香并辨认成分。N12探索测试与气体传感器分析检验输出和可用性。", "analysis_zh":"主讲采用真实任务。任务变快和可靠性结果不直接解释为康复收益；公开设计入口已核到，OSF本轮可达性未确认。", "fulltext_url":"https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf"},
+    "P14": {"reading_scope":"开放正文方法／结果局部核读；更正全文已读", "original_location":"Pilot Study; Methods; Results; correction10.1177/20416695211028757", "analysis_zh":"N90主试验与N17先导分开。约两周回忆用描述条目数代理，计数未区分准确性。更正仅修正第三作者姓名，无结果修改；适合作备课。"},
+    "P15": {"reading_scope":"大学库24页作者稿已取得；Methods/Results与Table1/Fig3实际核读并查看页面", "original_location":"§2.2,2.4–2.7; Results; Table1（稿p22–23）; Fig3（稿p20）", "summary_zh":"136名健康参与者随机四组，均接受投影式VR放松程序，分别加香、加触觉、两者或均无。四组放松VAS均值前后升高，作者未检出加香的额外情绪／在场感优势。", "analysis_zh":"同一程序有香／无香比较可区分前后变化与额外收益。人数34/36/33/33，量表0–10。Methods2.6标签笔误按Fig3/2.7核正。", "fulltext_url":"https://repositori.uji.es/server/api/core/bitstreams/cb77edc0-dd07-406d-a9e4-7f69082cb44a/content"}
+  },
+  "additional_papers": [
+    {"id":"P35", "doi":"10.1371/journal.pone.0157568", "doi_url":"https://doi.org/10.1371/journal.pone.0157568", "title":"Olfactory Stimuli Increase Presence in Virtual Environments", "authors_display":"Benson G. Munyan III; Sandra M. Neer; Deborah C. Beidel; Florian Jentsch", "authors_bib":"Munyan, Benson G., III and Neer, Sandra M. and Beidel, Deborah C. and Jentsch, Florian", "venue":"PLOS ONE", "published":[[2016,6,16]], "publication_kind":"原始实验", "priority":"备课", "summary_zh":"分析60名年轻成人在轻度焦虑虚拟环境中的加／撤香序列，在场感结果与气味条件有关，状态焦虑和EDA无相应条件效应。", "analysis_zh":"招募122后排除较多，顺序和熟悉因素需考虑；在场感指标不直接当作临床疗效。", "reading_scope":"开放全文Participants、Design and Procedure、Results局部核读", "original_location":"Participants; Design and Procedure; Results; Figs.3–6", "fulltext_url":"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157568"}
+  ]
+}

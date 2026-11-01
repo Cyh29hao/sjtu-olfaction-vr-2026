@@ -1,0 +1,14 @@
+[
+  {
+    "source": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10169775/supplementaryFiles",
+    "archive_member": "41467_2023_37678_Fig5_HTML.gif",
+    "path": "research\\2026-11-01\\deep-review\\assets\\P02-41467_2023_37678_Fig5_HTML.gif",
+    "extraction": "completed local ZIP member deflate stream from partial transfer",
+    "valid_image": true,
+    "size": [
+      100,
+      106
+    ],
+    "license": "CC BY4.0"
+  }
+]

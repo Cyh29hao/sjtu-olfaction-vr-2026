@@ -1,0 +1,114 @@
+[
+  {
+    "file": "flower-vr.jpg",
+    "paper": "P02",
+    "original": "P02 Supplementary Movie3",
+    "location": "视频1／5／13秒真实帧；封面为5秒帧裁剪",
+    "crop_pixels": [
+      0,
+      0,
+      668,
+      276
+    ],
+    "license": "CC BY 4.0",
+    "modification": "原视频逐帧渲染后裁剪或并排，无生成内容",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "sha256": "3b91b57a8caad6be9e004bd5f26f94d8db0f3f73cb17d9acd44224c9246d4e12"
+  },
+  {
+    "file": "flower-vr-sequence.jpg",
+    "paper": "P02",
+    "original": "P02 Supplementary Movie3",
+    "location": "视频1／5／13秒真实帧；封面为5秒帧裁剪",
+    "crop_pixels": [
+      0,
+      282,
+      212,
+      692
+    ],
+    "license": "CC BY 4.0",
+    "modification": "原视频逐帧渲染后裁剪或并排，无生成内容",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "sha256": "35bcf1875ec0010396c94e0e34a8dae736d233af18166d32227ac4b3a858f020"
+  },
+  {
+    "file": "wearable-device.jpg",
+    "paper": "P02",
+    "original": "research/2026-11-01/deep-review/assets/P02-Fig1.png",
+    "location": "Fig.1d–e，两个装置的实物照片",
+    "crop_pixels": [
+      0,
+      1624,
+      2003,
+      2242
+    ],
+    "license": "CC BY 4.0",
+    "modification": "仅裁剪并转JPEG，科学内容未重绘",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "sha256": "bfc088a8690cfb0e6f73def50b778f6e5fad13094212363f7021b5253e404a6f"
+  },
+  {
+    "file": "wearable-close.jpg",
+    "paper": "P02",
+    "original": "research/2026-11-01/deep-review/assets/P02-Fig1.png",
+    "location": "Fig.1d右下，上唇装置照片，保留尺度",
+    "crop_pixels": [
+      431,
+      1930,
+      850,
+      2240
+    ],
+    "license": "CC BY 4.0",
+    "modification": "仅裁剪并转JPEG，科学内容未重绘",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "sha256": "6880e220978189a797bf52bf96f499239db47a5cdedffc256d42bb79c0c5585a"
+  },
+  {
+    "file": "handheld-sniff.jpg",
+    "paper": "P05",
+    "original": "research/2026-11-01/deep-review/assets/P05-Fig5.png",
+    "location": "Fig.5b，真人使用手持装置",
+    "crop_pixels": [
+      473,
+      0,
+      947,
+      503
+    ],
+    "license": "CC BY 4.0",
+    "modification": "仅裁剪并转JPEG，科学内容未重绘",
+    "source_url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
+    "sha256": "c003fcd3474844596d2509d7e1332f1b4c45077de5db1c2f9ae5cba812950d36"
+  },
+  {
+    "file": "wine-cellar-task.jpg",
+    "paper": "P05",
+    "original": "research/2026-11-01/deep-review/assets/P05-Fig5.png",
+    "location": "Fig.5a–c，酒窖、闻香、选择气味成分",
+    "crop_pixels": [
+      0,
+      0,
+      1645,
+      503
+    ],
+    "license": "CC BY 4.0",
+    "modification": "仅裁剪并转JPEG，科学内容未重绘",
+    "source_url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
+    "sha256": "cbf79de19657504e0aee0d1d88e199d9629dd0bd10f81c6eedfd59783d2c379a"
+  },
+  {
+    "file": "temperature-response.jpg",
+    "paper": "P02",
+    "original": "research/2026-11-01/deep-review/assets/P02-Fig5.jpg",
+    "location": "Fig.5d，发生器温度随演示变化",
+    "crop_pixels": [
+      213,
+      595,
+      668,
+      706
+    ],
+    "license": "CC BY 4.0",
+    "modification": "仅裁剪原图，未估读或重绘数据",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "sha256": "77427c297532d26efa44200f3d9942b4b04325315c91dda5c005c5d5cc27ddc3"
+  }
+]

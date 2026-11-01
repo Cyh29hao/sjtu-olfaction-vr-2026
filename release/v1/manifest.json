@@ -1,0 +1,67 @@
+{
+  "version": "v1",
+  "main_slides": 16,
+  "backup_slides": 5,
+  "last_slide": "11人分工",
+  "speakers": 4,
+  "design_seconds": 720,
+  "synthesized_reading_seconds": 636.54,
+  "human_rehearsal": false,
+  "artifacts": [
+    {
+      "path": "release/v1/olfaction-vr-v1.pptx",
+      "bytes": 1419583,
+      "sha256": "77fb8cd8803849b50c6ead849e7fd08785e134974e8f28cbed3d6e0f0a23cc98"
+    },
+    {
+      "path": "release/v1/group-01-science.pptx",
+      "bytes": 26863,
+      "sha256": "8be8d479dcbc288ef075d6462be5b770496efc6f90c399ab68c292b101a854ed"
+    },
+    {
+      "path": "release/v1/group-02-technology.pptx",
+      "bytes": 808706,
+      "sha256": "ab6dbca8273d6255cacec98e504b9c16fe2f44849e08f7cae79ab6e4482d6d8e"
+    },
+    {
+      "path": "release/v1/group-03-applications.pptx",
+      "bytes": 297775,
+      "sha256": "af69b0e13e577f1d291f9d750ecf9b705868daef2228e369c7d2700780d5340e"
+    },
+    {
+      "path": "release/v1/olfaction-vr-v1.pdf",
+      "bytes": 836718,
+      "sha256": "50f15c1ff0b827c481bd3642fb40412f7935fdea982cdb6ec94bc7ff029c7dec"
+    },
+    {
+      "path": "release/v1/group-01-science.pdf",
+      "bytes": 94917,
+      "sha256": "874b2f36cb5aed1bb52df5d91252f4c5f49441c5aa0f012189fab1912bbe39d4"
+    },
+    {
+      "path": "release/v1/group-02-technology.pdf",
+      "bytes": 412249,
+      "sha256": "99393778afbbc41b4d2cdb7e1d1a9c5c3eb327845bfa92e947d00582bf7fd71a"
+    },
+    {
+      "path": "release/v1/group-03-applications.pdf",
+      "bytes": 208894,
+      "sha256": "43391aaebc4aa97c441e33e56aec8246da72715cc230768c35ef7985a1557647"
+    },
+    {
+      "path": "release/v1/olfaction-vr-v1-main.pdf",
+      "bytes": 1068825,
+      "sha256": "68fd9d191a748158a57f6b279a93f6edf0382c0ba70662996f6159d521d893af"
+    },
+    {
+      "path": "release/v1/全场口播.pdf",
+      "bytes": 265100,
+      "sha256": "ddc90260807f0cf9cddd3d7d4ff6548c3ec263138f1ddacc7be4f7af64840e84"
+    },
+    {
+      "path": "release/v1/问答与备课.pdf",
+      "bytes": 271460,
+      "sha256": "1b0ecb4cdcfc3f3bc472f2164d772451890ca93d491ccfcc00abba157fad407f"
+    }
+  ]
+}

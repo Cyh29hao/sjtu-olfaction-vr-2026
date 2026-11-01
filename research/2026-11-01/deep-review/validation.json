@@ -1,0 +1,36 @@
+{
+  "claims_count": 13,
+  "utf8_readback": true,
+  "P02_archive_complete": true,
+  "images": [
+    {
+      "file": "P02-Fig1.png",
+      "size": [
+        2003,
+        2241
+      ],
+      "sha256": "c7484f4b00c96e2d11a35b598774b5f338520093002d3900363020d05d1def9e",
+      "image_valid": true
+    },
+    {
+      "file": "P02-Fig5.jpg",
+      "size": [
+        668,
+        706
+      ],
+      "sha256": "3c98520898161ed91c2d8138ee43d8acc93f3a4dc3487d8a0721ac8323bd8b82",
+      "image_valid": true
+    },
+    {
+      "file": "P05-Fig5.png",
+      "size": [
+        2000,
+        503
+      ],
+      "sha256": "a564714264006c805ff6101fd664c621394de14924162bf3d36219f4e60f2cef",
+      "image_valid": true
+    }
+  ],
+  "P02_video_playback_reviewed": false,
+  "source_review": "AI查阅，组员人工复核待办"
+}

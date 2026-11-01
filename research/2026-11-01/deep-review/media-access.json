@@ -1,0 +1,19 @@
+[
+  {
+    "id": "P02-Fig5-small",
+    "url": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-023-37678-4/MediaObjects/41467_2023_37678_Fig5_HTML.png",
+    "ct": "text/html; charset=utf-8",
+    "bytes": 3038,
+    "error": "not an accepted media type"
+  },
+  {
+    "id": "P02-Movie3-PMC",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10169775/bin/41467_2023_37678_MOESM6_ESM.mp4",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "id": "P02-supplement-zip",
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10169775/supplementaryFiles",
+    "error": "The read operation timed out"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "assets/PLOS2016_fig1.png",
+    "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0157568.g001",
+    "http": 200,
+    "saved": true,
+    "license": "CC BY; Munyan et al. 2016 PLOS ONE 11(6):e0157568",
+    "changes": "none"
+  },
+  {
+    "file": "assets/PLOS2016_fig3.png",
+    "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0157568.g003",
+    "http": 200,
+    "saved": true,
+    "license": "CC BY; Munyan et al. 2016 PLOS ONE 11(6):e0157568",
+    "changes": "none"
+  },
+  {
+    "file": "assets/PLOS2016_fig4.png",
+    "url": "https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0157568.g004",
+    "http": 200,
+    "saved": true,
+    "license": "CC BY; Munyan et al. 2016 PLOS ONE 11(6):e0157568",
+    "changes": "none"
+  }
+]

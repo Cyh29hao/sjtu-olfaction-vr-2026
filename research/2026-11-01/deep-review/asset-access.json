@@ -1,0 +1,26 @@
+[
+  {
+    "id": "P02-Fig5",
+    "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-37678-4/MediaObjects/41467_2023_37678_Fig5_HTML.png",
+    "bytes": 3038,
+    "content_type": "text/html; charset=utf-8",
+    "error": "HTTP200但返回text/html Client Challenge，伪图片已删除"
+  },
+  {
+    "id": "P02-Fig1",
+    "url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-023-37678-4/MediaObjects/41467_2023_37678_Fig1_HTML.png",
+    "path": "research\\2026-11-01\\deep-review\\assets\\P02-Fig1.png",
+    "bytes": 3832293,
+    "content_type": "image/png"
+  },
+  {
+    "id": "P14-Fig2",
+    "url": "https://journals.sagepub.com/cms/10.1177/2041669521989731/asset/images/large/10.1177_2041669521989731-fig2.jpeg",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "P14-Fig6",
+    "url": "https://journals.sagepub.com/cms/10.1177/2041669521989731/asset/images/large/10.1177_2041669521989731-fig6.jpeg",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

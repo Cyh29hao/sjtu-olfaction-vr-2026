@@ -1,0 +1,101 @@
+{
+  "all_originals_unchanged": true,
+  "checks": [
+    {
+      "path": "1.百廿红-李一.pptx",
+      "sha256_before": "32bcf709cc46f1824f58cb23c662e9795f7bef71cc06b8a41f6f3f08d4f21ae9",
+      "sha256_after": "32bcf709cc46f1824f58cb23c662e9795f7bef71cc06b8a41f6f3f08d4f21ae9",
+      "unchanged": true
+    },
+    {
+      "path": "简单蓝（16：9）-沈小丹.pptx",
+      "sha256_before": "00b09afdedcf1b2360629eddd0f405f0049ec33a482a7a7fdd2af93df00cc1d3",
+      "sha256_after": "00b09afdedcf1b2360629eddd0f405f0049ec33a482a7a7fdd2af93df00cc1d3",
+      "unchanged": true
+    },
+    {
+      "path": "简单蓝（4：3）-沈小丹.pptx",
+      "sha256_before": "d576874fd809a2785410d1395fa7eb57dc7dc218e72128d966f738f59e07422c",
+      "sha256_after": "d576874fd809a2785410d1395fa7eb57dc7dc218e72128d966f738f59e07422c",
+      "unchanged": true
+    },
+    {
+      "path": "3.天空之境-潘冬远、张娉.pptx",
+      "sha256_before": "559779601502f740dedc74ff6cae4fd42ae5093b57c9d7fcd4352495192b2c27",
+      "sha256_after": "559779601502f740dedc74ff6cae4fd42ae5093b57c9d7fcd4352495192b2c27",
+      "unchanged": true
+    },
+    {
+      "path": "4.深海金芒-许歆瑶.pptx",
+      "sha256_before": "bb11e01611a1a2703d3784e62102ae0d296d9972743bd16deb5ca752b8912f21",
+      "sha256_after": "bb11e01611a1a2703d3784e62102ae0d296d9972743bd16deb5ca752b8912f21",
+      "unchanged": true
+    },
+    {
+      "path": "5.浩瀚星河-迮佳.pptx",
+      "sha256_before": "3702720fdc1269d9b67d816ad7157c4a4c08547d5603345b6d57e01529aa20e7",
+      "sha256_after": "3702720fdc1269d9b67d816ad7157c4a4c08547d5603345b6d57e01529aa20e7",
+      "unchanged": true
+    },
+    {
+      "path": "6.鎏金岁月-陈玥彤.pptx",
+      "sha256_before": "d7f33b7b8519db7da0710f0072c721598a6c7af5a4c99b8013d6dbe4f35e2ed3",
+      "sha256_after": "d7f33b7b8519db7da0710f0072c721598a6c7af5a4c99b8013d6dbe4f35e2ed3",
+      "unchanged": true
+    },
+    {
+      "path": "1.诗意校园-2023酒红醉人（极速版）.pptx",
+      "sha256_before": "4886536006db1fd3a3afc8003cc80d8f14b08010dc7892ea3324bdbc5803a1aa",
+      "sha256_after": "4886536006db1fd3a3afc8003cc80d8f14b08010dc7892ea3324bdbc5803a1aa",
+      "unchanged": true
+    },
+    {
+      "path": "2.诗意校园-2022蓝绿青春（徐臻）.pptx",
+      "sha256_before": "169d1ef0103060773807880c49328d1d538114bba5ef1061b2b865171cab826c",
+      "sha256_after": "169d1ef0103060773807880c49328d1d538114bba5ef1061b2b865171cab826c",
+      "unchanged": true
+    },
+    {
+      "path": "3.诗意校园-2023赤霞银珠（极速版）.pptx",
+      "sha256_before": "348b3527f22a6a7f71cd46265acef090546ee6df1652b11ffb8292089b702fb0",
+      "sha256_after": "348b3527f22a6a7f71cd46265acef090546ee6df1652b11ffb8292089b702fb0",
+      "unchanged": true
+    },
+    {
+      "path": "4.诗意校园-2023暗夜奔驰（极速版）.pptx",
+      "sha256_before": "4b371002475cf7d6ee162991d94af414c9089b562a014952dd4c899a38f1d64b",
+      "sha256_after": "4b371002475cf7d6ee162991d94af414c9089b562a014952dd4c899a38f1d64b",
+      "unchanged": true
+    },
+    {
+      "path": "智能体产业研发_V5_06.pptx",
+      "sha256_before": "d75cdde59518fbe687126be61fc7eaeec7fa77b5252d118dc964f765d9b1b55e",
+      "sha256_after": "d75cdde59518fbe687126be61fc7eaeec7fa77b5252d118dc964f765d9b1b55e",
+      "unchanged": true
+    },
+    {
+      "path": "智能体产业研发_V5_07.pptx",
+      "sha256_before": "a41deb99aab302e07a7581403f31cba7f865df67cdfa248b7f5fdcdf0b3567f0",
+      "sha256_after": "a41deb99aab302e07a7581403f31cba7f865df67cdfa248b7f5fdcdf0b3567f0",
+      "unchanged": true
+    },
+    {
+      "path": "学号已省略 陈云海.pptx",
+      "sha256_before": "60657aca8658d0a1b7208b64e65c947eca8f1f46dff4153b7172169fdb6215b7",
+      "sha256_after": "60657aca8658d0a1b7208b64e65c947eca8f1f46dff4153b7172169fdb6215b7",
+      "unchanged": true
+    },
+    {
+      "path": "马原第9周presentation 第8组 陈云海 杨青玥.pptx",
+      "sha256_before": "bdd50d67e236d148a1fc8fe30d821623463e9aa864853c2a6105277598652ec7",
+      "sha256_after": "bdd50d67e236d148a1fc8fe30d821623463e9aa864853c2a6105277598652ec7",
+      "unchanged": true
+    },
+    {
+      "path": "5.30 Traditional or New-type... Exploring the future of university education.pptx",
+      "sha256_before": "0ff28f57d6857287312f60fd4aef4041dea13ef6f767c2b2ad8db74d5b364fce",
+      "sha256_after": "0ff28f57d6857287312f60fd4aef4041dea13ef6f767c2b2ad8db74d5b364fce",
+      "unchanged": true
+    }
+  ]
+}

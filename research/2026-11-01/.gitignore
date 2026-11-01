@@ -1,0 +1,4 @@
+private/
+templates/private/
+__pycache__/
+templates/previews/candidate_*/slide_*.png

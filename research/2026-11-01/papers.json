@@ -1,0 +1,1003 @@
+{
+  "date": "2026-11-01",
+  "scope": "定向广泛调研，非穷尽性系统综述",
+  "papers": [
+    {
+      "id": "P01",
+      "doi": "10.1145/3665243",
+      "topic": "综述与设计地图",
+      "doi_url": "https://doi.org/10.1145/3665243",
+      "retrieved_at": "2026-11-01T08:37:57.645074+00:00",
+      "title": "A Review of Olfactory Display Designs for Virtual Reality Environments",
+      "venue": "ACM Computing Surveys",
+      "type": "journal-article",
+      "published": [
+        [
+          2024,
+          6,
+          28
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1145%2F3665243",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Crossref publisher-deposited abstract",
+      "publication_kind": "分类综述",
+      "priority": "核心地图",
+      "summary_zh": "归纳面向 HMD/CAVE 的嗅觉显示系统及设计挑战。",
+      "analysis_zh": "先复用已有分类与系统比较表来建立检索地图，再回到具体原始研究；综述所述潜力不自动等于装置效果已被临床验证。",
+      "reading_scope": "注册摘要；作者机构题录",
+      "original_location": "Abstract；系统分类和比较表全文待获取",
+      "authors_display": "Jordan Tewell; Nimesha Ranasinghe",
+      "authors_bib": "Tewell, Jordan and Ranasinghe, Nimesha"
+    },
+    {
+      "id": "P02",
+      "doi": "10.1038/s41467-023-37678-4",
+      "topic": "设备与气味释放",
+      "doi_url": "https://doi.org/10.1038/s41467-023-37678-4",
+      "retrieved_at": "2026-11-01T08:37:57.647075+00:00",
+      "status": "original_registry_verified",
+      "pmid": "37160931",
+      "pmcid": "PMC10169775",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-023-37678-4%22&format=json&resultType=core",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "title": "Soft, miniaturized, wireless olfactory interface for virtual reality",
+      "authors_display": "Liu Y, Yiu CK, Zhao Z, Park W, Shi R, Huang X, Zeng Y, Wang K, Wong TH, Jia S, Zhou J, Gao Z, Zhao L, Yao K, Li J, Sha C, Gao Y, Zhao G, Huang Y, Li D, Guo Q, Li Y, Yu X.",
+      "venue": "Nature Communications",
+      "published": [
+        [
+          2023,
+          5,
+          9
+        ]
+      ],
+      "publication_kind": "器件与系统原始研究",
+      "priority": "核心案例",
+      "summary_zh": "用预装香料的微型气味发生器，展示贴近上唇与面罩两种无线界面。加热、机械结构和控制电路共同调节释放。",
+      "analysis_zh": "真实抓花近鼻演示可作贯穿。加热预存材料与鼻端感知分开解释；原文承认残留使频繁切味受限。",
+      "reading_scope": "开放正文局部深读；Fig.1/5实际查看；补充视频3取真实帧核对动作",
+      "original_location": "Concepts and design; electrical performance; Demonstrations; Fig.1/5; Supplementary Movie3",
+      "authors_bib": "Liu, Yiming and Yiu, Chun Ki and Zhao, Zhao and Park, Wooyoung and others",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10169775/fullTextXML",
+      "fulltext_license": "© The Author(s) 2023 https://creativecommons.org/licenses/by/4.0/ Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ .",
+      "fulltext_access": "已下载全文XML；实际阅读范围以上述reading_scope为准"
+    },
+    {
+      "id": "P03",
+      "doi": "10.1038/s41467-024-48884-z",
+      "topic": "设备与气味释放",
+      "doi_url": "https://doi.org/10.1038/s41467-024-48884-z",
+      "retrieved_at": "2026-11-01T08:37:57.648075+00:00",
+      "title": "Intelligent wearable olfactory interface for latency-free mixed reality and fast olfactory enhancement",
+      "venue": "Nature Communications",
+      "type": "journal-article",
+      "published": [
+        [
+          2024,
+          5,
+          25
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1038%2Fs41467-024-48884-z",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "38796514",
+      "pmcid": "PMC11128017",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-024-48884-z%22&format=json&resultType=core",
+      "publication_kind": "器件与系统原始研究",
+      "priority": "核心案例",
+      "summary_zh": "将机械开孔、加热与算法结合，研究低延迟 MR 和多通道嗅觉训练。",
+      "analysis_zh": "约70ms是特定器件／浓度测量指标，不等于整套鼻端感知或退味时间；志愿者与一位患者案例分别理解。",
+      "reading_scope": "正文训练与响应定义局部核读",
+      "original_location": "器件响应／乙醇浓度测量；Olfactory training demonstration",
+      "authors_display": "Yiming Liu; Shengxin Jia; Chun Ki Yiu; Wooyoung Park; Zhenlin Chen; Jin Nan; Xingcan Huang; Hongting Chen; Wenyang Li; Yuyu Gao; Weike Song; Tomoyuki Yokota; Takao Someya; Zhao Zhao; Yuhang Li; Xinge Yu",
+      "authors_bib": "Liu, Yiming and Jia, Shengxin and Yiu, Chun Ki and Park, Wooyoung and Chen, Zhenlin and Nan, Jin and Huang, Xingcan and Chen, Hongting and Li, Wenyang and Gao, Yuyu and Song, Weike and Yokota, Tomoyuki and Someya, Takao and Zhao, Zhao and Li, Yuhang and Yu, Xinge",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11128017/fullTextXML",
+      "fulltext_license": "© The Author(s) 2024 Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/ .",
+      "fulltext_access": "已下载全文XML；实际阅读范围以上述reading_scope为准"
+    },
+    {
+      "id": "P04",
+      "doi": "10.1038/s41467-024-50261-9",
+      "topic": "设备与气味释放",
+      "doi_url": "https://doi.org/10.1038/s41467-024-50261-9",
+      "retrieved_at": "2026-11-01T08:37:57.649074+00:00",
+      "title": "Advances in olfactory augmented virtual reality towards future metaverse applications",
+      "venue": "Nature Communications",
+      "type": "journal-article",
+      "published": [
+        [
+          2024,
+          7,
+          31
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1038%2Fs41467-024-50261-9",
+      "status": "doi_metadata_verified",
+      "pmid": "39085214",
+      "pmcid": "PMC11291476",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41467-024-50261-9%22&format=json&resultType=core",
+      "publication_kind": "Comment／展望",
+      "priority": "背景参考",
+      "summary_zh": "讨论嗅觉反馈和可穿戴装置在虚实交互中的进展。",
+      "analysis_zh": "期刊明确标为 Comment，不能把它与原始装置论文相加，当作另一项独立效果验证。适合寻找引用线索与概念图。",
+      "reading_scope": "期刊原文页面",
+      "original_location": "文章类型 Comment；正文与参考文献",
+      "authors_display": "Zixuan Zhang; Xinge Guo; Chengkuo Lee",
+      "authors_bib": "Zhang, Zixuan and Guo, Xinge and Lee, Chengkuo"
+    },
+    {
+      "id": "P05",
+      "doi": "10.1016/j.ijhcs.2022.102928",
+      "topic": "设备与气味释放",
+      "doi_url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
+      "retrieved_at": "2026-11-01T08:38:00.598212+00:00",
+      "title": "A graspable olfactory display for virtual reality",
+      "venue": "International Journal of Human-Computer Studies",
+      "type": "journal-article",
+      "published": [
+        [
+          2023,
+          1
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1016%2Fj.ijhcs.2022.102928",
+      "status": "doi_metadata_verified",
+      "publication_kind": "装置开发与验证",
+      "priority": "核心案例",
+      "summary_zh": "四种气味材料、阀门与手持VR控制器；虚拟酒窖中闻香并辨认成分。N12探索测试与气体传感器分析检验输出和可用性。",
+      "analysis_zh": "主讲采用真实任务。任务变快和可靠性结果不直接解释为康复收益；公开设计入口已核到，OSF本轮可达性未确认。",
+      "reading_scope": "大学库12页全文已取得；设计、User study和Discussion核读；Fig.5与PDF实页核对",
+      "original_location": "PDF pp.3/6脚注；p.7 Fig.5；User study/Discussion",
+      "authors_display": "Simon Niedenthal; William Fredborg; Peter Lundén; Marie Ehrndal; Jonas K. Olofsson",
+      "authors_bib": "Niedenthal, Simon and Fredborg, William and Lundén, Peter and Ehrndal, Marie and Olofsson, Jonas K.",
+      "fulltext_url": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf"
+    },
+    {
+      "id": "P06",
+      "doi": "10.1007/s11042-015-2971-0",
+      "topic": "可复用装置与HCI",
+      "doi_url": "https://doi.org/10.1007/s11042-015-2971-0",
+      "retrieved_at": "2026-11-01T08:38:00.620431+00:00",
+      "status": "publisher_abstract_verified",
+      "title": "A reproducible olfactory display for exploring olfaction in immersive media experiences",
+      "authors_display": "Michael J. Howell; Nicolas S. Herrera; Alec G. Moore; Ryan P. McMahan",
+      "venue": "Multimedia Tools and Applications",
+      "published": [
+        [
+          2016
+        ]
+      ],
+      "publisher_url": "https://link.springer.com/article/10.1007/s11042-015-2971-0",
+      "date_note": "Online 2015-10-20; print volume 2016",
+      "publication_kind": "可复现装置与探索研究",
+      "priority": "复用优先",
+      "summary_zh": "提出简单、低成本、可复现的嗅觉显示，并开展三项探索研究。",
+      "analysis_zh": "摘要明确提到体验可能同时出现正负作用，适合提醒先复用现有装置思路。完整材料清单、成本和实验条件尚需全文，当前不启动自制。",
+      "reading_scope": "出版社摘要",
+      "original_location": "Springer Abstract；Methods 全文待获取",
+      "authors_bib": "Michael J. Howell and Nicolas S. Herrera and Alec G. Moore and Ryan P. McMahan"
+    },
+    {
+      "id": "P07",
+      "doi": "10.1541/ieejsmas.128.451",
+      "topic": "综述与设计地图",
+      "doi_url": "https://doi.org/10.1541/ieejsmas.128.451",
+      "retrieved_at": "2026-11-01T08:38:00.739041+00:00",
+      "title": "Recent Trend in Development of Olfactory Displays",
+      "venue": "IEEJ Transactions on Sensors and Micromachines",
+      "type": "journal-article",
+      "published": [
+        [
+          2008
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1541%2Fieejsmas.128.451",
+      "status": "doi_metadata_verified",
+      "publication_kind": "技术综述",
+      "priority": "背景参考",
+      "summary_zh": "把嗅觉显示概括为生成目标浓度的带味空气并递送至嗅觉器官，区分制作气味与递送气味。",
+      "analysis_zh": "适合解释最基础的工程链路。2008 年综述用于历史和概念，不当作当前产品性能表。",
+      "reading_scope": "期刊摘要",
+      "original_location": "J-STAGE Abstract",
+      "authors_display": "Yasuyuki Yanagida",
+      "authors_bib": "Yanagida, Yasuyuki"
+    },
+    {
+      "id": "P08",
+      "doi": "10.1541/ieejsmas.138.337",
+      "topic": "设备与增强嗅觉",
+      "doi_url": "https://doi.org/10.1541/ieejsmas.138.337",
+      "retrieved_at": "2026-11-01T08:38:00.837794+00:00",
+      "title": "Review on Development of Devices for Amplifying Human Olfaction: Approaches using Real and Virtual Concentration Method",
+      "venue": "IEEJ Transactions on Sensors and Micromachines",
+      "type": "journal-article",
+      "published": [
+        [
+          2018,
+          8,
+          1
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1541%2Fieejsmas.138.337",
+      "status": "doi_metadata_verified",
+      "publication_kind": "技术综述",
+      "priority": "扩展话题",
+      "summary_zh": "对比吸附／热脱附的真实气味浓缩，与传感器检测后另行产生刺激的虚拟浓缩。",
+      "analysis_zh": "可用来区分检测、计算和输出，避免把电子鼻或气体传感器直接叫作能重放任意气味的显示器。",
+      "reading_scope": "期刊摘要",
+      "original_location": "J-STAGE Abstract",
+      "authors_display": "Haruka Matsukura; Hiroshi Ishida",
+      "authors_bib": "Matsukura, Haruka and Ishida, Hiroshi"
+    },
+    {
+      "id": "P09",
+      "doi": "10.1016/S0092-8674(00)80581-4",
+      "topic": "嗅觉编码与数字化",
+      "doi_url": "https://doi.org/10.1016/S0092-8674(00)80581-4",
+      "retrieved_at": "2026-11-01T08:38:03.882979+00:00",
+      "title": "Combinatorial Receptor Codes for Odors",
+      "venue": "Cell",
+      "type": "journal-article",
+      "published": [
+        [
+          1999,
+          3
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1016%2FS0092-8674%2800%2980581-4",
+      "status": "doi_metadata_verified",
+      "pmid": "10089886",
+      "pmcid": null,
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2FS0092-8674%2800%2980581-4%22&format=json&resultType=core",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "publication_kind": "基础实验",
+      "priority": "必要科学基础",
+      "summary_zh": "以钙成像与单细胞 RT-PCR 研究受体和气味分子的组合编码：一个受体可响应多种分子，同一分子也可激活多个受体。",
+      "analysis_zh": "用一张组合关系图解释基础即可；受体组合证据不直接推出一个固定的通用配香基底，也不要求在通识课展开全套神经回路。",
+      "reading_scope": "原始摘要",
+      "original_location": "Cell Abstract",
+      "authors_display": "Bettina Malnic; Junzo Hirono; Takaaki Sato; Linda B Buck",
+      "authors_bib": "Malnic, Bettina and Hirono, Junzo and Sato, Takaaki and Buck, Linda B"
+    },
+    {
+      "id": "P10",
+      "doi": "10.1126/science.ade4401",
+      "topic": "嗅觉编码与数字化",
+      "doi_url": "https://doi.org/10.1126/science.ade4401",
+      "retrieved_at": "2026-11-01T08:38:03.909485+00:00",
+      "title": "A principal odor map unifies diverse tasks in olfactory perception",
+      "venue": "Science",
+      "type": "journal-article",
+      "published": [
+        [
+          2023,
+          9
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1126%2Fscience.ade4401",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "37651511",
+      "pmcid": "PMC11898014",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.ade4401%22&format=json&resultType=core",
+      "publication_kind": "机器学习与感知验证",
+      "priority": "数字化边界",
+      "summary_zh": "用图神经网络建立 Principal Odor Map，从分子结构预测气味描述，并作前瞻性新分子测试。",
+      "analysis_zh": "预测气味标签与向鼻子生成刺激是不同任务。适合回答 AI 在哪里有用；不能把分子描述模型直接说成已经实现网上传香。",
+      "reading_scope": "原始摘要；全文接口访问受限",
+      "original_location": "Science／Europe PMC Abstract",
+      "authors_display": "Brian K. Lee; Emily J. Mayhew; Benjamin Sanchez-Lengeling; Jennifer N. Wei; Wesley W. Qian; Kelsie A. Little; Matthew Andres; Britney B. Nguyen; Theresa Moloy; Jacob Yasonik; Jane K. Parker; Richard C. Gerkin; Joel D. Mainland; Alexander B. Wiltschko",
+      "authors_bib": "Lee, Brian K. and Mayhew, Emily J. and Sanchez-Lengeling, Benjamin and Wei, Jennifer N. and Qian, Wesley W. and Little, Kelsie A. and Andres, Matthew and Nguyen, Britney B. and Moloy, Theresa and Yasonik, Jacob and Parker, Jane K. and Gerkin, Richard C. and Mainland, Joel D. and Wiltschko, Alexander B."
+    },
+    {
+      "id": "P11",
+      "doi": "10.1126/science.1249168",
+      "topic": "嗅觉编码与争议",
+      "doi_url": "https://doi.org/10.1126/science.1249168",
+      "retrieved_at": "2026-11-01T08:38:03.910497+00:00",
+      "title": "Humans Can Discriminate More than 1 Trillion Olfactory Stimuli",
+      "venue": "Science",
+      "type": "journal-article",
+      "published": [
+        [
+          2014,
+          3,
+          21
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1126%2Fscience.1249168",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "24653035",
+      "pmcid": "PMC4483192",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1126%2Fscience.1249168%22&format=json&resultType=core",
+      "publication_kind": "心理物理实验与外推",
+      "priority": "争议备份",
+      "summary_zh": "通过混合物辨别实验外推可区分嗅觉刺激的数量，提出超过一万亿的下限估计。",
+      "analysis_zh": "必须与 P12 配对阅读。汇报可讲嗅觉复杂，具体数量涉及外推假设，不宜直接当成确定事实。",
+      "reading_scope": "原始摘要",
+      "original_location": "Science Abstract；与P12对读",
+      "authors_display": "C. Bushdid; M. O. Magnasco; L. B. Vosshall; A. Keller",
+      "authors_bib": "Bushdid, C. and Magnasco, M. O. and Vosshall, L. B. and Keller, A."
+    },
+    {
+      "id": "P12",
+      "doi": "10.7554/eLife.07865",
+      "topic": "嗅觉编码与争议",
+      "doi_url": "https://doi.org/10.7554/eLife.07865",
+      "retrieved_at": "2026-11-01T08:38:04.997478+00:00",
+      "title": "On the dimensionality of odor space",
+      "venue": "eLife",
+      "type": "journal-article",
+      "published": [
+        [
+          2015,
+          7,
+          7
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.7554%2FeLife.07865",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "26151672",
+      "pmcid": "PMC4491593",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.7554%2FeLife.07865%22&format=json&resultType=core",
+      "publication_kind": "方法学批评",
+      "priority": "争议备份",
+      "summary_zh": "分析如何从有限混合物样本推断气味空间维数，批评一万亿估计的数学外推。",
+      "analysis_zh": "它质疑的是估计方法，不能反过来宣称人类实际上只能分辨某个很小的固定数。科学争议适合展示为何要查原文。",
+      "reading_scope": "原始摘要；全文已取得待核读",
+      "original_location": "Abstract；完整推导待核读",
+      "authors_display": "Markus Meister",
+      "authors_bib": "Meister, Markus",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4491593/fullTextXML",
+      "fulltext_license": "© 2015, Meister This article is distributed under the terms of the Creative Commons Attribution License , which permits unrestricted use and redistribution provided that the original author and source are credited.",
+      "fulltext_access": "已下载全文XML；实际阅读范围以上述reading_scope为准"
+    },
+    {
+      "id": "P13",
+      "doi": "10.3389/frvir.2020.571812",
+      "topic": "多感官与在场感",
+      "doi_url": "https://doi.org/10.3389/frvir.2020.571812",
+      "retrieved_at": "2026-11-01T08:38:06.473517+00:00",
+      "title": "Olfactory Perception and Presence in a Virtual Reality Food Environment",
+      "venue": "Frontiers in Virtual Reality",
+      "type": "journal-article",
+      "published": [
+        [
+          2020,
+          9,
+          28
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.3389%2Ffrvir.2020.571812",
+      "status": "doi_metadata_verified",
+      "pmid": "37635709",
+      "pmcid": "PMC10457091",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.3389%2Ffrvir.2020.571812%22&format=json&resultType=core",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "publication_kind": "VR场景用户研究",
+      "priority": "核心反例",
+      "summary_zh": "在 VR 自助餐情境释放薯条气味，研究气味察觉和在场感的关系；摘要报告仅部分参与者察觉气味。",
+      "analysis_zh": "察觉到味道与更高在场感的关联，不能自动当作随机加香的平均因果效果。注意未察觉者、注意力和个体差异。",
+      "reading_scope": "原始摘要；全文接口访问受限",
+      "original_location": "Frontiers／Europe PMC Abstract",
+      "authors_display": "Susan Persky; Alexander P. Dolwick",
+      "authors_bib": "Persky, Susan and Dolwick, Alexander P."
+    },
+    {
+      "id": "P14",
+      "doi": "10.1177/2041669521989731",
+      "topic": "多感官与记忆",
+      "doi_url": "https://doi.org/10.1177/2041669521989731",
+      "retrieved_at": "2026-11-01T08:38:06.501167+00:00",
+      "title": "Smells Influence Perceived Pleasantness but Not Memorization of a Visual Virtual Environment",
+      "venue": "i-Perception",
+      "type": "journal-article",
+      "published": [
+        [
+          2021,
+          3
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1177%2F2041669521989731",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "33868626",
+      "pmcid": "PMC8020408",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1177%2F2041669521989731%22&format=json&resultType=core",
+      "publication_kind": "场景一致性与延迟回忆实验",
+      "priority": "核心反例",
+      "summary_zh": "用玫瑰、橙子与无味条件配合虚拟场景，研究一致性、愉悦度和约两周后的场景回忆。",
+      "analysis_zh": "N90主试验与N17先导分开。约两周回忆用描述条目数代理，计数未区分准确性。更正仅修正第三作者姓名，无结果修改；适合作备课。",
+      "reading_scope": "开放正文方法／结果局部核读；更正全文已读",
+      "original_location": "Pilot Study; Methods; Results; correction10.1177/20416695211028757",
+      "authors_display": "Agnieszka Sabiniewicz; Elena Schaefer; Cagdas Guducu; Cedric Manesse; Moustafa Bensafi; Nadejda Krasteva; Gabriele Nelles; Thomas Hummel",
+      "authors_bib": "Sabiniewicz, Agnieszka and Schaefer, Elena and Guducu, Cagdas and Manesse, Cedric and Bensafi, Moustafa and Krasteva, Nadejda and Nelles, Gabriele and Hummel, Thomas",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8020408/fullTextXML",
+      "fulltext_license": "© The Author(s) 2021 2021 SAGE Publications Ltd. Manuscript content on this site is licensed under Creative Commons Licenses https://creativecommons.org/licenses/by/4.0/ Creative Commons CC BY: This article is distributed under the terms of the Creative Commons Attribution 4.0 License ( https://creativecommons.org/licenses/by/4.0/ ) which permits any use, reproduction and distribution of the work without further permission provided the original work is attributed as specified on the SAGE and Open Access pages ( https://us.sagepub.com/en-us/nam/open-access-at-sage ).",
+      "fulltext_access": "已下载全文XML；实际阅读范围以上述reading_scope为准"
+    },
+    {
+      "id": "P15",
+      "doi": "10.1016/j.chb.2015.08.007",
+      "topic": "放松与健康边界",
+      "doi_url": "https://doi.org/10.1016/j.chb.2015.08.007",
+      "retrieved_at": "2026-11-01T08:38:06.542053+00:00",
+      "title": "Virtual reality and stimulation of touch and smell for inducing relaxation: A randomized controlled trial",
+      "venue": "Computers in Human Behavior",
+      "type": "journal-article",
+      "published": [
+        [
+          2016,
+          2
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1016%2Fj.chb.2015.08.007",
+      "status": "doi_metadata_verified",
+      "publication_kind": "随机对照研究",
+      "priority": "待读候选",
+      "summary_zh": "136名健康参与者随机四组，均接受投影式VR放松程序，分别加香、加触觉、两者或均无。四组放松VAS均值前后升高，作者未检出加香的额外情绪／在场感优势。",
+      "analysis_zh": "同一程序有香／无香比较可区分前后变化与额外收益。人数34/36/33/33，量表0–10。Methods2.6标签笔误按Fig3/2.7核正。",
+      "reading_scope": "大学库24页作者稿已取得；Methods/Results与Table1/Fig3实际核读并查看页面",
+      "original_location": "§2.2,2.4–2.7; Results; Table1（稿p22–23）; Fig3（稿p20）",
+      "authors_display": "Berenice Serrano; Rosa M. Baños; Cristina Botella",
+      "authors_bib": "Serrano, Berenice and Baños, Rosa M. and Botella, Cristina",
+      "fulltext_url": "https://repositori.uji.es/server/api/core/bitstreams/cb77edc0-dd07-406d-a9e4-7f69082cb44a/content"
+    },
+    {
+      "id": "P16",
+      "doi": "10.1177/17456916211014196",
+      "topic": "放松与健康边界",
+      "doi_url": "https://doi.org/10.1177/17456916211014196",
+      "retrieved_at": "2026-11-01T08:38:07.649906+00:00",
+      "title": "The Power of Odor Persuasion: The Incorporation of Olfactory Cues in Virtual Environments for Personalized Relaxation",
+      "venue": "Perspectives on Psychological Science",
+      "type": "journal-article",
+      "published": [
+        [
+          2021,
+          11,
+          9
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1177%2F17456916211014196",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "34752166",
+      "pmcid": "PMC9069654",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1177%2F17456916211014196%22&format=json&resultType=core",
+      "publication_kind": "观点／综述性文章",
+      "priority": "健康背景",
+      "summary_zh": "讨论气味用于个性化放松 VR 的可能性、临床场景与递送障碍。",
+      "analysis_zh": "用于整理机制假说和设计问题，不能独自证明具体设备有效治疗焦虑或其他疾病。",
+      "reading_scope": "原始摘要",
+      "original_location": "Abstract；clinical applications与limitations部分待深入",
+      "authors_display": "Silvia Francesca Maria Pizzoli; Dario Monzani; Ketti Mazzocco; Emanuela Maggioni; Gabriella Pravettoni",
+      "authors_bib": "Pizzoli, Silvia Francesca Maria and Monzani, Dario and Mazzocco, Ketti and Maggioni, Emanuela and Pravettoni, Gabriella"
+    },
+    {
+      "id": "P17",
+      "doi": "10.1016/j.buildenv.2025.112608",
+      "topic": "建筑与真实场景",
+      "doi_url": "https://doi.org/10.1016/j.buildenv.2025.112608",
+      "retrieved_at": "2026-11-01T08:38:08.834313+00:00",
+      "title": "Digital smell technologies for the built environment: Evaluating human responses to multisensory stimuli in immersive virtual reality",
+      "venue": "Building and Environment",
+      "type": "journal-article",
+      "published": [
+        [
+          2025,
+          3
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1016%2Fj.buildenv.2025.112608",
+      "status": "doi_metadata_verified",
+      "publication_kind": "系统开发与用户研究",
+      "priority": "场景候选",
+      "summary_zh": "以建筑环境为对象，提出多感官 VR 的气味模拟流程与认知、生理、心理等反应测量。",
+      "analysis_zh": "可复用其开发流程和测量思路；具体对照、样本与效应尚未核实，暂不把技术流程完成当成健康收益。",
+      "reading_scope": "期刊索引摘要与亮点",
+      "original_location": "Building and Environment Abstract／Highlights",
+      "authors_display": "Muhammed Yildirim; Anastasia Globa; Ozgur Gocer; Arianna Brambilla",
+      "authors_bib": "Yildirim, Muhammed and Globa, Anastasia and Gocer, Ozgur and Brambilla, Arianna"
+    },
+    {
+      "id": "P18",
+      "doi": "10.1016/j.vrih.2025.10.001",
+      "topic": "建筑与真实场景",
+      "doi_url": "https://doi.org/10.1016/j.vrih.2025.10.001",
+      "retrieved_at": "2026-11-01T08:38:09.120515+00:00",
+      "title": "Multisensory virtual reality environments in architecture: The impact of smell on presence, engagement, and user experience",
+      "venue": "Virtual Reality &amp; Intelligent Hardware",
+      "type": "journal-article",
+      "published": [
+        [
+          2025,
+          12
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1016%2Fj.vrih.2025.10.001",
+      "status": "doi_metadata_verified",
+      "publication_kind": "多感官建筑体验研究",
+      "priority": "场景候选",
+      "summary_zh": "使用视觉、听觉、嗅觉组合与混合方法，研究建筑 VR 的在场感、参与和体验。",
+      "analysis_zh": "作为多模态案例候选；需确认每种感官的独立贡献及是否与P17共享样本，不能把同一项目的两篇文章算成重复验证。",
+      "reading_scope": "期刊原始摘要",
+      "original_location": "Virtual Reality & Intelligent Hardware Abstract",
+      "authors_display": "Muhammed YILDIRIM; Anastasia GLOBA; Ozgur GOCER; Arianna BRAMBILLA",
+      "authors_bib": "YILDIRIM, Muhammed and GLOBA, Anastasia and GOCER, Ozgur and BRAMBILLA, Arianna"
+    },
+    {
+      "id": "P19",
+      "doi": "10.3389/fnins.2023.1200448",
+      "topic": "嗅觉训练与健康边界",
+      "doi_url": "https://doi.org/10.3389/fnins.2023.1200448",
+      "retrieved_at": "2026-11-01T08:38:09.224082+00:00",
+      "title": "Overnight olfactory enrichment using an odorant diffuser improves memory and modifies the uncinate fasciculus in older adults",
+      "venue": "Frontiers in Neuroscience",
+      "type": "journal-article",
+      "published": [
+        [
+          2023,
+          7,
+          24
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.3389%2Ffnins.2023.1200448",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "37554295",
+      "pmcid": "PMC10405466",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.3389%2Ffnins.2023.1200448%22&format=json&resultType=core",
+      "publication_kind": "嗅觉丰富化干预",
+      "priority": "健康边界反例",
+      "summary_zh": "用夜间气味扩散器研究健康老年人的记忆与脑影像变化，研究本身没有 VR。",
+      "analysis_zh": "原始摘要报告43名入组者；宣传中的226%对应特定记忆测验及比较口径。不能转写为虚拟嗅觉普遍提升记忆或治疗认知疾病。",
+      "reading_scope": "原始摘要；全文已取得待核读",
+      "original_location": "Abstract；具体数字用于主讲前复核完整分析样本",
+      "authors_display": "Cynthia C. Woo; Blake Miranda; Mithra Sathishkumar; Farideh Dehkordi-Vakil; Michael A. Yassa; Michael Leon",
+      "authors_bib": "Woo, Cynthia C. and Miranda, Blake and Sathishkumar, Mithra and Dehkordi-Vakil, Farideh and Yassa, Michael A. and Leon, Michael",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10405466/fullTextXML",
+      "fulltext_license": "Copyright © 2023 Woo, Miranda, Sathishkumar, Dehkordi-Vakil, Yassa and Leon. This is an open-access article distributed under the terms of the Creative Commons Attribution License (CC BY). The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.",
+      "fulltext_access": "已下载全文XML；实际阅读范围以上述reading_scope为准"
+    },
+    {
+      "id": "P20",
+      "doi": "10.1002/lary.20101",
+      "topic": "嗅觉训练与健康边界",
+      "doi_url": "https://doi.org/10.1002/lary.20101",
+      "retrieved_at": "2026-11-01T08:38:10.086168+00:00",
+      "title": "Effects of olfactory training in patients with olfactory loss",
+      "venue": "The Laryngoscope",
+      "type": "journal-article",
+      "published": [
+        [
+          2009,
+          2,
+          23
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1002%2Flary.20101",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "19235739",
+      "pmcid": null,
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1002%2Flary.20101%22&format=json&resultType=core",
+      "publication_kind": "前瞻性对照研究",
+      "priority": "临床基础",
+      "summary_zh": "对嗅觉障碍患者进行反复气味暴露训练，并与未训练组比较。",
+      "analysis_zh": "它支持讨论嗅觉训练这一思路，设计并非凭题目就可认定为随机盲法；也没有证明 VR 增量效果。",
+      "reading_scope": "原始摘要",
+      "original_location": "Methods：训练组40、未训练组16；12周",
+      "authors_display": "Thomas Hummel; Karo Rissom; Jens Reden; Aantje Hähner; Mark Weidenbecher; Karl‐Bernd Hüttenbrink",
+      "authors_bib": "Hummel, Thomas and Rissom, Karo and Reden, Jens and Hähner, Aantje and Weidenbecher, Mark and Hüttenbrink, Karl‐Bernd"
+    },
+    {
+      "id": "P21",
+      "doi": "10.1007/s00405-025-09936-2",
+      "topic": "嗅觉训练与健康边界",
+      "doi_url": "https://doi.org/10.1007/s00405-025-09936-2",
+      "retrieved_at": "2026-11-01T08:38:11.680597+00:00",
+      "title": "Efficacy of olfactory-visual combined training on post-viral olfactory dysfunction: a randomized controlled trial",
+      "venue": "European Archives of Oto-Rhino-Laryngology",
+      "type": "journal-article",
+      "published": [
+        [
+          2025,
+          12,
+          22
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1007%2Fs00405-025-09936-2",
+      "status": "doi_metadata_verified",
+      "pmid": "41430457",
+      "pmcid": null,
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1007%2Fs00405-025-09936-2%22&format=json&resultType=core",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "publication_kind": "随机对照研究",
+      "priority": "临床边界",
+      "summary_zh": "比较感染后嗅觉障碍患者的不同训练方案，其中一组在闻气味时看对应图片。",
+      "analysis_zh": "视觉联合训练与嗅觉改善值得关注，但对应图片不是沉浸式 VR。摘要也报告部分情绪／生活质量指标未见改善，应分结局解释。",
+      "reading_scope": "原始摘要",
+      "original_location": "Methods；Results；四组设计；六个月结局",
+      "authors_display": "Zhenni Tian; Xi Wang; Jiadi He; Wen Liu; Yunpeng Zang",
+      "authors_bib": "Tian, Zhenni and Wang, Xi and He, Jiadi and Liu, Wen and Zang, Yunpeng"
+    },
+    {
+      "id": "P22",
+      "doi": "10.1109/ACCESS.2025.3622742",
+      "topic": "临床综述",
+      "doi_url": "https://doi.org/10.1109/ACCESS.2025.3622742",
+      "retrieved_at": "2026-11-01T08:38:11.903017+00:00",
+      "title": "Beyond Sight and Sound: A Systematic Review of Haptic and Olfactory Feedback in Therapeutic Virtual Reality Interventions",
+      "venue": "IEEE Access",
+      "type": "journal-article",
+      "published": [
+        [
+          2025
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1109%2FACCESS.2025.3622742",
+      "status": "doi_metadata_verified",
+      "publication_kind": "系统综述",
+      "priority": "临床地图",
+      "summary_zh": "整理触觉与嗅觉反馈用于治疗性 VR 的研究，涉及创伤、焦虑、压力和放松等方向。",
+      "analysis_zh": "39项纳入研究混合了触觉与嗅觉；不能把总数量说成39项嗅觉疗效试验。优先用来追原始研究及证据空白。",
+      "reading_scope": "作者机构原始摘要",
+      "original_location": "Sunway Abstract；综述全文待读",
+      "authors_display": "Myint Zu Than; Kian Meng Yap; Yunli Lee",
+      "authors_bib": "Than, Myint Zu and Yap, Kian Meng and Lee, Yunli"
+    },
+    {
+      "id": "P23",
+      "doi": "10.1145/2556288.2557008",
+      "topic": "可复用装置与HCI",
+      "doi_url": "https://doi.org/10.1145/2556288.2557008",
+      "retrieved_at": "2026-11-01T08:38:11.928060+00:00",
+      "title": "Opportunities for odor",
+      "venue": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "type": "proceedings-article",
+      "published": [
+        [
+          2014,
+          4,
+          26
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1145%2F2556288.2557008",
+      "status": "doi_metadata_verified",
+      "publication_kind": "HCI设计研究",
+      "priority": "待读候选",
+      "summary_zh": "以气味体验和技术设计机会为主题的 CHI 论文。",
+      "analysis_zh": "本轮仅核到题录，具体研究方法和发现暂不归纳；保留为人机交互与设计语言的后续线索。",
+      "reading_scope": "仅题录",
+      "original_location": "Crossref题录；摘要与原文待取得",
+      "authors_display": "Marianna Obrist; Alexandre N. Tuch; Kasper Hornbaek",
+      "authors_bib": "Obrist, Marianna and Tuch, Alexandre N. and Hornbaek, Kasper"
+    },
+    {
+      "id": "P24",
+      "doi": "10.3390/mti10080085",
+      "topic": "游戏与在场感",
+      "doi_url": "https://doi.org/10.3390/mti10080085",
+      "retrieved_at": "2026-11-01T08:38:12.709431+00:00",
+      "title": "Scent Ninja: An Exploratory Study of Olfactory Cues, Presence, Immersion, and User Experience in Active Virtual Reality Gameplay",
+      "venue": "Multimodal Technologies and Interaction",
+      "type": "journal-article",
+      "published": [
+        [
+          2026,
+          8,
+          11
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.3390%2Fmti10080085",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Crossref publisher-deposited abstract",
+      "publication_kind": "探索性游戏用户研究",
+      "priority": "新近反例",
+      "summary_zh": "在带事件触发气味的切水果 VR 中比较有味与无味条件，摘要给出12名参与者。",
+      "analysis_zh": "摘要报告部分沉浸条目改善，而在场感、其他体验及游戏表现未见显著差异；小样本和次序效应限制推广。",
+      "reading_scope": "出版社登记摘要",
+      "original_location": "Abstract；Results统计细节待全文核查",
+      "authors_display": "Jordan Tewell; Nimesha Ranasinghe",
+      "authors_bib": "Tewell, Jordan and Ranasinghe, Nimesha"
+    },
+    {
+      "id": "P26",
+      "doi": "10.1038/s41598-019-46099-7",
+      "topic": "自然场景与放松",
+      "doi_url": "https://doi.org/10.1038/s41598-019-46099-7",
+      "retrieved_at": "2026-11-01T08:38:14.324570+00:00",
+      "title": "Reduction of physiological stress by urban green space in a multisensory virtual experiment",
+      "venue": "Scientific Reports",
+      "type": "journal-article",
+      "published": [
+        [
+          2019,
+          7,
+          12
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1038%2Fs41598-019-46099-7",
+      "status": "doi_metadata_verified",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "pmid": "31300656",
+      "pmcid": "PMC6625985",
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1038%2Fs41598-019-46099-7%22&format=json&resultType=core",
+      "publication_kind": "多感官自然环境实验",
+      "priority": "健康场景候选",
+      "summary_zh": "在城市、森林、公园等虚拟自然刺激中，考察多感官环境和生理压力反应。",
+      "analysis_zh": "原文用皮电等短期实验指标。气味愉悦度与压力反应关系不能直接解释为单独加香治疗疾病或长期获益。",
+      "reading_scope": "摘要与原文局部",
+      "original_location": "Methods；Perceived pleasantness；Relationship between perceived pleasantness and skin conductance",
+      "authors_display": "Marcus Hedblom; Bengt Gunnarsson; Behzad Iravani; Igor Knez; Martin Schaefer; Pontus Thorsson; Johan N. Lundström",
+      "authors_bib": "Hedblom, Marcus and Gunnarsson, Bengt and Iravani, Behzad and Knez, Igor and Schaefer, Martin and Thorsson, Pontus and Lundström, Johan N.",
+      "fulltext_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6625985/fullTextXML",
+      "fulltext_license": "© The Author(s) 2019 Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ .",
+      "fulltext_access": "已下载全文XML；实际阅读范围以上述reading_scope为准"
+    },
+    {
+      "id": "P27",
+      "doi": "10.1109/VR.1999.756955",
+      "topic": "多感官与记忆",
+      "doi_url": "https://doi.org/10.1109/VR.1999.756955",
+      "retrieved_at": "2026-11-01T08:38:14.428180+00:00",
+      "title": "Evaluating the importance of multi-sensory input on memory and the sense of presence in virtual environments",
+      "venue": "Proceedings IEEE Virtual Reality (Cat. No. 99CB36316)",
+      "type": "proceedings-article",
+      "published": [
+        [
+          1999
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1109%2FVR.1999.756955",
+      "status": "doi_metadata_verified",
+      "date_source": "本轮已读原始题录的年份",
+      "publication_kind": "经典多感官研究",
+      "priority": "待读候选",
+      "summary_zh": "经典研究把多感官输入、记忆与在场感放在同一实验问题下。",
+      "analysis_zh": "本轮仅核到题录和被后续论文引用的关系。具体实验组、样本与效果尚未读，适合背景查源，不写确定结论。",
+      "reading_scope": "仅题录",
+      "original_location": "IEEE题录；正文待取得",
+      "authors_display": "H.Q. Dinh; N. Walker; L.F. Hodges; Chang Song; A. Kobayashi",
+      "authors_bib": "Dinh, H.Q. and Walker, N. and Hodges, L.F. and Chang Song and Kobayashi, A."
+    },
+    {
+      "id": "P28",
+      "doi": "10.48550/arXiv.2507.07911",
+      "topic": "前沿预印本-压力",
+      "doi_url": "https://doi.org/10.48550/arXiv.2507.07911",
+      "retrieved_at": "2026-11-01T08:38:15.510208+00:00",
+      "status": "original_arxiv_abstract_verified",
+      "url": "https://arxiv.org/abs/2507.07911",
+      "title": "The Potential of Olfactory Stimuli in Stress Reduction through Virtual Reality",
+      "authors_display": "Yasmin Elsaddik Valdivieso et al.",
+      "venue": "arXiv公开版本",
+      "published": [
+        [
+          2025,
+          7,
+          10
+        ]
+      ],
+      "publication_kind": "arXiv公开版本",
+      "priority": "新近边界",
+      "summary_zh": "30人被试内比较海边 VR 的有香与无香条件，同时测自评与心率变异性。",
+      "analysis_zh": "摘要报告自评放松差异不显著、部分HRV结果有差异；不能只挑显著指标概括全部有效。同行评审和完整统计尚待核。",
+      "reading_scope": "arXiv原始摘要",
+      "original_location": "Abstract；2025-07-10提交",
+      "authors_bib": "Yasmin Elsaddik Valdivieso and others"
+    },
+    {
+      "id": "P29",
+      "doi": "10.48550/arXiv.2604.07699",
+      "topic": "前沿预印本-训练",
+      "doi_url": "https://doi.org/10.48550/arXiv.2604.07699",
+      "retrieved_at": "2026-11-01T08:38:15.510208+00:00",
+      "status": "original_arxiv_abstract_verified",
+      "url": "https://arxiv.org/abs/2604.07699",
+      "title": "Smells Like Fire: Exploring the Impact of Olfactory Cues in VR Wildfire Evacuation Training",
+      "authors_display": "Alison Crosby et al.",
+      "venue": "arXiv公开版本",
+      "published": [
+        [
+          2026,
+          4,
+          9
+        ]
+      ],
+      "publication_kind": "CHI海报／arXiv公开版本",
+      "priority": "训练候选",
+      "summary_zh": "18人山火撤离 VR 探索研究，对比烟味与对照条件的自评体验和准备感。",
+      "analysis_zh": "较高沉浸评分不是实际撤离技能迁移的直接证据；规模小，主讲若选它应以探索性训练案例呈现。",
+      "reading_scope": "arXiv原始摘要与会议标记",
+      "original_location": "Abstract；Comments：CHI2026 poster；related DOI 10.1145/3772363.3798806",
+      "authors_bib": "Alison Crosby and others"
+    },
+    {
+      "id": "P30",
+      "doi": "10.48550/arXiv.2609.32975",
+      "topic": "前沿预印本-导航",
+      "doi_url": "https://doi.org/10.48550/arXiv.2609.32975",
+      "retrieved_at": "2026-11-01T08:38:15.510208+00:00",
+      "status": "original_arxiv_abstract_verified",
+      "url": "https://arxiv.org/abs/2609.32975",
+      "title": "Exploring the Effects of Olfactory Cues and Ventilation on Teleportation-based Navigation in VR",
+      "authors_display": "Dongyun Han et al.",
+      "venue": "arXiv公开版本",
+      "published": [
+        [
+          2026,
+          9,
+          26
+        ]
+      ],
+      "publication_kind": "arXiv公开版本",
+      "priority": "导航候选",
+      "summary_zh": "研究气味提示和通风对 VR 地点辨认、重复导航及用户体验的影响。",
+      "analysis_zh": "摘要显示通风有助减少残留干扰，但更长通风未清楚提高重复导航准确率。适合把退味讲成工程需求而非装饰。",
+      "reading_scope": "arXiv原始摘要",
+      "original_location": "Abstract；2026-09-26提交；同行评审状态未核实",
+      "authors_bib": "Dongyun Han and others"
+    },
+    {
+      "id": "P31",
+      "doi": "10.48550/arXiv.2609.32992",
+      "topic": "前沿预印本-导航",
+      "doi_url": "https://doi.org/10.48550/arXiv.2609.32992",
+      "retrieved_at": "2026-11-01T08:38:15.510208+00:00",
+      "status": "original_arxiv_abstract_verified",
+      "url": "https://arxiv.org/abs/2609.32992",
+      "title": "Smelling the Way: Olfactory Modulation of Spatial Estimation and Path Integration in Virtual Reality",
+      "authors_display": "Siyeon Bak et al.",
+      "venue": "arXiv公开版本",
+      "published": [
+        [
+          2026,
+          9,
+          26
+        ]
+      ],
+      "publication_kind": "arXiv公开版本",
+      "priority": "导航权衡",
+      "summary_zh": "两项空间任务分别研究气味定位和回到起点，报告定位偏差、终点误差和任务时间等结局。",
+      "analysis_zh": "更小终点误差同时伴随更长行走距离与时间。真实价值取决于任务目标，不能只挑一个改善指标。",
+      "reading_scope": "arXiv原始摘要",
+      "original_location": "Abstract；Study1 N=24、Study2 N=19；同行评审状态未核实",
+      "authors_bib": "Siyeon Bak and others"
+    },
+    {
+      "id": "P32",
+      "doi": "10.48550/arXiv.2509.11342",
+      "topic": "前沿预印本-社交",
+      "doi_url": "https://doi.org/10.48550/arXiv.2509.11342",
+      "retrieved_at": "2026-11-01T08:38:15.510208+00:00",
+      "status": "original_arxiv_abstract_verified",
+      "url": "https://arxiv.org/abs/2509.11342",
+      "title": "What if Virtual Agents Had Scents? Users' Judgments of Virtual Agent Personality and Appeals in Encounters",
+      "authors_display": "Dongyun Han et al.",
+      "venue": "arXiv公开版本",
+      "published": [
+        [
+          2025,
+          9,
+          14
+        ]
+      ],
+      "publication_kind": "arXiv公开版本",
+      "priority": "社交扩展",
+      "summary_zh": "比较虚拟人物的气味、表情和性别线索对人物印象的影响。",
+      "analysis_zh": "愉快气味未必压过视觉线索，不愉快气味可能主导负面判断。适合作为多感官失配或个体偏好的扩展，而非情绪控制证明。",
+      "reading_scope": "arXiv原始摘要",
+      "original_location": "Abstract；2025-09-14提交；同行评审状态未核实",
+      "authors_bib": "Dongyun Han and others"
+    },
+    {
+      "id": "P33",
+      "doi": "10.48550/arXiv.2509.11347",
+      "topic": "前沿预印本-导航",
+      "doi_url": "https://doi.org/10.48550/arXiv.2509.11347",
+      "retrieved_at": "2026-11-01T08:38:15.510208+00:00",
+      "status": "original_arxiv_abstract_verified",
+      "url": "https://arxiv.org/abs/2509.11347",
+      "title": "Beyond the Portal: Enhancing Recognition in Virtual Reality Through Multisensory Cues",
+      "authors_display": "Siyeon Bak et al.",
+      "venue": "arXiv公开版本",
+      "published": [
+        [
+          2025,
+          9,
+          14
+        ]
+      ],
+      "publication_kind": "arXiv公开版本",
+      "priority": "导航扩展",
+      "summary_zh": "在受限视觉门户场景中比较视觉、听觉与气味线索组合，测目标辨认和反应时。",
+      "analysis_zh": "组合条件改善不等于嗅觉单独贡献已经被分离；需要逐条件对照后再决定是否放入主讲。",
+      "reading_scope": "arXiv原始摘要",
+      "original_location": "Abstract；2025-09-14提交；同行评审状态未核实",
+      "authors_bib": "Siyeon Bak and others"
+    },
+    {
+      "id": "P34",
+      "doi": "10.1016/0092-8674(91)90418-X",
+      "topic": "嗅觉科学基础",
+      "doi_url": "https://doi.org/10.1016/0092-8674(91)90418-X",
+      "retrieved_at": "2026-11-01T08:38:15.510208+00:00",
+      "title": "A novel multigene family may encode odorant receptors: A molecular basis for odor recognition",
+      "venue": "Cell",
+      "type": "journal-article",
+      "published": [
+        [
+          1991,
+          4
+        ]
+      ],
+      "metadata_source": "https://api.crossref.org/works/10.1016%2F0092-8674%2891%2990418-X",
+      "status": "doi_metadata_verified",
+      "pmid": "1840504",
+      "pmcid": null,
+      "europepmc_source": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2F0092-8674%2891%2990418-X%22&format=json&resultType=core",
+      "abstract_source": "Europe PMC indexed original abstract",
+      "publication_kind": "基础分子研究",
+      "priority": "必要科学基础",
+      "summary_zh": "通过克隆与表征候选受体基因家族，为嗅觉分子识别建立基础。",
+      "analysis_zh": "适合作为科学背景，与P09互补。通识汇报只保留与实现有关的解释，不用基础发现代替现代设备或临床证据。",
+      "reading_scope": "原始摘要",
+      "original_location": "Cell Abstract",
+      "authors_display": "Linda Buck; Richard Axel",
+      "authors_bib": "Buck, Linda and Axel, Richard"
+    },
+    {
+      "id": "P35",
+      "doi": "10.1371/journal.pone.0157568",
+      "doi_url": "https://doi.org/10.1371/journal.pone.0157568",
+      "title": "Olfactory Stimuli Increase Presence in Virtual Environments",
+      "authors_display": "Benson G. Munyan III; Sandra M. Neer; Deborah C. Beidel; Florian Jentsch",
+      "authors_bib": "Munyan, Benson G., III and Neer, Sandra M. and Beidel, Deborah C. and Jentsch, Florian",
+      "venue": "PLOS ONE",
+      "published": [
+        [
+          2016,
+          6,
+          16
+        ]
+      ],
+      "publication_kind": "原始实验",
+      "priority": "备课",
+      "summary_zh": "分析60名年轻成人在轻度焦虑虚拟环境中的加／撤香序列，在场感结果与气味条件有关，状态焦虑和EDA无相应条件效应。",
+      "analysis_zh": "招募122后排除较多，顺序和熟悉因素需考虑；在场感指标不直接当作临床疗效。",
+      "reading_scope": "开放全文Participants、Design and Procedure、Results局部核读",
+      "original_location": "Participants; Design and Procedure; Results; Figs.3–6",
+      "fulltext_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157568"
+    }
+  ],
+  "unverified_candidates": [
+    {
+      "id": "P25",
+      "topic": "设备与气味释放",
+      "retrieved_at": "2026-11-01T08:38:14.243245+00:00",
+      "status": "identifier_unverified_candidate",
+      "title": "Extension of Wearable Olfactory Display for Multisensory VR Experience",
+      "venue": "Eurographics Symposium on Virtual Environments",
+      "published": [
+        [
+          2024
+        ]
+      ],
+      "seed_doi_unverified": "10.2312/egve.20241374",
+      "source_url": "https://diglib.eg.org/bitstream/handle/10.2312/egve20241374/egve20241374.pdf",
+      "publication_kind": "会议论文线索",
+      "priority": "标识待核",
+      "summary_zh": "检索到2024年可穿戴嗅觉显示扩展论文及 Eurographics 原始 PDF 入口。",
+      "analysis_zh": "初始 DOI 查询失败、PDF入口访问受限；保留题名和检索线索，暂不列为已核实文献或引用其性能。",
+      "reading_scope": "仅检索线索",
+      "original_location": "Eurographics原始入口；DOI未确认",
+      "authors_display": "作者字段待核，见原始入口",
+      "authors_bib": "作者字段待核，见原始入口"
+    }
+  ]
+}

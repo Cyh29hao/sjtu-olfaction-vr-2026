@@ -1,0 +1,927 @@
+{
+  "version": "v1",
+  "title": "让 VR 有气味",
+  "subtitle": "气味、VR与虚拟感官",
+  "template": "诗意校园·2022蓝绿青春",
+  "speaker_count": 4,
+  "presentation_seconds": 720,
+  "sources": {
+    "P02": {
+      "title": "Soft, miniaturized, wireless olfactory interface for virtual reality",
+      "authors": "Liu et al.",
+      "year": 2023,
+      "url": "https://www.nature.com/articles/s41467-023-37678-4",
+      "doi": "10.1038/s41467-023-37678-4",
+      "location": "Concepts and design; Demonstrations; Figs. 1, 5; Supplementary Movie 3",
+      "license": "CC BY 4.0，具体材料另有creditline者除外"
+    },
+    "P05": {
+      "title": "A graspable olfactory display for virtual reality",
+      "authors": "Niedenthal et al.",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
+      "fulltext": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+      "doi": "10.1016/j.ijhcs.2022.102928",
+      "location": "Fig. 5; User study; Discussion",
+      "license": "CC BY 4.0"
+    },
+    "P09": {
+      "title": "Combinatorial Receptor Codes for Odors",
+      "authors": "Malnic et al.",
+      "year": 1999,
+      "url": "https://doi.org/10.1016/S0092-8674(00)80581-4",
+      "doi": "10.1016/S0092-8674(00)80581-4",
+      "location": "Abstract; receptor response combinations",
+      "license": "仅引用事实，教学示意由本组重绘"
+    },
+    "P10": {
+      "title": "A principal odor map unifies diverse tasks in olfactory perception",
+      "authors": "Lee et al.",
+      "year": 2023,
+      "url": "https://doi.org/10.1126/science.ade4401",
+      "doi": "10.1126/science.ade4401",
+      "location": "Abstract，分子结构到感知描述预测",
+      "license": "仅引用事实，不复制原图"
+    },
+    "P15": {
+      "title": "Virtual reality and stimulation of touch and smell for inducing relaxation: A randomized controlled trial",
+      "authors": "Serrano, Baños & Botella",
+      "year": 2016,
+      "url": "https://doi.org/10.1016/j.chb.2015.08.007",
+      "fulltext": "https://repositori.uji.es/server/api/core/bitstreams/cb77edc0-dd07-406d-a9e4-7f69082cb44a/content",
+      "doi": "10.1016/j.chb.2015.08.007",
+      "location": "§2.2, §2.4–2.7; Results; Table 1; Fig. 3",
+      "license": "数据按原表重绘，作者稿仅作本地核查"
+    },
+    "P14": {
+      "title": "Smells Influence Perceived Pleasantness but Not Memorization of a Visual Virtual Environment",
+      "authors": "Sabiniewicz et al.",
+      "year": 2021,
+      "url": "https://doi.org/10.1177/2041669521989731",
+      "doi": "10.1177/2041669521989731",
+      "location": "Methods; Pilot Study; Results; correction仅改作者姓名",
+      "correction": "https://doi.org/10.1177/20416695211028757",
+      "license": "CC BY 4.0"
+    },
+    "P03": {
+      "title": "Intelligent wearable olfactory interface for latency-free mixed reality and fast olfactory enhancement",
+      "authors": "Liu et al.",
+      "year": 2024,
+      "url": "https://www.nature.com/articles/s41467-024-48884-z",
+      "doi": "10.1038/s41467-024-48884-z",
+      "location": "Olfactory training demonstration; Fig. 5; latency definitions",
+      "license": "CC BY 4.0，具体材料另有creditline者除外"
+    },
+    "P35": {
+      "title": "Olfactory Stimuli Increase Presence in Virtual Environments",
+      "authors": "Munyan et al.",
+      "year": 2016,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157568",
+      "doi": "10.1371/journal.pone.0157568",
+      "location": "Participants; Design and Procedure; Results",
+      "license": "CC BY"
+    },
+    "OVR": {
+      "title": "Omara FAQ and press kit",
+      "authors": "OVR Technology",
+      "year": 2026,
+      "url": "https://ovrtechnology.com/pages/faqs",
+      "press_kit": "https://ovrtechnology.com/pages/press-kit",
+      "location": "What stage of development; When does the Omara ship",
+      "license": "仅引用事实，不复制营销图",
+      "accessed": "2026-11-01"
+    }
+  },
+  "slides": [
+    {
+      "id": "O01",
+      "group": "00",
+      "role": "main",
+      "title": "让 VR 有气味",
+      "layout": "cover",
+      "seconds": 15,
+      "subtitle": "花香，从哪儿来？",
+      "body": "花香，从哪儿来？",
+      "image": "assets/flower-vr.jpg",
+      "script": "我们今天想带大家闻一朵花。花在VR里，鼻子却在教室里。这股花香，要怎么从虚拟世界来到我们面前？",
+      "source_ids": [
+        "P02"
+      ],
+      "source_locations": [
+        "P02 Demonstrations; Fig.5，真实VR闻花演示"
+      ],
+      "footer": "气味科学中的健康密码 · 小组汇报",
+      "byline": "气味、VR与虚拟感官 · 小组汇报"
+    },
+    {
+      "id": "O02",
+      "group": "00",
+      "role": "main",
+      "title": "伸手摘花，凑近闻一闻",
+      "layout": "photo",
+      "seconds": 40,
+      "image": "assets/flower-vr-sequence.jpg",
+      "caption": "2023年研究中的VR闻花演示",
+      "body": "画面跟着手走，气味也要跟上",
+      "script": "先看这个研究里的动作：伸手抓住花，把花移近鼻子，装置开始释香。我们平时闻花，这几个动作几乎连在一起；放进VR以后，却要把画面、手的位置和香味重新配合起来。接下来我们就跟着这朵花，看鼻子怎样认出气味，装置怎样把香味送过来。最后再问，多了这股香，究竟能帮上什么忙？",
+      "source_ids": [
+        "P02"
+      ],
+      "source_locations": [
+        "P02 Demonstrations; Fig.5; Supplementary Movie3"
+      ],
+      "footer": "Liu等，Nature Communications，2023，Fig.5／Movie3",
+      "elements": [
+        {
+          "type": "text",
+          "text": "抓起",
+          "x": 104,
+          "y": 510,
+          "w": 340,
+          "h": 45,
+          "size": 28,
+          "color": "#175F8B",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "凑近",
+          "x": 468,
+          "y": 510,
+          "w": 340,
+          "h": 45,
+          "size": 28,
+          "color": "#175F8B",
+          "bold": true
+        },
+        {
+          "type": "text",
+          "text": "移开",
+          "x": 832,
+          "y": 510,
+          "w": 340,
+          "h": 45,
+          "size": 28,
+          "color": "#175F8B",
+          "bold": true
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "group": "01",
+      "role": "main",
+      "title": "气味怎样变成感受",
+      "layout": "mechanism",
+      "seconds": 35,
+      "steps": [
+        {
+          "label": "气味分子",
+          "text": "从材料中挥发"
+        },
+        {
+          "label": "到达鼻腔",
+          "text": "随着空气进入"
+        },
+        {
+          "label": "受体响应",
+          "text": "产生一组信号"
+        },
+        {
+          "label": "感知气味",
+          "text": "大脑解释信号"
+        }
+      ],
+      "body": "鼻子得先收到气味分子",
+      "script": "闻花时，先是花里的挥发性分子进入空气，再随着呼吸到达鼻腔，触发嗅觉受体。大脑根据这些信号形成气味感受。所以，屏幕把花画得再逼真，我们的鼻子也还没有收到花香。我们今天讨论的这类虚拟嗅觉装置，做的就是补上这一步：在合适的时候，把真实的气味刺激送到鼻子附近。",
+      "source_ids": [
+        "P09",
+        "P02"
+      ],
+      "source_locations": [
+        "P09 Abstract; P02 Concepts and design"
+      ],
+      "footer": "嗅觉过程教学示意；Malnic等，Cell，1999；Liu等，2023"
+    },
+    {
+      "id": "S02",
+      "group": "01",
+      "role": "main",
+      "title": "一种气味，对应一组响应",
+      "layout": "receptors",
+      "seconds": 35,
+      "receptor_labels": [
+        "受体 A",
+        "受体 B",
+        "受体 C",
+        "受体 D"
+      ],
+      "odors": [
+        {
+          "label": "气味甲",
+          "active": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "气味乙",
+          "active": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "气味丙",
+          "active": [
+            0,
+            1
+          ]
+        }
+      ],
+      "body": "同一个受体，也可能响应不同气味分子",
+      "script": "气味的识别也比一个标签复杂。一个受体可以响应多种气味分子，一种分子也可以激活多种受体，气味依靠这样的组合来区分。图里只用几个格子帮大家理解关系，具体颜色没有对应实验强度。这意味着，给电脑写一个“玫瑰味”标签还很容易，想把那种感受稳定地做出来，就需要选择材料、控制强弱，还要考虑闻的人。",
+      "source_ids": [
+        "P09"
+      ],
+      "source_locations": [
+        "P09 Abstract，组合受体编码"
+      ],
+      "footer": "组合关系教学示意，非实验测量；Malnic等，Cell，1999",
+      "caption": "不同气味，可以共享部分受体"
+    },
+    {
+      "id": "S03",
+      "group": "01",
+      "role": "main",
+      "title": "预测气味，与做出气味",
+      "layout": "compare",
+      "seconds": 35,
+      "columns": [
+        {
+          "label": "模型预测",
+          "text": "分子结构\n气味描述"
+        },
+        {
+          "label": "装置呈现",
+          "text": "气味材料\n鼻端刺激"
+        }
+      ],
+      "body": "它们解决的是不同环节的问题",
+      "script": "现在也有模型根据分子结构预测气味描述，比如这项2023年的研究。它能帮助我们理解或寻找气味材料。可是在VR花园里，即使软件已经判断“这里应该有玫瑰味”，鼻子也还需要收到刺激。于是问题从“电脑知道是什么味”，走到“装置怎样让人闻到”。下面看这一步怎样实现。",
+      "source_ids": [
+        "P10",
+        "P02"
+      ],
+      "source_locations": [
+        "P10 Abstract; P02 Concepts and design"
+      ],
+      "footer": "Lee等，Science，2023；Liu等，Nature Communications，2023"
+    },
+    {
+      "id": "T01",
+      "group": "02",
+      "role": "main",
+      "title": "从场景指令到鼻端气味",
+      "layout": "process",
+      "seconds": 45,
+      "steps": [
+        {
+          "label": "靠近花朵",
+          "text": "读取位置与动作"
+        },
+        {
+          "label": "发出指令",
+          "text": "选定气味通道"
+        },
+        {
+          "label": "释放香味",
+          "text": "加热预存香料"
+        },
+        {
+          "label": "停止与退味",
+          "text": "关闭后散去余味"
+        }
+      ],
+      "body": "软件管时机，装置管释放",
+      "script": "把这套系统拆开，其实有一条很清楚的工作流程。VR知道手和花的位置，判断什么时候该有香味，再把指令交给气味装置。装置控制预存的气味材料，让气味释放到鼻子附近。花移开以后，还要停止释放、处理余味。不同研究会用加热、气流或阀门来控制。我们先看闻花演示用的加热方案。",
+      "source_ids": [
+        "P02",
+        "P05"
+      ],
+      "source_locations": [
+        "P02 Concepts and design; Demonstrations; P05 device design"
+      ],
+      "footer": "依据Liu等，2023；Niedenthal等，2023整理"
+    },
+    {
+      "id": "T02",
+      "group": "02",
+      "role": "main",
+      "title": "把小型发生器放在鼻子附近",
+      "layout": "photo",
+      "seconds": 55,
+      "image": "assets/wearable-device.jpg",
+      "caption": "香料存进小发生器，按指令加热释放",
+      "body": "香料储存在蜡中，加热促进释放",
+      "script": "这是香港城市大学等团队在2023年发表的装置。图里可以看到两种形态：一种贴在上唇附近，另一种装进面罩。气味材料预先放在发生器里，主要利用加热来促进释放。这里最值得看的，是装置离鼻子很近，而且每个发生器可以单独控制。它把香味留在随身的小装置里，就能配合虚拟场景，而不用把整个房间先熏出一个味道。",
+      "source_ids": [
+        "P02"
+      ],
+      "source_locations": [
+        "P02 Concepts and design; Fig.1b–e"
+      ],
+      "footer": "Liu等，Nature Communications，2023，Fig.1；CC BY 4.0"
+    },
+    {
+      "id": "T03",
+      "group": "02",
+      "role": "main",
+      "title": "香味也需要跟得上动作",
+      "layout": "timeline",
+      "seconds": 45,
+      "steps": [
+        {
+          "label": "靠近",
+          "text": "场景触发"
+        },
+        {
+          "label": "释香",
+          "text": "加热挥发"
+        },
+        {
+          "label": "移开",
+          "text": "停止加热"
+        },
+        {
+          "label": "退味",
+          "text": "冷却与散去"
+        }
+      ],
+      "body": "人闻到的时间，还取决于传播和察觉",
+      "script": "再把闻花动作放到时间线上。画面里花已经靠近，香味最好也及时到；花移开了，香味又要退下去。这里至少经过控制、材料释放、空气传播和人的察觉。器件升温快，只回答了其中一部分。设计整套体验时，要看从动作发生到人真正闻到的配合。图上画的是过程顺序，长度没有代表实验秒数。",
+      "source_ids": [
+        "P02",
+        "P03"
+      ],
+      "source_locations": [
+        "P02 electrical performance and Demonstrations; P03 latency definitions"
+      ],
+      "footer": "过程时序示意，无比例；Liu等，2023；Liu等，2024"
+    },
+    {
+      "id": "T04",
+      "group": "02",
+      "role": "main",
+      "title": "下一朵花，还带着上一股味？",
+      "layout": "photo",
+      "seconds": 45,
+      "columns": [
+        {
+          "label": "画面切换",
+          "text": "新场景可以立即显示"
+        },
+        {
+          "label": "气味切换",
+          "text": "材料和空气里仍有余味"
+        }
+      ],
+      "body": "控制释放，也要控制残留",
+      "script": "再看原研究的温度曲线：加热时上升，停止后逐渐回落。花已经移开，发生器还在冷却，空气里的气味分子也可能影响下一次闻香。刚闻完玫瑰，马上换到橙子，新旧气味就可能叠在一起。温度曲线告诉我们装置在怎样变化，鼻子附近还剩多少味，也需要另外测。更快释放、更利落地退味，是这类装置要继续解决的实际问题。",
+      "source_ids": [
+        "P02"
+      ],
+      "source_locations": [
+        "P02 Fig.5d原温度曲线；Demonstrations残留与频繁切味限制"
+      ],
+      "footer": "Liu等，Nature Communications，2023，Fig.5d；原图温度曲线，CC BY 4.0",
+      "image": "assets/temperature-response.jpg",
+      "caption": "加热时温度上升，停止后逐渐回落"
+    },
+    {
+      "id": "T05",
+      "group": "02",
+      "role": "main",
+      "title": "把香味戴在脸上，或拿在手里",
+      "layout": "compare",
+      "seconds": 35,
+      "columns": [
+        {
+          "label": "穿戴式",
+          "text": "发生器靠近鼻子",
+          "image": "assets/wearable-close.jpg"
+        },
+        {
+          "label": "手持式",
+          "text": "拿近物体，主动嗅闻",
+          "image": "assets/handheld-sniff.jpg"
+        }
+      ],
+      "body": "形式跟着交互任务走",
+      "script": "装置也可以换个位置。左边放在鼻子附近，右边则装在VR手柄上，让人像端起杯子一样主动凑近闻。手持方案通过气流和阀门控制气味，还能混合预存的几种材料。两种形式都在解决“什么时候、从哪里闻到”的问题。接下来就看，这个手柄实际被用来做什么。",
+      "source_ids": [
+        "P02",
+        "P05"
+      ],
+      "source_locations": [
+        "P02 Fig.1d; P05 Figs.1,5; device design"
+      ],
+      "footer": "Liu等，2023；Niedenthal等，IJHCS，2023"
+    },
+    {
+      "id": "A01",
+      "group": "03",
+      "role": "main",
+      "title": "在虚拟酒窖里练习辨香",
+      "layout": "photo",
+      "seconds": 40,
+      "image": "assets/wine-cellar-task.jpg",
+      "caption": "拿起酒杯，闻香，再选择气味成分",
+      "body": "一项真实应用：交互式气味辨认练习",
+      "script": "这是研究者做的虚拟酒窖游戏。玩家拿起酒杯、闻香，再判断里面有什么气味，之后逐步挑战更复杂的混合物。12名参与者完成了探索性测试，研究检查装置能否稳定输出、玩家能否使用它。它给我们一个很具体的应用：把气味辨认做成可以操作、可以反馈的练习。要接触这一类技术，可以从这样的研究原型、开放设计或开发演示找入口。",
+      "source_ids": [
+        "P05"
+      ],
+      "source_locations": [
+        "P05 Fig.5; User study; Discussion，N12"
+      ],
+      "footer": "Niedenthal等，IJHCS，2023，Fig.5；探索性用户测试N=12"
+    },
+    {
+      "id": "A02",
+      "group": "03",
+      "role": "main",
+      "title": "加一股香，能让人更放松吗？",
+      "layout": "experiment",
+      "seconds": 55,
+      "conditions": [
+        {
+          "label": "VR",
+          "text": "34人"
+        },
+        {
+          "label": "VR＋香味",
+          "text": "36人"
+        },
+        {
+          "label": "VR＋触觉",
+          "text": "33人"
+        },
+        {
+          "label": "VR＋香味＋触觉",
+          "text": "33人"
+        }
+      ],
+      "body": "136名健康参与者，随机分到四组",
+      "script": "从练习走到健康应用，我们问一个大家更熟悉的问题：在虚拟自然环境里放松，再加一点香味，会更有效吗？这项2016年的随机对照研究用了同一套放松程序，把136名参与者分成四组，分别体验VR、加香、加触觉，以及两者都加。这是投影式VR房间，香味来自薰衣草扩香。这样比较，可以把“做完以后更放松”和“多加了香味带来的改善”分开看。",
+      "source_ids": [
+        "P15"
+      ],
+      "source_locations": [
+        "P15 Methods §2.4–2.7; Fig.3; Table1，N34/36/33/33"
+      ],
+      "footer": "Serrano等，Computers in Human Behavior，2016；投影式VR，健康样本",
+      "table": {
+        "headers": [
+          "气味条件",
+          "无触觉",
+          "有触觉"
+        ],
+        "rows": [
+          [
+            "无香",
+            "34人",
+            "33人"
+          ],
+          [
+            "有香",
+            "36人",
+            "33人"
+          ]
+        ]
+      },
+      "caption": "136人随机分组，同一套VR放松程序"
+    },
+    {
+      "id": "A03",
+      "group": "03",
+      "role": "main",
+      "title": "四组的平均放松评分都上升了",
+      "layout": "results",
+      "seconds": 55,
+      "chart": {
+        "type": "bar",
+        "categories": [
+          "VR",
+          "加香",
+          "加触觉",
+          "两者都加"
+        ],
+        "series": [
+          {
+            "name": "体验前",
+            "values": [
+              6.06,
+              6.17,
+              6.76,
+              6.7
+            ],
+            "color": "#A7BBC8"
+          },
+          {
+            "name": "体验后",
+            "values": [
+              7.78,
+              8.14,
+              8.33,
+              7.88
+            ],
+            "color": "#175F8B"
+          }
+        ],
+        "yTitle": "放松评分（0–10）",
+        "yMin": 0,
+        "yMax": 10
+      },
+      "takeaways": [
+        "整体前后评分提高",
+        "研究未检出加香的额外改善"
+      ],
+      "script": "横轴是四组，浅色是体验前，蓝色是体验后，纵轴是零到十分的放松评分。每组平均分都往上走，整个程序前后也有显著变化。可研究没有检出加香对放松或在场感的额外改善。如果只拿加香组体验前后比，就很容易把整套程序的效果，都算给那股香。对我们来说，这个实验最好用的地方，就是提醒我们：问“有没有用”的时候，还要问“比什么更有用”。",
+      "source_ids": [
+        "P15"
+      ],
+      "source_locations": [
+        "P15 Table1 relaxation VAS均值；Results；整体前后F(1,132)=90.31,p<.001；原文未给组间确切F/p"
+      ],
+      "footer": "Serrano等，2016，Table1／Results；图示均值，SD与检验见备课"
+    },
+    {
+      "id": "A04",
+      "group": "03",
+      "role": "main",
+      "title": "加香，得帮上一件具体的事",
+      "layout": "evidence",
+      "seconds": 40,
+      "table": {
+        "headers": [
+          "想解决的事",
+          "先看什么结果"
+        ],
+        "rows": [
+          [
+            "练习辨认气味",
+            "能否稳定呈现、给出反馈"
+          ],
+          [
+            "营造放松体验",
+            "比同样的VR多改善多少"
+          ],
+          [
+            "用于患者康复",
+            "症状、随访与合适的对照"
+          ]
+        ]
+      },
+      "takeaways": [
+        "使用方式，跟着具体目标选"
+      ],
+      "script": "所以，实际意义要跟任务放在一起看。想练习辨香，装置就得稳定呈现，还能让人作答、得到反馈。想帮助放松，就要和同样的VR程序比较。走到患者康复，还要看症状和随访。虚拟嗅觉最值得期待的，是把特定气味安排进合适的练习或场景。接下来需要研究清楚的，是它在哪一步帮上忙，以及这份收益值不值得设备和使用成本。",
+      "source_ids": [
+        "P05",
+        "P15",
+        "P03"
+      ],
+      "source_locations": [
+        "P05 User study; P15 Results; P03 Olfactory training demonstration；后两列为本组据研究设计归纳的判断问题"
+      ],
+      "footer": "依据P05／P15／P03归纳；判断问题为本组分析"
+    },
+    {
+      "id": "C01",
+      "group": "00",
+      "role": "main",
+      "title": "这股香，多帮了多少？",
+      "layout": "judgment",
+      "seconds": 45,
+      "question": "某款加香VR：用户体验后更放松",
+      "alternatives": [
+        {
+          "label": "只比较体验前后",
+          "text": "整套体验有没有变化"
+        },
+        {
+          "label": "再加一组同样VR",
+          "text": "这股香多带来多少变化"
+        }
+      ],
+      "body": "同样的问题，也能用来读产品宣传",
+      "script": "现在回头看一句宣传：用户体验这款加香VR以后，更放松了。大家第一反应会想问什么？我们刚才已经有办法了：找一组同样的VR，只把香味这一项换掉，再看结果。接着看它测的是主观感受、任务表现，还是患者症状。至于能不能马上用，还得查支持哪些内容、设备怎样获得、耗材怎样更换。拿到这些答案，我们再决定值不值得用。",
+      "source_ids": [
+        "P15",
+        "OVR"
+      ],
+      "source_locations": [
+        "本页宣传语为本组自拟练习，不指向实际公司；判断方法依据P15对照设计；产品获取问题依据OVR FAQ"
+      ],
+      "footer": "宣传语为自拟例子；对照思路依据Serrano等，2016"
+    },
+    {
+      "id": "C02",
+      "group": "00",
+      "role": "main",
+      "title": "回到那朵花",
+      "layout": "closing",
+      "seconds": 40,
+      "lines": [
+        "花在画面里",
+        "香味在装置里",
+        "多了这股香，帮上了什么忙？"
+      ],
+      "body": "从一次辨香练习，到一项有对照的应用",
+      "image": "assets/flower-vr.jpg",
+      "script": "回到开头那朵花。花是画面，花香来自装置里的真实材料；场景、装置和鼻子一起，才完成这次闻花。我们已经可以把气味做进一些虚拟体验，像酒窖里的辨香练习。往后它能走多远，要看释放与退味能否更好控制，内容是否值得用，以及研究能否找到明确的收益。以后再看到“能闻到的VR”，希望大家会自然地多问一句：多了这股香，帮上了什么忙？谢谢大家。",
+      "source_ids": [
+        "P02",
+        "P05",
+        "P15"
+      ],
+      "source_locations": [
+        "全场归纳，证据对应P02/P05/P15"
+      ],
+      "footer": "欢迎提问"
+    },
+    {
+      "id": "B01",
+      "group": "00",
+      "role": "backup",
+      "title": "气味能让人记得更多吗？",
+      "layout": "evidence",
+      "seconds": 0,
+      "table": {
+        "headers": [
+          "研究设置",
+          "实际观察"
+        ],
+        "rows": [
+          [
+            "90人，三组各30人",
+            "花园／橙子场景配不同气味"
+          ],
+          [
+            "约两周后回忆",
+            "未见对应的回忆描述数优势"
+          ],
+          [
+            "测量方式",
+            "描述条目数，未区分描述准确性"
+          ]
+        ]
+      },
+      "takeaways": [
+        "回答这次任务，保留对其他任务的检验"
+      ],
+      "script": "备课：P14使用三个气味组与花园、橙子场景，约两周后回忆。这里的记忆代理是可说出的描述条目数，不能覆盖所有记忆能力。原文部分即时条件有差异，愉悦度结果也不一致。更正仅修正第三作者姓名为Cagdas Guducu，没有改实验结果。",
+      "source_ids": [
+        "P14"
+      ],
+      "source_locations": [
+        "P14 Methods; Results; correction10.1177/20416695211028757"
+      ],
+      "footer": "Sabiniewicz等，i-Perception，2021；更正已核"
+    },
+    {
+      "id": "B02",
+      "group": "00",
+      "role": "backup",
+      "title": "在场感与治疗结果怎么区分",
+      "layout": "evidence",
+      "seconds": 0,
+      "table": {
+        "headers": [
+          "PLOS ONE 2016",
+          "研究范围"
+        ],
+        "rows": [
+          [
+            "最终分析60名年轻成人",
+            "招募122，存在较多排除"
+          ],
+          [
+            "气味条件与在场感相关",
+            "两轮、四种加／撤香序列"
+          ],
+          [
+            "焦虑与皮电",
+            "未见气味条件效应"
+          ]
+        ]
+      },
+      "takeaways": [
+        "在场感是体验指标，疗效还需患者试验"
+      ],
+      "script": "备课：Munyan等2016研究在轻度焦虑虚拟环境中考察气味。在场感量表存在条件和轮次的显著关系，状态焦虑与皮电没有对应条件效应。健康年轻样本、排除比例与顺序效应都影响解释。它提供体验层证据，没有直接检验患者治疗增益。",
+      "source_ids": [
+        "P35"
+      ],
+      "source_locations": [
+        "P35 Participants; Design and Procedure; Results"
+      ],
+      "footer": "Munyan等，PLOS ONE，2016，doi:10.1371/journal.pone.0157568"
+    },
+    {
+      "id": "B03",
+      "group": "00",
+      "role": "backup",
+      "title": "产品和临床前景，分别查什么",
+      "layout": "evidence",
+      "seconds": 0,
+      "table": {
+        "headers": [
+          "线索",
+          "核查重点"
+        ],
+        "rows": [
+          [
+            "OVR Omara",
+            "FAQ写DFM、目标2026年第四季度发货"
+          ],
+          [
+            "可穿戴训练演示",
+            "志愿者测试与一位患者案例分开"
+          ],
+          [
+            "普通同学怎样接触",
+            "研究原型、公开设计或开发演示；先核获取条件"
+          ]
+        ]
+      },
+      "takeaways": [
+        "产品状态查询：2026-11-01"
+      ],
+      "script": "备课：OVR FAQ的制造和发货计划属于厂家当时的公开说明，未验证实际交付或国内现货。P03包括志愿者与单名患者训练演示，器件响应不等于鼻端端到端感知时间。若问哪里能体验，先给真实研究／开发路线，不杜撰上海体验店或支持普通头显即插即用。",
+      "source_ids": [
+        "OVR",
+        "P03",
+        "P05"
+      ],
+      "source_locations": [
+        "OVR What stage of development / When does the Omara ship; P03 Olfactory training demonstration; P05 design availability"
+      ],
+      "footer": "OVR官方FAQ，2026-11-01；Liu等，2024；Niedenthal等，2023"
+    },
+    {
+      "id": "R01",
+      "group": "00",
+      "role": "backup",
+      "title": "主要来源：原理与装置",
+      "layout": "references",
+      "seconds": 0,
+      "entries": [
+        {
+          "label": "P09",
+          "text": "Malnic等，1999，Cell：组合受体编码",
+          "url": "https://doi.org/10.1016/S0092-8674(00)80581-4"
+        },
+        {
+          "label": "P10",
+          "text": "Lee等，2023，Science：分子到气味描述预测",
+          "url": "https://doi.org/10.1126/science.ade4401"
+        },
+        {
+          "label": "P02",
+          "text": "Liu等，2023，Nature Communications：可穿戴嗅觉界面",
+          "url": "https://doi.org/10.1038/s41467-023-37678-4"
+        },
+        {
+          "label": "P05",
+          "text": "Niedenthal等，2023，IJHCS：手持嗅觉显示与酒窖游戏",
+          "url": "https://doi.org/10.1016/j.ijhcs.2022.102928"
+        }
+      ],
+      "script": "供追溯，不逐条朗读。完整来源与原文定位见来源手册。",
+      "source_ids": [
+        "P09",
+        "P10",
+        "P02",
+        "P05"
+      ],
+      "footer": "完整题录、图源和原文定位见仓库来源手册"
+    },
+    {
+      "id": "R02",
+      "group": "00",
+      "role": "backup",
+      "title": "主要来源：应用与效果",
+      "layout": "references",
+      "seconds": 0,
+      "entries": [
+        {
+          "label": "P15",
+          "text": "Serrano等，2016，CHB：VR、香味与触觉的随机对照研究",
+          "url": "https://doi.org/10.1016/j.chb.2015.08.007"
+        },
+        {
+          "label": "P14",
+          "text": "Sabiniewicz等，2021，i-Perception：场景愉悦度与记忆",
+          "url": "https://doi.org/10.1177/2041669521989731"
+        },
+        {
+          "label": "P35",
+          "text": "Munyan等，2016，PLOS ONE：在场感、状态焦虑与皮电",
+          "url": "https://doi.org/10.1371/journal.pone.0157568"
+        },
+        {
+          "label": "P03",
+          "text": "Liu等，2024，Nature Communications：穿戴界面与训练演示",
+          "url": "https://doi.org/10.1038/s41467-024-48884-z"
+        }
+      ],
+      "script": "供追溯，不逐条朗读。OVR产品状态另按2026-11-01官方FAQ核对。",
+      "source_ids": [
+        "P15",
+        "P14",
+        "P35",
+        "P03",
+        "OVR"
+      ],
+      "footer": "产品状态：OVR官方FAQ（2026-11-01）"
+    },
+    {
+      "id": "TEAM",
+      "group": "00",
+      "role": "contributions",
+      "title": "小组分工",
+      "layout": "contributions",
+      "seconds": 0,
+      "table": {
+        "headers": [
+          "组别",
+          "成员",
+          "当前职责／贡献记录"
+        ],
+        "rows": [
+          [
+            "总体整合",
+            "陈云海",
+            "主线、合稿与协调；具体完成项待核对"
+          ],
+          [
+            "科学原理",
+            "朱轶宸（组长）",
+            "组织核改；具体完成项待记录"
+          ],
+          [
+            "科学原理",
+            "刘昌镇",
+            "具体完成项待记录"
+          ],
+          [
+            "科学原理",
+            "潘力熔",
+            "具体完成项待记录"
+          ],
+          [
+            "技术设备",
+            "蔡天怿（组长）",
+            "组织核改；具体完成项待记录"
+          ],
+          [
+            "技术设备",
+            "娄嘉恒",
+            "具体完成项待记录"
+          ],
+          [
+            "技术设备",
+            "王叶",
+            "具体完成项待记录"
+          ],
+          [
+            "多感官与应用",
+            "陈柔羽（组长）",
+            "组织核改；具体完成项待记录"
+          ],
+          [
+            "多感官与应用",
+            "杨绎麟",
+            "具体完成项待记录"
+          ],
+          [
+            "多感官与应用",
+            "邓沐熙",
+            "具体完成项待记录"
+          ],
+          [
+            "多感官与应用",
+            "隋沅辰",
+            "具体完成项待记录"
+          ]
+        ]
+      },
+      "script": "首稿阶段按已确认名单列角色。每位成员至少完成一项实际工作，最终提交前逐人填写，发言人由组内安排并满足全组四人。AI辅助调研与首稿制作，原始来源需由成员复核。",
+      "source_ids": [],
+      "footer": "2026-10-29确认名单；提交前逐人填实贡献"
+    }
+  ]
+}
