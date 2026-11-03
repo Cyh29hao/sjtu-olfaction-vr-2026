@@ -182,6 +182,39 @@ async function render(d,n) {
       text(s,d.caption || '组合编码教学示意，圆点不表示实测强度',104,602,1092,47,28,C.muted);
       break;
     }
+    case 'requirements': {
+      const items=d.items || [];
+      if(items.length!==3)throw new Error(`${d.id}: requirements needs three concrete items`);
+      items.forEach((item,i)=>{
+        const x=104+i*380;
+        text(s,item.label,x,245,320,70,40,C.blue,true);
+        line(s,x,340,300,C.green,5);
+        text(s,item.text,x,385,320,150,31,C.ink);
+      });
+      if(d.caption)text(s,d.caption,104,600,1092,47,28,C.ink);
+      break;
+    }
+    case 'device': {
+      await picture(s,d.image,104,180,520,405,'contain');
+      (d.items || []).forEach((item,i)=>{
+        const y=200+i*126;
+        text(s,item.label,690,y,500,48,34,C.blue,true);
+        text(s,item.text,690,y+53,500,62,28,C.ink);
+      });
+      if(d.caption)text(s,d.caption,104,602,1092,43,25,C.muted);
+      break;
+    }
+    case 'response': {
+      text(s,'发生器温度随时间变化（原图）',104,173,730,42,26,C.blue);
+      await picture(s,d.image,104,240,720,290,'contain');
+      (d.items || []).forEach((item,i)=>{
+        const y=235+i*175;
+        text(s,item.label,875,y,320,52,31,C.blue,true);
+        text(s,item.text,875,y+62,320,100,28,C.ink);
+      });
+      if(d.caption)text(s,d.caption,104,600,1092,48,25,C.ink);
+      break;
+    }
     case 'compare': {
       const cols=d.columns || [];
       for(let i=0;i<cols.length;i++) {
@@ -221,7 +254,7 @@ async function render(d,n) {
         barOptions:{direction:c.direction || 'column',grouping:'clustered',gapWidth:95},
         dataLabels:{showValue:true,position:'outEnd',textStyle:{fontSize:23,fill:C.ink}},
         chartFill:C.white,plotAreaFill:C.white,
-        xAxis:{textStyle:{typeface:FONT,fontSize:23},majorGridlines:{fill:'none',width:0}},
+        xAxis:{textStyle:{typeface:FONT,fontSize:c.category_font_size || 23},majorGridlines:{fill:'none',width:0}},
         yAxis:{min:c.yMin ?? 0,max:c.yMax,numberFormatCode:c.format || '0.0',textStyle:{fontSize:20},majorGridlines:{fill:C.line,width:1}},
       });
       applyPresentationChartFont(chart,{fontFamily:FONT});

@@ -1,7 +1,7 @@
 {
-  "version": "v1",
+  "version": "v2",
   "title": "让 VR 有气味",
-  "subtitle": "气味、VR与虚拟感官",
+  "subtitle": "怎样让鼻子也参与虚拟体验",
   "template": "诗意校园·2022蓝绿青春",
   "speaker_count": 4,
   "presentation_seconds": 720,
@@ -81,167 +81,122 @@
       "location": "Participants; Design and Procedure; Results",
       "license": "CC BY"
     },
-    "OVR": {
-      "title": "Omara FAQ and press kit",
-      "authors": "OVR Technology",
-      "year": 2026,
-      "url": "https://ovrtechnology.com/pages/faqs",
-      "press_kit": "https://ovrtechnology.com/pages/press-kit",
-      "location": "What stage of development; When does the Omara ship",
-      "license": "仅引用事实，不复制营销图",
-      "accessed": "2026-11-01"
+    "SU01": {
+      "title": "Smelling in VR environment possible with new gaming technology",
+      "authors": "Stockholm University, Communications Office",
+      "year": 2022,
+      "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
+      "location": "Code and blueprints openly available; Find more information; checked 2026-11-03",
+      "license": "只转述公开资源入口；不复制新闻图片或宣传性疗效表述"
     }
   },
+  "course": "气味科学中的健康密码",
+  "group_handoffs": {
+    "00": "开场从一次真实闻花演示提出问题；收束回到实现、用途与判断方法。四位讲者共用同一问题顺序。",
+    "01": "接住画面里的花为什么还闻不到；解释分子、受体组合和选材料、调释放的关系，把怎样按动作供香交给技术组。",
+    "02": "接住真实材料如何配合动作；讲一套装置的储香、加热、触发与散味。结束时把能控制一次嗅闻转成适合什么任务。",
+    "03": "先用酒窖说明可操作的辨香练习，再明确换到放松时比较目标变了；用对照设计和结果回答加香多帮了多少。"
+  },
+  "compression_notes": [
+    "主讲保留闻花、装置完整流程、放松研究的对照与结果；AI预测和装置形态比较已移备课。",
+    "时间紧时，缩短S02组合示意的举例和A04的前景讨论，保留每次换人前后的交接。",
+    "无需器材或视频即可讲完；讲图时留出指认对象、读坐标和停顿时间。"
+  ],
   "slides": [
     {
       "id": "T01",
       "group": "02",
       "role": "main",
-      "title": "从场景指令到鼻端气味",
-      "layout": "process",
+      "title": "把香料和加热元件放在鼻子附近",
+      "layout": "device",
       "seconds": 45,
-      "steps": [
-        {
-          "label": "靠近花朵",
-          "text": "读取位置与动作"
-        },
-        {
-          "label": "发出指令",
-          "text": "选定气味通道"
-        },
-        {
-          "label": "释放香味",
-          "text": "加热预存香料"
-        },
-        {
-          "label": "停止与退味",
-          "text": "关闭后散去余味"
-        }
-      ],
-      "body": "软件管时机，装置管释放",
-      "script": "把这套系统拆开，其实有一条很清楚的工作流程。VR知道手和花的位置，判断什么时候该有香味，再把指令交给气味装置。装置控制预存的气味材料，让气味释放到鼻子附近。花移开以后，还要停止释放、处理余味。不同研究会用加热、气流或阀门来控制。我们先看闻花演示用的加热方案。",
+      "script": "这是刚才那项研究的近鼻装置。左边是贴在上唇附近的版本，闻花演示用的是同系列的面罩版本。每个小发生器里预装含香材料，收到电信号后，加热元件让气味更容易释放出来。发生器离鼻子很近，使用者就能闻到。这套设计把香料和控制部件做进随身装置，再由无线指令调节。我们接着把它接回刚才的闻花动作。",
       "source_ids": [
-        "P02",
-        "P05"
+        "P02"
       ],
       "source_locations": [
-        "P02 Concepts and design; Demonstrations; P05 device design"
+        "P02 Fig.1d–e；Concepts and design principle；Methods/Operation"
       ],
-      "footer": "依据Liu等，2023；Niedenthal等，2023整理"
+      "footer": "Liu等，Nature Communications，2023，Fig.1d–e；照片裁剪，CC BY 4.0",
+      "image": "assets/wearable-close.jpg",
+      "items": [
+        {
+          "label": "含香材料（石蜡载体）",
+          "text": "预先存入发生器"
+        },
+        {
+          "label": "加热元件",
+          "text": "收到指令后促进释放"
+        },
+        {
+          "label": "温度调节",
+          "text": "控制加热和冷却过程"
+        }
+      ],
+      "caption": "图为上唇型实物；闻花演示使用同系列面罩型"
     },
     {
       "id": "T02",
       "group": "02",
       "role": "main",
-      "title": "把小型发生器放在鼻子附近",
-      "layout": "photo",
-      "seconds": 55,
-      "image": "assets/wearable-device.jpg",
-      "caption": "香料存进小发生器，按指令加热释放",
-      "body": "香料储存在蜡中，加热促进释放",
-      "script": "这是香港城市大学等团队在2023年发表的装置。图里可以看到两种形态：一种贴在上唇附近，另一种装进面罩。气味材料预先放在发生器里，主要利用加热来促进释放。这里最值得看的，是装置离鼻子很近，而且每个发生器可以单独控制。它把香味留在随身的小装置里，就能配合虚拟场景，而不用把整个房间先熏出一个味道。",
+      "title": "花靠近鼻子，程序就发出释香指令",
+      "layout": "process",
+      "seconds": 50,
+      "script": "沿着图从左往右看。VR系统先记录手和花的位置；花靠近鼻子，场景发出释香指令；发生器开始加热预存材料，气味进入鼻子附近的空气，再被人闻到。这样，眼睛看见的靠近动作和鼻子收到的刺激就能对应起来。程序控制的是这一串动作，而不是隔着屏幕把花香传过来。装置已经能完成这次演示，接下来还要让连续的嗅闻用起来更顺。",
       "source_ids": [
         "P02"
       ],
       "source_locations": [
-        "P02 Concepts and design; Fig.1b–e"
+        "P02 Demonstrations; Fig.5b–d; Supplementary Movie3"
       ],
-      "footer": "Liu等，Nature Communications，2023，Fig.1；CC BY 4.0"
+      "footer": "依据Liu等，2023闻花演示绘制；流程图为教学示意",
+      "steps": [
+        {
+          "label": "记录位置",
+          "text": "追踪手和虚拟花"
+        },
+        {
+          "label": "判断靠近",
+          "text": "场景触发释香"
+        },
+        {
+          "label": "控制发生器",
+          "text": "加热预装材料"
+        },
+        {
+          "label": "闻到气味",
+          "text": "分子到达鼻子"
+        }
+      ],
+      "caption": "一次闻花，由画面、动作和真实释香共同完成"
     },
     {
       "id": "T03",
       "group": "02",
       "role": "main",
-      "title": "香味也需要跟得上动作",
-      "layout": "timeline",
-      "seconds": 45,
-      "steps": [
-        {
-          "label": "靠近",
-          "text": "场景触发"
-        },
-        {
-          "label": "释香",
-          "text": "加热挥发"
-        },
-        {
-          "label": "移开",
-          "text": "停止加热"
-        },
-        {
-          "label": "退味",
-          "text": "冷却与散去"
-        }
-      ],
-      "body": "人闻到的时间，还取决于传播和察觉",
-      "script": "再把闻花动作放到时间线上。画面里花已经靠近，香味最好也及时到；花移开了，香味又要退下去。这里至少经过控制、材料释放、空气传播和人的察觉。器件升温快，只回答了其中一部分。设计整套体验时，要看从动作发生到人真正闻到的配合。图上画的是过程顺序，长度没有代表实验秒数。",
-      "source_ids": [
-        "P02",
-        "P03"
-      ],
-      "source_locations": [
-        "P02 electrical performance and Demonstrations; P03 latency definitions"
-      ],
-      "footer": "过程时序示意，无比例；Liu等，2023；Liu等，2024"
-    },
-    {
-      "id": "T04",
-      "group": "02",
-      "role": "main",
-      "title": "下一朵花，还带着上一股味？",
-      "layout": "photo",
-      "seconds": 45,
-      "columns": [
-        {
-          "label": "画面切换",
-          "text": "新场景可以立即显示"
-        },
-        {
-          "label": "气味切换",
-          "text": "材料和空气里仍有余味"
-        }
-      ],
-      "body": "控制释放，也要控制残留",
-      "script": "再看原研究的温度曲线：加热时上升，停止后逐渐回落。花已经移开，发生器还在冷却，空气里的气味分子也可能影响下一次闻香。刚闻完玫瑰，马上换到橙子，新旧气味就可能叠在一起。温度曲线告诉我们装置在怎样变化，鼻子附近还剩多少味，也需要另外测。更快释放、更利落地退味，是这类装置要继续解决的实际问题。",
+      "title": "花移开以后，余味还要散去",
+      "layout": "response",
+      "seconds": 65,
+      "script": "这张原图把刚才的动作和发生器温度联系起来。先认坐标：横向是时间，纵向是温度；加热时曲线上升，停止以后再逐渐回落。它说明发生器的状态有一个变化过程。空气里的气味分子也还需要散去，所以花从画面里移开，不会把鼻子附近的味道一起清空。连续闻不同气味时，就要同时照顾释放、气流、距离和残留。把这些配合好，装置才更适合反复嗅闻。下一项研究就把“拿近、闻一下、再判断”做成了一个具体任务。",
       "source_ids": [
         "P02"
       ],
       "source_locations": [
-        "P02 Fig.5d原温度曲线；Demonstrations残留与频繁切味限制"
+        "P02 Fig.5d原温度曲线；Electrical performance；Demonstrations末段的残留与频繁切味限制"
       ],
-      "footer": "Liu等，Nature Communications，2023，Fig.5d；原图温度曲线，CC BY 4.0",
+      "footer": "Liu等，2023，Fig.5d，CC BY 4.0；温度曲线保持原图性质",
       "image": "assets/temperature-response.jpg",
-      "caption": "加热时温度上升，停止后逐渐回落"
-    },
-    {
-      "id": "T05",
-      "group": "02",
-      "role": "main",
-      "title": "把香味戴在脸上，或拿在手里",
-      "layout": "compare",
-      "seconds": 35,
-      "columns": [
+      "items": [
         {
-          "label": "穿戴式",
-          "text": "发生器靠近鼻子",
-          "image": "assets/wearable-close.jpg"
+          "label": "控制信号",
+          "text": "可以停止加热"
         },
         {
-          "label": "手持式",
-          "text": "拿近物体，主动嗅闻",
-          "image": "assets/handheld-sniff.jpg"
+          "label": "材料与空气",
+          "text": "冷却、散味需要过程"
         }
       ],
-      "body": "形式跟着交互任务走",
-      "script": "装置也可以换个位置。左边放在鼻子附近，右边则装在VR手柄上，让人像端起杯子一样主动凑近闻。手持方案通过气流和阀门控制气味，还能混合预存的几种材料。两种形式都在解决“什么时候、从哪里闻到”的问题。接下来就看，这个手柄实际被用来做什么。",
-      "source_ids": [
-        "P02",
-        "P05"
-      ],
-      "source_locations": [
-        "P02 Fig.1d; P05 Figs.1,5; device design"
-      ],
-      "footer": "Liu等，2023；Niedenthal等，IJHCS，2023"
+      "caption": "原图测的是发生器温度；散味还取决于材料、气流和距离"
     }
   ]
 }

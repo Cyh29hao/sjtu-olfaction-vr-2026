@@ -1,7 +1,7 @@
 {
-  "version": "v1",
+  "version": "v2",
   "title": "让 VR 有气味",
-  "subtitle": "气味、VR与虚拟感官",
+  "subtitle": "怎样让鼻子也参与虚拟体验",
   "template": "诗意校园·2022蓝绿青春",
   "speaker_count": 4,
   "presentation_seconds": 720,
@@ -81,66 +81,82 @@
       "location": "Participants; Design and Procedure; Results",
       "license": "CC BY"
     },
-    "OVR": {
-      "title": "Omara FAQ and press kit",
-      "authors": "OVR Technology",
-      "year": 2026,
-      "url": "https://ovrtechnology.com/pages/faqs",
-      "press_kit": "https://ovrtechnology.com/pages/press-kit",
-      "location": "What stage of development; When does the Omara ship",
-      "license": "仅引用事实，不复制营销图",
-      "accessed": "2026-11-01"
+    "SU01": {
+      "title": "Smelling in VR environment possible with new gaming technology",
+      "authors": "Stockholm University, Communications Office",
+      "year": 2022,
+      "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
+      "location": "Code and blueprints openly available; Find more information; checked 2026-11-03",
+      "license": "只转述公开资源入口；不复制新闻图片或宣传性疗效表述"
     }
   },
+  "course": "气味科学中的健康密码",
+  "group_handoffs": {
+    "00": "开场从一次真实闻花演示提出问题；收束回到实现、用途与判断方法。四位讲者共用同一问题顺序。",
+    "01": "接住画面里的花为什么还闻不到；解释分子、受体组合和选材料、调释放的关系，把怎样按动作供香交给技术组。",
+    "02": "接住真实材料如何配合动作；讲一套装置的储香、加热、触发与散味。结束时把能控制一次嗅闻转成适合什么任务。",
+    "03": "先用酒窖说明可操作的辨香练习，再明确换到放松时比较目标变了；用对照设计和结果回答加香多帮了多少。"
+  },
+  "compression_notes": [
+    "主讲保留闻花、装置完整流程、放松研究的对照与结果；AI预测和装置形态比较已移备课。",
+    "时间紧时，缩短S02组合示意的举例和A04的前景讨论，保留每次换人前后的交接。",
+    "无需器材或视频即可讲完；讲图时留出指认对象、读坐标和停顿时间。"
+  ],
   "slides": [
     {
       "id": "S01",
       "group": "01",
       "role": "main",
-      "title": "气味怎样变成感受",
+      "title": "鼻子收到的是气味分子",
       "layout": "mechanism",
-      "seconds": 35,
-      "steps": [
-        {
-          "label": "气味分子",
-          "text": "从材料中挥发"
-        },
-        {
-          "label": "到达鼻腔",
-          "text": "随着空气进入"
-        },
-        {
-          "label": "受体响应",
-          "text": "产生一组信号"
-        },
-        {
-          "label": "感知气味",
-          "text": "大脑解释信号"
-        }
-      ],
-      "body": "鼻子得先收到气味分子",
-      "script": "闻花时，先是花里的挥发性分子进入空气，再随着呼吸到达鼻腔，触发嗅觉受体。大脑根据这些信号形成气味感受。所以，屏幕把花画得再逼真，我们的鼻子也还没有收到花香。我们今天讨论的这类虚拟嗅觉装置，做的就是补上这一步：在合适的时候，把真实的气味刺激送到鼻子附近。",
+      "seconds": 40,
+      "script": "日常闻花时，花里的挥发性分子进入空气，随着吸气来到鼻腔，触发嗅觉受体，再由神经信号参与形成气味感受。放到VR里，头显只把花的样子送给眼睛，鼻子这一段还需要装置来补上。所以今天讲的虚拟嗅觉，基本做法很直接：在虚拟场景需要的时候，把真实气味送到鼻子附近。下一步是，装置该准备什么样的气味。",
       "source_ids": [
         "P09",
         "P02"
       ],
       "source_locations": [
-        "P09 Abstract; P02 Concepts and design"
+        "P09 Abstract：受体组合响应；P02 Concepts and design principle"
       ],
-      "footer": "嗅觉过程教学示意；Malnic等，Cell，1999；Liu等，2023"
+      "footer": "机制为教学示意；依据Malnic等，Cell，1999；Liu等，2023",
+      "steps": [
+        {
+          "label": "气味分子",
+          "text": "随吸气进入鼻腔"
+        },
+        {
+          "label": "嗅觉受体",
+          "text": "把刺激转成神经信号"
+        },
+        {
+          "label": "大脑",
+          "text": "形成气味感受"
+        }
+      ],
+      "caption": "给画面配香，要把真实刺激送到鼻子"
     },
     {
       "id": "S02",
       "group": "01",
       "role": "main",
-      "title": "一种气味，对应一组响应",
+      "title": "一种气味，会引起一组受体响应",
       "layout": "receptors",
-      "seconds": 35,
+      "seconds": 45,
+      "script": "看这张简化图，每一列代表一种受体，每一行代表一种气味。一个受体可以对多种气味分子有响应，一种分子也可以引起多个受体响应；大脑利用这类组合来区分气味。于是，给软件写上“玫瑰味”还不够，装置需要选出能让人产生相应感受的材料。几种香料混在一起会闻成什么，也要通过实际嗅闻来检验。我们的闻花任务可以先从几种已经选好的材料做起。",
+      "source_ids": [
+        "P09",
+        "P02",
+        "P05"
+      ],
+      "source_locations": [
+        "P09 Abstract，combinatorial receptor code；P02预装含香材料；P05调配预存材料"
+      ],
+      "footer": "Malnic等，Cell，1999；组合图为教学示意",
       "receptor_labels": [
-        "受体 A",
-        "受体 B",
-        "受体 C",
-        "受体 D"
+        "受体A",
+        "受体B",
+        "受体C",
+        "受体D"
       ],
       "odors": [
         {
@@ -154,56 +170,51 @@
           "label": "气味乙",
           "active": [
             1,
-            2,
-            3
+            2
           ]
         },
         {
           "label": "气味丙",
           "active": [
             0,
-            1
+            1,
+            3
           ]
         }
       ],
-      "body": "同一个受体，也可能响应不同气味分子",
-      "script": "气味的识别也比一个标签复杂。一个受体可以响应多种气味分子，一种分子也可以激活多种受体，气味依靠这样的组合来区分。图里只用几个格子帮大家理解关系，具体颜色没有对应实验强度。这意味着，给电脑写一个“玫瑰味”标签还很容易，想把那种感受稳定地做出来，就需要选择材料、控制强弱，还要考虑闻的人。",
-      "source_ids": [
-        "P09"
-      ],
-      "source_locations": [
-        "P09 Abstract，组合受体编码"
-      ],
-      "footer": "组合关系教学示意，非实验测量；Malnic等，Cell，1999",
-      "caption": "不同气味，可以共享部分受体"
+      "caption": "组合关系示意；圆点不表示实测强度"
     },
     {
       "id": "S03",
       "group": "01",
       "role": "main",
-      "title": "预测气味，与做出气味",
-      "layout": "compare",
-      "seconds": 35,
-      "columns": [
-        {
-          "label": "模型预测",
-          "text": "分子结构\n气味描述"
-        },
-        {
-          "label": "装置呈现",
-          "text": "气味材料\n鼻端刺激"
-        }
-      ],
-      "body": "它们解决的是不同环节的问题",
-      "script": "现在也有模型根据分子结构预测气味描述，比如这项2023年的研究。它能帮助我们理解或寻找气味材料。可是在VR花园里，即使软件已经判断“这里应该有玫瑰味”，鼻子也还需要收到刺激。于是问题从“电脑知道是什么味”，走到“装置怎样让人闻到”。下面看这一步怎样实现。",
+      "title": "先选花香，再让它配合动作",
+      "layout": "requirements",
+      "seconds": 50,
+      "script": "所以，做这次闻花体验，至少要把材料和释放方式配合起来。首先预装合适的花香材料；然后调节释放，让气味的强弱适合这次体验；还要让它跟得上动作，靠近时出现，移开以后逐渐退去。这里的“数字化”，主要体现在程序怎样控制真实材料。这样一来，问题就落到具体装置上了：香料放在哪里，电脑的指令又怎样变成一次释香？",
       "source_ids": [
-        "P10",
-        "P02"
+        "P02",
+        "P05"
       ],
       "source_locations": [
-        "P10 Abstract; P02 Concepts and design"
+        "P02 Concepts and design principle; Demonstrations；P05 display design"
       ],
-      "footer": "Lee等，Science，2023；Liu等，Nature Communications，2023"
+      "footer": "依据P02 / P05归纳的实现要求；图示为本组解释",
+      "items": [
+        {
+          "label": "选材料",
+          "text": "这朵花配什么气味"
+        },
+        {
+          "label": "调释放",
+          "text": "让刺激强弱合适"
+        },
+        {
+          "label": "配动作",
+          "text": "靠近时闻到\n移开后退味"
+        }
+      ],
+      "caption": "材料提供气味，程序安排它怎样出现"
     }
   ]
 }

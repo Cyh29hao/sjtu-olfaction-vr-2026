@@ -1,7 +1,7 @@
 {
-  "version": "v1",
+  "version": "v2",
   "title": "让 VR 有气味",
-  "subtitle": "气味、VR与虚拟感官",
+  "subtitle": "怎样让鼻子也参与虚拟体验",
   "template": "诗意校园·2022蓝绿青春",
   "speaker_count": 4,
   "presentation_seconds": 720,
@@ -81,106 +81,106 @@
       "location": "Participants; Design and Procedure; Results",
       "license": "CC BY"
     },
-    "OVR": {
-      "title": "Omara FAQ and press kit",
-      "authors": "OVR Technology",
-      "year": 2026,
-      "url": "https://ovrtechnology.com/pages/faqs",
-      "press_kit": "https://ovrtechnology.com/pages/press-kit",
-      "location": "What stage of development; When does the Omara ship",
-      "license": "仅引用事实，不复制营销图",
-      "accessed": "2026-11-01"
+    "SU01": {
+      "title": "Smelling in VR environment possible with new gaming technology",
+      "authors": "Stockholm University, Communications Office",
+      "year": 2022,
+      "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
+      "location": "Code and blueprints openly available; Find more information; checked 2026-11-03",
+      "license": "只转述公开资源入口；不复制新闻图片或宣传性疗效表述"
     }
   },
+  "course": "气味科学中的健康密码",
+  "group_handoffs": {
+    "00": "开场从一次真实闻花演示提出问题；收束回到实现、用途与判断方法。四位讲者共用同一问题顺序。",
+    "01": "接住画面里的花为什么还闻不到；解释分子、受体组合和选材料、调释放的关系，把怎样按动作供香交给技术组。",
+    "02": "接住真实材料如何配合动作；讲一套装置的储香、加热、触发与散味。结束时把能控制一次嗅闻转成适合什么任务。",
+    "03": "先用酒窖说明可操作的辨香练习，再明确换到放松时比较目标变了；用对照设计和结果回答加香多帮了多少。"
+  },
+  "compression_notes": [
+    "主讲保留闻花、装置完整流程、放松研究的对照与结果；AI预测和装置形态比较已移备课。",
+    "时间紧时，缩短S02组合示意的举例和A04的前景讨论，保留每次换人前后的交接。",
+    "无需器材或视频即可讲完；讲图时留出指认对象、读坐标和停顿时间。"
+  ],
   "slides": [
     {
       "id": "A01",
       "group": "03",
       "role": "main",
-      "title": "在虚拟酒窖里练习辨香",
+      "title": "在虚拟酒窖里，把闻香变成一道题",
       "layout": "photo",
-      "seconds": 40,
-      "image": "assets/wine-cellar-task.jpg",
-      "caption": "拿起酒杯，闻香，再选择气味成分",
-      "body": "一项真实应用：交互式气味辨认练习",
-      "script": "这是研究者做的虚拟酒窖游戏。玩家拿起酒杯、闻香，再判断里面有什么气味，之后逐步挑战更复杂的混合物。12名参与者完成了探索性测试，研究检查装置能否稳定输出、玩家能否使用它。它给我们一个很具体的应用：把气味辨认做成可以操作、可以反馈的练习。要接触这一类技术，可以从这样的研究原型、开放设计或开发演示找入口。",
+      "seconds": 50,
+      "script": "这次把花换成一杯虚拟葡萄酒，是因为辨香本身就是一个可以练习的任务。研究者把装置接在VR手柄上，用气流和阀门控制预装气味。玩家端起杯子，凑近闻，再选择自己闻到的成分，游戏给出反馈，并逐步增加混合气味的难度。12名参与者完成了探索性测试。这里已经实现的是一套可操作的辨香练习：气味提供题目，虚拟场景组织动作和反馈。要知道练习能让辨香能力提高多少，还需要专门比较学习结果。",
       "source_ids": [
         "P05"
       ],
       "source_locations": [
-        "P05 Fig.5; User study; Discussion，N12"
+        "P05 Fig.5；Device design；User study，N12；Discussion"
       ],
-      "footer": "Niedenthal等，IJHCS，2023，Fig.5；探索性用户测试N=12"
+      "footer": "Niedenthal等，IJHCS，2023，Fig.5；探索性测试N=12，CC BY 4.0",
+      "image": "assets/wine-cellar-task.jpg",
+      "caption": "拿起酒杯 → 主动闻香 → 选择气味成分 → 得到反馈"
     },
     {
       "id": "A02",
       "group": "03",
       "role": "main",
-      "title": "加一股香，能让人更放松吗？",
+      "title": "如果目标换成放松，加香会多帮多少？",
       "layout": "experiment",
       "seconds": 55,
-      "conditions": [
-        {
-          "label": "VR",
-          "text": "34人"
-        },
-        {
-          "label": "VR＋香味",
-          "text": "36人"
-        },
-        {
-          "label": "VR＋触觉",
-          "text": "33人"
-        },
-        {
-          "label": "VR＋香味＋触觉",
-          "text": "33人"
-        }
-      ],
-      "body": "136名健康参与者，随机分到四组",
-      "script": "从练习走到健康应用，我们问一个大家更熟悉的问题：在虚拟自然环境里放松，再加一点香味，会更有效吗？这项2016年的随机对照研究用了同一套放松程序，把136名参与者分成四组，分别体验VR、加香、加触觉，以及两者都加。这是投影式VR房间，香味来自薰衣草扩香。这样比较，可以把“做完以后更放松”和“多加了香味带来的改善”分开看。",
+      "script": "酒窖里，闻香就是题目本身；如果换成放松，气味是额外加进体验的一项，比较目标也就变了。这项研究把136名健康成人随机分成四组，来到投影式VR房间，跟着同样的画面、音乐和引导语活动。研究者另外设置薰衣草香味和人造草触觉：参与者看虚拟草地时，有的组还会触摸真实的人造草。两项刺激各设有、无，就得到表里的四组。横向看触觉，纵向看香味；四组都在体验前后评估放松程度。",
       "source_ids": [
         "P15"
       ],
       "source_locations": [
-        "P15 Methods §2.4–2.7; Fig.3; Table1，N34/36/33/33"
+        "P15 Methods §2.2、§2.4–2.7；Fig.3；Table1，组别人数34/36/33/33",
+        "P15 §2.5人造草/薰衣草；§2.7触摸草地及视听引导程序"
       ],
-      "footer": "Serrano等，Computers in Human Behavior，2016；投影式VR，健康样本",
+      "footer": "Serrano等，Computers in Human Behavior，2016；投影式VR、薰衣草扩香、健康样本",
+      "caption": "投影画面、音乐与引导相同；香味和触觉各设有／无",
       "table": {
         "headers": [
           "气味条件",
-          "无触觉",
-          "有触觉"
+          "无人造草触觉",
+          "有人造草触觉"
         ],
         "rows": [
           [
-            "无香",
+            "无薰衣草香",
             "34人",
             "33人"
           ],
           [
-            "有香",
+            "有薰衣草香",
             "36人",
             "33人"
           ]
-        ]
-      },
-      "caption": "136人随机分组，同一套VR放松程序"
+        ],
+        "fontSize": 29
+      }
     },
     {
       "id": "A03",
       "group": "03",
       "role": "main",
-      "title": "四组的平均放松评分都上升了",
+      "title": "放松评分：四种条件的比较",
       "layout": "results",
-      "seconds": 55,
+      "seconds": 50,
+      "script": "纵轴是零到十分的放松评分，浅色是体验前，蓝色是体验后。四组的平均分都提高了，作者也报告整体前后变化达到统计显著。想看香味多帮了多少，就保持触觉条件相同：左边两组放在一起看，右边两组放在一起看。作者的组间分析没有检出显著差异，因此这次研究没有看到加香的额外优势。整套程序之后更放松，是实际观察到的结果；香味有没有再多带来帮助，则是另一个需要比较的问题。",
+      "source_ids": [
+        "P15"
+      ],
+      "source_locations": [
+        "P15 Table1 relaxation VAS均值；Results；整体前后F(1,132)=90.31,p<.001；原文未给组间确切F/p"
+      ],
+      "footer": "Serrano等，2016，Table1 / Results；图示均值，SD与检验记录见来源手册",
       "chart": {
         "type": "bar",
         "categories": [
-          "VR",
-          "加香",
-          "加触觉",
-          "两者都加"
+          "无触觉\n无香",
+          "无触觉\n加香",
+          "有触觉\n无香",
+          "有触觉\n加香"
         ],
         "series": [
           {
@@ -206,61 +206,60 @@
         ],
         "yTitle": "放松评分（0–10）",
         "yMin": 0,
-        "yMax": 10
+        "yMax": 10,
+        "category_font_size": 21
       },
       "takeaways": [
-        "整体前后评分提高",
-        "研究未检出加香的额外改善"
-      ],
-      "script": "横轴是四组，浅色是体验前，蓝色是体验后，纵轴是零到十分的放松评分。每组平均分都往上走，整个程序前后也有显著变化。可研究没有检出加香对放松或在场感的额外改善。如果只拿加香组体验前后比，就很容易把整套程序的效果，都算给那股香。对我们来说，这个实验最好用的地方，就是提醒我们：问“有没有用”的时候，还要问“比什么更有用”。",
-      "source_ids": [
-        "P15"
-      ],
-      "source_locations": [
-        "P15 Table1 relaxation VAS均值；Results；整体前后F(1,132)=90.31,p<.001；原文未给组间确切F/p"
-      ],
-      "footer": "Serrano等，2016，Table1／Results；图示均值，SD与检验见备课"
+        "四组体验后\n平均评分更高",
+        "组间差异\n未达统计显著"
+      ]
     },
     {
       "id": "A04",
       "group": "03",
       "role": "main",
-      "title": "加香，得帮上一件具体的事",
+      "title": "用途不同，要看的结果也不同",
       "layout": "evidence",
-      "seconds": 40,
+      "seconds": 45,
+      "script": "把两个任务放在一起看，虚拟嗅觉的用途就具体了。辨香练习需要能反复呈现、作答和反馈，接下来可以检验学到的能力；放松体验则要找出哪种气味、强度和场景搭配更有帮助。想尝试这一类技术，可以关注配有嗅觉装置的研究或开发演示。酒窖研究团队也公开了装置图纸和游戏代码，具备硬件条件时可以据此探索。今后的进展，既包括把释香和退味做得更好，也包括找到真正值得加入气味的任务。",
+      "source_ids": [
+        "P02",
+        "P05",
+        "P15",
+        "SU01"
+      ],
+      "source_locations": [
+        "P02工程限制；P05 User study与开放资料；P15 Results；SU01 Code and blueprints openly available；用途比较为本组归纳"
+      ],
+      "footer": "任务比较为本组归纳；P02 / P05 / P15；开放资料入口见来源手册",
       "table": {
         "headers": [
-          "想解决的事",
-          "先看什么结果"
+          "用途",
+          "气味承担什么作用",
+          "下一步看什么"
         ],
+        "widths": [
+          1,
+          2.2,
+          2.2
+        ],
+        "fontSize": 27,
         "rows": [
           [
-            "练习辨认气味",
-            "能否稳定呈现、给出反馈"
+            "辨香练习",
+            "提供要辨认的对象",
+            "练习能否改善真实辨香"
           ],
           [
-            "营造放松体验",
-            "比同样的VR多改善多少"
-          ],
-          [
-            "用于患者康复",
-            "症状、随访与合适的对照"
+            "放松体验",
+            "参与营造整体场景",
+            "哪些条件下有额外收益"
           ]
         ]
       },
       "takeaways": [
-        "使用方式，跟着具体目标选"
-      ],
-      "script": "所以，实际意义要跟任务放在一起看。想练习辨香，装置就得稳定呈现，还能让人作答、得到反馈。想帮助放松，就要和同样的VR程序比较。走到患者康复，还要看症状和随访。虚拟嗅觉最值得期待的，是把特定气味安排进合适的练习或场景。接下来需要研究清楚的，是它在哪一步帮上忙，以及这份收益值不值得设备和使用成本。",
-      "source_ids": [
-        "P05",
-        "P15",
-        "P03"
-      ],
-      "source_locations": [
-        "P05 User study; P15 Results; P03 Olfactory training demonstration；后两列为本组据研究设计归纳的判断问题"
-      ],
-      "footer": "依据P05／P15／P03归纳；判断问题为本组分析"
+        "想尝试：关注有嗅觉装置的演示，或参考研究团队开放设计"
+      ]
     }
   ]
 }
