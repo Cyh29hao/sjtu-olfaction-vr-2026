@@ -1,0 +1,123 @@
+{
+  "checked_date": "2026-11-03",
+  "reviewer_type": "AI原文查阅，组员人工复核待办",
+  "claims": [
+    {
+      "id": "V3-SCI-01",
+      "topic": "简化嗅觉路径",
+      "wording": "分子随气流到鼻腔上部，与嗅觉神经元上的受体相互作用；信号经嗅球等脑区处理，形成气味感知。",
+      "sources": ["https://www.nidcd.nih.gov/health/smell-disorders", "https://www.cuimc.columbia.edu/news/richard-axel-wins-2004-nobel-prize"],
+      "locations": ["How does your sense of smell work?", "Paragraph beginning The sense of smell is possible"],
+      "read": "官方科普正文与研究者所在大学介绍正文",
+      "limits": "用于简化主嗅觉通路，不把受体蛋白等同神经元；嗅球本身是脑的一部分。诺奖官网正文访问403。",
+      "drawing": "气味源／鼻腔上部受体和神经元／嗅球／脑内处理；标注简化示意"
+    },
+    {
+      "id": "V3-SCI-02",
+      "topic": "组合编码",
+      "wording": "一种受体可以响应多种气味分子，一种分子也可能激活多类受体；不同分子形成不同响应组合。浓度变化也可能改变组合。",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/10089886/", "https://doi.org/10.1016/S0092-8674(00)80581-4"],
+      "locations": ["Malnic et al. 1999, Abstract"],
+      "read": "原始摘要与题录，本轮未声称全文阅读",
+      "sample": "小鼠嗅觉受体神经元；钙成像与单细胞RT-PCR",
+      "limits": "示意响应格不是人闻玫瑰实测，不推出少数基香复现所有气味；不要引用早期啮齿类约1000个受体数字当人类当前数量。"
+    },
+    {
+      "id": "V3-ENG-01",
+      "topic": "P02主要工程案例",
+      "wording": "预装含香材料的面罩发生器由电脑控制加热；动作跟踪与虚拟花的位置变化触发相应的气味释放。",
+      "sources": ["https://www.nature.com/articles/s41467-023-37678-4"],
+      "locations": ["Concepts and design principle", "Demonstrations of the olfaction systems", "Fig.1; Fig.5b–d; Supplementary Movie3"],
+      "read": "复用并重读开放全文相关正文及已核原图",
+      "limits": "面罩9路是发生器数量，不能称任意气味复制；工程演示不是学习／健康收益对照。"
+    },
+    {
+      "id": "V3-ENG-02",
+      "topic": "P02切味难点",
+      "wording": "停止加热、器件降温与空气中气味消退各有过程；长残留限制频繁切味。",
+      "sources": ["https://www.nature.com/articles/s41467-023-37678-4"],
+      "locations": ["Electrical performance of OGs", "Odors generation performance", "Demonstrations末段改进方向"],
+      "read": "开放全文相关正文",
+      "limits": "1.44秒对应特定器件温度响应，不能当作所有用户鼻端察觉或退味时间。"
+    },
+    {
+      "id": "V3-APP-01",
+      "topic": "P05任务",
+      "wording": "12名参与者在虚拟酒窖拿起杯、按扳机释香，从4个候选答案中选一个，把杯移进相应的答案圆圈；答对变绿、答错变红。",
+      "sources": ["https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf"],
+      "locations": ["PDF pp.5–6: Participants, Virtual wine cellar, Procedure; Fig.5"],
+      "read": "原文方法与结果重读",
+      "n": 12,
+      "denominator": "4会话×4难度×8题=每人128试次；每难度每会话8题",
+      "levels": ["单味", "两味等比", "三味有主味50/25/25", "三味等比"],
+      "answer_unit": "单味题选名称，混合题从候选成分组合中选一个，并非逐项多选；混合题候选涉及成分和主味，见p.8 Process of elimination。",
+      "scoring": "研究统计答对题数／正确率；正文只说正确答案累积积分，未明示游戏内部固定每题+1等权重。",
+      "limits": "配方比例不是鼻端浓度实测；四选一辨识不同于患者康复疗效；不补造原文没有逐项列出的候选菜单。"
+    },
+    {
+      "id": "V3-APP-02",
+      "topic": "P05主讲结果图",
+      "wording": "单味等级1表现高于混合等级；三味等比等级4最低；两味与有主味三味之间未检出显著差异。",
+      "sources": ["https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf"],
+      "locations": ["PDF pp.7–9; Fig.6d; Game performance; Within-subjects stability"],
+      "figure": "assets/P05-Fig6-original.png",
+      "main_crop": "assets/wine-performance.png",
+      "n": 12,
+      "unit": "每人在某难度四会话平均得分，折合每会话8题，满分8；点为参与者、误差线SD。",
+      "unit_basis": "Results称四会话合并均分；图注称overall mean score、SD；任务程序给出每级每会话8题。未另附逐点数表。",
+      "statistics_backup": "Greenhouse–Geisser corrected repeated measures ANOVA F(1.76,19.4)=38.8,p<.001,generalized eta squared=.54",
+      "limits": "不从柱高估精确均值；结果不是严格单调下降，也不是训练前后疗效。"
+    },
+    {
+      "id": "V3-APP-03",
+      "topic": "P05重测稳定性备课",
+      "wording": "同一香气组重复两会话，跨参与者总分相关为第1/2会话r=.77、第3/4会话r=.72。",
+      "sources": ["https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf"],
+      "locations": ["Fig.6c; PDF pp.7–8 Game performance"],
+      "n": 12,
+      "denominator": "每会话跨4难度32题总分，12人配对；第1/2会话同红酒香气组，第3/4会话同白酒香气组",
+      "statistics_backup": "两项在原图均标**，对应p<.01；不擅自添加原文未明确的检验种类或校正说明。",
+      "limits": "相关是人与人排序的稳定性，不能读成每人能力提高77%或72%。"
+    },
+    {
+      "id": "V3-APP-04",
+      "topic": "P05行为观察备课",
+      "wording": "12人中4人自发晃动虚拟杯，模仿现实品酒。",
+      "sources": ["https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf"],
+      "locations": ["PDF p.8 Gameplay heuristics / Playing with wine; Fig.7a"],
+      "n": 12,
+      "observed_count": 4,
+      "limits": "是研究者记录的行为，未通过对照证明晃杯提升识别率或沉浸。"
+    },
+    {
+      "id": "V3-HEALTH-01",
+      "topic": "P15四组短对照",
+      "wording": "136名非临床成人随机参加四种放松条件，四组前后都更放松；额外加香／触觉的组间优势未检出。",
+      "sources": ["https://doi.org/10.1016/j.chb.2015.08.007", "https://repositori.uji.es/bitstreams/cb77edc0-dd07-406d-a9e4-7f69082cb44a/download?download=1"],
+      "locations": ["Author manuscript pp.5–11, Methods2.1–2.7, Results3; Fig.3; Table1"],
+      "read": "复用已核作者稿并重新检查Results和对照口径",
+      "n": 136,
+      "conditions": ["视听投影VR n34", "再加薰衣草 n36", "再加人造草触觉 n33", "两者都加 n33"],
+      "statistics_backup": "overall pre/post relaxation F(1,132)=90.31,p<.001；组间放松比较没有印出精确F/p，不补造。",
+      "limits": "没有无VR组，整体变化不能独立归因VR；不是临床患者疗效；未显著不等于证明等效或所有加香无用。"
+    },
+    {
+      "id": "V3-ACCESS-01",
+      "topic": "A-Frame浏览器入口",
+      "wording": "官方Hello World在普通笔记本浏览器可显示三维场景并用键盘移动，能用来了解虚拟场景。",
+      "sources": ["https://aframe.io/aframe/examples/boilerplate/hello-world/", "https://aframe.io/docs/1.8.0/introduction/"],
+      "read": "官方文档；隔离原生Edge实际渲染、截图查看及局部CDP键盘输入测试",
+      "tested": "AFRAME1.8.0,canvas/wasd/look就绪；摄像机位置随W键改变",
+      "limits": "手机、头显、教室网络未实测；没有气味输出。普通HTTP抓取403不能推断原生浏览器失败。"
+    },
+    {
+      "id": "V3-ACCESS-02",
+      "topic": "SU/OSF开放资料",
+      "wording": "研究团队提供公开制作和使用资源；本轮读到了公开目录，并取得有效使用手册。",
+      "sources": ["https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology", "https://osf.io/zagxk/", "https://api.osf.io/v2/nodes/zagxk/files/osfstorage/", "https://files.osf.io/v1/resources/zagxk/providers/osfstorage/5f4ce9c93461bf00a0beba20"],
+      "read": "SU正文、OSF公开API目录、OFM4_user_manual_4.6.pdf前3页",
+      "tested": "OSF项目public=true，目录列出使用/制作PDF、STL、镜像；使用手册1,762,853字节、有效6页PDF已下载",
+      "limits": "OSF主网页403、YouTube抓取失败；尚未运行程序／制作硬件／验证消费者购买；PDF原件许可未单独确认，私人缓存不再分发。"
+    }
+  ]
+}

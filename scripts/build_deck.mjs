@@ -104,7 +104,11 @@ function base(d,n) {
   if (d.role === 'backup') s.hidden=true;
   if (d.layout !== 'cover') {
     // Reuse the template master/layout; custom content does not change the shared master.
-    text(s,d.title,104,38,1092,90,44,C.blue,true,'headline');
+    if(source.version === 'v3') {
+      const chapter = d.role === 'backup' ? '备课与来源' : d.role === 'contributions' ? '小组协作' : ({'01':'01  嗅觉感知的科学基础','02':'02  虚拟嗅觉的技术实现','03':'03  应用场景与实验结果'}[d.group] || (d.id.startsWith('C')?'04  体验途径与效果判断':'气味、VR与虚拟感官'));
+      text(s,chapter,104,16,1092,25,16,C.muted,false,'chapter-location');
+      text(s,d.title,104,51,1092,77,43,C.blue,true,'headline');
+    } else text(s,d.title,104,38,1092,90,44,C.blue,true,'headline');
     text(s,d.footer || (d.source_ids || []).map(x=>`[${x}]`).join('  '),104,660,1060,33,16,C.muted,false,'source-footer');
     text(s,String(n).padStart(2,'0'),1185,673,45,25,15,C.muted,false,'page-number');
   }
@@ -145,6 +149,106 @@ async function render(d,n) {
       text(s,d.title || source.title,70,198,520,230,64,C.white,true,'cover-title');
       text(s,d.subtitle || source.subtitle || '',70,462,500,110,30,C.white);
       text(s,d.byline || '气味、VR与虚拟感官',70,620,520,40,23,C.white);
+      if(source.version==='v3')text(s,'研究演示帧：Liu等，2023，Movie3 · CC BY 4.0',687,666,560,36,13,C.white);
+      break;
+    }
+    case 'agenda': {
+      (d.sections || []).forEach((section,i)=>{
+        const y=177+i*104;
+        text(s,String(i+1).padStart(2,'0'),104,y,95,65,42,C.green,true);
+        text(s,section.title,224,y+1,625,55,35,C.blue,true);
+        text(s,section.text,835,y+10,360,52,25,C.muted);
+        if(i<3)line(s,224,y+74,971,C.line,1.5);
+      });
+      break;
+    }
+    case 'olfaction': {
+      // Editable conceptual diagram; positions are not anatomical coordinates.
+      const circles=[[148,256,22],[205,298,16],[260,238,19],[301,316,24],[178,361,18]];
+      circles.forEach(([x,y,r],i)=>s.shapes.add({geometry:'ellipse',position:{left:x,top:y,width:r*2,height:r*2},fill:i%2?C.green:C.blue,line:{fill:'none',width:0}}));
+      text(s,'气味分子',104,173,270,60,35,C.blue,true);
+      text(s,'随吸气到达嗅觉区域',104,475,300,85,27,C.ink);
+      arrow(s,391,320,45);
+      rect(s,488,267,250,16,'#BED4DE');
+      [510,583,656].forEach((x,i)=>{
+        rect(s,x,235,14,64,i===1?C.green:C.blue);
+        s.shapes.add({geometry:'ellipse',position:{left:x-12,top:312,width:40,height:40},fill:C.pale,line:{fill:C.blue,width:2}});
+        rect(s,x+6,352,3,70,C.blue);
+      });
+      text(s,'受体与感受神经元',463,173,335,60,33,C.blue,true);
+      text(s,'化学刺激转成神经信号',466,475,330,85,27,C.ink);
+      arrow(s,803,320,45);
+      s.shapes.add({geometry:'ellipse',position:{left:903,top:249,width:237,height:89},fill:C.pale,line:{fill:C.blue,width:2}});
+      text(s,'嗅球',965,273,120,50,33,C.blue,true);
+      s.shapes.add({geometry:'downArrow',position:{left:1003,top:353,width:30,height:44},fill:C.blue,line:{fill:'none',width:0}});
+      text(s,'后续脑区',921,410,245,60,33,C.blue,true);
+      text(s,'处理信号，形成感受',884,492,310,70,27,C.ink);
+      text(s,d.caption || '',104,602,1092,43,28,C.ink);
+      break;
+    }
+    case 'device-detail': {
+      await picture(s,d.image,104,186,480,376,'contain');
+      text(s,'面罩与气味发生器',104,575,500,48,28,C.blue,true);
+      await picture(s,d.detail_image,620,178,250,273,'contain');
+      text(s,'单个发生器',620,479,250,50,27,C.blue,true);
+      (d.items || []).forEach((item,i)=>{
+        const y=190+i*122;
+        text(s,item.label,914,y,280,45,30,C.blue,true);
+        text(s,item.text,914,y+49,280,70,25,C.ink);
+      });
+      if(d.caption)text(s,d.caption,104,623,1092,31,22,C.muted);
+      break;
+    }
+    case 'scent-interaction': case 'task-sequence': {
+      await picture(s,d.image,104,171,1092,256,'contain');
+      const steps=d.steps || [],gap=50,width=(1092-gap*(steps.length-1))/steps.length;
+      steps.forEach((step,i)=>{
+        const x=104+i*(width+gap);
+        text(s,String(i+1).padStart(2,'0'),x,453,55,38,24,C.green,true);
+        text(s,step.label,x,497,width,52,29,C.blue,true);
+        text(s,step.text || '',x,553,width,66,24,C.ink);
+        if(i<steps.length-1)arrow(s,x+width+8,505,32);
+      });
+      break;
+    }
+    case 'odor-cycle': {
+      const xs=[330,633,936];
+      (d.rows || []).forEach((row,r)=>{
+        const y=211+r*188;
+        text(s,row.label,104,y+15,200,75,31,C.blue,true);
+        row.states.forEach((state,i)=>{
+          rect(s,xs[i],y,246,101,r?C.pale:'#F1F7E8');
+          text(s,state,xs[i]+17,y+29,215,63,29,C.ink,true);
+          if(i<2)arrow(s,xs[i]+261,y+40,25);
+        });
+      });
+      text(s,'场景停止后，气味仍可能留在鼻子附近',330,344,850,50,29,C.blue);
+      text(s,d.caption || '',104,605,1092,45,28,C.ink);
+      break;
+    }
+    case 'study-result': {
+      text(s,'任务等级与混合设定',104,175,560,48,30,C.blue,true);
+      (d.levels || []).forEach((level,i)=>{
+        const y=248+i*83;
+        text(s,level.label,104,y,375,49,30,C.ink,true);
+        text(s,level.text,104,y+43,400,40,24,C.muted);
+      });
+      await picture(s,d.image,683,166,492,446,'contain');
+      text(s,'每级平均得分（满分8）',690,606,505,36,25,C.blue);
+      if(d.caption)text(s,d.caption,104,634,1092,27,19,C.muted);
+      break;
+    }
+    case 'resources': {
+      (d.resources || []).forEach((resource,i)=>{
+        const x=104+i*575;
+        text(s,resource.label,x,180,520,62,33,C.blue,true);
+      });
+      for(let i=0;i<(d.resources || []).length;i++) {
+        const resource=d.resources[i],x=104+i*575;
+        await picture(s,resource.qr,x,269,218,218,'contain');
+        text(s,resource.text,x+243,310,290,140,28,C.ink);
+      }
+      if(d.caption)text(s,d.caption,104,572,1092,71,29,C.ink);
       break;
     }
     case 'photo': {

@@ -1,0 +1,64 @@
+{
+  "checked_date": "2026-11-03",
+  "scope": "只读访问、现有原生浏览器隔离测试、公开手册阅读；未运行研究团队程序或操作实际桌面",
+  "entries": [
+    {
+      "name": "A-Frame官方Hello World",
+      "url": "https://aframe.io/aframe/examples/boilerplate/hello-world/",
+      "web_fetch": "网页入口可定位；普通urllib返回403",
+      "native_browser": "成功",
+      "tested_version": "A-Frame1.8.0",
+      "actual_check": "隔离原生Edge加载、canvas渲染截图已看；CDP仅向该无头页发送W键",
+      "camera_before": [0,1.6,0],
+      "camera_after": [0,1.6,-8.352621455341632],
+      "keyboard_move_passed": true,
+      "phone_or_headset_tested": false,
+      "smell_output": false,
+      "use": "笔记本观看／操作三维场景，理解虚拟场景部分；不是完整虚拟嗅觉体验"
+    },
+    {
+      "name": "Stockholm University研究介绍",
+      "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
+      "actual_check": "已打开全文，Code and blueprints openly available及页尾手册/代码/制作/视频链接已定位",
+      "use": "可读的研究介绍与入口目录，未来用途是研究者期望而非已经证实的临床结果"
+    },
+    {
+      "name": "OSF Olfactometer公开项目",
+      "url": "https://osf.io/zagxk/",
+      "main_page_result": "HTTP403",
+      "api_url": "https://api.osf.io/v2/nodes/zagxk/",
+      "api_result": "HTTP200，title=Olfactometer，public=true",
+      "directory_url": "https://api.osf.io/v2/nodes/zagxk/files/osfstorage/",
+      "directory_result": "HTTP200，可读真实公开文件列表",
+      "file_examples": [
+        {"name":"OFM4_user_manual_4.6.pdf","bytes":1762853,"download_tested":true},
+        {"name":"OFM4_building_instruction_4.6.1.pdf","bytes":16004797,"download_tested":false},
+        {"name":"nosewise_ofm_stl_4.6.1.zip","bytes":20194931,"download_tested":false},
+        {"name":"nosewise_ofm_4.5.0.img.zip","bytes":1085832958,"download_tested":false}
+      ],
+      "manual_download_url": "https://files.osf.io/v1/resources/zagxk/providers/osfstorage/5f4ce9c93461bf00a0beba20",
+      "manual_download_result": "HTTP200；虽然Content-Type为application/octet-stream，内容以%PDF开头，PyMuPDF成功解析为6页",
+      "reading": "手册前3页：4路香气、洁净/含香气流调节、风扇、Pi控制、外接供电与气味盒等",
+      "program_run": false,
+      "hardware_built": false,
+      "consumer_purchase_verified": false,
+      "use": "可查具体复现条件的资料入口；镜像约1.09GB，本轮按任务需要只读取小型手册"
+    },
+    {
+      "name": "论文给出的酒窖游戏视频",
+      "url": "https://www.youtube.com/watch?v=G8ye5Npn3JU",
+      "source_location": "P05 PDF第6页脚注2；SU页尾",
+      "actual_check": "链接来源已核，抓取失败",
+      "playback_verified": false,
+      "use": "备用外链，课堂讲述以本地已核原图为基础"
+    },
+    {
+      "name": "诺奖2004官方资料",
+      "urls": ["https://www.nobelprize.org/prizes/medicine/2004/press-release/","https://www.nobelprize.org/prizes/medicine/2004/buck/facts/","https://www.nobelprize.org/uploads/2018/06/axel-lecture.pdf"],
+      "actual_check": "本轮主入口HTTP403",
+      "fulltext_read": false,
+      "alternative_used": ["NIH/NIDCD官方嗅觉科普","Malnic1999原始摘要","Columbia大学研究介绍"],
+      "use": "保留来源线索，不声称已通读官方原文或复制其图"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
-  "version": "v2",
-  "title": "让 VR 有气味",
-  "subtitle": "怎样让鼻子也参与虚拟体验",
+  "version": "v3",
+  "title": "气味、VR与虚拟感官",
+  "subtitle": "虚拟嗅觉怎样实现，又适合用在哪里",
   "template": "诗意校园·2022蓝绿青春",
   "speaker_count": 4,
   "presentation_seconds": 720,
@@ -22,7 +22,7 @@
       "url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
       "fulltext": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
       "doi": "10.1016/j.ijhcs.2022.102928",
-      "location": "Fig. 5; User study; Discussion",
+      "location": "Display design; user study; Figs.5–6; Discussion; supplementary OSF resources",
       "license": "CC BY 4.0"
     },
     "P09": {
@@ -88,92 +88,147 @@
       "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
       "location": "Code and blueprints openly available; Find more information; checked 2026-11-03",
       "license": "只转述公开资源入口；不复制新闻图片或宣传性疗效表述"
+    },
+    "AF01": {
+      "title": "A-Frame: Introduction and Hello World",
+      "authors": "A-Frame project",
+      "year": 2026,
+      "url": "https://aframe.io/docs/1.8.0/introduction/",
+      "fulltext": "https://aframe.io/aframe/examples/boilerplate/hello-world/",
+      "location": "Features / Cross-Platform VR; Hello World sample; accessed 2026-11-03",
+      "license": "MIT；主讲只提供现成示例入口，使用条件按项目说明"
+    },
+    "N01": {
+      "title": "Smell Disorders: How does your sense of smell work?",
+      "authors": "NIH / National Institute on Deafness and Other Communication Disorders",
+      "year": 2026,
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "location": "How does your sense of smell work?；2026-11-03核读正文",
+      "license": "只引用已核事实，通路图由本组绘制"
+    },
+    "N02": {
+      "title": "Richard Axel Wins 2004 Nobel Prize",
+      "authors": "Columbia University Irving Medical Center",
+      "year": 2004,
+      "url": "https://www.cuimc.columbia.edu/news/richard-axel-wins-2004-nobel-prize",
+      "location": "Paragraph beginning The sense of smell is possible；嗅球及后续脑区",
+      "license": "只引用已核事实，不复制原图"
     }
   },
   "course": "气味科学中的健康密码",
   "group_handoffs": {
-    "00": "开场从一次真实闻花演示提出问题；收束回到实现、用途与判断方法。四位讲者共用同一问题顺序。",
-    "01": "接住画面里的花为什么还闻不到；解释分子、受体组合和选材料、调释放的关系，把怎样按动作供香交给技术组。",
-    "02": "接住真实材料如何配合动作；讲一套装置的储香、加热、触发与散味。结束时把能控制一次嗅闻转成适合什么任务。",
-    "03": "先用酒窖说明可操作的辨香练习，再明确换到放松时比较目标变了；用对照设计和结果回答加香多帮了多少。"
+    "00": "开场用一分钟讲动机、概念和全场路线；收束先给电脑手机可用的了解入口，再用案例形成判断。不要替三组重复各自结论。",
+    "01": "先连续解释气味分子、受体和神经信号，以及受体响应组合。结束时一次性交给技术组：怎样提供合适刺激，并让它配合场景中的动作。",
+    "02": "只展开一套近鼻面罩装置：认清发生器、追踪一次释香指令，再解释停止和切换。把已经能完成一次受控嗅闻的能力交给应用组。",
+    "03": "把酒窖辨香讲成一项完整任务，展开任务设计与12人测试中的难度结果；再以放松实验短对照说明用途变了，应该测的收益也变了。"
   },
-  "compression_notes": [
-    "主讲保留闻花、装置完整流程、放松研究的对照与结果；AI预测和装置形态比较已移备课。",
-    "时间紧时，缩短S02组合示意的举例和A04的前景讨论，保留每次换人前后的交接。",
-    "无需器材或视频即可讲完；讲图时留出指认对象、读坐标和停顿时间。"
+  "compression_notes": "按四人完整试讲调整。先缩短开源资源介绍、次要元件名与前景，不压掉受体图的读法、装置触发链、酒窖任务与结果图的解释。放松实验只保留同程序的有香/无香比较与结果。视频15–20秒包含在T02预算内，静态三帧可独立讲完；有临时播放问题直接按静态图继续。章节用时是参考，最终守住全场12分钟。",
+  "transition_reserve_seconds": 30,
+  "chapter_titles": [
+    "嗅觉感知的科学基础",
+    "虚拟嗅觉的技术实现",
+    "应用场景与实验结果",
+    "体验途径与效果判断"
+  ],
+  "evidence_notes": [
+    "P09组合响应图为教学示意，甲乙丙及受体A–D不是实测数据或特定香料配方。图中的刺激层次与分子/复杂混合气味的解释分开。",
+    "P02主要讲面罩型，同系列上唇型保留备课。单个发生器含香石蜡载体、加热元件和温度控制；没有把发生器温度响应写成鼻端感知延迟。T03气味残留流程为无数值教学示意。",
+    "P05 N=12，每会话每等级8题，四会话共128题/人。Fig6d保留原图，等级2与3差异未达显著，不宣称难度严格逐级上升；图中分数与离散度口径见来源和问答。未据图估计均值或添加误差线。",
+    "P15 136名健康成人随机四组，34/36/33/33人。投影式VR、同样视听和引导，薰衣草扩香与人造草触觉各有/无。0–10放松VAS；均值图，原表SD留问答。整体前后F(1,132)=90.31,p<.001；作者未检出组间额外优势，未给该项精确F/p。没有无VR对照。",
+    "P15稿§2.6 Smell/Touch括号解释对调，按Fig3与§2.7核正。触觉是观看虚拟草地时触摸真实人造草。",
+    "A-Frame场景提供视觉和交互，闻到气味另需材料与释香装置。研究团队的公开设计入口与现成可购设备分别核查；未把资料公开写成同学已能零硬件体验嗅觉。",
+    "人工原文复核、四人真人试讲、教室放映与Canvas提交由后续小组完成；AI查阅和合成计时分别记录。"
   ],
   "slides": [
     {
       "id": "A01",
       "group": "03",
+      "title": "虚拟酒窖中的辨香任务",
+      "layout": "task-sequence",
       "role": "main",
-      "title": "在虚拟酒窖里，把闻香变成一道题",
-      "layout": "photo",
-      "seconds": 50,
-      "script": "这次把花换成一杯虚拟葡萄酒，是因为辨香本身就是一个可以练习的任务。研究者把装置接在VR手柄上，用气流和阀门控制预装气味。玩家端起杯子，凑近闻，再选择自己闻到的成分，游戏给出反馈，并逐步增加混合气味的难度。12名参与者完成了探索性测试。这里已经实现的是一套可操作的辨香练习：气味提供题目，虚拟场景组织动作和反馈。要知道练习能让辨香能力提高多少，还需要专门比较学习结果。",
+      "seconds": 55,
+      "script": "一个很直接的应用是辨香：任务本身就需要闻。另一组研究者把手持气味装置接到VR手柄上，做成了这间虚拟酒窖。玩家拿起酒杯，按扳机闻香，再从四个候选答案里选一个，把杯子移进相应的圆圈。单味题认名称，混合题认成分组合；答对变绿，答错变红，接着进入下一题。图里能看到酒窖、真实嗅闻和作答界面。虚拟场景组织动作和反馈，气味提供辨认对象。研究者接着用不同复杂度的配方，测试参与者的作答表现。",
       "source_ids": [
         "P05"
       ],
       "source_locations": [
-        "P05 Fig.5；Device design；User study，N12；Discussion"
+        "P05 Fig.5; interaction design; User study"
       ],
-      "footer": "Niedenthal等，IJHCS，2023，Fig.5；探索性测试N=12，CC BY 4.0",
       "image": "assets/wine-cellar-task.jpg",
-      "caption": "拿起酒杯 → 主动闻香 → 选择气味成分 → 得到反馈"
+      "steps": [
+        {
+          "label": "拿起酒杯",
+          "text": "选择一杯虚拟酒"
+        },
+        {
+          "label": "主动闻香",
+          "text": "使用手持气味装置"
+        },
+        {
+          "label": "四选一作答",
+          "text": "选择名称或成分组合"
+        },
+        {
+          "label": "得到反馈",
+          "text": "正确变绿，错误变红"
+        }
+      ],
+      "caption": "气味提供辨认对象，虚拟场景组织动作、作答与反馈",
+      "cue": "先完整讲一次玩家经历，再切到研究测试；暂不讨论健康效果。",
+      "footer": "Niedenthal等，IJHCS，2023，Fig.5 / User study；原图裁剪，CC BY 4.0"
     },
     {
       "id": "A02",
       "group": "03",
+      "title": "混合香气的辨认表现",
+      "layout": "study-result",
       "role": "main",
-      "title": "如果目标换成放松，加香会多帮多少？",
-      "layout": "experiment",
-      "seconds": 55,
-      "script": "酒窖里，闻香就是题目本身；如果换成放松，气味是额外加进体验的一项，比较目标也就变了。这项研究把136名健康成人随机分成四组，来到投影式VR房间，跟着同样的画面、音乐和引导语活动。研究者另外设置薰衣草香味和人造草触觉：参与者看虚拟草地时，有的组还会触摸真实的人造草。两项刺激各设有、无，就得到表里的四组。横向看触觉，纵向看香味；四组都在体验前后评估放松程度。",
+      "seconds": 80,
+      "script": "这项测试有12人，做了四轮测验。每轮都包括左边四类配方：单味、两味等比、三味中一种占一半，以及三味等比。每类八道题，统计答对几道。右边将四轮取平均，满分仍是八分；小点是每个人的平均表现，柱子是全组平均，误差线表示得分分散程度。单味最容易辨认，三味等比最难。中间两类的差异未达显著：配方有三种气味，存在主味时，表现仍可能接近两味混合。理解题目难度，除了成分数量，还要看怎样混合。这套任务已经能呈现不同辨香题，并记录行为表现；接下来可以用它检验反复练习带来的学习结果。",
       "source_ids": [
-        "P15"
+        "P05"
       ],
       "source_locations": [
-        "P15 Methods §2.2、§2.4–2.7；Fig.3；Table1，组别人数34/36/33/33",
-        "P15 §2.5人造草/薰衣草；§2.7触摸草地及视听引导程序"
+        "P05 §3 User study; Fig.6d; 12人、四会话、四等级、每级8题；按参与者汇总",
+        "P05 Fig.6d caption：mean score and SD；Results：four sessions合并；每人每等级32题折算满分8"
       ],
-      "footer": "Serrano等，Computers in Human Behavior，2016；投影式VR、薰衣草扩香、健康样本",
-      "caption": "投影画面、音乐与引导相同；香味和触觉各设有／无",
-      "table": {
-        "headers": [
-          "气味条件",
-          "无人造草触觉",
-          "有人造草触觉"
-        ],
-        "rows": [
-          [
-            "无薰衣草香",
-            "34人",
-            "33人"
-          ],
-          [
-            "有薰衣草香",
-            "36人",
-            "33人"
-          ]
-        ],
-        "fontSize": 29
-      }
+      "image": "research/2026-11-03-v3/assets/wine-performance.png",
+      "levels": [
+        {
+          "label": "1  单味",
+          "text": "一种香气"
+        },
+        {
+          "label": "2  两味等比",
+          "text": "50% / 50%"
+        },
+        {
+          "label": "3  三味有主味",
+          "text": "50% / 25% / 25%"
+        },
+        {
+          "label": "4  三味等比",
+          "text": "三种等比例"
+        }
+      ],
+      "caption": "12人 · 每级每轮8题 · 四轮平均分（满分8）；点为参与者，误差线SD",
+      "cue": "先解释任务等级，再认纵轴和小点，最后指第1/4级。别把等级2→3画成单调上升难度；百分比是装置混合设定。",
+      "footer": "Niedenthal等，2023，Fig.6d；N=12，每人128试次，原图裁剪，CC BY 4.0"
     },
     {
       "id": "A03",
       "group": "03",
-      "role": "main",
-      "title": "放松评分：四种条件的比较",
+      "title": "放松实验：有香与无香的效果比较",
       "layout": "results",
-      "seconds": 50,
-      "script": "纵轴是零到十分的放松评分，浅色是体验前，蓝色是体验后。四组的平均分都提高了，作者也报告整体前后变化达到统计显著。想看香味多帮了多少，就保持触觉条件相同：左边两组放在一起看，右边两组放在一起看。作者的组间分析没有检出显著差异，因此这次研究没有看到加香的额外优势。整套程序之后更放松，是实际观察到的结果；香味有没有再多带来帮助，则是另一个需要比较的问题。",
+      "role": "main",
+      "seconds": 65,
+      "script": "换成放松，问题就变成了：在同样的体验上加香，能多帮多少？这项研究把136名健康成人随机分成四组，投影式VR、音乐和引导相同，香味与人造草触觉各设有、无。纵轴是零到十分的放松评分，浅色为体验前，蓝色为体验后。四组均值都提高了，但作者没有检出加香带来的额外优势。读图时保持触觉条件相同，再比较有香和无香。和辨香任务放在一起看，是否值得加入气味，要看它在任务里承担什么作用，再看相应结果。",
       "source_ids": [
         "P15"
       ],
       "source_locations": [
         "P15 Table1 relaxation VAS均值；Results；整体前后F(1,132)=90.31,p<.001；原文未给组间确切F/p"
       ],
-      "footer": "Serrano等，2016，Table1 / Results；图示均值，SD与检验记录见来源手册",
       "chart": {
         "type": "bar",
         "categories": [
@@ -210,56 +265,12 @@
         "category_font_size": 21
       },
       "takeaways": [
-        "四组体验后\n平均评分更高",
-        "组间差异\n未达统计显著"
-      ]
-    },
-    {
-      "id": "A04",
-      "group": "03",
-      "role": "main",
-      "title": "用途不同，要看的结果也不同",
-      "layout": "evidence",
-      "seconds": 45,
-      "script": "把两个任务放在一起看，虚拟嗅觉的用途就具体了。辨香练习需要能反复呈现、作答和反馈，接下来可以检验学到的能力；放松体验则要找出哪种气味、强度和场景搭配更有帮助。想尝试这一类技术，可以关注配有嗅觉装置的研究或开发演示。酒窖研究团队也公开了装置图纸和游戏代码，具备硬件条件时可以据此探索。今后的进展，既包括把释香和退味做得更好，也包括找到真正值得加入气味的任务。",
-      "source_ids": [
-        "P02",
-        "P05",
-        "P15",
-        "SU01"
+        "136人\n四组随机分配",
+        "加香后的额外优势\n本研究未检出"
       ],
-      "source_locations": [
-        "P02工程限制；P05 User study与开放资料；P15 Results；SU01 Code and blueprints openly available；用途比较为本组归纳"
-      ],
-      "footer": "任务比较为本组归纳；P02 / P05 / P15；开放资料入口见来源手册",
-      "table": {
-        "headers": [
-          "用途",
-          "气味承担什么作用",
-          "下一步看什么"
-        ],
-        "widths": [
-          1,
-          2.2,
-          2.2
-        ],
-        "fontSize": 27,
-        "rows": [
-          [
-            "辨香练习",
-            "提供要辨认的对象",
-            "练习能否改善真实辨香"
-          ],
-          [
-            "放松体验",
-            "参与营造整体场景",
-            "哪些条件下有额外收益"
-          ]
-        ]
-      },
-      "takeaways": [
-        "想尝试：关注有嗅觉装置的演示，或参考研究团队开放设计"
-      ]
+      "caption": "同一投影式VR与视听引导；香味/触觉各设有、无；柱示均值",
+      "cue": "四组人数与设计留备注；主讲先说明相同程序，再指左右两对。此页约一分钟，不加第二页重复判断。",
+      "footer": "Serrano等，Computers in Human Behavior，2016，Table1 / Results；健康样本"
     }
   ]
 }

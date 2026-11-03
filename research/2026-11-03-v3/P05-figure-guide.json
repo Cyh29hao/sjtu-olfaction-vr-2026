@@ -1,0 +1,31 @@
+{
+  "paper": "P05",
+  "doi": "10.1016/j.ijhcs.2022.102928",
+  "source": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+  "pdf_page": 7,
+  "figure": "Fig.6",
+  "original_pixels": [
+    2000,
+    586
+  ],
+  "unchanged_copy": "research\\2026-11-03-v3\\assets\\P05-Fig6-original.png",
+  "recommended_main_panel": "d",
+  "recommended_crop_box_pixels": [
+    1500,
+    0,
+    2000,
+    586
+  ],
+  "crop_note": "建议由制稿程序设置图片裁剪；原图始终保留。需保留score纵轴、1–4横轴、SD误差线。",
+  "main_panel_y": "每级每会话8题，四会话合并的平均得分；图注为SD",
+  "n_participants": 12,
+  "not_independent_n": 384,
+  "printed_mean_numbers_available": false,
+  "do_not_digitize_as_exact": true,
+  "main_result": "单味等级1高于各混合等级；三味等比等级4低于其他等级；等级2与3未显著不同。",
+  "alternative_panel_c": "跨12名参与者会话总分的相关矩阵。S1-S2同红酒香气r=.77；S3-S4同白酒香气r=.72，图中均** p<.01。不是个体训练增益。",
+  "license": "CC BY4.0；出处和裁剪注明于页面来源/备注",
+  "validated_crop": "assets/wine-performance.png",
+  "point_interpretation": "每个点是一名参与者在该难度合并四会话的平均分；每会话该难度8题，因此满分8，四会话共32题折算为每会话平均分。原文Figure6图注和Results Game performance联合解释，图中未另列点的逐个数表。",
+  "dispersion_interpretation": "error bars为SD，图注明确；跨12名参与者的该难度得分离散度，不是四会话均值的SE或置信区间。"
+}

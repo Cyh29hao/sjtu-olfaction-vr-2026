@@ -1,7 +1,7 @@
 {
-  "version": "v2",
-  "title": "让 VR 有气味",
-  "subtitle": "怎样让鼻子也参与虚拟体验",
+  "version": "v3",
+  "title": "气味、VR与虚拟感官",
+  "subtitle": "虚拟嗅觉怎样实现，又适合用在哪里",
   "template": "诗意校园·2022蓝绿青春",
   "speaker_count": 4,
   "presentation_seconds": 720,
@@ -22,7 +22,7 @@
       "url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
       "fulltext": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
       "doi": "10.1016/j.ijhcs.2022.102928",
-      "location": "Fig. 5; User study; Discussion",
+      "location": "Display design; user study; Figs.5–6; Discussion; supplementary OSF resources",
       "license": "CC BY 4.0"
     },
     "P09": {
@@ -88,95 +88,138 @@
       "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
       "location": "Code and blueprints openly available; Find more information; checked 2026-11-03",
       "license": "只转述公开资源入口；不复制新闻图片或宣传性疗效表述"
+    },
+    "AF01": {
+      "title": "A-Frame: Introduction and Hello World",
+      "authors": "A-Frame project",
+      "year": 2026,
+      "url": "https://aframe.io/docs/1.8.0/introduction/",
+      "fulltext": "https://aframe.io/aframe/examples/boilerplate/hello-world/",
+      "location": "Features / Cross-Platform VR; Hello World sample; accessed 2026-11-03",
+      "license": "MIT；主讲只提供现成示例入口，使用条件按项目说明"
+    },
+    "N01": {
+      "title": "Smell Disorders: How does your sense of smell work?",
+      "authors": "NIH / National Institute on Deafness and Other Communication Disorders",
+      "year": 2026,
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "location": "How does your sense of smell work?；2026-11-03核读正文",
+      "license": "只引用已核事实，通路图由本组绘制"
+    },
+    "N02": {
+      "title": "Richard Axel Wins 2004 Nobel Prize",
+      "authors": "Columbia University Irving Medical Center",
+      "year": 2004,
+      "url": "https://www.cuimc.columbia.edu/news/richard-axel-wins-2004-nobel-prize",
+      "location": "Paragraph beginning The sense of smell is possible；嗅球及后续脑区",
+      "license": "只引用已核事实，不复制原图"
     }
   },
   "slides": [
     {
       "id": "O01",
       "group": "00",
-      "role": "main",
-      "title": "让 VR 有气味",
+      "title": "气味、VR\n与虚拟感官",
       "layout": "cover",
-      "seconds": 15,
-      "script": "大家好。今天我们从一朵VR里的花讲起：眼睛已经看见它了，怎样才能让鼻子也闻到？这件事做好以后，又能用来干什么？",
+      "role": "main",
+      "seconds": 20,
+      "script": "在VR里，我们可以走进花园，看到花，也可以伸手把它拿起来。但把花凑到鼻子前，这个动作往往还少了一部分体验。今天我们想弄清楚，怎样让鼻子也参与进来，以及这样做能用在哪里。",
       "source_ids": [
         "P02"
       ],
       "source_locations": [
         "P02 Fig.5b–d; Supplementary Movie3"
       ],
-      "footer": "Liu等，Nature Communications，2023",
-      "subtitle": "花在画面里，花香从哪儿来？",
-      "byline": "气味、VR与虚拟感官 · 小组汇报",
-      "image": "assets/flower-vr.jpg"
+      "subtitle": "虚拟嗅觉怎样实现，又适合用在哪里",
+      "image": "assets/flower-vr.jpg",
+      "byline": "气味科学中的健康密码 · 小组汇报",
+      "cue": "看向同学，用一个普通动作建立问题；封面不报论文或设备名。",
+      "footer": "图：Liu等，Nature Communications，2023，Supplementary Movie3；真实演示帧"
     },
     {
       "id": "O02",
       "group": "00",
+      "title": "汇报内容",
+      "layout": "agenda",
       "role": "main",
-      "title": "从一次闻花，看完整个过程",
-      "layout": "photo",
-      "seconds": 50,
-      "script": "这组画面来自一项真实研究。参与者戴着头显和释香面罩，伸手抓住虚拟的花，再把花移到鼻子前，相应的气味发生器就开始加热释香。画面里的花是虚拟的，闻到的材料却是真实的。我们沿着这个动作往下看：先弄清鼻子要收到什么，再看装置怎样把香味安排到合适的时候，最后用两个任务判断，这样做到底有什么用。",
-      "source_ids": [
-        "P02"
-      ],
-      "source_locations": [
-        "P02 Demonstrations; Fig.5b–d; Supplementary Movie3真实帧"
-      ],
-      "footer": "Liu等，Nature Communications，2023，Fig.5 / Movie3；真实演示帧",
-      "image": "assets/flower-vr-sequence.jpg",
-      "caption": "鼻子需要什么 → 装置怎样配合 → 加香能帮什么"
-    },
-    {
-      "id": "S01",
-      "group": "01",
-      "role": "main",
-      "title": "鼻子收到的是气味分子",
-      "layout": "mechanism",
       "seconds": 40,
-      "script": "日常闻花时，花里的挥发性分子进入空气，随着吸气来到鼻腔，触发嗅觉受体，再由神经信号参与形成气味感受。放到VR里，头显只把花的样子送给眼睛，鼻子这一段还需要装置来补上。所以今天讲的虚拟嗅觉，基本做法很直接：在虚拟场景需要的时候，把真实气味送到鼻子附近。下一步是，装置该准备什么样的气味。",
+      "script": "虚拟嗅觉，是让人在虚拟场景中闻到与内容配合的气味。今天重点看用真实气味材料来实现的一条路线。它可以补充环境体验，也可以让闻香本身成为任务。接下来先理解嗅觉，再拆开一套装置；然后看辨香应用和放松实验，最后说说怎样了解、体验和判断这类技术。先从鼻子怎样闻到气味讲起。",
       "source_ids": [
-        "P09",
-        "P02"
-      ],
-      "source_locations": [
-        "P09 Abstract：受体组合响应；P02 Concepts and design principle"
-      ],
-      "footer": "机制为教学示意；依据Malnic等，Cell，1999；Liu等，2023",
-      "steps": [
-        {
-          "label": "气味分子",
-          "text": "随吸气进入鼻腔"
-        },
-        {
-          "label": "嗅觉受体",
-          "text": "把刺激转成神经信号"
-        },
-        {
-          "label": "大脑",
-          "text": "形成气味感受"
-        }
-      ],
-      "caption": "给画面配香，要把真实刺激送到鼻子"
-    },
-    {
-      "id": "S02",
-      "group": "01",
-      "role": "main",
-      "title": "一种气味，会引起一组受体响应",
-      "layout": "receptors",
-      "seconds": 45,
-      "script": "看这张简化图，每一列代表一种受体，每一行代表一种气味。一个受体可以对多种气味分子有响应，一种分子也可以引起多个受体响应；大脑利用这类组合来区分气味。于是，给软件写上“玫瑰味”还不够，装置需要选出能让人产生相应感受的材料。几种香料混在一起会闻成什么，也要通过实际嗅闻来检验。我们的闻花任务可以先从几种已经选好的材料做起。",
-      "source_ids": [
-        "P09",
         "P02",
         "P05"
       ],
       "source_locations": [
-        "P09 Abstract，combinatorial receptor code；P02预装含香材料；P05调配预存材料"
+        "本组路线设计；P02/P05提供真实装置与应用依据"
       ],
-      "footer": "Malnic等，Cell，1999；组合图为教学示意",
+      "sections": [
+        {
+          "title": "嗅觉感知的科学基础",
+          "text": "鼻子需要收到什么刺激"
+        },
+        {
+          "title": "虚拟嗅觉的技术实现",
+          "text": "装置怎样配合场景释香"
+        },
+        {
+          "title": "应用场景与实验结果",
+          "text": "具体任务与实际观察"
+        },
+        {
+          "title": "体验途径与效果判断",
+          "text": "怎样接触，怎样判断"
+        }
+      ],
+      "cue": "指着四项依次交代路线，不在目录页提前展开每部分结论。",
+      "footer": "全场路线；主要装置与任务依据Liu等，2023；Niedenthal等，2023"
+    },
+    {
+      "id": "S01",
+      "group": "01",
+      "title": "气味分子怎样成为嗅觉信号",
+      "layout": "olfaction",
+      "role": "main",
+      "seconds": 65,
+      "script": "先看一次普通的闻花。花中的一些挥发性分子进入空气，随着吸气到达鼻腔上部的嗅觉区域。那里有嗅觉感受神经元，受体蛋白位于这些细胞表面；气味分子与受体相互作用，细胞把化学刺激转成神经信号，再传到嗅球和后续脑区，参与形成气味感受。图中从左到右，发生的是分子到信号、再到感受的过程。我们觉得一种气味熟悉或陌生，还和以往的经验有关。下面接着看，这些受体怎样帮助我们区分不同气味。",
+      "source_ids": [
+        "N01",
+        "N02",
+        "P09"
+      ],
+      "source_locations": [
+        "N01 How does your sense of smell work?；N02 The sense of smell is possible段；P09原始摘要"
+      ],
+      "steps": [
+        {
+          "label": "气味分子",
+          "text": "随吸气到达嗅觉区域"
+        },
+        {
+          "label": "受体与神经元",
+          "text": "把化学刺激转成神经信号"
+        },
+        {
+          "label": "嗅球及后续脑区",
+          "text": "处理信号，形成气味感受"
+        }
+      ],
+      "caption": "分子刺激 → 神经信号 → 气味感受",
+      "cue": "用指示器完整走一遍图，讲清受体位于感受神经元上；示意不画作精确解剖结构。",
+      "footer": "嗅觉通路教学示意；NIH/NIDCD；Columbia University；Malnic等，1999"
+    },
+    {
+      "id": "S02",
+      "group": "01",
+      "title": "嗅觉受体的组合响应",
+      "layout": "receptors",
+      "role": "main",
+      "seconds": 75,
+      "script": "这张图把受体的响应关系简化了。每一列是一种受体，每一行是一种气味刺激；蓝点表示这里画出的响应。先看受体C，它可以对几种刺激有响应。再看刺激甲，也涉及多个受体。神经系统可以利用这样的响应组合来区分气味，因而一种味道通常涉及多个受体的响应。图中的颜色和圆点帮助解释组合关系，具体材料能产生怎样的感受，还要实际检验。讲到这里，呈现气味的任务就清楚了：既要提供合适的刺激，也要安排它到达鼻子的时间。下一位同学用一套真实装置，说明这件事怎样实现。",
+      "source_ids": [
+        "P09"
+      ],
+      "source_locations": [
+        "P09 Abstract: combinatorial receptor codes; 图为教学示意"
+      ],
       "receptor_labels": [
         "受体A",
         "受体B",
@@ -185,21 +228,21 @@
       ],
       "odors": [
         {
-          "label": "气味甲",
+          "label": "刺激甲",
           "active": [
             0,
             2
           ]
         },
         {
-          "label": "气味乙",
+          "label": "刺激乙",
           "active": [
             1,
             2
           ]
         },
         {
-          "label": "气味丙",
+          "label": "刺激丙",
           "active": [
             0,
             1,
@@ -207,206 +250,206 @@
           ]
         }
       ],
-      "caption": "组合关系示意；圆点不表示实测强度"
-    },
-    {
-      "id": "S03",
-      "group": "01",
-      "role": "main",
-      "title": "先选花香，再让它配合动作",
-      "layout": "requirements",
-      "seconds": 50,
-      "script": "所以，做这次闻花体验，至少要把材料和释放方式配合起来。首先预装合适的花香材料；然后调节释放，让气味的强弱适合这次体验；还要让它跟得上动作，靠近时出现，移开以后逐渐退去。这里的“数字化”，主要体现在程序怎样控制真实材料。这样一来，问题就落到具体装置上了：香料放在哪里，电脑的指令又怎样变成一次释香？",
-      "source_ids": [
-        "P02",
-        "P05"
-      ],
-      "source_locations": [
-        "P02 Concepts and design principle; Demonstrations；P05 display design"
-      ],
-      "footer": "依据P02 / P05归纳的实现要求；图示为本组解释",
-      "items": [
-        {
-          "label": "选材料",
-          "text": "这朵花配什么气味"
-        },
-        {
-          "label": "调释放",
-          "text": "让刺激强弱合适"
-        },
-        {
-          "label": "配动作",
-          "text": "靠近时闻到\n移开后退味"
-        }
-      ],
-      "caption": "材料提供气味，程序安排它怎样出现"
+      "caption": "看响应组合来理解编码；图中甲乙丙与圆点均为教学示意",
+      "cue": "先纵着读一列，再横着读一行，给观众认图的时间；不扩展成气味调色盘。",
+      "footer": "Malnic等，Cell，1999，Abstract；受体组合关系教学示意"
     },
     {
       "id": "T01",
       "group": "02",
+      "title": "可穿戴释香装置的结构",
+      "layout": "device-detail",
       "role": "main",
-      "title": "把香料和加热元件放在鼻子附近",
-      "layout": "device",
-      "seconds": 45,
-      "script": "这是刚才那项研究的近鼻装置。左边是贴在上唇附近的版本，闻花演示用的是同系列的面罩版本。每个小发生器里预装含香材料，收到电信号后，加热元件让气味更容易释放出来。发生器离鼻子很近，使用者就能闻到。这套设计把香料和控制部件做进随身装置，再由无线指令调节。我们接着把它接回刚才的闻花动作。",
+      "seconds": 65,
+      "script": "我们用2023年的这套研究装置来看具体实现。它把多个小型气味发生器放在面罩上，靠近鼻子，每个发生器预先装有含香材料。右边放大的是一个发生器：石蜡作为载体保存香料，加热元件收到指令后促进气味释放，温度反馈帮助控制加热过程。研究者把这些部件做成了可穿戴、无线控制的形式。接下来看，闻花时的什么动作会触发它。",
       "source_ids": [
         "P02"
       ],
       "source_locations": [
-        "P02 Fig.1d–e；Concepts and design principle；Methods/Operation"
+        "P02 Fig.1a,c,e; Concepts and design principle; Methods"
       ],
-      "footer": "Liu等，Nature Communications，2023，Fig.1d–e；照片裁剪，CC BY 4.0",
-      "image": "assets/wearable-close.jpg",
+      "image": "assets/v3/wearable-mask.jpg",
+      "detail_image": "assets/v3/odor-generator.jpg",
       "items": [
         {
-          "label": "含香材料（石蜡载体）",
-          "text": "预先存入发生器"
+          "label": "含香材料",
+          "text": "香料预存在石蜡载体中"
         },
         {
           "label": "加热元件",
-          "text": "收到指令后促进释放"
+          "text": "接收指令，促进气味释放"
         },
         {
-          "label": "温度调节",
-          "text": "控制加热和冷却过程"
+          "label": "温度反馈",
+          "text": "帮助控制加热过程"
         }
       ],
-      "caption": "图为上唇型实物；闻花演示使用同系列面罩型"
+      "caption": "面罩型：多个发生器靠近鼻子；与闻花演示属于同一系列",
+      "cue": "先认面罩与发生器，再放大一只发生器；板层缩写和不同封装放备课。",
+      "footer": "Liu等，Nature Communications，2023，Fig.1a,c,e；原图裁剪，CC BY 4.0"
     },
     {
       "id": "T02",
       "group": "02",
+      "title": "VR动作与气味释放的同步",
+      "layout": "scent-interaction",
       "role": "main",
-      "title": "花靠近鼻子，程序就发出释香指令",
-      "layout": "process",
-      "seconds": 50,
-      "script": "沿着图从左往右看。VR系统先记录手和花的位置；花靠近鼻子，场景发出释香指令；发生器开始加热预存材料，气味进入鼻子附近的空气，再被人闻到。这样，眼睛看见的靠近动作和鼻子收到的刺激就能对应起来。程序控制的是这一串动作，而不是隔着屏幕把花香传过来。装置已经能完成这次演示，接下来还要让连续的嗅闻用起来更顺。",
+      "seconds": 65,
+      "script": "看这段真实演示，先注意花和鼻子之间的距离。花拿近以后，对应的发生器开始加热。图下方把过程拆开了：VR系统记录花的位置，接近事件触发控制指令，发生器促进预存气味释放，分子到达鼻子附近。眼睛看见的动作和鼻子收到的刺激，就由这条控制链配合起来。程序安排哪种气味、什么时候出现。接着把花移开，事情还有后半段。",
       "source_ids": [
         "P02"
       ],
       "source_locations": [
         "P02 Demonstrations; Fig.5b–d; Supplementary Movie3"
       ],
-      "footer": "依据Liu等，2023闻花演示绘制；流程图为教学示意",
+      "image": "assets/v3/flower-sequence.jpg",
       "steps": [
         {
-          "label": "记录位置",
-          "text": "追踪手和虚拟花"
+          "label": "场景事件",
+          "text": "花靠近鼻子"
         },
         {
-          "label": "判断靠近",
-          "text": "场景触发释香"
+          "label": "控制指令",
+          "text": "启动对应发生器"
         },
         {
-          "label": "控制发生器",
-          "text": "加热预装材料"
+          "label": "气味释放",
+          "text": "材料释出气味"
         },
         {
-          "label": "闻到气味",
+          "label": "实际嗅闻",
           "text": "分子到达鼻子"
         }
       ],
-      "caption": "一次闻花，由画面、动作和真实释香共同完成"
+      "caption": "真实演示帧：拿花 → 靠近 → 移开",
+      "cue": "可在这里播放15–20秒随稿短片；播放时间已在本页预算内。静态三帧能独立讲完。",
+      "footer": "Liu等，2023，Fig.5b–d / Supplementary Movie3；帧图裁剪，CC BY 4.0"
     },
     {
       "id": "T03",
       "group": "02",
+      "title": "气味残留与连续切换",
+      "layout": "odor-cycle",
       "role": "main",
-      "title": "花移开以后，余味还要散去",
-      "layout": "response",
-      "seconds": 65,
-      "script": "这张原图把刚才的动作和发生器温度联系起来。先认坐标：横向是时间，纵向是温度；加热时曲线上升，停止以后再逐渐回落。它说明发生器的状态有一个变化过程。空气里的气味分子也还需要散去，所以花从画面里移开，不会把鼻子附近的味道一起清空。连续闻不同气味时，就要同时照顾释放、气流、距离和残留。把这些配合好，装置才更适合反复嗅闻。下一项研究就把“拿近、闻一下、再判断”做成了一个具体任务。",
+      "seconds": 60,
+      "script": "画面里把花移开，或者让它马上消失，都比较容易；空气里的气味却还需要散去。先看上面，场景已经结束这次闻花，控制器也可以停止加热；再看下面，鼻子附近仍可能留有上一种气味。接下来换另一种味道，就得同时照顾材料冷却、气流和残留。这项研究也把残留列为频繁切换气味的限制。到这里，我们看懂了一次嗅闻怎样实现，以及连续使用为什么更难。下一部分看，哪些任务值得用上这种能力。",
       "source_ids": [
         "P02"
       ],
       "source_locations": [
-        "P02 Fig.5d原温度曲线；Electrical performance；Demonstrations末段的残留与频繁切味限制"
+        "P02 Demonstrations末段：residue limits frequent switching; 无数值过程示意"
       ],
-      "footer": "Liu等，2023，Fig.5d，CC BY 4.0；温度曲线保持原图性质",
-      "image": "assets/temperature-response.jpg",
-      "items": [
+      "rows": [
         {
-          "label": "控制信号",
-          "text": "可以停止加热"
+          "label": "虚拟场景",
+          "states": [
+            "拿近花朵",
+            "移开花朵",
+            "下一次嗅闻"
+          ]
         },
         {
-          "label": "材料与空气",
-          "text": "冷却、散味需要过程"
+          "label": "装置与空气",
+          "states": [
+            "释出气味",
+            "冷却与散味",
+            "呈现新的刺激"
+          ]
         }
       ],
-      "caption": "原图测的是发生器温度；散味还取决于材料、气流和距离"
+      "caption": "连续嗅闻需要共同安排：释放、散味与下一次交互",
+      "cue": "沿两行对照讲，停在移开后的差别。此图无时间刻度，不把温度曲线当成嗅闻测量。",
+      "footer": "依据Liu等，2023，Demonstrations末段；过程为教学示意，非实测时长"
     },
     {
       "id": "A01",
       "group": "03",
+      "title": "虚拟酒窖中的辨香任务",
+      "layout": "task-sequence",
       "role": "main",
-      "title": "在虚拟酒窖里，把闻香变成一道题",
-      "layout": "photo",
-      "seconds": 50,
-      "script": "这次把花换成一杯虚拟葡萄酒，是因为辨香本身就是一个可以练习的任务。研究者把装置接在VR手柄上，用气流和阀门控制预装气味。玩家端起杯子，凑近闻，再选择自己闻到的成分，游戏给出反馈，并逐步增加混合气味的难度。12名参与者完成了探索性测试。这里已经实现的是一套可操作的辨香练习：气味提供题目，虚拟场景组织动作和反馈。要知道练习能让辨香能力提高多少，还需要专门比较学习结果。",
+      "seconds": 55,
+      "script": "一个很直接的应用是辨香：任务本身就需要闻。另一组研究者把手持气味装置接到VR手柄上，做成了这间虚拟酒窖。玩家拿起酒杯，按扳机闻香，再从四个候选答案里选一个，把杯子移进相应的圆圈。单味题认名称，混合题认成分组合；答对变绿，答错变红，接着进入下一题。图里能看到酒窖、真实嗅闻和作答界面。虚拟场景组织动作和反馈，气味提供辨认对象。研究者接着用不同复杂度的配方，测试参与者的作答表现。",
       "source_ids": [
         "P05"
       ],
       "source_locations": [
-        "P05 Fig.5；Device design；User study，N12；Discussion"
+        "P05 Fig.5; interaction design; User study"
       ],
-      "footer": "Niedenthal等，IJHCS，2023，Fig.5；探索性测试N=12，CC BY 4.0",
       "image": "assets/wine-cellar-task.jpg",
-      "caption": "拿起酒杯 → 主动闻香 → 选择气味成分 → 得到反馈"
+      "steps": [
+        {
+          "label": "拿起酒杯",
+          "text": "选择一杯虚拟酒"
+        },
+        {
+          "label": "主动闻香",
+          "text": "使用手持气味装置"
+        },
+        {
+          "label": "四选一作答",
+          "text": "选择名称或成分组合"
+        },
+        {
+          "label": "得到反馈",
+          "text": "正确变绿，错误变红"
+        }
+      ],
+      "caption": "气味提供辨认对象，虚拟场景组织动作、作答与反馈",
+      "cue": "先完整讲一次玩家经历，再切到研究测试；暂不讨论健康效果。",
+      "footer": "Niedenthal等，IJHCS，2023，Fig.5 / User study；原图裁剪，CC BY 4.0"
     },
     {
       "id": "A02",
       "group": "03",
+      "title": "混合香气的辨认表现",
+      "layout": "study-result",
       "role": "main",
-      "title": "如果目标换成放松，加香会多帮多少？",
-      "layout": "experiment",
-      "seconds": 55,
-      "script": "酒窖里，闻香就是题目本身；如果换成放松，气味是额外加进体验的一项，比较目标也就变了。这项研究把136名健康成人随机分成四组，来到投影式VR房间，跟着同样的画面、音乐和引导语活动。研究者另外设置薰衣草香味和人造草触觉：参与者看虚拟草地时，有的组还会触摸真实的人造草。两项刺激各设有、无，就得到表里的四组。横向看触觉，纵向看香味；四组都在体验前后评估放松程度。",
+      "seconds": 80,
+      "script": "这项测试有12人，做了四轮测验。每轮都包括左边四类配方：单味、两味等比、三味中一种占一半，以及三味等比。每类八道题，统计答对几道。右边将四轮取平均，满分仍是八分；小点是每个人的平均表现，柱子是全组平均，误差线表示得分分散程度。单味最容易辨认，三味等比最难。中间两类的差异未达显著：配方有三种气味，存在主味时，表现仍可能接近两味混合。理解题目难度，除了成分数量，还要看怎样混合。这套任务已经能呈现不同辨香题，并记录行为表现；接下来可以用它检验反复练习带来的学习结果。",
       "source_ids": [
-        "P15"
+        "P05"
       ],
       "source_locations": [
-        "P15 Methods §2.2、§2.4–2.7；Fig.3；Table1，组别人数34/36/33/33",
-        "P15 §2.5人造草/薰衣草；§2.7触摸草地及视听引导程序"
+        "P05 §3 User study; Fig.6d; 12人、四会话、四等级、每级8题；按参与者汇总",
+        "P05 Fig.6d caption：mean score and SD；Results：four sessions合并；每人每等级32题折算满分8"
       ],
-      "footer": "Serrano等，Computers in Human Behavior，2016；投影式VR、薰衣草扩香、健康样本",
-      "caption": "投影画面、音乐与引导相同；香味和触觉各设有／无",
-      "table": {
-        "headers": [
-          "气味条件",
-          "无人造草触觉",
-          "有人造草触觉"
-        ],
-        "rows": [
-          [
-            "无薰衣草香",
-            "34人",
-            "33人"
-          ],
-          [
-            "有薰衣草香",
-            "36人",
-            "33人"
-          ]
-        ],
-        "fontSize": 29
-      }
+      "image": "research/2026-11-03-v3/assets/wine-performance.png",
+      "levels": [
+        {
+          "label": "1  单味",
+          "text": "一种香气"
+        },
+        {
+          "label": "2  两味等比",
+          "text": "50% / 50%"
+        },
+        {
+          "label": "3  三味有主味",
+          "text": "50% / 25% / 25%"
+        },
+        {
+          "label": "4  三味等比",
+          "text": "三种等比例"
+        }
+      ],
+      "caption": "12人 · 每级每轮8题 · 四轮平均分（满分8）；点为参与者，误差线SD",
+      "cue": "先解释任务等级，再认纵轴和小点，最后指第1/4级。别把等级2→3画成单调上升难度；百分比是装置混合设定。",
+      "footer": "Niedenthal等，2023，Fig.6d；N=12，每人128试次，原图裁剪，CC BY 4.0"
     },
     {
       "id": "A03",
       "group": "03",
-      "role": "main",
-      "title": "放松评分：四种条件的比较",
+      "title": "放松实验：有香与无香的效果比较",
       "layout": "results",
-      "seconds": 50,
-      "script": "纵轴是零到十分的放松评分，浅色是体验前，蓝色是体验后。四组的平均分都提高了，作者也报告整体前后变化达到统计显著。想看香味多帮了多少，就保持触觉条件相同：左边两组放在一起看，右边两组放在一起看。作者的组间分析没有检出显著差异，因此这次研究没有看到加香的额外优势。整套程序之后更放松，是实际观察到的结果；香味有没有再多带来帮助，则是另一个需要比较的问题。",
+      "role": "main",
+      "seconds": 65,
+      "script": "换成放松，问题就变成了：在同样的体验上加香，能多帮多少？这项研究把136名健康成人随机分成四组，投影式VR、音乐和引导相同，香味与人造草触觉各设有、无。纵轴是零到十分的放松评分，浅色为体验前，蓝色为体验后。四组均值都提高了，但作者没有检出加香带来的额外优势。读图时保持触觉条件相同，再比较有香和无香。和辨香任务放在一起看，是否值得加入气味，要看它在任务里承担什么作用，再看相应结果。",
       "source_ids": [
         "P15"
       ],
       "source_locations": [
         "P15 Table1 relaxation VAS均值；Results；整体前后F(1,132)=90.31,p<.001；原文未给组间确切F/p"
       ],
-      "footer": "Serrano等，2016，Table1 / Results；图示均值，SD与检验记录见来源手册",
       "chart": {
         "type": "bar",
         "categories": [
@@ -443,117 +486,83 @@
         "category_font_size": 21
       },
       "takeaways": [
-        "四组体验后\n平均评分更高",
-        "组间差异\n未达统计显著"
-      ]
-    },
-    {
-      "id": "A04",
-      "group": "03",
-      "role": "main",
-      "title": "用途不同，要看的结果也不同",
-      "layout": "evidence",
-      "seconds": 45,
-      "script": "把两个任务放在一起看，虚拟嗅觉的用途就具体了。辨香练习需要能反复呈现、作答和反馈，接下来可以检验学到的能力；放松体验则要找出哪种气味、强度和场景搭配更有帮助。想尝试这一类技术，可以关注配有嗅觉装置的研究或开发演示。酒窖研究团队也公开了装置图纸和游戏代码，具备硬件条件时可以据此探索。今后的进展，既包括把释香和退味做得更好，也包括找到真正值得加入气味的任务。",
-      "source_ids": [
-        "P02",
-        "P05",
-        "P15",
-        "SU01"
+        "136人\n四组随机分配",
+        "加香后的额外优势\n本研究未检出"
       ],
-      "source_locations": [
-        "P02工程限制；P05 User study与开放资料；P15 Results；SU01 Code and blueprints openly available；用途比较为本组归纳"
-      ],
-      "footer": "任务比较为本组归纳；P02 / P05 / P15；开放资料入口见来源手册",
-      "table": {
-        "headers": [
-          "用途",
-          "气味承担什么作用",
-          "下一步看什么"
-        ],
-        "widths": [
-          1,
-          2.2,
-          2.2
-        ],
-        "fontSize": 27,
-        "rows": [
-          [
-            "辨香练习",
-            "提供要辨认的对象",
-            "练习能否改善真实辨香"
-          ],
-          [
-            "放松体验",
-            "参与营造整体场景",
-            "哪些条件下有额外收益"
-          ]
-        ]
-      },
-      "takeaways": [
-        "想尝试：关注有嗅觉装置的演示，或参考研究团队开放设计"
-      ]
+      "caption": "同一投影式VR与视听引导；香味/触觉各设有、无；柱示均值",
+      "cue": "四组人数与设计留备注；主讲先说明相同程序，再指左右两对。此页约一分钟，不加第二页重复判断。",
+      "footer": "Serrano等，Computers in Human Behavior，2016，Table1 / Results；健康样本"
     },
     {
       "id": "C01",
       "group": "00",
+      "title": "了解与体验虚拟嗅觉的途径",
+      "layout": "resources",
       "role": "main",
-      "title": "你会找哪组人来比较？",
-      "layout": "judgment",
       "seconds": 45,
-      "script": "假设一款设备这样宣传：体验这款加香VR以后，用户更放松了。你会找哪组人来和它比较？可以先想两秒。刚才的实验给了我们一个办法：找同样的VR程序，只把香味这一项去掉。这样，宣传里的“更放松”就有了明确的比较对象。接着看它测的是主观感受、任务表现还是患者症状，便能更准确地理解这项产品的用途。",
+      "script": "想进一步了解，可以先看酒窖研究团队的介绍，里面连接演示和开放制作资料；亲自闻到，还需要匹配的释香装置和材料。另一个入口是A-Frame现成场景，我们已在电脑浏览器里测试过显示和键盘移动，同学可以操作看看。找体验时，就关注内容怎样交互、外设提供什么气味，以及两者怎样配合。二维码留给大家课后打开。",
       "source_ids": [
-        "P05",
-        "P15"
+        "AF01",
+        "SU01",
+        "P05"
       ],
       "source_locations": [
-        "本页宣传语为本组自拟，不指向真实公司；判断思路依据P05/P15研究设计"
+        "AF01 Introduction/Features与Hello World；SU01 Code and blueprints openly available及Find more information"
       ],
-      "footer": "宣传语为自拟例子；比较思路依据Serrano等，2016",
-      "question": "“体验这款加香VR以后，用户更放松了。”",
-      "alternatives": [
+      "resources": [
         {
-          "label": "只看体验前后",
-          "text": "看到整套体验带来的变化"
+          "label": "真实嗅觉系统与开放资料",
+          "text": "酒窖研究团队\n演示与开放制作入口",
+          "qr": "assets/v3/wine-project-qr.png",
+          "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology"
         },
         {
-          "label": "同样VR，有香／无香",
-          "text": "进一步判断香味带来的额外变化"
+          "label": "电脑浏览器中的虚拟场景",
+          "text": "A-Frame现成示例\n可看、可键盘移动",
+          "qr": "assets/v3/aframe-qr.png",
+          "url": "https://aframe.io/aframe/examples/boilerplate/hello-world/"
         }
       ],
-      "body": "自拟宣传例子；用刚才的研究思路判断",
-      "cue": "读完问题停两秒，让同学先想到自己的比较对象，再显示或指出两种比较。"
+      "caption": "观看与交互从网页开始；实际嗅闻需要释香装置和材料",
+      "cue": "说明看/操作网页与实际嗅闻的区别；让同学课后扫码，课堂不等待所有人进入。",
+      "footer": "A-Frame官方文档 / 示例；Stockholm University研究团队介绍；入口检查见来源手册"
     },
     {
       "id": "C02",
       "group": "00",
+      "title": "气味相关宣传的判断依据",
+      "layout": "judgment",
       "role": "main",
-      "title": "让真实气味配合虚拟场景",
-      "layout": "closing",
-      "seconds": 40,
-      "script": "回到开头那朵花。今天看到的虚拟嗅觉，是让真实材料产生的气味配合虚拟场景中的动作。它已经能让人在虚拟酒窖里闻香、作答、得到反馈；而给放松体验额外加香，这次研究没有检出更多帮助。今后的进展，一方面是把释放、散味和交互做得更顺，另一方面是在具体任务中找到明确的收益。以后再看到“能闻到的VR”，希望大家既能大致说清它怎样工作，也知道该怎样判断它有没有用。谢谢大家。",
+      "seconds": 55,
+      "script": "最后，假设产品说，戴上它就能闻见虚拟森林，还能帮助放松。“闻见森林”可以看它提供哪些气味、怎样配合场景、怎样切换。“帮助放松”则要看测了什么，以及和什么条件比较。我们今天看到，气味已经能参与闻花和辨香这类交互。接下来值得期待的，是装置更好用，以及找到确实值得加入气味的内容。希望大家下次遇到这类体验，既知道可以试什么，也有办法判断它是否适合自己。谢谢大家。",
       "source_ids": [
         "P02",
         "P05",
         "P15"
       ],
       "source_locations": [
-        "全场归纳，对应P02闻花/P05辨香/P15放松对照"
+        "本组自拟情境；P02装置能力、P05任务表现、P15放松比较"
       ],
-      "footer": "谢谢大家，欢迎提问",
-      "lines": [
-        "香料提供气味",
-        "程序配合动作",
-        "用途放在具体任务里判断"
+      "question": "“能闻见虚拟森林，还能帮助放松。”",
+      "alternatives": [
+        {
+          "label": "具体怎样体验",
+          "text": "气味种类、场景配合与使用条件"
+        },
+        {
+          "label": "效果依据是什么",
+          "text": "实际测量、比较条件与结果"
+        }
       ],
-      "image": "assets/flower-vr.jpg",
-      "caption": "从闻一朵花，到一次可以操作、可以检验的嗅觉体验"
+      "body": "自拟宣传示例；结合本场装置、辨香与放松研究判断",
+      "cue": "围绕“闻森林”“帮助放松”两个具体承诺各说判断依据；结尾留在个人体验与判断。",
+      "footer": "宣传为本组自拟；判断依据P02 / P05 / P15；谢谢大家，欢迎提问"
     },
     {
       "id": "B01",
       "group": "00",
       "role": "backup",
-      "title": "气味能让人记得更多吗？",
+      "title": "备课：气味与场景记忆的研究",
       "layout": "evidence",
       "seconds": 0,
       "table": {
@@ -592,7 +601,7 @@
       "id": "B02",
       "group": "00",
       "role": "backup",
-      "title": "在场感与治疗结果怎么区分",
+      "title": "备课：在场感与健康结果",
       "layout": "evidence",
       "seconds": 0,
       "table": {
@@ -631,7 +640,7 @@
       "id": "B03",
       "group": "00",
       "role": "backup",
-      "title": "怎样接触这些研究与开放设计",
+      "title": "备课：开放资料与设备条件",
       "layout": "evidence",
       "seconds": 0,
       "table": {
@@ -657,14 +666,14 @@
       "takeaways": [
         "先确认装置、材料与内容是否匹配自己的任务"
       ],
-      "script": "备课：P02官方补充视频可以查看动作、虚拟画面与释香的配合。P05论文和研究团队页面提供装置图纸、制作说明与游戏代码入口；复现需要对应的硬件、气味材料和VR条件。具体体验可以从具备嗅觉装置的研究或开发演示找起。资源页面存在和设备已经可以买到，是两种不同的状态，查阅时分别确认。",
+      "script": "P05团队网页连接OSF制作资料与酒窖游戏视频。开放设计用于理解和复现，实际嗅闻需要装置、气味材料与对应内容。课堂入口的最新可达性单独记录；A-Frame只提供浏览器中的视觉与交互。",
       "source_ids": [
-        "P02",
         "P05",
-        "SU01"
+        "SU01",
+        "AF01"
       ],
       "source_locations": [
-        "P02 Movie3；P05资源说明；SU01开放图纸、代码和游戏入口，2026-11-03查看"
+        "P05资源脚注；SU01 Find more information；AF01 Features"
       ],
       "footer": "研究入口与复现条件；产品购买状态另按官方最新信息核对"
     },
@@ -672,7 +681,7 @@
       "id": "B04",
       "group": "00",
       "role": "backup",
-      "title": "备课：根据分子预测气味，解决哪一步",
+      "title": "备课：分子结构与气味预测",
       "layout": "compare",
       "seconds": 0,
       "columns": [
@@ -700,7 +709,7 @@
       "id": "B05",
       "group": "00",
       "role": "backup",
-      "title": "备课：装置的位置跟着嗅闻动作走",
+      "title": "备课：穿戴式与手持式装置",
       "layout": "compare",
       "seconds": 0,
       "columns": [
@@ -727,6 +736,34 @@
       "footer": "Liu等，2023；Niedenthal等，IJHCS，2023"
     },
     {
+      "id": "B06",
+      "group": "00",
+      "role": "backup",
+      "title": "备课：发生器温度响应的原始测量",
+      "layout": "response",
+      "seconds": 0,
+      "script": "这张曲线是发生器温度随时间变化，来自P02 Fig.5d。它支持解释加热和冷却的过程。鼻端浓度、感知起始与空气清除还需要对应测量，图中的温度时长不能替代它们。主讲改用无数值过程图解释残留，原图留在这里回答工程追问。",
+      "source_ids": [
+        "P02"
+      ],
+      "source_locations": [
+        "P02 Fig.5d原温度曲线；Electrical performance；Demonstrations末段的残留与频繁切味限制"
+      ],
+      "footer": "Liu等，2023，Fig.5d，CC BY 4.0；温度曲线保持原图性质",
+      "image": "assets/temperature-response.jpg",
+      "items": [
+        {
+          "label": "控制信号",
+          "text": "可以停止加热"
+        },
+        {
+          "label": "材料与空气",
+          "text": "冷却、散味需要过程"
+        }
+      ],
+      "caption": "原图测的是发生器温度；散味还取决于材料、气流和距离"
+    },
+    {
       "id": "R01",
       "group": "00",
       "role": "backup",
@@ -735,34 +772,39 @@
       "seconds": 0,
       "entries": [
         {
-          "label": "P09",
-          "text": "Malnic等，1999，Cell：组合受体编码",
-          "url": "https://doi.org/10.1016/S0092-8674(00)80581-4"
+          "label": "N01/N02",
+          "text": "NIH/NIDCD；Columbia University：嗅觉通路与受体基础"
         },
         {
-          "label": "P10",
-          "text": "Lee等，2023，Science：分子到气味描述预测",
-          "url": "https://doi.org/10.1126/science.ade4401"
+          "label": "P09",
+          "text": "Malnic等，1999，Cell：嗅觉受体组合编码"
         },
         {
           "label": "P02",
-          "text": "Liu等，2023，Nature Communications：可穿戴嗅觉界面",
-          "url": "https://doi.org/10.1038/s41467-023-37678-4"
+          "text": "Liu等，2023，Nature Communications：可穿戴嗅觉界面"
         },
         {
           "label": "P05",
-          "text": "Niedenthal等，2023，IJHCS：手持嗅觉显示与酒窖游戏",
-          "url": "https://doi.org/10.1016/j.ijhcs.2022.102928"
+          "text": "Niedenthal等，2023，IJHCS：手持装置、酒窖任务与测试"
+        },
+        {
+          "label": "P10",
+          "text": "Lee等，2023，Science：分子结构与气味预测（备课）"
         }
       ],
       "script": "供追溯，不逐条朗读。完整来源与原文定位见来源手册。",
       "source_ids": [
+        "N01",
+        "N02",
         "P09",
-        "P10",
         "P02",
-        "P05"
+        "P05",
+        "P10"
       ],
-      "footer": "完整题录、图源和原文定位见仓库来源手册"
+      "footer": "完整题录、图源和原文定位见仓库来源手册",
+      "source_locations": [
+        "基础来源、原始论文与具体读取范围见来源手册"
+      ]
     },
     {
       "id": "R02",
@@ -796,6 +838,10 @@
           "label": "SU01",
           "text": "Stockholm University，2022：酒窖装置、游戏与开放设计入口",
           "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology"
+        },
+        {
+          "label": "AF01",
+          "text": "A-Frame官方文档与Hello World：浏览器交互入口"
         }
       ],
       "script": "供追溯：P15对应放松对照，P14对应愉悦度与记忆，P35对应在场感，P03对应后续穿戴与训练演示。研究团队开放设计入口见SU01和来源手册。",
@@ -804,7 +850,8 @@
         "P14",
         "P35",
         "P03",
-        "SU01"
+        "SU01",
+        "AF01"
       ],
       "footer": "完整出处、阅读范围和研究团队开放入口见来源手册"
     },
@@ -812,7 +859,7 @@
       "id": "TEAM",
       "group": "00",
       "role": "contributions",
-      "title": "小组分工",
+      "title": "小组分工与实际贡献",
       "layout": "contributions",
       "seconds": 0,
       "table": {
@@ -886,14 +933,26 @@
   ],
   "course": "气味科学中的健康密码",
   "group_handoffs": {
-    "00": "开场从一次真实闻花演示提出问题；收束回到实现、用途与判断方法。四位讲者共用同一问题顺序。",
-    "01": "接住画面里的花为什么还闻不到；解释分子、受体组合和选材料、调释放的关系，把怎样按动作供香交给技术组。",
-    "02": "接住真实材料如何配合动作；讲一套装置的储香、加热、触发与散味。结束时把能控制一次嗅闻转成适合什么任务。",
-    "03": "先用酒窖说明可操作的辨香练习，再明确换到放松时比较目标变了；用对照设计和结果回答加香多帮了多少。"
+    "00": "开场用一分钟讲动机、概念和全场路线；收束先给电脑手机可用的了解入口，再用案例形成判断。不要替三组重复各自结论。",
+    "01": "先连续解释气味分子、受体和神经信号，以及受体响应组合。结束时一次性交给技术组：怎样提供合适刺激，并让它配合场景中的动作。",
+    "02": "只展开一套近鼻面罩装置：认清发生器、追踪一次释香指令，再解释停止和切换。把已经能完成一次受控嗅闻的能力交给应用组。",
+    "03": "把酒窖辨香讲成一项完整任务，展开任务设计与12人测试中的难度结果；再以放松实验短对照说明用途变了，应该测的收益也变了。"
   },
-  "compression_notes": [
-    "主讲保留闻花、装置完整流程、放松研究的对照与结果；AI预测和装置形态比较已移备课。",
-    "时间紧时，缩短S02组合示意的举例和A04的前景讨论，保留每次换人前后的交接。",
-    "无需器材或视频即可讲完；讲图时留出指认对象、读坐标和停顿时间。"
+  "compression_notes": "按四人完整试讲调整。先缩短开源资源介绍、次要元件名与前景，不压掉受体图的读法、装置触发链、酒窖任务与结果图的解释。放松实验只保留同程序的有香/无香比较与结果。视频15–20秒包含在T02预算内，静态三帧可独立讲完；有临时播放问题直接按静态图继续。章节用时是参考，最终守住全场12分钟。",
+  "transition_reserve_seconds": 30,
+  "chapter_titles": [
+    "嗅觉感知的科学基础",
+    "虚拟嗅觉的技术实现",
+    "应用场景与实验结果",
+    "体验途径与效果判断"
+  ],
+  "evidence_notes": [
+    "P09组合响应图为教学示意，甲乙丙及受体A–D不是实测数据或特定香料配方。图中的刺激层次与分子/复杂混合气味的解释分开。",
+    "P02主要讲面罩型，同系列上唇型保留备课。单个发生器含香石蜡载体、加热元件和温度控制；没有把发生器温度响应写成鼻端感知延迟。T03气味残留流程为无数值教学示意。",
+    "P05 N=12，每会话每等级8题，四会话共128题/人。Fig6d保留原图，等级2与3差异未达显著，不宣称难度严格逐级上升；图中分数与离散度口径见来源和问答。未据图估计均值或添加误差线。",
+    "P15 136名健康成人随机四组，34/36/33/33人。投影式VR、同样视听和引导，薰衣草扩香与人造草触觉各有/无。0–10放松VAS；均值图，原表SD留问答。整体前后F(1,132)=90.31,p<.001；作者未检出组间额外优势，未给该项精确F/p。没有无VR对照。",
+    "P15稿§2.6 Smell/Touch括号解释对调，按Fig3与§2.7核正。触觉是观看虚拟草地时触摸真实人造草。",
+    "A-Frame场景提供视觉和交互，闻到气味另需材料与释香装置。研究团队的公开设计入口与现成可购设备分别核查；未把资料公开写成同学已能零硬件体验嗅觉。",
+    "人工原文复核、四人真人试讲、教室放映与Canvas提交由后续小组完成；AI查阅和合成计时分别记录。"
   ]
 }

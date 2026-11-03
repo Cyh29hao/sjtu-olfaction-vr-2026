@@ -1,0 +1,157 @@
+[
+  {
+    "file": "assets/v3/wearable-mask.jpg",
+    "source": "research/2026-11-01/deep-review/assets/P02-Fig1.png",
+    "source_sha256": "c7484f4b00c96e2d11a35b598774b5f338520093002d3900363020d05d1def9e",
+    "source_size": [
+      2003,
+      2241
+    ],
+    "crop_xyxy_pixels": [
+      1392,
+      1930,
+      1687,
+      2240
+    ],
+    "location": "Fig.1e lower middle; physical nine-generator face mask, original 2 cm scale",
+    "modification": "Crop and JPEG conversion only; no redrawing or scaling of evidence",
+    "sha256": "c330f1524349b554ff8da2f148e1f0d4c0f3f45d27048cfe6abf19e9eb464fd0",
+    "attribution": "Yiming Liu et al., Soft, miniaturized, wireless olfactory interface for virtual reality, Nature Communications (2023)",
+    "copyright": "The Author(s), 2023",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "paper_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "file": "assets/v3/wearable-mask-worn.jpg",
+    "source": "research/2026-11-01/deep-review/assets/P02-Fig1.png",
+    "source_sha256": "c7484f4b00c96e2d11a35b598774b5f338520093002d3900363020d05d1def9e",
+    "source_size": [
+      2003,
+      2241
+    ],
+    "crop_xyxy_pixels": [
+      1692,
+      1930,
+      2002,
+      2240
+    ],
+    "location": "Fig.1e lower right; wearing position, original 3 cm scale",
+    "modification": "Crop and JPEG conversion only; no redrawing or scaling of evidence",
+    "sha256": "669bdfdedc52e1be1c1eaf147ad32667843c46bbad48e2fc8a81e83d1a0c900b",
+    "attribution": "Yiming Liu et al., Soft, miniaturized, wireless olfactory interface for virtual reality, Nature Communications (2023)",
+    "copyright": "The Author(s), 2023",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "paper_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "file": "assets/v3/odor-generator.jpg",
+    "source": "research/2026-11-01/deep-review/assets/P02-Fig1.png",
+    "source_sha256": "c7484f4b00c96e2d11a35b598774b5f338520093002d3900363020d05d1def9e",
+    "source_size": [
+      2003,
+      2241
+    ],
+    "crop_xyxy_pixels": [
+      880,
+      619,
+      1164,
+      826
+    ],
+    "location": "Fig.1a lower-right inset; single odor generator, original 3 mm scale",
+    "modification": "Crop and JPEG conversion only; no redrawing or scaling of evidence",
+    "sha256": "72f2d5d4de39f1a0f280fec5d769e5e13505f0aa4056c7632d53f3ab47fc9546",
+    "attribution": "Yiming Liu et al., Soft, miniaturized, wireless olfactory interface for virtual reality, Nature Communications (2023)",
+    "copyright": "The Author(s), 2023",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "paper_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "file": "assets/v3/odor-generator-structure.jpg",
+    "source": "research/2026-11-01/deep-review/assets/P02-Fig1.png",
+    "source_sha256": "c7484f4b00c96e2d11a35b598774b5f338520093002d3900363020d05d1def9e",
+    "source_size": [
+      2003,
+      2241
+    ],
+    "crop_xyxy_pixels": [
+      353,
+      319,
+      1200,
+      855
+    ],
+    "location": "Fig.1a odor generator exploded structure and heating/sensing channels",
+    "modification": "Crop and JPEG conversion only; no redrawing or scaling of evidence",
+    "sha256": "06152168851b3b81f143c8c77b708372ef8f9801db1819ffe9049b8ae178aefb",
+    "attribution": "Yiming Liu et al., Soft, miniaturized, wireless olfactory interface for virtual reality, Nature Communications (2023)",
+    "copyright": "The Author(s), 2023",
+    "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "paper_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "file": "assets/v3/flower-sequence.jpg",
+    "source": "research/2026-11-01/deep-review/assets/P02-Movie3.mp4",
+    "frame_seconds": [
+      1,
+      7,
+      13
+    ],
+    "source_frame_size": [
+      1920,
+      1080
+    ],
+    "output_size": [
+      1920,
+      360
+    ],
+    "modification": "Three actual decoded frames, each proportionally reduced to 640x360 and placed side by side; no generated content",
+    "sha256": "314aca46effffa639aa733db383b063502d94ddd3c73006fee039d523d22160c",
+    "attribution": "Yiming Liu et al., Soft, miniaturized, wireless olfactory interface for virtual reality, Nature Communications (2023)",
+    "copyright": "The Author(s), 2023",
+    "source_url": "https://static-content.springer-cdn.com/esm/art%3A10.1038%2Fs41467-023-37678-4/MediaObjects/41467_2023_37678_MOESM6_ESM.mp4",
+    "paper_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_sha256": "ab1ed82e9a5f89f6be314e8c3d9b653a20b6ceea63480e5c5e1a5f5c74df386e",
+    "observed_actions": [
+      "grasping the flower / arm in front",
+      "hand near face / flower closer in VR",
+      "hand lowered / flower moved away in VR"
+    ]
+  },
+  {
+    "file": "assets/v3/flower-demo.mp4",
+    "source": "research/2026-11-01/deep-review/assets/P02-Movie3.mp4",
+    "source_sha256": "ab1ed82e9a5f89f6be314e8c3d9b653a20b6ceea63480e5c5e1a5f5c74df386e",
+    "source_url": "https://static-content.springer-cdn.com/esm/art%3A10.1038%2Fs41467-023-37678-4/MediaObjects/41467_2023_37678_MOESM6_ESM.mp4",
+    "paper_url": "https://doi.org/10.1038/s41467-023-37678-4",
+    "source_location": "Supplementary Movie 3; original archive member 41467_2023_37678_MOESM6_ESM.mp4",
+    "source_interval_seconds": [
+      0,
+      15.016566
+    ],
+    "duration_seconds": 16.641067,
+    "pixel_size": [
+      1920,
+      1080
+    ],
+    "mime_type": "video/mp4;codecs=avc1",
+    "modification": "Excerpt captured from playback at rate 1, H264 MP4 re-encoding, video only; encoding startup hold makes output about 1.62 s longer than the source interval",
+    "source_audio_tracks": 1,
+    "output_audio_tracks": 0,
+    "source_audio_reviewed": false,
+    "attribution": "Yiming Liu et al., Soft, miniaturized, wireless olfactory interface for virtual reality, Nature Communications (2023)",
+    "copyright": "The Author(s), 2023",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "sha256": "cdf074b93a55d3249f4840f3d5a4d1c23667c71963058101a7a18a3955cb6ed9",
+    "verification": "Headless Edge decoded output at 0.5, 7, 13 s and near the end; keyframes visually reviewed. Native PowerPoint playback is not covered by this record."
+  }
+]

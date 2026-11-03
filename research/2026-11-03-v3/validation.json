@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-03",
+  "claims": 11,
+  "relative_links": 11,
+  "links_passed": true,
+  "utf8_readback": true,
+  "original_figure_unchanged": true,
+  "crop_pixels": [
+    500,
+    586
+  ],
+  "figure_visual_review": true,
+  "aframe_browser_render_review": true,
+  "aframe_keyboard_move": true,
+  "manual_pdf_valid_pages": 6,
+  "human_review": false
+}

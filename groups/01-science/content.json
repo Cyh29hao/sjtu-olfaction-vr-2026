@@ -1,7 +1,7 @@
 {
-  "version": "v2",
-  "title": "让 VR 有气味",
-  "subtitle": "怎样让鼻子也参与虚拟体验",
+  "version": "v3",
+  "title": "气味、VR与虚拟感官",
+  "subtitle": "虚拟嗅觉怎样实现，又适合用在哪里",
   "template": "诗意校园·2022蓝绿青春",
   "speaker_count": 4,
   "presentation_seconds": 720,
@@ -22,7 +22,7 @@
       "url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
       "fulltext": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
       "doi": "10.1016/j.ijhcs.2022.102928",
-      "location": "Fig. 5; User study; Discussion",
+      "location": "Display design; user study; Figs.5–6; Discussion; supplementary OSF resources",
       "license": "CC BY 4.0"
     },
     "P09": {
@@ -88,70 +88,106 @@
       "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
       "location": "Code and blueprints openly available; Find more information; checked 2026-11-03",
       "license": "只转述公开资源入口；不复制新闻图片或宣传性疗效表述"
+    },
+    "AF01": {
+      "title": "A-Frame: Introduction and Hello World",
+      "authors": "A-Frame project",
+      "year": 2026,
+      "url": "https://aframe.io/docs/1.8.0/introduction/",
+      "fulltext": "https://aframe.io/aframe/examples/boilerplate/hello-world/",
+      "location": "Features / Cross-Platform VR; Hello World sample; accessed 2026-11-03",
+      "license": "MIT；主讲只提供现成示例入口，使用条件按项目说明"
+    },
+    "N01": {
+      "title": "Smell Disorders: How does your sense of smell work?",
+      "authors": "NIH / National Institute on Deafness and Other Communication Disorders",
+      "year": 2026,
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "location": "How does your sense of smell work?；2026-11-03核读正文",
+      "license": "只引用已核事实，通路图由本组绘制"
+    },
+    "N02": {
+      "title": "Richard Axel Wins 2004 Nobel Prize",
+      "authors": "Columbia University Irving Medical Center",
+      "year": 2004,
+      "url": "https://www.cuimc.columbia.edu/news/richard-axel-wins-2004-nobel-prize",
+      "location": "Paragraph beginning The sense of smell is possible；嗅球及后续脑区",
+      "license": "只引用已核事实，不复制原图"
     }
   },
   "course": "气味科学中的健康密码",
   "group_handoffs": {
-    "00": "开场从一次真实闻花演示提出问题；收束回到实现、用途与判断方法。四位讲者共用同一问题顺序。",
-    "01": "接住画面里的花为什么还闻不到；解释分子、受体组合和选材料、调释放的关系，把怎样按动作供香交给技术组。",
-    "02": "接住真实材料如何配合动作；讲一套装置的储香、加热、触发与散味。结束时把能控制一次嗅闻转成适合什么任务。",
-    "03": "先用酒窖说明可操作的辨香练习，再明确换到放松时比较目标变了；用对照设计和结果回答加香多帮了多少。"
+    "00": "开场用一分钟讲动机、概念和全场路线；收束先给电脑手机可用的了解入口，再用案例形成判断。不要替三组重复各自结论。",
+    "01": "先连续解释气味分子、受体和神经信号，以及受体响应组合。结束时一次性交给技术组：怎样提供合适刺激，并让它配合场景中的动作。",
+    "02": "只展开一套近鼻面罩装置：认清发生器、追踪一次释香指令，再解释停止和切换。把已经能完成一次受控嗅闻的能力交给应用组。",
+    "03": "把酒窖辨香讲成一项完整任务，展开任务设计与12人测试中的难度结果；再以放松实验短对照说明用途变了，应该测的收益也变了。"
   },
-  "compression_notes": [
-    "主讲保留闻花、装置完整流程、放松研究的对照与结果；AI预测和装置形态比较已移备课。",
-    "时间紧时，缩短S02组合示意的举例和A04的前景讨论，保留每次换人前后的交接。",
-    "无需器材或视频即可讲完；讲图时留出指认对象、读坐标和停顿时间。"
+  "compression_notes": "按四人完整试讲调整。先缩短开源资源介绍、次要元件名与前景，不压掉受体图的读法、装置触发链、酒窖任务与结果图的解释。放松实验只保留同程序的有香/无香比较与结果。视频15–20秒包含在T02预算内，静态三帧可独立讲完；有临时播放问题直接按静态图继续。章节用时是参考，最终守住全场12分钟。",
+  "transition_reserve_seconds": 30,
+  "chapter_titles": [
+    "嗅觉感知的科学基础",
+    "虚拟嗅觉的技术实现",
+    "应用场景与实验结果",
+    "体验途径与效果判断"
+  ],
+  "evidence_notes": [
+    "P09组合响应图为教学示意，甲乙丙及受体A–D不是实测数据或特定香料配方。图中的刺激层次与分子/复杂混合气味的解释分开。",
+    "P02主要讲面罩型，同系列上唇型保留备课。单个发生器含香石蜡载体、加热元件和温度控制；没有把发生器温度响应写成鼻端感知延迟。T03气味残留流程为无数值教学示意。",
+    "P05 N=12，每会话每等级8题，四会话共128题/人。Fig6d保留原图，等级2与3差异未达显著，不宣称难度严格逐级上升；图中分数与离散度口径见来源和问答。未据图估计均值或添加误差线。",
+    "P15 136名健康成人随机四组，34/36/33/33人。投影式VR、同样视听和引导，薰衣草扩香与人造草触觉各有/无。0–10放松VAS；均值图，原表SD留问答。整体前后F(1,132)=90.31,p<.001；作者未检出组间额外优势，未给该项精确F/p。没有无VR对照。",
+    "P15稿§2.6 Smell/Touch括号解释对调，按Fig3与§2.7核正。触觉是观看虚拟草地时触摸真实人造草。",
+    "A-Frame场景提供视觉和交互，闻到气味另需材料与释香装置。研究团队的公开设计入口与现成可购设备分别核查；未把资料公开写成同学已能零硬件体验嗅觉。",
+    "人工原文复核、四人真人试讲、教室放映与Canvas提交由后续小组完成；AI查阅和合成计时分别记录。"
   ],
   "slides": [
     {
       "id": "S01",
       "group": "01",
+      "title": "气味分子怎样成为嗅觉信号",
+      "layout": "olfaction",
       "role": "main",
-      "title": "鼻子收到的是气味分子",
-      "layout": "mechanism",
-      "seconds": 40,
-      "script": "日常闻花时，花里的挥发性分子进入空气，随着吸气来到鼻腔，触发嗅觉受体，再由神经信号参与形成气味感受。放到VR里，头显只把花的样子送给眼睛，鼻子这一段还需要装置来补上。所以今天讲的虚拟嗅觉，基本做法很直接：在虚拟场景需要的时候，把真实气味送到鼻子附近。下一步是，装置该准备什么样的气味。",
+      "seconds": 65,
+      "script": "先看一次普通的闻花。花中的一些挥发性分子进入空气，随着吸气到达鼻腔上部的嗅觉区域。那里有嗅觉感受神经元，受体蛋白位于这些细胞表面；气味分子与受体相互作用，细胞把化学刺激转成神经信号，再传到嗅球和后续脑区，参与形成气味感受。图中从左到右，发生的是分子到信号、再到感受的过程。我们觉得一种气味熟悉或陌生，还和以往的经验有关。下面接着看，这些受体怎样帮助我们区分不同气味。",
       "source_ids": [
-        "P09",
-        "P02"
+        "N01",
+        "N02",
+        "P09"
       ],
       "source_locations": [
-        "P09 Abstract：受体组合响应；P02 Concepts and design principle"
+        "N01 How does your sense of smell work?；N02 The sense of smell is possible段；P09原始摘要"
       ],
-      "footer": "机制为教学示意；依据Malnic等，Cell，1999；Liu等，2023",
       "steps": [
         {
           "label": "气味分子",
-          "text": "随吸气进入鼻腔"
+          "text": "随吸气到达嗅觉区域"
         },
         {
-          "label": "嗅觉受体",
-          "text": "把刺激转成神经信号"
+          "label": "受体与神经元",
+          "text": "把化学刺激转成神经信号"
         },
         {
-          "label": "大脑",
-          "text": "形成气味感受"
+          "label": "嗅球及后续脑区",
+          "text": "处理信号，形成气味感受"
         }
       ],
-      "caption": "给画面配香，要把真实刺激送到鼻子"
+      "caption": "分子刺激 → 神经信号 → 气味感受",
+      "cue": "用指示器完整走一遍图，讲清受体位于感受神经元上；示意不画作精确解剖结构。",
+      "footer": "嗅觉通路教学示意；NIH/NIDCD；Columbia University；Malnic等，1999"
     },
     {
       "id": "S02",
       "group": "01",
-      "role": "main",
-      "title": "一种气味，会引起一组受体响应",
+      "title": "嗅觉受体的组合响应",
       "layout": "receptors",
-      "seconds": 45,
-      "script": "看这张简化图，每一列代表一种受体，每一行代表一种气味。一个受体可以对多种气味分子有响应，一种分子也可以引起多个受体响应；大脑利用这类组合来区分气味。于是，给软件写上“玫瑰味”还不够，装置需要选出能让人产生相应感受的材料。几种香料混在一起会闻成什么，也要通过实际嗅闻来检验。我们的闻花任务可以先从几种已经选好的材料做起。",
+      "role": "main",
+      "seconds": 75,
+      "script": "这张图把受体的响应关系简化了。每一列是一种受体，每一行是一种气味刺激；蓝点表示这里画出的响应。先看受体C，它可以对几种刺激有响应。再看刺激甲，也涉及多个受体。神经系统可以利用这样的响应组合来区分气味，因而一种味道通常涉及多个受体的响应。图中的颜色和圆点帮助解释组合关系，具体材料能产生怎样的感受，还要实际检验。讲到这里，呈现气味的任务就清楚了：既要提供合适的刺激，也要安排它到达鼻子的时间。下一位同学用一套真实装置，说明这件事怎样实现。",
       "source_ids": [
-        "P09",
-        "P02",
-        "P05"
+        "P09"
       ],
       "source_locations": [
-        "P09 Abstract，combinatorial receptor code；P02预装含香材料；P05调配预存材料"
+        "P09 Abstract: combinatorial receptor codes; 图为教学示意"
       ],
-      "footer": "Malnic等，Cell，1999；组合图为教学示意",
       "receptor_labels": [
         "受体A",
         "受体B",
@@ -160,21 +196,21 @@
       ],
       "odors": [
         {
-          "label": "气味甲",
+          "label": "刺激甲",
           "active": [
             0,
             2
           ]
         },
         {
-          "label": "气味乙",
+          "label": "刺激乙",
           "active": [
             1,
             2
           ]
         },
         {
-          "label": "气味丙",
+          "label": "刺激丙",
           "active": [
             0,
             1,
@@ -182,39 +218,9 @@
           ]
         }
       ],
-      "caption": "组合关系示意；圆点不表示实测强度"
-    },
-    {
-      "id": "S03",
-      "group": "01",
-      "role": "main",
-      "title": "先选花香，再让它配合动作",
-      "layout": "requirements",
-      "seconds": 50,
-      "script": "所以，做这次闻花体验，至少要把材料和释放方式配合起来。首先预装合适的花香材料；然后调节释放，让气味的强弱适合这次体验；还要让它跟得上动作，靠近时出现，移开以后逐渐退去。这里的“数字化”，主要体现在程序怎样控制真实材料。这样一来，问题就落到具体装置上了：香料放在哪里，电脑的指令又怎样变成一次释香？",
-      "source_ids": [
-        "P02",
-        "P05"
-      ],
-      "source_locations": [
-        "P02 Concepts and design principle; Demonstrations；P05 display design"
-      ],
-      "footer": "依据P02 / P05归纳的实现要求；图示为本组解释",
-      "items": [
-        {
-          "label": "选材料",
-          "text": "这朵花配什么气味"
-        },
-        {
-          "label": "调释放",
-          "text": "让刺激强弱合适"
-        },
-        {
-          "label": "配动作",
-          "text": "靠近时闻到\n移开后退味"
-        }
-      ],
-      "caption": "材料提供气味，程序安排它怎样出现"
+      "caption": "看响应组合来理解编码；图中甲乙丙与圆点均为教学示意",
+      "cue": "先纵着读一列，再横着读一行，给观众认图的时间；不扩展成气味调色盘。",
+      "footer": "Malnic等，Cell，1999，Abstract；受体组合关系教学示意"
     }
   ]
 }
