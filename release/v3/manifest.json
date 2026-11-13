@@ -5,16 +5,16 @@
   "last_slide": "11人分工",
   "speakers": 4,
   "design_seconds": 720,
-  "spoken_seconds_budget": 690,
-  "transition_reserve_seconds": 30,
+  "spoken_seconds_budget": 685,
+  "transition_reserve_seconds": 35,
   "presentation_seconds": 720,
-  "synthesized_reading_seconds": 598.66,
+  "synthesized_reading_seconds": null,
   "human_rehearsal": false,
   "artifacts": [
     {
       "path": "release/v3/olfaction-vr-v3.pptx",
-      "bytes": 874029,
-      "sha256": "3baecaf844d080eda8bbcf39b3b7644501c96e541af744b96364b7ca45f94a9a"
+      "bytes": 874811,
+      "sha256": "95e9ba27607940b1f275445a6993d535e541ec822b19bdebbe1ed5facc4abc96"
     },
     {
       "path": "release/v3/group-01-science.pptx",
@@ -23,8 +23,8 @@
     },
     {
       "path": "release/v3/group-02-technology.pptx",
-      "bytes": 265387,
-      "sha256": "6097e2af8374a4c9656dc0e2098fc5948368505aaf48fe95bf2ceecd7f28c106"
+      "bytes": 265949,
+      "sha256": "00c06f82737db779feea51c54b67b0476b75c6f131b9e0aef2b201cc503c5e9e"
     },
     {
       "path": "release/v3/group-03-applications.pptx",
@@ -33,8 +33,8 @@
     },
     {
       "path": "release/v3/olfaction-vr-v3.pdf",
-      "bytes": 699463,
-      "sha256": "3c6da7d5f59ff04b50ed50f1da7a84e5bc938c1b7fbd96ddfe8144b026399c70"
+      "bytes": 700943,
+      "sha256": "758c402be5ce3b4a6d99a618a90cd6119f96a8bd221e4c4dc7fc4776aff8cfc8"
     },
     {
       "path": "release/v3/group-01-science.pdf",
@@ -44,7 +44,7 @@
     {
       "path": "release/v3/group-02-technology.pdf",
       "bytes": 209460,
-      "sha256": "1776472d34b8382ec627c12250cd784a28c6a9d7d6145478f3ba61c8c96014d1"
+      "sha256": "1cb42383d8833e2ff022144ef55d09375fea7b2fab09a6d57de58524db509fb7"
     },
     {
       "path": "release/v3/group-03-applications.pdf",
@@ -53,18 +53,18 @@
     },
     {
       "path": "release/v3/olfaction-vr-v3-main.pdf",
-      "bytes": 893434,
-      "sha256": "fb5b1f06aa27653eff1372abc464c21a941c7433af9ff5c53fe33b1713a0a50e"
+      "bytes": 896206,
+      "sha256": "29ecea6199b02579943e4263e9b2207618015501f277ff4c26649cc63c86c2f9"
     },
     {
       "path": "release/v3/全场口播.pdf",
-      "bytes": 262104,
-      "sha256": "da923e2407cee15bb18ef7e3675418659aba3515f6de96b26e8597cafed97e73"
+      "bytes": 267577,
+      "sha256": "9afe5db4e44d81b936c7e578065e6163576576067c614c2a91e6e3f635898a15"
     },
     {
       "path": "release/v3/问答与备课.pdf",
       "bytes": 296434,
-      "sha256": "daf09b8863f2444e122ad83191db2b0b6495e8bc0e3bf014b66e6a2176e630bb"
+      "sha256": "21d49140a0fbfb63ec33ab4ad5fce83b04fcfb3445b4c2a50c31a68ee743e213"
     }
   ]
 }
