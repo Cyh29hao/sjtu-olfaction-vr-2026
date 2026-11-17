@@ -14,17 +14,31 @@ import fitz
 
 ROOT = Path(__file__).resolve().parents[1]
 NS = {'a':'http://schemas.openxmlformats.org/drawingml/2006/main',
+      'p':'http://schemas.openxmlformats.org/presentationml/2006/main',
       'c':'http://schemas.openxmlformats.org/drawingml/2006/chart'}
 GROUP_NAMES = {'01':'group-01-science', '02':'group-02-technology', '03':'group-03-applications'}
 PEOPLE = ['陈云海','朱轶宸','刘昌镇','潘力熔','蔡天怿','娄嘉恒','王叶','陈柔羽','杨绎麟','邓沐熙','隋沅辰']
 
 
-def check_chart(archive, number, source):
-    rels = E.fromstring(archive.read(f'ppt/slides/_rels/slide{number}.xml.rels'))
-    targets = [r.get('Target') for r in rels if r.get('Type','').endswith('/chart')]
+def relationships(archive, part):
+    rel = posixpath.join(posixpath.dirname(part), '_rels', posixpath.basename(part)+'.rels')
+    return [(r.get('Id'), r.get('Type'), r.get('Target').lstrip('/') if r.get('Target').startswith('/')
+             else posixpath.normpath(posixpath.join(posixpath.dirname(part), r.get('Target'))))
+            for r in E.fromstring(archive.read(rel))]
+
+
+def ordered_slides(archive):
+    root = E.fromstring(archive.read('ppt/presentation.xml'))
+    targets = {rid:target for rid, _, target in relationships(archive, 'ppt/presentation.xml')}
+    return [targets[x.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id')]
+            for x in root.findall('{http://schemas.openxmlformats.org/presentationml/2006/main}sldIdLst/*')]
+
+
+def check_chart(archive, part, source):
+    rels = relationships(archive, part)
+    targets = [target for _, kind, target in rels if kind.endswith('/chart')]
     assert len(targets) == 1, (source['id'], 'expected one editable chart', targets)
-    target = targets[0]
-    chart_path = target.lstrip('/') if target.startswith('/') else posixpath.normpath(posixpath.join('ppt/slides', target))
+    chart_path = targets[0]
     chart = E.fromstring(archive.read(chart_path))
     actual = chart.xpath('//c:ser', namespaces=NS)
     expected = source['chart']
@@ -55,9 +69,14 @@ def check_deck(path, expected, sources, is_full=False):
             if name.lower().endswith(('.png','.jpg','.jpeg','.gif','.bmp','.webp','.tif','.tiff')):
                 with Image.open(BytesIO(data)) as image:
                     image.verify()
-        for number, slide in enumerate(expected,1):
-            xml = E.fromstring(archive.read(f'ppt/notesSlides/notesSlide{number}.xml'))
-            notes = '\n'.join(xml.xpath('//a:t/text()',namespaces=NS))
+        ordered = ordered_slides(archive)
+        assert len(ordered) == len(expected)
+        for part, slide in zip(ordered, expected):
+            note = [target for _, kind, target in relationships(archive, part) if kind.endswith('/notesSlide')]
+            assert len(note) == 1
+            xml = E.fromstring(archive.read(note[0]))
+            paras = xml.xpath('//p:sp[p:nvSpPr/p:nvPr/p:ph[@type="body"]]/p:txBody/a:p',namespaces=NS)
+            notes = '\n'.join(''.join(p.xpath('.//a:t/text()',namespaces=NS)) for p in paras)
             assert slide['script'] in notes, (path.name,slide['id'],'notes drift')
             for sid in slide.get('source_ids',[]):
                 assert sid in sources, (slide['id'],'unknown source',sid)
@@ -65,11 +84,11 @@ def check_deck(path, expected, sources, is_full=False):
                 if url:
                     assert url in notes, (path.name,slide['id'],'missing source URL',sid)
             if slide.get('layout') == 'results':
-                check_chart(archive,number,slide)
+                check_chart(archive,part,slide)
                 charts += 1
         if is_full:
             assert expected[-1]['id'] == 'TEAM' and expected[-1]['role'] == 'contributions'
-            last = E.fromstring(archive.read(f'ppt/slides/slide{len(expected)}.xml'))
+            last = E.fromstring(archive.read(ordered[-1]))
             rows = last.xpath('//a:tbl/a:tr',namespaces=NS)
             assert len(rows) == len(PEOPLE)+1, ('TEAM needs header and eleven person rows',len(rows))
             row_text = [''.join(r.xpath('.//a:t/text()',namespaces=NS)) for r in rows[1:]]

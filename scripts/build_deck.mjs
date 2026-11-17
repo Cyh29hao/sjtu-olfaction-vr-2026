@@ -106,7 +106,7 @@ function base(d,n) {
     // Reuse the template master/layout; custom content does not change the shared master.
     if(source.version === 'v3') {
       const chapter = d.role === 'backup' ? '备课与来源' : d.role === 'contributions' ? '小组协作' : ({'01':'01  嗅觉感知的科学基础','02':'02  虚拟嗅觉的技术实现','03':'03  应用场景与实验结果'}[d.group] || (d.id.startsWith('C')?'04  体验途径与效果判断':'气味、VR与虚拟感官'));
-      text(s,chapter,104,16,1092,25,16,C.muted,false,'chapter-location');
+      text(s,d.section_heading || chapter,104,16,1092,25,16,C.muted,false,'chapter-location');
       text(s,d.title,104,51,1092,77,43,C.blue,true,'headline');
     } else text(s,d.title,104,38,1092,90,44,C.blue,true,'headline');
     text(s,d.footer || (d.source_ids || []).map(x=>`[${x}]`).join('  '),104,660,1060,33,16,C.muted,false,'source-footer');
@@ -382,6 +382,16 @@ async function render(d,n) {
         text(s,a.text,450,y,746,95,33,C.ink);
       });
       if(body[0])text(s,body[0],104,615,1092,38,27,C.muted);
+      break;
+    }
+    case 'application-summary': {
+      text(s,d.question,104,150,1092,48,27,C.ink,true);
+      d.alternatives.forEach((a,i)=>{
+        const y=226+i*142;
+        text(s,a.label,104,y+6,180,45,30,C.blue,true);
+        text(s,a.text,320,y,860,96,27,C.ink);
+      });
+      d.lines.forEach((line,i)=>text(s,line,104,512+i*54,1092,64,34,C.blue,true));
       break;
     }
     case 'closing': {
