@@ -153,5 +153,12 @@
     "license_url": "https://creativecommons.org/licenses/by/4.0/",
     "sha256": "cdf074b93a55d3249f4840f3d5a4d1c23667c71963058101a7a18a3955cb6ed9",
     "verification": "Headless Edge decoded output at 0.5, 7, 13 s and near the end; keyframes visually reviewed. Native PowerPoint playback is not covered by this record."
+  },
+  {
+    "file": "assets/v3/flower-demo-qr.png",
+    "type": "QR code",
+    "target_url": "https://raw.githubusercontent.com/Cyh29hao/sjtu-olfaction-vr-2026/main/assets/v3/flower-demo.mp4",
+    "content": "Download the existing P02 flower demonstration excerpt; original film attribution is recorded above.",
+    "created": "2026-11-17"
   }
 ]

@@ -109,7 +109,7 @@ function base(d,n) {
       text(s,d.section_heading || chapter,104,16,1092,25,16,C.muted,false,'chapter-location');
       text(s,d.title,104,51,1092,77,43,C.blue,true,'headline');
     } else text(s,d.title,104,38,1092,90,44,C.blue,true,'headline');
-    text(s,d.footer || (d.source_ids || []).map(x=>`[${x}]`).join('  '),104,660,1060,33,16,C.muted,false,'source-footer');
+    text(s,d.footer ?? (d.source_ids || []).map(x=>`[${x}]`).join('  '),104,660,1060,33,16,C.muted,false,'source-footer');
     text(s,String(n).padStart(2,'0'),1185,673,45,25,15,C.muted,false,'page-number');
   }
   s.speakerNotes.text=notes(d);

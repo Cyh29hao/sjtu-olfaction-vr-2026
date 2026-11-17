@@ -172,7 +172,7 @@
       ],
       "caption": "分子刺激 → 神经信号 → 气味感受",
       "cue": "用指示器完整走一遍图，讲清受体位于感受神经元上；示意不画作精确解剖结构。",
-      "footer": "嗅觉通路教学示意；NIH/NIDCD；Columbia University；Malnic等，1999"
+      "footer": "嗅觉通路示意；NIH/NIDCD；Malnic等，1999"
     },
     {
       "id": "S02",
@@ -218,9 +218,9 @@
           ]
         }
       ],
-      "caption": "看响应组合来理解编码；图中甲乙丙与圆点均为教学示意",
+      "caption": "不同气味可以激活不同的受体组合（示意）",
       "cue": "先纵着读一列，再横着读一行，给观众认图的时间；不扩展成气味调色盘。",
-      "footer": "Malnic等，Cell，1999，Abstract；受体组合关系教学示意"
+      "footer": "Malnic等，Cell，1999"
     }
   ]
 }
