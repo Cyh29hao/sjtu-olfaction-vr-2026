@@ -24,6 +24,8 @@ STYLES={
 
 def inline(text):
     text=escape(text)
+    subscript_digits=str.maketrans('₀₁₂₃₄₅₆₇₈₉','0123456789')
+    text=re.sub('[₀₁₂₃₄₅₆₇₈₉]+',lambda match:'<sub>'+match.group(0).translate(subscript_digits)+'</sub>',text)
     text=re.sub(r'\*\*(.*?)\*\*',r'\1',text)
     text=re.sub(r'\[([^\]]+)\]\((https?://[^)]+)\)',
                 lambda m:f'<link href="{m.group(2)}" color="#175F8B">{m.group(1)}</link>',text)

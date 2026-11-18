@@ -113,6 +113,58 @@
       "url": "https://www.cuimc.columbia.edu/news/richard-axel-wins-2004-nobel-prize",
       "location": "Paragraph beginning The sense of smell is possible；嗅球及后续脑区",
       "license": "只引用已核事实，不复制原图"
+    },
+    "G01": {
+      "title": "Olfactory discrimination ability of human subjects for ten pairs of enantiomers",
+      "authors": "Laska & Teubner",
+      "year": 1999,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10321817/",
+      "doi": "10.1093/chemse/24.2.161",
+      "location": "原始摘要：20人、10对对映体、三角强迫选择；香芹酮等部分配对达到群体显著辨别。本轮取得摘要检索正文，未核读全文。",
+      "license": "仅转述研究结果，不复制论文图片"
+    },
+    "G02": {
+      "title": "Structural determinants of a conserved enantiomer-selective carvone binding pocket in the human odorant receptor OR1A1",
+      "authors": "Geithe et al.",
+      "year": 2017,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11107518/",
+      "doi": "10.1007/s00018-017-2576-z",
+      "location": "Abstract首段；Results: Carvone enantioselective and enantiospecific OR1A1 homologs。核读香型、受体响应及细胞实验性质；未将OR1A1单个受体写成完整感知的唯一解释。",
+      "license": "转述事实，不复制该论文插图"
+    },
+    "G03": {
+      "title": "PubChem: (R)-(−)-Carvone, CID 439570",
+      "authors": "NIH PubChem",
+      "year": 2026,
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/439570",
+      "location": "化学式C10H14O、R构型与二维结构。网页正文验证码受限；检索索引可见记录名和InChI，结构图片复用第一组提交PPT第6页。",
+      "license": "NIH PubChem二维化学结构；保留来源与CID，不复制第三方香型说明"
+    },
+    "G04": {
+      "title": "PubChem: (S)-(+)-Carvone, CID 16724",
+      "authors": "NIH PubChem",
+      "year": 2026,
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/16724",
+      "location": "化学式C10H14O、S构型与二维结构。网页正文验证码受限；检索索引可见记录名和分子式，结构图片复用第一组提交PPT第6页。",
+      "license": "NIH PubChem二维化学结构；保留来源与CID，不复制第三方香型说明"
+    },
+    "G05": {
+      "title": "Transport features predict if a molecule is odorous",
+      "authors": "Mayhew et al.",
+      "year": 2022,
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2116576119",
+      "doi": "10.1073/pnas.2116576119",
+      "location": "Abstract；Building an Odor Classification Model；Importance of High-Quality Experimental Data。实际核读传输条件、rule of three及96%的分母；本轮仅用于备课。",
+      "license": "转述事实；未新增复制原图"
+    },
+    "G06": {
+      "title": "Human olfactory detection of homologous n-alcohols measured via concentration–response functions",
+      "authors": "Cometto-Muñiz & Abraham",
+      "year": 2008,
+      "url": "https://doi.org/10.1016/j.pbb.2007.12.023",
+      "doi": "10.1016/j.pbb.2007.12.023",
+      "location": "原始摘要检索正文，支持四种正构醇的浓度—检测实验；出版社全文403。本轮未重新核验原稿图中阈值、误差线与各组人数，定量图未进入合稿。",
+      "license": "仅保留备课题录和阅读范围，不新增复制原图"
     }
   },
   "course": "气味科学中的健康密码",
@@ -141,20 +193,54 @@
   ],
   "slides": [
     {
+      "id": "S00",
+      "group": "01",
+      "role": "main",
+      "title": "香芹酮的结构与气味",
+      "layout": "compare",
+      "seconds": 35,
+      "script": "先看香芹酮这个例子。两种香芹酮的分子式都是C₁₀H₁₄O，原子连接方式也相同，但空间排列互为不能重合的镜像。左边通常描述为留兰香样，右边是葛缕子样。这个例子说明，选择气味材料时，分子的空间结构也可能影响闻到的气味。那鼻子怎样把分子的差别转成感受？",
+      "columns": [
+        {
+          "label": "(R)-(−)-香芹酮",
+          "image": "assets/v3/carvone-r.png",
+          "text": "典型气味：留兰香样"
+        },
+        {
+          "label": "(S)-(+)-香芹酮",
+          "image": "assets/v3/carvone-s.png",
+          "text": "典型气味：葛缕子样"
+        }
+      ],
+      "body": [
+        "分子式和连接方式相同，空间排列不同"
+      ],
+      "source_ids": [
+        "G02",
+        "G03",
+        "G04"
+      ],
+      "source_locations": [
+        "G02 Abstract首段、Results首节；第一组交稿第6页；G03/G04 PubChem CID 439570/16724二维结构"
+      ],
+      "cue": "指两幅结构中的实楔／虚楔，点出空间排列不同；香型用典型描述，不在本页展开命名规则或假定每个人都能辨别。",
+      "footer": "Geithe等，2017；结构：NIH PubChem，CID 439570、16724"
+    },
+    {
       "id": "S01",
       "group": "01",
       "title": "气味分子怎样成为嗅觉信号",
       "layout": "olfaction",
       "role": "main",
-      "seconds": 65,
-      "script": "先看一次普通的闻花。花中的一些挥发性分子进入空气，随着吸气到达鼻腔上部的嗅觉区域。那里有嗅觉感受神经元，受体蛋白位于这些细胞表面；气味分子与受体相互作用，细胞把化学刺激转成神经信号，再传到嗅球和后续脑区，参与形成气味感受。图中从左到右，发生的是分子到信号、再到感受的过程。我们觉得一种气味熟悉或陌生，还和以往的经验有关。下面接着看，这些受体怎样帮助我们区分不同气味。",
+      "seconds": 50,
+      "script": "闻花时，一些挥发性分子进入空气，随吸气到达鼻腔上部的嗅觉区域。嗅觉感受神经元的纤毛伸入黏液层，受体蛋白分布在纤毛表面。分子与受体相互作用后，细胞把化学刺激转成神经信号，经嗅球传向后续脑区，参与形成气味感受。沿图走一遍：先有分子到达，再有受体和细胞的响应，最后是脑内处理。接着看，不同气味怎样区分。",
       "source_ids": [
         "N01",
         "N02",
         "P09"
       ],
       "source_locations": [
-        "N01 How does your sense of smell work?；N02 The sense of smell is possible段；P09原始摘要"
+        "N01 How does your sense of smell work?；N02 The sense of smell is possible段；P09原始摘要。通路为教学概括；不画成固定两条独立脑通路。"
       ],
       "steps": [
         {
@@ -163,7 +249,7 @@
         },
         {
           "label": "受体与神经元",
-          "text": "把化学刺激转成神经信号"
+          "text": "纤毛上的受体参与刺激识别"
         },
         {
           "label": "嗅球及后续脑区",
@@ -180,13 +266,13 @@
       "title": "嗅觉受体的组合响应",
       "layout": "receptors",
       "role": "main",
-      "seconds": 75,
-      "script": "这张图把受体的响应关系简化了。每一列是一种受体，每一行是一种气味刺激；蓝点表示这里画出的响应。先看受体C，它可以对几种刺激有响应。再看刺激甲，也涉及多个受体。神经系统可以利用这样的响应组合来区分气味，因而一种味道通常涉及多个受体的响应。图中的颜色和圆点帮助解释组合关系，具体材料能产生怎样的感受，还要实际检验。讲到这里，呈现气味的任务就清楚了：既要提供合适的刺激，也要安排它到达鼻子的时间。下一位同学用一套真实装置，说明这件事怎样实现。",
+      "seconds": 55,
+      "script": "这张图只把受体的响应关系简化画出来。每列是一种受体，每行是一种气味刺激，蓝点表示响应。先看受体C，它会响应不止一种刺激；再看刺激甲，它涉及不止一种受体。神经系统可以利用这些响应组合区分气味，组合还会受浓度影响。因此，装置需要选择合适的材料，也要控制它到达鼻子的浓度和时间。下一位同学就用一套真实装置，说明怎样配合场景中的动作释放气味。",
       "source_ids": [
         "P09"
       ],
       "source_locations": [
-        "P09 Abstract: combinatorial receptor codes; 图为教学示意"
+        "P09原始摘要：单一气味刺激可激活多个OR、单个OR可响应多个刺激、改变浓度可改变组合。甲乙丙和点阵为教学示意，不是实测配方。"
       ],
       "receptor_labels": [
         "受体A",
@@ -218,7 +304,7 @@
           ]
         }
       ],
-      "caption": "不同气味可以激活不同的受体组合（示意）",
+      "caption": "不同刺激可以引起不同的受体响应组合（教学示意）",
       "cue": "先纵着读一列，再横着读一行，给观众认图的时间；不扩展成气味调色盘。",
       "footer": "Malnic等，Cell，1999"
     }
