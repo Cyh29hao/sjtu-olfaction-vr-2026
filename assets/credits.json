@@ -110,5 +110,25 @@
     "modification": "仅裁剪原图，未估读或重绘数据",
     "source_url": "https://doi.org/10.1038/s41467-023-37678-4",
     "sha256": "77427c297532d26efa44200f3d9942b4b04325315c91dda5c005c5d5cc27ddc3"
+  },
+  {
+    "file": "v3/carvone-r.png",
+    "paper": "G03",
+    "original": "第一组交稿《气味分子基础.pptx》第6页嵌入的NIH PubChem二维结构",
+    "location": "CID 439570",
+    "source_url": "https://pubchem.ncbi.nlm.nih.gov/compound/439570",
+    "license": "NIH PubChem化学结构记录；其他来源的描述分别核证",
+    "modification": "直接提取原嵌入PNG，未改动结构或楔形键",
+    "sha256": "ccffc3bccb6892d89dbe0a7228b0f8ec03664a0e6850549e6f7fd1adf3438fcb"
+  },
+  {
+    "file": "v3/carvone-s.png",
+    "paper": "G04",
+    "original": "第一组交稿《气味分子基础.pptx》第6页嵌入的NIH PubChem二维结构",
+    "location": "CID 16724",
+    "source_url": "https://pubchem.ncbi.nlm.nih.gov/compound/16724",
+    "license": "NIH PubChem化学结构记录；其他来源的描述分别核证",
+    "modification": "直接提取原嵌入PNG，未改动结构或楔形键",
+    "sha256": "8cf15dca97bde32c6944779a79387d7f463c694bc8713f8bd49dfaaa44de9090"
   }
 ]

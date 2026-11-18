@@ -113,6 +113,58 @@
       "url": "https://www.cuimc.columbia.edu/news/richard-axel-wins-2004-nobel-prize",
       "location": "Paragraph beginning The sense of smell is possible；嗅球及后续脑区",
       "license": "只引用已核事实，不复制原图"
+    },
+    "G01": {
+      "title": "Olfactory discrimination ability of human subjects for ten pairs of enantiomers",
+      "authors": "Laska & Teubner",
+      "year": 1999,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10321817/",
+      "doi": "10.1093/chemse/24.2.161",
+      "location": "原始摘要：20人、10对对映体、三角强迫选择；香芹酮等部分配对达到群体显著辨别。本轮取得摘要检索正文，未核读全文。",
+      "license": "仅转述研究结果，不复制论文图片"
+    },
+    "G02": {
+      "title": "Structural determinants of a conserved enantiomer-selective carvone binding pocket in the human odorant receptor OR1A1",
+      "authors": "Geithe et al.",
+      "year": 2017,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11107518/",
+      "doi": "10.1007/s00018-017-2576-z",
+      "location": "Abstract首段；Results: Carvone enantioselective and enantiospecific OR1A1 homologs。核读香型、受体响应及细胞实验性质；未将OR1A1单个受体写成完整感知的唯一解释。",
+      "license": "转述事实，不复制该论文插图"
+    },
+    "G03": {
+      "title": "PubChem: (R)-(−)-Carvone, CID 439570",
+      "authors": "NIH PubChem",
+      "year": 2026,
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/439570",
+      "location": "化学式C10H14O、R构型与二维结构。网页正文验证码受限；检索索引可见记录名和InChI，结构图片复用第一组提交PPT第6页。",
+      "license": "NIH PubChem二维化学结构；保留来源与CID，不复制第三方香型说明"
+    },
+    "G04": {
+      "title": "PubChem: (S)-(+)-Carvone, CID 16724",
+      "authors": "NIH PubChem",
+      "year": 2026,
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/16724",
+      "location": "化学式C10H14O、S构型与二维结构。网页正文验证码受限；检索索引可见记录名和分子式，结构图片复用第一组提交PPT第6页。",
+      "license": "NIH PubChem二维化学结构；保留来源与CID，不复制第三方香型说明"
+    },
+    "G05": {
+      "title": "Transport features predict if a molecule is odorous",
+      "authors": "Mayhew et al.",
+      "year": 2022,
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2116576119",
+      "doi": "10.1073/pnas.2116576119",
+      "location": "Abstract；Building an Odor Classification Model；Importance of High-Quality Experimental Data。实际核读传输条件、rule of three及96%的分母；本轮仅用于备课。",
+      "license": "转述事实；未新增复制原图"
+    },
+    "G06": {
+      "title": "Human olfactory detection of homologous n-alcohols measured via concentration–response functions",
+      "authors": "Cometto-Muñiz & Abraham",
+      "year": 2008,
+      "url": "https://doi.org/10.1016/j.pbb.2007.12.023",
+      "doi": "10.1016/j.pbb.2007.12.023",
+      "location": "原始摘要检索正文，支持四种正构醇的浓度—检测实验；出版社全文403。本轮未重新核验原稿图中阈值、误差线与各组人数，定量图未进入合稿。",
+      "license": "仅保留备课题录和阅读范围，不新增复制原图"
     }
   },
   "course": "气味科学中的健康密码",
@@ -483,6 +535,10 @@
           "text": "Malnic等，1999，Cell：嗅觉受体组合编码"
         },
         {
+          "label": "G02–G04",
+          "text": "Geithe等，2017；NIH PubChem：香芹酮气味与立体结构"
+        },
+        {
           "label": "P02",
           "text": "Liu等，2023，Nature Communications：可穿戴嗅觉界面"
         },
@@ -502,7 +558,10 @@
         "P09",
         "P02",
         "P05",
-        "P10"
+        "P10",
+        "G02",
+        "G03",
+        "G04"
       ],
       "footer": "完整题录、图源和原文定位见仓库来源手册",
       "source_locations": [
@@ -580,7 +639,7 @@
           [
             "科学原理",
             "朱轶宸（组长）",
-            "组织核改；具体完成项待记录"
+            "汇总提交第一组16页PPT；组内具体分工待确认"
           ],
           [
             "科学原理",
@@ -629,11 +688,12 @@
           ]
         ]
       },
-      "script": "第二组负责人已提交三位成员的核查、改稿与试讲贡献，蔡天怿上台；其余组的实际贡献和发言人仍待本人确认。全场最多四人。AI审阅与成员人工复核分别记录。",
+      "script": "朱轶宸于11月17日提交第一组16页PPT，具体组内分工仍待成员确认。第二组负责人已提交三位成员的核查、改稿与试讲贡献，蔡天怿上台；其余成员贡献和发言人继续核对。全场最多四人。AI审阅与成员人工复核分别记录。",
       "source_ids": [],
       "footer": "第二组贡献与上台安排据2026-11-12 PR #3；其余成员待确认",
       "source_locations": [
-        "docs/team.md 实际贡献记录；第二组PR #3（2026-11-12），按组内提交确认记录"
+        "docs/team.md 实际贡献记录；第二组PR #3（2026-11-12），按组内提交确认记录",
+        "2026-11-17提交034f97a，上传账号ZhuYichen2737；上传记录只支持提交行为，不据此分配三人的实际制作贡献。"
       ]
     }
   ]
