@@ -5,66 +5,66 @@
   "last_slide": "答辩总结",
   "speakers": 4,
   "design_seconds": 720,
-  "spoken_seconds_budget": 675,
-  "transition_reserve_seconds": 45,
+  "spoken_seconds_budget": 660,
+  "transition_reserve_seconds": 60,
   "presentation_seconds": 720,
   "synthesized_reading_seconds": null,
   "human_rehearsal": false,
   "artifacts": [
     {
       "path": "release/v3/olfaction-vr-v3.pptx",
-      "bytes": 3040330,
-      "sha256": "9b6ea4f46b1ae31e011a9867d522bdaf2bff372335329cda64a599d8f572f85e"
+      "bytes": 3774303,
+      "sha256": "cfdbd2de6a9736585393f551c10d0c66b25efa472266160c0ca43075832f48b7"
     },
     {
       "path": "release/v3/group-01-science.pptx",
-      "bytes": 50068,
-      "sha256": "e82a6ea44bb3de9f89d4e857454f2a96223931820c237ca5cc25510efa938d70"
+      "bytes": 51176,
+      "sha256": "cfeee67a9b25101c0e1f6e43999987902a3da118adc93096bda140ac5461f185"
     },
     {
       "path": "release/v3/group-02-technology.pptx",
-      "bytes": 266902,
-      "sha256": "0e263763b8da59d1586669f125300fe2526524622b93377451b2cbb8e59a839d"
+      "bytes": 278318,
+      "sha256": "31eaff8d82d17b4a7b216aff38500719bad11bd0d4443fa1dd7523a13a252be2"
     },
     {
       "path": "release/v3/group-03-applications.pptx",
-      "bytes": 650348,
-      "sha256": "a2b111d73329ddf52e2e44436e8d3934cba7c54294b14c7f07f82974ba5f260d"
+      "bytes": 1434343,
+      "sha256": "f533482e3a18b691b0f0a5d3c74cb8407888b89fd177f7844d38e09aa96e1b97"
     },
     {
       "path": "release/v3/olfaction-vr-v3.pdf",
-      "bytes": 893595,
-      "sha256": "09b3486afd582d9535097eaea699ccb4f92686dd07204cd94895e8420ae87c8f"
+      "bytes": 1132843,
+      "sha256": "712023c1adc02900875ac6711b14451b156c2fc0713b30e8b6d2431483e46e5f"
     },
     {
       "path": "release/v3/group-01-science.pdf",
-      "bytes": 202549,
-      "sha256": "2a9f53649625d18c0e01ce884215f79dc296e26f472c234dd980d4d532ef0931"
+      "bytes": 217941,
+      "sha256": "c18a7f3d1322782c8faaf69cb9c6d7b8715c77e1a7aa182be2c3138aeac21b00"
     },
     {
       "path": "release/v3/group-02-technology.pdf",
-      "bytes": 213251,
-      "sha256": "58eb844bdf45b20854c506608ebdca8d58724ebd1c1898275c21bc4745979f98"
+      "bytes": 210803,
+      "sha256": "6d38f2b100059af3e3ed71103b9f6ff1d54f98f41853b8862aa68ba070f930d0"
     },
     {
       "path": "release/v3/group-03-applications.pdf",
-      "bytes": 305757,
-      "sha256": "1676eb2c3efb626b1a546baecd0a0d04518a605c73ae43b071d5eb9ba38b306a"
+      "bytes": 452313,
+      "sha256": "552dc5ce011af25dabfb051088385e25d10f3964f3e6628c1bbdc1a5d216e104"
     },
     {
       "path": "release/v3/olfaction-vr-v3-main.pdf",
-      "bytes": 1119522,
-      "sha256": "ca655524e2030c29f0ac41b49f86565b855e85d94aecd83afd1b71dd21838f06"
+      "bytes": 1260734,
+      "sha256": "2f1c55f17325adb9c702ac0c288dc1266d20b072e007df2f7d23c3e41e1b2fa3"
     },
     {
       "path": "release/v3/全场口播.pdf",
-      "bytes": 261942,
-      "sha256": "51e1dd8863254e0d47a49a71776422213d48b3479febaa602ecc709c9239413c"
+      "bytes": 256590,
+      "sha256": "8187320c1653c62e8818f6ed0de38be78714fa4214b21952a795965879fec553"
     },
     {
       "path": "release/v3/问答与备课.pdf",
-      "bytes": 329969,
-      "sha256": "efdb03a63ff993c6255ed5d94cc38008827356be8ad974a40c2c01076dde142b"
+      "bytes": 336472,
+      "sha256": "0f02d628b1f42862eda54705fe46bd9caf2b7d528624b50624d112a840365899"
     }
   ]
 }
