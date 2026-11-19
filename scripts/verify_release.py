@@ -136,8 +136,9 @@ def main():
         charts += check_deck(path,slides,deck['sources'],name==f'olfaction-vr-{version}')
         artifacts.append(path)
     pdf_counts = {name:len(slides) for name,slides in expected_decks.items()}
-    tail_count=1+sum(s['role']=='qa' for s in deck['slides'])
-    pdf_counts[f'olfaction-vr-{version}-main'] = len(main_slides)+tail_count
+    public_pages = [s for s in deck['slides'] if s['role'] != 'backup']
+    team_page = next(i for i,s in enumerate(public_pages) if s['id'] == 'TEAM')
+    pdf_counts[f'olfaction-vr-{version}-main'] = len(public_pages)
     for name in [*pdf_counts,'全场口播','问答与备课']:
         path = release/f'{name}.pdf'
         with fitz.open(path) as pdf:
@@ -146,7 +147,7 @@ def main():
             assert pdf.page_count > 0 and all(page.get_text().strip() for page in pdf), (name,'empty page')
             if name == f'olfaction-vr-{version}-main':
                 for person in PEOPLE:
-                    assert person in pdf[-tail_count].get_text(), ('main PDF contribution page',person)
+                    assert person in pdf[team_page].get_text(), ('main PDF contribution page',person)
         artifacts.append(path)
     missing = []
     links = 0

@@ -373,34 +373,44 @@
       "layout": "receptor-overlap",
       "title": "鼻子怎样区分不同的气味分子？",
       "seconds": 40,
-      "script": "看一对真实分子，庚酸和1-庚醇。在这项小鼠实验里，有一个受体对两种分子都响应。只对庚酸响应的有五种，只对1-庚醇响应的有两种。先看中间，再看两边，同一个受体可以参与区分多种气味，区别来自整组响应。浓度改变时，组合也可能改变。接下来看看，这些感知条件怎样约束释香装置。",
+      "script": "看小鼠实验里的三种受体。庚酸这行，A和B有响应；1-庚醇这行，B和C有响应。看中间的B，两种分子都能激活它，但整组受体的响应不同，鼻子就能利用这种组合区分气味。这里节选了三种受体，改变浓度也可能改变响应组合。接下来看看，这些感知条件对释香装置意味着什么。",
       "odors": [
         {
           "label": "庚酸",
-          "only": 5
+          "active": [
+            0,
+            1
+          ]
         },
         {
           "label": "1-庚醇",
-          "only": 2
+          "active": [
+            1,
+            2
+          ]
         }
       ],
-      "caption": "不同气味分子可以激活有重叠、但不同的受体组合",
+      "caption": "两种分子都能激活 B，另外的响应不同。",
       "source_ids": [
         "P09",
         "N01"
       ],
       "source_locations": [
-        "P09 Fig.7、Receptor Codes for Rancid versus Floral Odorants：庚酸与1-庚醇共享1种受体，5种仅响应庚酸、2种仅响应庚醇。Fig.6与Discussion解释浓度对组合的影响。"
+        "P09 Fig.7，第719页：庚酸在S18、S19列有响应，在S25列未见响应；1-庚醇在S19、S25列有响应，在S18列未见响应。主讲节选三列，完整两种刺激的计数见B04。Fig.6与Discussion讨论浓度变化。"
       ],
-      "cue": "先指两条共有的中间格，再指左右两端；只在这对刺激和论文条件下解释响应。",
-      "footer": "Malnic等，Cell，1999，图7 · 小鼠嗅觉神经元记录",
-      "visual_hint": "两个横条共享一个响应格；小鼠实验。",
-      "shared": 1,
+      "cue": "按两行读A加B、B加C，再指共有的B列。A、B、C是原论文受体编号的讲解用简称。",
+      "footer": "Malnic 等，Cell，1999，图 7 · 小鼠嗅觉受体实验节选",
+      "visual_hint": "按行读响应组合，再纵向比较共用的B列。",
       "backup": {
         "target": "B04",
-        "label": "庚酸与1-庚醇",
+        "label": "小鼠嗅觉受体的实测响应",
         "anchor": "backup-topic"
-      }
+      },
+      "receptors": [
+        "S18（受体 A）",
+        "S19（受体 B）",
+        "S25（受体 C）"
+      ]
     },
     {
       "id": "S05",
@@ -1409,6 +1419,80 @@
       "footer": "完整出处、阅读范围和研究团队开放入口见来源手册"
     },
     {
+      "id": "R03",
+      "group": "00",
+      "role": "references",
+      "layout": "formal-references",
+      "title": "参考文献",
+      "section_heading": "",
+      "seconds": 0,
+      "script": "供教师审查。逐页出处、媒体与其他来源见《来源手册》。",
+      "footer": "逐页定位、媒体署名与其余来源见讲稿附件《来源手册》。",
+      "source_ids": [
+        "G05",
+        "G06",
+        "G02",
+        "P09",
+        "P02",
+        "P05",
+        "P35",
+        "P15"
+      ],
+      "source_locations": [
+        "主讲引用的核心原始研究。经对应 DOI 可查证。"
+      ],
+      "entries": [
+        {
+          "author": "Mayhew, E. J., et al.",
+          "title": "Transport features predict if a molecule is odorous",
+          "journal": "PNAS, 2022.",
+          "doi": "10.1073/pnas.2116576119"
+        },
+        {
+          "author": "Cometto-Muñiz, J. E., & Abraham, M. H.",
+          "title": "Human olfactory detection of homologous n-alcohols measured via concentration–response functions",
+          "journal": "Pharmacol Biochem Behav, 2008.",
+          "doi": "10.1016/j.pbb.2007.12.023"
+        },
+        {
+          "author": "Geithe, C., et al.",
+          "title": "Structural determinants of a conserved enantiomer-selective carvone binding pocket in the human odorant receptor OR1A1",
+          "journal": "Cell Mol Life Sci, 2017.",
+          "doi": "10.1007/s00018-017-2576-z"
+        },
+        {
+          "author": "Malnic, B., Hirono, J., Sato, T., & Buck, L. B.",
+          "title": "Combinatorial Receptor Codes for Odors",
+          "journal": "Cell, 1999.",
+          "doi": "10.1016/S0092-8674(00)80581-4"
+        },
+        {
+          "author": "Liu, Y., et al.",
+          "title": "Soft, miniaturized, wireless olfactory interface for virtual reality",
+          "journal": "Nat Commun, 2023.",
+          "doi": "10.1038/s41467-023-37678-4"
+        },
+        {
+          "author": "Niedenthal, S., et al.",
+          "title": "A graspable olfactory display for virtual reality",
+          "journal": "Int J Hum–Comput Stud, 2023.",
+          "doi": "10.1016/j.ijhcs.2022.102928"
+        },
+        {
+          "author": "Munyan, B. G., et al.",
+          "title": "Olfactory Stimuli Increase Presence in Virtual Environments",
+          "journal": "PLOS ONE, 2016.",
+          "doi": "10.1371/journal.pone.0157568"
+        },
+        {
+          "author": "Serrano, B., Baños, R. M., & Botella, C.",
+          "title": "Virtual reality and stimulation of touch and smell for inducing relaxation: A randomized controlled trial",
+          "journal": "Comput Human Behav, 2016.",
+          "doi": "10.1016/j.chb.2015.08.007"
+        }
+      ]
+    },
+    {
       "id": "TEAM",
       "group": "00",
       "role": "contributions",
@@ -1424,8 +1508,8 @@
         "rows": [
           [
             "总体整合",
-            "陈云海",
-            "主线、合稿与协调；具体完成项待核对"
+            "陈云海（组长）",
+            "统筹分工与主线，整合与审阅PPT、讲稿，负责开场及收束"
           ],
           [
             "科学原理",
@@ -1479,15 +1563,18 @@
           ]
         ]
       },
-      "script": "第一组由潘力熔负责气味分子相关原理，刘昌镇负责嗅觉产生原理，朱轶宸负责为什么嗅觉难以数字化及合并后修改；第一组联审后暂定通过，主讲仍待确认。第二组蔡天怿主讲，第三组陈柔羽主讲，其余贡献见表。",
+      "script": "我们分原理、装置、应用三组，组员各自完成负责内容。我负责协调各组、统筹合稿，并讲开场和总结。",
       "source_ids": [],
-      "footer": "各组贡献据组内提交与11月19日反馈；第一组主讲、第0组具体记录待补",
+      "footer": "各组贡献据组内提交与11月19日反馈；第一组主讲待确认",
       "source_locations": [
         "docs/team.md 实际贡献记录；第二组PR #3（2026-11-12），按组内提交确认记录",
         "2026-11-17提交034f97a，上传账号ZhuYichen2737；上传记录只支持提交行为，不据此分配三人的实际制作贡献。",
         "2026-11-19陈云海转述第三组组长：陈柔羽统筹修改、完成讲稿并上台；其余三人负责PPT修改及资料搜集核对。组长确认与逐篇核源记录分别登记。",
-        "2026-11-19陈云海转述第一组分工：潘力熔气味分子相关原理；刘昌镇嗅觉产生原理；朱轶宸为什么嗅觉难以数字化、合并后修改。第一组联审后暂定通过。"
-      ]
+        "2026-11-19陈云海转述第一组分工：潘力熔气味分子相关原理；刘昌镇嗅觉产生原理；朱轶宸为什么嗅觉难以数字化、合并后修改。第一组联审后暂定通过。",
+        "2026-11-19陈云海完成整场审阅。组长贡献依据各轮策划、协调、审稿、合稿及本组开场和总结安排拟写。"
+      ],
+      "cue": "约12秒，计入原有60秒转场与分工时间。说完切到答辩总图。",
+      "in_reserve_seconds": 12
     },
     {
       "id": "QA",
@@ -1499,8 +1586,8 @@
       "seconds": 30,
       "intro": "",
       "caption": "",
-      "script": "回到开头那朵花。软件识别靠近，装置让真实气味在鼻边出现。应用中，和场景配合的气味能让人更像身处其中。气味也可以组织不同难度的辨香任务。辨认陌生气味的训练收益还待验证，同一放松程序加薰衣草也未检出额外放松。欢迎提问。",
-      "cue": "上两层用一条线复述实现，主要指底层三项结果。停在本页；按卡片标题进入各段证据。",
+      "script": "回到开头那朵花，VR识别动作，装置在鼻边释出真实气味。气味能增强一些场景的在场感，也能用来做辨香任务。受时间限制，有些细节放在了备课页。如果问到相关内容，我们可以点这里的链接，打开对应页面。欢迎提问。",
+      "cue": "回扣闻花和应用，说明本页标题可以打开正文，正文小标题可进一步打开备课页。随后停在本页答辩。",
       "source_ids": [
         "P09",
         "P02",

@@ -513,26 +513,40 @@ async function render(d,n) {
       text(s,d.caption || '组合编码教学示意，圆点不表示实测强度',104,602,1092,47,28,C.muted);
       break;
     }
+    case 'formal-references': {
+      const title=s.shapes.items.find(shape=>shape.name==='headline');
+      title.text.style={typeface:'宋体',fontSize:43,color:C.ink,bold:true};
+      const writeLine=(value,x,y,w,h,size,bold=false)=>{
+        const item=text(s,value,x,y,w,h,size,C.ink,bold);
+        item.text.style={typeface:'Times New Roman',fontSize:size,color:C.ink,bold};
+      };
+      rect(s,632,147,1,473,'#D5DEE0');
+      d.entries.forEach((ref,i)=>{
+        const x=i<4?104:661, y=146+(i%4)*123;
+        writeLine('['+(i+1)+']',x,y,40,29,22,true);
+        writeLine(ref.author,x+45,y,490,28,22,true);
+        writeLine(ref.title,x+45,y+30,471,63,18);
+        writeLine(ref.journal+'  DOI '+ref.doi,x+45,y+93,490,28,16);
+      });
+      const note=s.shapes.items.find(shape=>shape.name==='source-footer');
+      note.text.style={typeface:'宋体',fontSize:17,color:C.muted};
+      break;
+    }
     case 'receptor-overlap': {
-      text(s,d.backup?.label || '小鼠嗅觉受体的实测响应',104,154,1092,48,26,C.blue,true,d.backup?.anchor);
-      const groups=[
-        {x:310,w:360,label:`仅响应${d.odors[0].label}`,color:'#EDF4F9'},
-        {x:680,w:185,label:'两种都响应',color:'#E9F5DF'},
-        {x:875,w:310,label:`仅响应${d.odors[1].label}`,color:'#EDF4F9'},
-      ];
-      for(const g of groups) {
-        rect(s,g.x,236,g.w,287,g.color);
-        text(s,g.label,g.x+14,252,g.w-28,38,23,C.blue,true);
-      }
-      for(const [i,odor] of d.odors.entries()) {
-        const y=328+i*112;
-        text(s,odor.label,104,y-2,188,56,33,C.ink,true);
-        const own=groups[i===0?0:2];
-        for(let j=0;j<odor.only;j++)oval(s,own.x+23+j*52,y,32,32,C.blue);
-        for(let j=0;j<d.shared;j++)oval(s,groups[1].x+70+j*36,y,32,32,'#6DAE3C');
-      }
-      line(s,765,361,2,'#A8CB94',78);
-      text(s,d.caption,104,577,1092,69,28,C.blue,true);
+      text(s,d.backup?.label || '小鼠嗅觉受体的实测响应',104,151,900,42,26,C.blue,true,d.backup?.anchor);
+      text(s,'测试分子',104,215,190,48,26,C.muted,true);
+      d.receptors.forEach((receptor,i)=>text(s,receptor,322+i*294,215,268,53,29,C.blue,true));
+      d.odors.forEach((odor,row)=>{
+        const y=284+row*111;
+        text(s,odor.label,104,y+20,192,54,34,C.ink,true);
+        d.receptors.forEach((_,column)=>{
+          const x=322+column*294, active=odor.active.includes(column);
+          rect(s,x,y,268,89,active?(column===1?'#E9F5DF':'#EDF4F9'):'#F6F8F9');
+          text(s,active?'有响应':'未见响应',x+18,y+20,232,57,32,active?C.blue:C.muted,active);
+        });
+      });
+      text(s,d.caption,104,535,1092,51,32,C.blue,true);
+      text(s,'节选原图三种小鼠嗅觉受体，A、B、C 为讲解用简称。',104,600,1092,42,24,C.muted);
       break;
     }
     case 'requirements': {
