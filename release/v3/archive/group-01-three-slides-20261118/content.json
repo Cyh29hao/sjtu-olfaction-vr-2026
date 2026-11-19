@@ -1,0 +1,312 @@
+{
+  "version": "v3",
+  "title": "气味、VR与虚拟感官",
+  "subtitle": "虚拟嗅觉怎样实现，又适合用在哪里",
+  "template": "诗意校园·2022蓝绿青春",
+  "speaker_count": 4,
+  "presentation_seconds": 720,
+  "sources": {
+    "P02": {
+      "title": "Soft, miniaturized, wireless olfactory interface for virtual reality",
+      "authors": "Liu et al.",
+      "year": 2023,
+      "url": "https://www.nature.com/articles/s41467-023-37678-4",
+      "doi": "10.1038/s41467-023-37678-4",
+      "location": "Concepts and design; Demonstrations; Figs. 1, 5; Supplementary Movie 3",
+      "license": "CC BY 4.0，具体材料另有creditline者除外"
+    },
+    "P05": {
+      "title": "A graspable olfactory display for virtual reality",
+      "authors": "Niedenthal et al.",
+      "year": 2023,
+      "url": "https://doi.org/10.1016/j.ijhcs.2022.102928",
+      "fulltext": "https://www.diva-portal.org/smash/get/diva2%3A1711062/FULLTEXT01.pdf",
+      "doi": "10.1016/j.ijhcs.2022.102928",
+      "location": "Display design; user study; Figs.5–6; Discussion; supplementary OSF resources",
+      "license": "CC BY 4.0"
+    },
+    "P09": {
+      "title": "Combinatorial Receptor Codes for Odors",
+      "authors": "Malnic et al.",
+      "year": 1999,
+      "url": "https://doi.org/10.1016/S0092-8674(00)80581-4",
+      "doi": "10.1016/S0092-8674(00)80581-4",
+      "location": "Abstract; receptor response combinations",
+      "license": "仅引用事实，教学示意由本组重绘"
+    },
+    "P10": {
+      "title": "A principal odor map unifies diverse tasks in olfactory perception",
+      "authors": "Lee et al.",
+      "year": 2023,
+      "url": "https://doi.org/10.1126/science.ade4401",
+      "doi": "10.1126/science.ade4401",
+      "location": "Abstract，分子结构到感知描述预测",
+      "license": "仅引用事实，不复制原图"
+    },
+    "P15": {
+      "title": "Virtual reality and stimulation of touch and smell for inducing relaxation: A randomized controlled trial",
+      "authors": "Serrano, Baños & Botella",
+      "year": 2016,
+      "url": "https://doi.org/10.1016/j.chb.2015.08.007",
+      "fulltext": "https://repositori.uji.es/server/api/core/bitstreams/cb77edc0-dd07-406d-a9e4-7f69082cb44a/content",
+      "doi": "10.1016/j.chb.2015.08.007",
+      "location": "§2.2, §2.4–2.7; Results; Table 1; Fig. 3",
+      "license": "数据按原表重绘，作者稿仅作本地核查"
+    },
+    "P14": {
+      "title": "Smells Influence Perceived Pleasantness but Not Memorization of a Visual Virtual Environment",
+      "authors": "Sabiniewicz et al.",
+      "year": 2021,
+      "url": "https://doi.org/10.1177/2041669521989731",
+      "doi": "10.1177/2041669521989731",
+      "location": "Methods; Pilot Study; Results; correction仅改作者姓名",
+      "correction": "https://doi.org/10.1177/20416695211028757",
+      "license": "CC BY 4.0"
+    },
+    "P03": {
+      "title": "Intelligent wearable olfactory interface for latency-free mixed reality and fast olfactory enhancement",
+      "authors": "Liu et al.",
+      "year": 2024,
+      "url": "https://www.nature.com/articles/s41467-024-48884-z",
+      "doi": "10.1038/s41467-024-48884-z",
+      "location": "Olfactory training demonstration; Fig. 5; latency definitions",
+      "license": "CC BY 4.0，具体材料另有creditline者除外"
+    },
+    "P35": {
+      "title": "Olfactory Stimuli Increase Presence in Virtual Environments",
+      "authors": "Munyan et al.",
+      "year": 2016,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157568",
+      "doi": "10.1371/journal.pone.0157568",
+      "location": "Participants; Design and Procedure; Results",
+      "license": "CC BY"
+    },
+    "SU01": {
+      "title": "Smelling in VR environment possible with new gaming technology",
+      "authors": "Stockholm University, Communications Office",
+      "year": 2022,
+      "url": "https://www.su.se/english/news/articles/2022-10-12-smelling-in-vr-environment-possible-with-new-gaming-technology",
+      "location": "Code and blueprints openly available; Find more information; checked 2026-11-03",
+      "license": "只转述公开资源入口；不复制新闻图片或宣传性疗效表述"
+    },
+    "AF01": {
+      "title": "A-Frame: Introduction and Hello World",
+      "authors": "A-Frame project",
+      "year": "网页/文档，查阅于2026-11-03",
+      "url": "https://aframe.io/docs/1.8.0/introduction/",
+      "fulltext": "https://aframe.io/aframe/examples/boilerplate/hello-world/",
+      "location": "Features / Cross-Platform VR; Hello World sample; accessed 2026-11-03",
+      "license": "MIT；主讲只提供现成示例入口，使用条件按项目说明"
+    },
+    "N01": {
+      "title": "Smell Disorders: How does your sense of smell work?",
+      "authors": "NIH / National Institute on Deafness and Other Communication Disorders",
+      "year": "网页/文档，查阅于2026-11-03",
+      "url": "https://www.nidcd.nih.gov/health/smell-disorders",
+      "location": "How does your sense of smell work?；2026-11-03核读正文",
+      "license": "只引用已核事实，通路图由本组绘制"
+    },
+    "N02": {
+      "title": "Richard Axel Wins 2004 Nobel Prize",
+      "authors": "Columbia University Irving Medical Center",
+      "year": 2004,
+      "url": "https://www.cuimc.columbia.edu/news/richard-axel-wins-2004-nobel-prize",
+      "location": "Paragraph beginning The sense of smell is possible；嗅球及后续脑区",
+      "license": "只引用已核事实，不复制原图"
+    },
+    "G01": {
+      "title": "Olfactory discrimination ability of human subjects for ten pairs of enantiomers",
+      "authors": "Laska & Teubner",
+      "year": 1999,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10321817/",
+      "doi": "10.1093/chemse/24.2.161",
+      "location": "原始摘要：20人、10对对映体、三角强迫选择；香芹酮等部分配对达到群体显著辨别。本轮取得摘要检索正文，未核读全文。",
+      "license": "仅转述研究结果，不复制论文图片"
+    },
+    "G02": {
+      "title": "Structural determinants of a conserved enantiomer-selective carvone binding pocket in the human odorant receptor OR1A1",
+      "authors": "Geithe et al.",
+      "year": 2017,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11107518/",
+      "doi": "10.1007/s00018-017-2576-z",
+      "location": "Abstract首段；Results: Carvone enantioselective and enantiospecific OR1A1 homologs。核读香型、受体响应及细胞实验性质；未将OR1A1单个受体写成完整感知的唯一解释。",
+      "license": "转述事实，不复制该论文插图"
+    },
+    "G03": {
+      "title": "PubChem: (R)-(−)-Carvone, CID 439570",
+      "authors": "NIH PubChem",
+      "year": 2026,
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/439570",
+      "location": "化学式C10H14O、R构型与二维结构。网页正文验证码受限；检索索引可见记录名和InChI，结构图片复用第一组提交PPT第6页。",
+      "license": "NIH PubChem二维化学结构；保留来源与CID，不复制第三方香型说明"
+    },
+    "G04": {
+      "title": "PubChem: (S)-(+)-Carvone, CID 16724",
+      "authors": "NIH PubChem",
+      "year": 2026,
+      "url": "https://pubchem.ncbi.nlm.nih.gov/compound/16724",
+      "location": "化学式C10H14O、S构型与二维结构。网页正文验证码受限；检索索引可见记录名和分子式，结构图片复用第一组提交PPT第6页。",
+      "license": "NIH PubChem二维化学结构；保留来源与CID，不复制第三方香型说明"
+    },
+    "G05": {
+      "title": "Transport features predict if a molecule is odorous",
+      "authors": "Mayhew et al.",
+      "year": 2022,
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2116576119",
+      "doi": "10.1073/pnas.2116576119",
+      "location": "Abstract；Building an Odor Classification Model；Importance of High-Quality Experimental Data。实际核读传输条件、rule of three及96%的分母；本轮仅用于备课。",
+      "license": "转述事实；未新增复制原图"
+    },
+    "G06": {
+      "title": "Human olfactory detection of homologous n-alcohols measured via concentration–response functions",
+      "authors": "Cometto-Muñiz & Abraham",
+      "year": 2008,
+      "url": "https://doi.org/10.1016/j.pbb.2007.12.023",
+      "doi": "10.1016/j.pbb.2007.12.023",
+      "location": "原始摘要检索正文，支持四种正构醇的浓度—检测实验；出版社全文403。本轮未重新核验原稿图中阈值、误差线与各组人数，定量图未进入合稿。",
+      "license": "仅保留备课题录和阅读范围，不新增复制原图"
+    }
+  },
+  "course": "气味科学中的健康密码",
+  "group_handoffs": {
+    "00": "开场用一分钟讲动机、概念和全场路线；收束先给电脑手机可用的了解入口，再用案例形成判断。不要替三组重复各自结论。",
+    "01": "先连续解释气味分子、受体和神经信号，以及受体响应组合。结束时一次性交给技术组：怎样提供合适刺激，并让它配合场景中的动作。",
+    "02": "只展开一套近鼻面罩装置：认清发生器、追踪一次释香指令，再解释停止和切换。把已经能完成一次受控嗅闻的能力交给应用组。",
+    "03": "把酒窖辨香讲成一项完整任务，展开任务设计与12人测试中的难度结果；再以放松实验短对照说明用途变了，应该测的收益也变了。"
+  },
+  "compression_notes": "按四人完整试讲调整。先缩短开源资源介绍、次要元件名与前景，不压掉受体图的读法、装置触发链、酒窖任务与结果图的解释。放松实验只保留同程序的有香/无香比较与结果。视频15–20秒包含在T02预算内，静态三帧可独立讲完；有临时播放问题直接按静态图继续。章节用时是参考，最终守住全场12分钟。",
+  "transition_reserve_seconds": 30,
+  "chapter_titles": [
+    "嗅觉感知的科学基础",
+    "虚拟嗅觉的技术实现",
+    "应用场景与实验结果",
+    "体验途径与效果判断"
+  ],
+  "evidence_notes": [
+    "P09组合响应图为教学示意，甲乙丙及受体A–D不是实测数据或特定香料配方。图中的刺激层次与分子/复杂混合气味的解释分开。",
+    "P02主要讲面罩型，同系列上唇型保留备课。单个发生器含香石蜡载体、加热元件和温度控制；没有把发生器温度响应写成鼻端感知延迟。T03气味残留流程为无数值教学示意。",
+    "P05 N=12，每会话每等级8题，四会话共128题/人。Fig6d保留原图，等级2与3差异未达显著，不宣称难度严格逐级上升；图中分数与离散度口径见来源和问答。未据图估计均值或添加误差线。",
+    "P15 136名健康成人随机四组，34/36/33/33人。投影式VR、同样视听和引导，薰衣草扩香与人造草触觉各有/无。0–10放松VAS；均值图，原表SD留问答。整体前后F(1,132)=90.31,p<.001；作者未检出组间额外优势，未给该项精确F/p。没有无VR对照。",
+    "P15稿§2.6 Smell/Touch括号解释对调，按Fig3与§2.7核正。触觉是观看虚拟草地时触摸真实人造草。",
+    "A-Frame场景提供视觉和交互，闻到气味另需材料与释香装置。研究团队的公开设计入口与现成可购设备分别核查；未把资料公开写成同学已能零硬件体验嗅觉。",
+    "人工原文复核、四人真人试讲、教室放映与Canvas提交由后续小组完成；AI查阅和合成计时分别记录。"
+  ],
+  "slides": [
+    {
+      "id": "S00",
+      "group": "01",
+      "role": "main",
+      "title": "香芹酮的结构与气味",
+      "layout": "compare",
+      "seconds": 35,
+      "script": "先看香芹酮这个例子。两种香芹酮的分子式都是C₁₀H₁₄O，原子连接方式也相同，但空间排列互为不能重合的镜像。左边通常描述为留兰香样，右边是葛缕子样。这个例子说明，选择气味材料时，分子的空间结构也可能影响闻到的气味。那鼻子怎样把分子的差别转成感受？",
+      "columns": [
+        {
+          "label": "(R)-(−)-香芹酮",
+          "image": "assets/v3/carvone-r.png",
+          "text": "典型气味：留兰香样"
+        },
+        {
+          "label": "(S)-(+)-香芹酮",
+          "image": "assets/v3/carvone-s.png",
+          "text": "典型气味：葛缕子样"
+        }
+      ],
+      "body": [
+        "分子式和连接方式相同，空间排列不同"
+      ],
+      "source_ids": [
+        "G02",
+        "G03",
+        "G04"
+      ],
+      "source_locations": [
+        "G02 Abstract首段、Results首节；第一组交稿第6页；G03/G04 PubChem CID 439570/16724二维结构"
+      ],
+      "cue": "指两幅结构中的实楔／虚楔，点出空间排列不同；香型用典型描述，不在本页展开命名规则或假定每个人都能辨别。",
+      "footer": "Geithe等，2017；结构：NIH PubChem，CID 439570、16724"
+    },
+    {
+      "id": "S01",
+      "group": "01",
+      "title": "气味分子怎样成为嗅觉信号",
+      "layout": "olfaction",
+      "role": "main",
+      "seconds": 50,
+      "script": "闻花时，一些挥发性分子进入空气，随吸气到达鼻腔上部的嗅觉区域。嗅觉感受神经元的纤毛伸入黏液层，受体蛋白分布在纤毛表面。分子与受体相互作用后，细胞把化学刺激转成神经信号，经嗅球传向后续脑区，参与形成气味感受。沿图走一遍：先有分子到达，再有受体和细胞的响应，最后是脑内处理。接着看，不同气味怎样区分。",
+      "source_ids": [
+        "N01",
+        "N02",
+        "P09"
+      ],
+      "source_locations": [
+        "N01 How does your sense of smell work?；N02 The sense of smell is possible段；P09原始摘要。通路为教学概括；不画成固定两条独立脑通路。"
+      ],
+      "steps": [
+        {
+          "label": "气味分子",
+          "text": "随吸气到达嗅觉区域"
+        },
+        {
+          "label": "受体与神经元",
+          "text": "纤毛上的受体参与刺激识别"
+        },
+        {
+          "label": "嗅球及后续脑区",
+          "text": "处理信号，形成气味感受"
+        }
+      ],
+      "caption": "分子刺激 → 神经信号 → 气味感受",
+      "cue": "用指示器完整走一遍图，讲清受体位于感受神经元上；示意不画作精确解剖结构。",
+      "footer": "嗅觉通路示意；NIH/NIDCD；Malnic等，1999"
+    },
+    {
+      "id": "S02",
+      "group": "01",
+      "title": "嗅觉受体的组合响应",
+      "layout": "receptors",
+      "role": "main",
+      "seconds": 55,
+      "script": "这张图只把受体的响应关系简化画出来。每列是一种受体，每行是一种气味刺激，蓝点表示响应。先看受体C，它会响应不止一种刺激；再看刺激甲，它涉及不止一种受体。神经系统可以利用这些响应组合区分气味，组合还会受浓度影响。因此，装置需要选择合适的材料，也要控制它到达鼻子的浓度和时间。下一位同学就用一套真实装置，说明怎样配合场景中的动作释放气味。",
+      "source_ids": [
+        "P09"
+      ],
+      "source_locations": [
+        "P09原始摘要：单一气味刺激可激活多个OR、单个OR可响应多个刺激、改变浓度可改变组合。甲乙丙和点阵为教学示意，不是实测配方。"
+      ],
+      "receptor_labels": [
+        "受体A",
+        "受体B",
+        "受体C",
+        "受体D"
+      ],
+      "odors": [
+        {
+          "label": "刺激甲",
+          "active": [
+            0,
+            2
+          ]
+        },
+        {
+          "label": "刺激乙",
+          "active": [
+            1,
+            2
+          ]
+        },
+        {
+          "label": "刺激丙",
+          "active": [
+            0,
+            1,
+            3
+          ]
+        }
+      ],
+      "caption": "不同刺激可以引起不同的受体响应组合（教学示意）",
+      "cue": "先纵着读一列，再横着读一行，给观众认图的时间；不扩展成气味调色盘。",
+      "footer": "Malnic等，Cell，1999"
+    }
+  ]
+}

@@ -154,7 +154,7 @@
       "year": 2022,
       "url": "https://www.pnas.org/doi/10.1073/pnas.2116576119",
       "doi": "10.1073/pnas.2116576119",
-      "location": "Abstract；Building an Odor Classification Model；Importance of High-Quality Experimental Data。实际核读传输条件、rule of three及96%的分母；本轮仅用于备课。",
+      "location": "Abstract；Building an Odor Classification Model；Importance of High-Quality Experimental Data。11月18日核读传输条件、经验规则及96%分母；11月19日主讲采用无数值的传输条件示意，PNAS重访跳转cookie页。",
       "license": "转述事实；未新增复制原图"
     },
     "G06": {
@@ -198,7 +198,7 @@
       "title": "气味、VR\n与虚拟感官",
       "layout": "cover",
       "role": "main",
-      "seconds": 20,
+      "seconds": 15,
       "script": "想象一下，你在VR里拿起一朵花，凑近时还能闻到花香。气味从哪里来，又怎样跟上画面里的动作？今天我们就来看看，虚拟嗅觉怎样实现，又能用在哪里。",
       "source_ids": [
         "P02"
@@ -218,7 +218,7 @@
       "title": "汇报内容",
       "layout": "agenda",
       "role": "main",
-      "seconds": 40,
+      "seconds": 30,
       "script": "我们今天讲的虚拟嗅觉，是让人在虚拟场景中闻到与画面配合的气味。这里介绍的系统，用的都是真实的气味材料。\n\n接下来分四部分：先看鼻子怎样闻到气味，再看装置怎样配合场景释香；然后通过辨香和放松两个例子，看看气味在应用中有什么用；最后介绍了解和体验的入口，也聊聊怎样判断相关宣传。先从嗅觉的基本过程讲起。",
       "source_ids": [
         "P02",
@@ -254,7 +254,7 @@
       "title": "从哪里了解和体验虚拟嗅觉？",
       "layout": "resources",
       "role": "main",
-      "seconds": 45,
+      "seconds": 30,
       "script": "左边是酒窖研究团队的介绍，可以看演示，也能找到公开的制作资料。右边是前面闻花装置的一段短片，可以下载后再看一遍，虚拟动作怎样带动气味释放。\n\n想亲自闻到气味，还需要配套的释香装置和气味材料。大家可以课后扫码，先看看真实系统是怎样工作的。",
       "source_ids": [
         "P05",
@@ -288,7 +288,7 @@
       "title": "假设产品这样宣传，你会怎么看？",
       "layout": "judgment",
       "role": "main",
-      "seconds": 55,
+      "seconds": 45,
       "script": "最后，假设你看到这样一句宣传：“能闻到虚拟森林，还能帮助放松。”\n\n前半句，我们可以问：它能提供哪些气味，什么时候释放，和画面里的动作怎么配合？后半句，就要看加上香味以后，是不是真的比不加香更放松。\n\n所以，“能闻到”要看装置怎样实现，“有没有帮助”要看实际结果。今天我们已经看到，让鼻子参与VR有具体的做法；评价一种应用，则要看它想帮人做什么，再看相应的结果。谢谢大家。",
       "source_ids": [
         "P02",
@@ -527,6 +527,10 @@
       "seconds": 0,
       "entries": [
         {
+          "label": "G05",
+          "text": "Mayhew等，2022，PNAS：分子传输条件与有味分类"
+        },
+        {
           "label": "N01/N02",
           "text": "NIH/NIDCD；Columbia University：嗅觉通路与受体基础"
         },
@@ -545,10 +549,6 @@
         {
           "label": "P05",
           "text": "Niedenthal等，2023，IJHCS：手持装置、酒窖任务与测试"
-        },
-        {
-          "label": "P10",
-          "text": "Lee等，2023，Science：分子结构与气味预测（备课）"
         }
       ],
       "script": "供追溯，不逐条朗读。完整来源与原文定位见来源手册。",
@@ -561,7 +561,8 @@
         "P10",
         "G02",
         "G03",
-        "G04"
+        "G04",
+        "G05"
       ],
       "footer": "完整题录、图源和原文定位见仓库来源手册",
       "source_locations": [
