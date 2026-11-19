@@ -149,7 +149,9 @@ def main():
     missing = []
     links = 0
     for path in ROOT.rglob('*.md'):
-        if any(x in path.parts for x in ['.git','private','node_modules']) or any(x.startswith('.chart-data-') for x in path.parts):
+        # work/ contains ignored local exports, including verbatim PR snapshots
+        # whose relative links refer to their original repository locations.
+        if any(x in path.parts for x in ['.git','private','work','node_modules']) or any(x.startswith('.chart-data-') for x in path.parts):
             continue
         text = path.read_text(encoding='utf-8')
         assert '\ufffd' not in text, path

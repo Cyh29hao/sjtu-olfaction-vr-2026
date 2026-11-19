@@ -129,6 +129,8 @@ def main():
     print(json.dumps(verification,ensure_ascii=False))
 
 def visual_hint(slide):
+    if slide.get('visual_hint'):
+        return slide['visual_hint']
     return {'photo':'先指动作或装置，再解释，避免逐字念说明。','results':'先说横纵轴和两种颜色，再比较前后与组间。','experiment':'先交代四组共用同一放松程序，再指出香味与触觉的差别。','receptors':'只解释组合关系；颜色是教学示意。','timeline':'指顺序，提醒长度未按真实秒数绘制。','compare':'先说比较对象，再说各自承担的动作。','mechanism':'沿图讲清每一步的对象和动作。','process':'沿流程说明指令和材料怎样配合。'}.get(slide['layout'],'围绕本页主要问题讲，长解释留在口播里。')
 
 if __name__ == '__main__':

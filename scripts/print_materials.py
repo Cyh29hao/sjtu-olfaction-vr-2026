@@ -19,6 +19,7 @@ BLUE=HexColor('#175F8B')
 STYLES={
     'title':ParagraphStyle('title',fontName=FONT,fontSize=25,leading=35,textColor=BLUE,spaceAfter=20),
     'h2':ParagraphStyle('h2',fontName=FONT,fontSize=14,leading=22,textColor=BLUE,spaceBefore=15,spaceAfter=7,keepWithNext=True),
+    'h3':ParagraphStyle('h3',fontName=FONT,fontSize=12,leading=20,textColor=BLUE,spaceBefore=10,spaceAfter=6,keepWithNext=True),
     'body':ParagraphStyle('body',fontName=FONT,fontSize=10.8,leading=19,wordWrap='CJK',spaceAfter=9),
 }
 
@@ -77,6 +78,7 @@ def build(name,version='v1',review_dir=None):
             continue
         if block.startswith('# '):key='title';text=block[2:]
         elif block.startswith('## '):key='h2';text=block[3:]
+        elif block.startswith('### '):key='h3';text=block[4:]
         else:key='body';text=block
         story.append(Paragraph(inline(text),STYLES[key]))
     doc=SimpleDocTemplate(str(target),pagesize=(595.28,841.89),leftMargin=48,rightMargin=48,topMargin=45,bottomMargin=61,title=name,author='气味科学小组')

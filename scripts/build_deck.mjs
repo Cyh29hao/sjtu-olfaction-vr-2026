@@ -162,6 +162,23 @@ async function render(d,n) {
       });
       break;
     }
+    case 'science-transport': {
+      text(s,'花释放的分子，要经过传输才能形成鼻端刺激',104,170,1092,52,29,C.ink);
+      const xs=[104,500,896];
+      (d.steps || []).forEach((step,i)=>{
+        const x=xs[i];
+        text(s,String(i+1).padStart(2,'0'),x,247,70,46,26,C.green,true);
+        text(s,step.label,x,302,300,62,34,C.blue,true);
+        [[0,0,20],[62,18,15],[119,-10,18],[178,25,13]].forEach(([dx,dy,r],j)=>{
+          s.shapes.add({geometry:'ellipse',position:{left:x+24+dx,top:398+dy,width:r*2,height:r*2},fill:j%2?C.green:C.blue,line:{fill:'none',width:0}});
+        });
+        text(s,step.text,x,480,300,88,27,C.ink);
+        if(i<2)arrow(s,x+325,405,45);
+      });
+      if(d.body?.[0])text(s,d.body[0],104,573,1092,32,23,C.muted);
+      text(s,d.caption || '',104,614,1092,38,29,C.blue,true);
+      break;
+    }
     case 'olfaction': {
       // Editable conceptual diagram; positions are not anatomical coordinates.
       const circles=[[148,256,22],[205,298,16],[260,238,19],[301,316,24],[178,361,18]];
