@@ -18,7 +18,7 @@ const option = (key, fallback) => {
 };
 const modules = process.env.RUNTIME_NODE_MODULES || 'C:/Users/Cyh29hao/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
 const {PresentationFile, FileBlob} = await import(pathToFileURL(path.join(modules, '@oai/artifact-tool/dist/artifact_tool.mjs')).href);
-const skillDir=process.env.PRESENTATION_SKILL_DIR || 'C:/Users/Cyh29hao/.codex/plugins/cache/openai-primary-runtime/presentations/26.1026.10807/skills/presentations';
+const skillDir=process.env.PRESENTATION_SKILL_DIR || 'C:/Users/Cyh29hao/.codex/plugins/cache/openai-primary-runtime/presentations/26.1112.11217/skills/presentations';
 const {applyPresentationChartFont}=await import(pathToFileURL(path.join(skillDir,'container_tools/artifact_tool_utils.mjs')).href);
 const input = path.resolve(ROOT, option('--input', 'content/deck.json'));
 const output = path.resolve(ROOT, option('--output', '.git/production-20261101/build/candidate.pptx'));
@@ -53,6 +53,13 @@ function arrow(s,x,y,w=42,color=C.blue) {
   return s.shapes.add({geometry:'rightArrow',position:{left:x,top:y,width:w,height:20},fill:color,line:{fill:'none',width:0}});
 }
 function line(s,x,y,w,color=C.line,h=2) { return rect(s,x,y,w,h,color); }
+function oval(s,x,y,w,h,fill) {
+  return s.shapes.add({geometry:'ellipse',position:{left:x,top:y,width:w,height:h},fill,line:{fill:'none',width:0}});
+}
+function outline(s,x,y,w,h,commands,color=C.blue,width=4) {
+  return s.shapes.add({geometry:'custom',position:{left:x,top:y,width:w,height:h},fill:'none',
+    line:{style:'solid',fill:color,width},customPaths:[{width:w,height:h,commands}]});
+}
 async function picture(s, image, x,y,w,h,fit='contain') {
   if (!image) return;
   const item = typeof image === 'string' ? {path:image} : image;
@@ -105,7 +112,7 @@ function base(d,n) {
   if (d.layout !== 'cover') {
     // Reuse the template master/layout; custom content does not change the shared master.
     if(source.version === 'v3') {
-      const chapter = d.role === 'backup' ? '备课与来源' : d.role === 'contributions' ? '小组协作' : ({'01':'01  嗅觉感知的科学基础','02':'02  虚拟嗅觉的技术实现','03':'03  应用场景与实验结果'}[d.group] || (d.id.startsWith('C')?'04  体验途径与效果判断':'气味、VR与虚拟感官'));
+      const chapter = d.role === 'backup' ? '备课与来源' : d.role === 'contributions' ? '小组协作' : ({'01':'01  嗅觉感知的科学基础','02':'02  虚拟嗅觉的技术实现','03':'03  应用与意义'}[d.group] || (d.id.startsWith('C')?'04  体验途径与效果判断':'气味、VR与虚拟感官'));
       text(s,d.section_heading || chapter,104,16,1092,25,16,C.muted,false,'chapter-location');
       text(s,d.title,104,51,1092,77,43,C.blue,true,'headline');
     } else text(s,d.title,104,38,1092,90,44,C.blue,true,'headline');
@@ -154,13 +161,14 @@ async function render(d,n) {
     }
     case 'talk-roadmap': {
       const sections = d.sections || [];
-      const width = 244;
+      const gap = 75;
+      const width = (1092 - gap * (sections.length - 1)) / sections.length;
       for (const [index, item] of sections.entries()) {
-        const x = 104 + index * 282;
-        line(s,x,285,width,index===3?C.blue:C.green,5);
-        text(s,item.label,x,313,width,72,51,C.blue,true);
-        text(s,item.text,x,411,width,58,25,C.muted);
-        if (index < sections.length-1) arrow(s,x+width+7,343,24,C.blue);
+        const x = 104 + index * (width + gap);
+        line(s,x,285,width,C.green,5);
+        text(s,item.label,x,320,width,76,52,C.blue,true);
+        if(item.text)text(s,item.text,x,412,width,50,25,C.muted);
+        if (index < sections.length-1) arrow(s,x+width+22,344,31,C.blue);
       }
       break;
     }
@@ -179,8 +187,22 @@ async function render(d,n) {
       text(s,d.caption,104,610,1092,38,24,C.blue,true);
       break;
     }
+    case 'device-bridge': {
+      text(s,'装置能安排什么',104,153,414,39,26,C.blue,true);
+      text(s,'实际应用要测什么',646,153,550,39,26,C.blue,true);
+      for(const [index,row] of d.bridge_rows.entries()) {
+        const y=205+index*128;
+        rect(s,104,y,433,104,'#EFF6E9');
+        rect(s,646,y,550,104,index===1?'#E7F2F8':'#F2F6F9');
+        text(s,row.device,124,y+22,394,71,26,C.ink,true);
+        arrow(s,568,y+43,47,C.blue);
+        text(s,row.question,666,y+22,511,71,27,C.blue,true);
+      }
+      text(s,d.caption,104,611,1092,38,23,C.muted);
+      break;
+    }
     case 'presence-result': {
-      text(s,d.intro,104,146,1092,39,24,C.muted);
+      text(s,d.intro,104,146,1092,39,24,C.muted,false,d.backup?.anchor);
       await picture(s,d.image,104,196,708,434,'contain');
       for (const [index,row] of d.result_rows.entries()) {
         const y=212+index*122;
@@ -206,43 +228,59 @@ async function render(d,n) {
       break;
     }
     case 'answer-map': {
-      const columns = [245,569,893];
-      const columnWidth = 303;
-      const cells = [
-        ['分子与结构','香芹酮构型不同，香型可不同','选择材料','预装香料与石蜡载体'],
-        ['到达与感知','真实分子到达嗅觉区域','控制到达与时机','近鼻布局，动作触发释香'],
-        ['组合响应','刺激组成与浓度可改变感知','管理残留与切换','停止加热后，等待散味'],
-      ];
-      text(s,'理论',104,161,112,38,26,C.blue,true);
-      text(s,'装置',104,282,112,38,26,C.blue,true);
-      text(s,'应用',104,421,112,38,26,C.blue,true);
-      for (const [index,[science,description,device,implementation]] of cells.entries()) {
-        const x=columns[index];
-        rect(s,x,148,columnWidth,82,'#F1F6FA');
-        rect(s,x,270,columnWidth,82,'#EFF6E9');
-        text(s,science,x+12,155,279,34,25,C.blue,true);
-        text(s,description,x+12,193,279,29,20,C.ink);
-        s.shapes.add({geometry:'downArrow',position:{left:x+139,top:237,width:24,height:26},fill:C.green,line:{fill:'none',width:0}});
-        text(s,device,x+12,277,279,34,25,C.blue,true);
-        text(s,implementation,x+12,315,279,29,20,C.ink);
+      if(d.map_rows?.length!==9)throw new Error(`${d.id}: answer-map expects three cards per layer`);
+      const columns=[245,569,893];
+      const top=[148,268,414];
+      const layers=['理论','装置','应用与意义'];
+      for(const [r,layer] of layers.entries()) {
+        const y=top[r];
+        text(s,layer,104,y+10,132,43,24,C.blue,true);
+        for(const [i,x] of columns.entries()) {
+          const card=d.map_rows[r*3+i];
+          const application=r===2;
+          const fill=r===0?'#F1F6FA':r===1?'#EFF6E9':i===0?'#E7F2F8':'#F2F6F7';
+          rect(s,x,y,303,application?190:85,fill);
+          if(application)line(s,x,y,303,i===0?C.blue:i===1?C.green:'#A9BBC5',4);
+          text(s,card.label,x+13,y+8,277,35,24,C.blue,true,card.anchor);
+          text(s,card.text,x+13,y+46,277,application?127:35,application?20:18,C.ink);
+          if(r===0)s.shapes.add({geometry:'downArrow',position:{left:x+139,top:237,width:24,height:25},fill:C.green,line:{fill:'none',width:0}});
+        }
       }
-      line(s,245,367,951,C.line,1);
-      text(s,'三项独立研究',245,377,951,28,19,C.muted,true);
-      const studies = [
-        ['酒窖辨香 · 12人','单味得分最高，三味等比最低\n能设计难度，训练增益待证'],
-        ['主观在场感 · 60人','加香组上升，撤香组下降\n两种量表报告显著交互'],
-        ['放松对照 · 136人','相同视听程序加入薰衣草\n未检出额外放松优势'],
-      ];
-      for (const [index,[heading,outcome]] of studies.entries()) {
-        const x=columns[index];
-        rect(s,x,413,columnWidth,117,index===1?'#E7F2F8':'#F4F7F8');
-        text(s,heading,x+12,419,279,33,23,C.blue,true);
-        text(s,outcome,x+12,458,279,60,20,C.ink);
+      line(s,245,365,951,C.line,1);
+      text(s,'在三项独立研究中，看实际体验和任务表现',245,374,951,28,19,C.muted);
+      break;
+    }
+    case 'qa-evidence': {
+      text(s,d.answer,104,145,1092,79,31,C.blue,true,'evidence-answer');
+      line(s,104,228,1092);
+      const details=d.details || [];
+      if(d.image || d.images?.length || d.table) {
+        if(d.table)nativeTable(s,d,n,{left:104,top:257,width:640,height:325});
+        else if(d.images?.length) {
+          for(const [i,image] of d.images.entries()) {
+            const x=104+i*312;
+            await picture(s,image,x,250,292,285,'contain');
+            text(s,image.label,x,545,292,38,21,C.blue,true);
+          }
+        }
+        else await picture(s,d.image,104,245,608,344,'contain');
+        if(d.caption)text(s,d.caption,104,593,644,63,18,C.muted);
+        const rowHeight=Math.floor(398/Math.max(details.length,1));
+        for(const [i,item] of details.entries()) {
+          const y=248+i*rowHeight;
+          text(s,item.label,761,y,435,31,22,C.blue,true);
+          text(s,item.text,761,y+36,435,rowHeight-37,20,C.ink);
+        }
+      } else {
+        for(const [i,item] of details.entries()) {
+          const x=104+(i%2)*565;
+          const y=249+Math.floor(i/2)*174;
+          line(s,x,y,526,C.line,1);
+          text(s,item.label,x,y+11,526,42,25,C.blue,true);
+          text(s,item.text,x,y+55,526,116,23,C.ink);
+        }
+        if(d.caption)text(s,d.caption,104,612,1092,41,19,C.muted);
       }
-      rect(s,104,548,1092,62,C.blue);
-      text(s,'意义',118,563,108,34,24,C.white,true);
-      text(s,'真实嗅闻已可进入交互，部分场景观察到在场感收益。',245,563,933,36,24,C.white,true);
-      text(s,'答辩跳页',104,621,130,30,19,C.muted,true);
       break;
     }
     case 'narrative-map': {
@@ -284,20 +322,52 @@ async function render(d,n) {
       break;
     }
     case 'science-transport': {
-      text(s,'花释放的分子，要经过传输才能形成鼻端刺激',104,170,1092,52,29,C.ink);
-      const xs=[104,500,896];
+      const stages=[104,487,870];
       (d.steps || []).forEach((step,i)=>{
-        const x=xs[i];
-        text(s,String(i+1).padStart(2,'0'),x,247,70,46,26,C.green,true);
-        text(s,step.label,x,302,300,62,34,C.blue,true);
-        [[0,0,20],[62,18,15],[119,-10,18],[178,25,13]].forEach(([dx,dy,r],j)=>{
-          s.shapes.add({geometry:'ellipse',position:{left:x+24+dx,top:398+dy,width:r*2,height:r*2},fill:j%2?C.green:C.blue,line:{fill:'none',width:0}});
-        });
-        text(s,step.text,x,480,300,88,27,C.ink);
-        if(i<2)arrow(s,x+325,405,45);
+        const x=stages[i];
+        text(s,step.label,x,190,325,59,32,C.blue,true,i===2?d.backup?.anchor:'');
+        text(s,step.text,x,486,325,83,25,C.ink);
+        if(i<2)arrow(s,x+321,354,32,C.blue);
       });
-      if(d.body?.[0])text(s,d.body[0],104,573,1092,32,23,C.muted);
-      text(s,d.caption || '',104,614,1092,38,29,C.blue,true);
+      rect(s,183,366,6,90,C.green);
+      oval(s,151,399,39,17,'#9CCB72');
+      oval(s,187,410,39,17,'#9CCB72');
+      for(const [dx,dy] of [[-30,-14],[3,-22],[-29,16],[2,21]]) {
+        oval(s,172+dx,340+dy,36,37,'#CFE6BA');
+      }
+      oval(s,174,344,26,26,C.green);
+      arrow(s,228,341,35,'#A6BDCA');
+      for(const [x,y] of [[271,337],[298,322],[307,350],[331,312],[338,337],[362,328],[372,301]]) {
+        oval(s,x,y,13,13,C.blue);
+      }
+      // Side profile of the nose and the incoming flow, drawn as editable paths.
+      outline(s,555,266,187,196,[
+        {moveTo:{x:140,y:12}},
+        {cubicBezTo:{x1:80,y1:8,x2:46,y2:42,x:45,y:72}},
+        {quadBezTo:{x1:39,y1:100,x:11,y:132}},
+        {quadBezTo:{x1:7,y1:142,x:24,y:142}},
+        {lineTo:{x:52,y:145}},
+        {quadBezTo:{x1:54,y1:174,x:79,y:181}},
+        {lineTo:{x:141,y:181}},
+      ]);
+      outline(s,507,302,187,134,[
+        {moveTo:{x:5,y:125}},
+        {cubicBezTo:{x1:59,y1:128,x2:128,y2:118,x:125,y:77}},
+        {quadBezTo:{x1:125,y1:55,x:101,y:31}},
+      ],'#71AB3A',5);
+      oval(s,594,318,29,29,'#ABD77F');
+      text(s,'嗅觉区域',635,305,148,36,20,C.blue,true);
+      for(const [x,y] of [[514,411],[541,402],[564,415]])oval(s,x,y,11,11,C.blue);
+      for(const [i,[label,dots]] of [
+        ['分子很稀',[[28,55],[96,31]]],
+        ['浓度足以察觉',[[24,31],[58,26],[98,35],[44,61],[81,65],[108,57]]],
+      ].entries()) {
+        const x=872+i*162;
+        rect(s,x,301,145,105,i?'#EDF6E7':'#F2F6F8',C.line);
+        for(const [dx,dy] of dots)oval(s,x+dx,301+dy,14,14,C.blue);
+        text(s,label,x,425,150,36,20,C.blue,i===1);
+      }
+      text(s,d.caption || '',104,609,1092,43,28,C.blue,true);
       break;
     }
     case 'olfaction': {
@@ -326,7 +396,7 @@ async function render(d,n) {
     }
     case 'device-detail': {
       await picture(s,d.image,104,186,480,376,'contain');
-      text(s,'面罩与气味发生器',104,575,500,48,28,C.blue,true);
+      text(s,'面罩与气味发生器',104,575,500,48,28,C.blue,true,d.backup?.anchor);
       await picture(s,d.detail_image,620,178,250,273,'contain');
       text(s,'单个发生器',620,479,250,50,27,C.blue,true);
       (d.items || []).forEach((item,i)=>{
@@ -343,7 +413,7 @@ async function render(d,n) {
       steps.forEach((step,i)=>{
         const x=104+i*(width+gap);
         text(s,String(i+1).padStart(2,'0'),x,453,55,38,24,C.green,true);
-        text(s,step.label,x,497,width,52,29,C.blue,true);
+        text(s,step.label,x,497,width,52,29,C.blue,true,i===1?d.backup?.anchor:undefined);
         text(s,step.text || '',x,553,width,66,24,C.ink);
         if(i<steps.length-1)arrow(s,x+width+8,505,32);
       });
@@ -356,7 +426,7 @@ async function render(d,n) {
         text(s,row.label,104,y+15,200,75,31,C.blue,true);
         row.states.forEach((state,i)=>{
           rect(s,xs[i],y,246,101,r?C.pale:'#F1F7E8');
-          text(s,state,xs[i]+17,y+29,215,63,29,C.ink,true);
+          text(s,state,xs[i]+17,y+29,215,63,29,C.ink,true,r===1 && i===1?d.backup?.anchor:undefined);
           if(i<2)arrow(s,xs[i]+261,y+40,25);
         });
       });
@@ -365,15 +435,34 @@ async function render(d,n) {
       break;
     }
     case 'study-result': {
-      text(s,'任务等级与混合设定',104,175,560,48,30,C.blue,true);
-      (d.levels || []).forEach((level,i)=>{
-        const y=248+i*83;
-        text(s,level.label,104,y,375,49,30,C.ink,true);
-        text(s,level.text,104,y+43,400,40,24,C.muted);
-      });
-      await picture(s,d.image,683,166,492,446,'contain');
-      text(s,'每级平均得分（满分8）',690,606,505,36,25,C.blue);
-      if(d.caption)text(s,d.caption,104,634,1092,27,19,C.muted);
+      if(!d.chart_labels) {
+        text(s,'任务等级与混合设定',104,175,560,48,30,C.blue,true);
+        (d.levels || []).forEach((level,i)=>{
+          const y=248+i*83;
+          text(s,level.label,104,y,375,49,30,C.ink,true);
+          text(s,level.text,104,y+43,400,40,24,C.muted);
+        });
+        await picture(s,d.image,683,166,492,446,'contain');
+        text(s,'每级平均得分（满分8）',690,606,505,36,25,C.blue);
+        if(d.caption)text(s,d.caption,104,634,1092,27,19,C.muted);
+        break;
+      }
+      await picture(s,d.image,112,151,450,463,'contain');
+      text(s,d.backup?.label || '两种三味配方',610,168,578,43,30,C.blue,true,d.backup?.anchor);
+      for(const [i,label] of d.chart_labels.entries()) {
+        const y=230+i*119;
+        const segments=i?[1/3,1/3,1/3]:[.5,.25,.25];
+        text(s,`第${i+3}柱 · ${label}`,610,y,565,43,29,C.ink,true);
+        let x=611;
+        for(const [j,ratio] of segments.entries()) {
+          rect(s,x,y+52,294*ratio-3,20,['#8FCB63','#B5D5E6','#5F92AE'][j]);
+          x+=294*ratio;
+        }
+        text(s,i?'等比例':'50% / 25% / 25%',925,y+43,260,40,22,C.muted);
+      }
+      line(s,610,465,578);
+      text(s,d.intro || (d.takeaways || [])[0],610,489,578,112,31,C.blue,true);
+      if(d.caption)text(s,d.caption,104,620,1092,32,19,C.muted);
       break;
     }
     case 'resources': {
@@ -424,6 +513,28 @@ async function render(d,n) {
       text(s,d.caption || '组合编码教学示意，圆点不表示实测强度',104,602,1092,47,28,C.muted);
       break;
     }
+    case 'receptor-overlap': {
+      text(s,d.backup?.label || '小鼠嗅觉受体的实测响应',104,154,1092,48,26,C.blue,true,d.backup?.anchor);
+      const groups=[
+        {x:310,w:360,label:`仅响应${d.odors[0].label}`,color:'#EDF4F9'},
+        {x:680,w:185,label:'两种都响应',color:'#E9F5DF'},
+        {x:875,w:310,label:`仅响应${d.odors[1].label}`,color:'#EDF4F9'},
+      ];
+      for(const g of groups) {
+        rect(s,g.x,236,g.w,287,g.color);
+        text(s,g.label,g.x+14,252,g.w-28,38,23,C.blue,true);
+      }
+      for(const [i,odor] of d.odors.entries()) {
+        const y=328+i*112;
+        text(s,odor.label,104,y-2,188,56,33,C.ink,true);
+        const own=groups[i===0?0:2];
+        for(let j=0;j<odor.only;j++)oval(s,own.x+23+j*52,y,32,32,C.blue);
+        for(let j=0;j<d.shared;j++)oval(s,groups[1].x+70+j*36,y,32,32,'#6DAE3C');
+      }
+      line(s,765,361,2,'#A8CB94',78);
+      text(s,d.caption,104,577,1092,69,28,C.blue,true);
+      break;
+    }
     case 'requirements': {
       const items=d.items || [];
       if(items.length!==3)throw new Error(`${d.id}: requirements needs three concrete items`);
@@ -459,16 +570,21 @@ async function render(d,n) {
     }
     case 'compare': {
       const cols=d.columns || [];
+      const start=d.intro?211:175;
+      if(d.intro && d.backup && d.intro.startsWith('香芹酮')) {
+        text(s,'香芹酮',104,145,98,53,25,C.blue,true,d.backup.anchor);
+        text(s,d.intro.slice('香芹酮'.length),200,145,996,53,25,C.ink);
+      } else if(d.intro)text(s,d.intro,104,145,1092,57,25,C.ink,false,d.backup?.anchor);
       for(let i=0;i<cols.length;i++) {
         const col=cols[i],x=104+i*570;
-        text(s,col.label,x,175,520,65,36,C.blue,true);
-        if(col.image) await picture(s,col.image,x,260,520,270);
+        text(s,col.label,x,start,520,65,36,C.blue,true);
+        if(col.image) await picture(s,col.image,x,d.intro?285:260,520,d.intro?237:270);
         const terms=String(col.text || '').split('\n').filter(Boolean);
         if(!col.image && terms.length===2) {
           text(s,terms[0],x,290,520,70,38,C.ink);
           s.shapes.add({geometry:'downArrow',position:{left:x+64,top:380,width:28,height:44},fill:C.blue,line:{fill:'none',width:0}});
           text(s,terms[1],x,450,520,70,38,C.ink);
-        } else text(s,col.text || '',x,col.image?565:295,520,col.image?76:250,29,C.ink);
+        } else text(s,col.text || '',x,col.image?(d.intro?548:565):295,520,col.image?61:250,29,C.ink);
       }
       if(body[0])text(s,body[0],104,615,1092,38,28,C.ink);
       break;
@@ -500,7 +616,7 @@ async function render(d,n) {
         yAxis:{min:c.yMin ?? 0,max:c.yMax,numberFormatCode:c.format || '0.0',textStyle:{fontSize:20},majorGridlines:{fill:C.line,width:1}},
       });
       applyPresentationChartFont(chart,{fontFamily:FONT});
-      if(c.yTitle)text(s,c.yTitle,104,143,810,36,22,C.muted);
+      if(c.yTitle)text(s,c.yTitle,104,143,810,36,22,C.muted,false,d.backup?.anchor);
       if(!wide)paragraphs(s,d.takeaways,950,245,245,30,135,C.ink);
       if(d.caption)text(s,d.caption,104,617,1092,35,24,C.muted);
       nativeCharts.push(n);

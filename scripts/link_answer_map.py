@@ -1,4 +1,4 @@
-"""Add reversible in-deck Q&A navigation to the editable PPTX and its PDFs."""
+"""Wire title links, discreet return icons, and matching PDF destinations."""
 import argparse
 import json
 import posixpath
@@ -12,107 +12,151 @@ from verify_release import NS, ordered_slides
 
 REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
 PACKAGE_REL = "http://schemas.openxmlformats.org/package/2006/relationships"
-LABELS = {
-    "S05": "理论到装置",
-    "T02": "动作释香",
-    "A02": "辨香难度",
-    "A03": "在场感",
-    "A04": "放松对照",
-}
+DRAW = "{"+NS["a"]+"}"
+PRES = "{"+NS["p"]+"}"
+JUMP = "ppaction://hlinksldjump"
 
 
-def link_specs():
-    for i, (target, label) in enumerate(LABELS.items()):
-        yield "QA", target, label, (247 + 191 * i, 620, 174, 31)
-        yield target, "QA", "返回答辩总图", (1021, 12, 175, 33)
+def link_specs(slides):
+    by_id = {s["id"]:s for s in slides}
+    overview = by_id["QA"]["map_rows"]
+    targets = [item["target"] for item in overview]
+    assert len(targets) == len(set(targets))
+    for item in overview:
+        content = by_id[item["target"]]
+        backup = by_id[content["backup"]["target"]]
+        assert backup["role"] == "backup", backup["id"]
+        yield "QA", content["id"], item["anchor"], None
+        yield content["id"], "QA", "nav-home", (1195, 10, 41, 39)
+        yield content["id"], backup["id"], content["backup"]["anchor"], None
+        yield backup["id"], "QA", "nav-home", (1195, 10, 41, 39)
+        yield backup["id"], content["id"], "nav-back", (1150, 10, 41, 39)
 
 
 def xml_bytes(element):
     return etree.tostring(element, encoding="UTF-8", xml_declaration=True, standalone=True)
 
 
-def add_button(slide, relationship, label, bounds):
-    presentation = "{"+NS["p"]+"}"
-    drawing = "{"+NS["a"]+"}"
+def rel_path(part):
+    folder, name = posixpath.split(part)
+    return posixpath.join(folder, "_rels", name+".rels")
+
+
+def named_shape(slide, name):
+    shapes = slide.xpath("./p:cSld/p:spTree/p:sp[p:nvSpPr/p:cNvPr[@name=$n]]", namespaces=NS, n=name)
+    if len(shapes) != 1:
+        raise ValueError(f"Expected one {name!r} text shape, found {len(shapes)}")
+    return shapes[0]
+
+
+def add_icon(slide, name, bounds):
     tree = slide.find("p:cSld/p:spTree", NS)
     shape_id = max(int(x) for x in tree.xpath(".//p:cNvPr/@id", namespaces=NS)) + 1
-    shape = etree.SubElement(tree, presentation+"sp")
-    nv = etree.SubElement(shape, presentation+"nvSpPr")
-    props = etree.SubElement(nv, presentation+"cNvPr", id=str(shape_id), name="答辩导航 "+label)
-    etree.SubElement(props, drawing+"hlinkClick", {"{"+REL+"}id": relationship, "action":"ppaction://hlinksldjump"})
-    etree.SubElement(nv, presentation+"cNvSpPr", txBox="1")
-    etree.SubElement(nv, presentation+"nvPr")
-    style = etree.SubElement(shape, presentation+"spPr")
-    transform = etree.SubElement(style, drawing+"xfrm")
-    x, y, width, height = (str(round(coordinate*9525)) for coordinate in bounds)
-    etree.SubElement(transform, drawing+"off", x=x, y=y)
-    etree.SubElement(transform, drawing+"ext", cx=width, cy=height)
-    geometry = etree.SubElement(style, drawing+"prstGeom", prst="rect")
-    etree.SubElement(geometry, drawing+"avLst")
-    fill = etree.SubElement(style, drawing+"solidFill")
-    etree.SubElement(fill, drawing+"srgbClr", val="E9F2F8")
-    body = etree.SubElement(shape, presentation+"txBody")
-    etree.SubElement(body, drawing+"bodyPr", anchor="ctr", wrap="none", lIns="0", rIns="0", tIns="0", bIns="0")
-    etree.SubElement(body, drawing+"lstStyle")
-    paragraph = etree.SubElement(body, drawing+"p")
-    etree.SubElement(paragraph, drawing+"pPr", algn="ctr")
-    run = etree.SubElement(paragraph, drawing+"r")
-    run_props = etree.SubElement(run, drawing+"rPr", lang="zh-CN", sz="1350", b="1")
-    run_fill = etree.SubElement(run_props, drawing+"solidFill")
-    etree.SubElement(run_fill, drawing+"srgbClr", val="175F8B")
-    etree.SubElement(run_props, drawing+"latin", typeface="微软雅黑")
-    etree.SubElement(run_props, drawing+"ea", typeface="微软雅黑")
-    etree.SubElement(run, drawing+"t").text = label
+    shape = etree.SubElement(tree, PRES+"sp")
+    nv = etree.SubElement(shape, PRES+"nvSpPr")
+    title = "返回答辩总图" if name == "nav-home" else "返回主讲页"
+    etree.SubElement(nv, PRES+"cNvPr", id=str(shape_id), name=name, title=title, descr=title)
+    etree.SubElement(nv, PRES+"cNvSpPr", txBox="1")
+    etree.SubElement(nv, PRES+"nvPr")
+    style = etree.SubElement(shape, PRES+"spPr")
+    transform = etree.SubElement(style, DRAW+"xfrm")
+    x, y, width, height = (str(round(v*9525)) for v in bounds)
+    etree.SubElement(transform, DRAW+"off", x=x, y=y)
+    etree.SubElement(transform, DRAW+"ext", cx=width, cy=height)
+    geometry = etree.SubElement(style, DRAW+"prstGeom", prst="roundRect")
+    etree.SubElement(geometry, DRAW+"avLst")
+    fill = etree.SubElement(style, DRAW+"solidFill")
+    etree.SubElement(fill, DRAW+"srgbClr", val="F2F6F7")
+    body = etree.SubElement(shape, PRES+"txBody")
+    etree.SubElement(body, DRAW+"bodyPr", anchor="ctr", wrap="none", lIns="0", rIns="0", tIns="0", bIns="0")
+    etree.SubElement(body, DRAW+"lstStyle")
+    paragraph = etree.SubElement(body, DRAW+"p")
+    etree.SubElement(paragraph, DRAW+"pPr", algn="ctr")
+    run = etree.SubElement(paragraph, DRAW+"r")
+    props = etree.SubElement(run, DRAW+"rPr", lang="en-US", sz="1450")
+    etree.SubElement(etree.SubElement(props, DRAW+"solidFill"), DRAW+"srgbClr", val="48636D")
+    etree.SubElement(props, DRAW+"latin", typeface="Segoe UI Symbol")
+    etree.SubElement(run, DRAW+"t").text = "⌂" if name == "nav-home" else "←"
+    return shape
 
 
 def wire_pptx(source, target, slides):
-    if source.resolve() == target.resolve():
-        raise ValueError("Use separate source and output PPTX files")
     with ZipFile(source) as archive:
         order = ordered_slides(archive)
         parts = {name: archive.read(name) for name in archive.namelist()}
-    by_id = dict(zip((slide["id"] for slide in slides), order, strict=True))
-    for page_id, destination, label, bounds in link_specs():
-        part = by_id[page_id]
-        folder, name = posixpath.split(part)
-        rel_part = posixpath.join(folder, "_rels", name+".rels")
+    by_id = dict(zip((s["id"] for s in slides), order, strict=True))
+    for page, destination, name, bounds in link_specs(slides):
+        part = by_id[page]
+        rel_part = rel_path(part)
         rels = etree.fromstring(parts[rel_part])
-        rel_id = "rId"+str(max((int(r.get("Id")[3:]) for r in rels if r.get("Id","")[3:].isdigit()), default=0)+1)
+        ids = [int(r.get("Id")[3:]) for r in rels if r.get("Id","")[3:].isdigit()]
+        rid = "rId"+str(max(ids, default=0)+1)
         slide = etree.fromstring(parts[part])
-        if slide.xpath(f'//p:cNvPr[@name="答辩导航 {label}"]', namespaces=NS):
-            raise ValueError(f"Duplicate Q&A button on {page_id}: {label}")
-        etree.SubElement(rels, "{"+PACKAGE_REL+"}Relationship", Id=rel_id, Type=REL+"/slide",
-                         Target=posixpath.relpath(by_id[destination], folder))
-        add_button(slide, rel_id, label, bounds)
+        shape = add_icon(slide, name, bounds) if bounds else named_shape(slide, name)
+        props = shape.find("p:nvSpPr/p:cNvPr", NS)
+        assert props.find("a:hlinkClick", NS) is None, (page, name)
+        click = etree.Element(DRAW+"hlinkClick", {"{"+REL+"}id":rid, "action":JUMP}, tooltip=destination)
+        props.insert(0, click)  # DrawingML requires the action before the extension list.
+        etree.SubElement(rels, "{"+PACKAGE_REL+"}Relationship", Id=rid, Type=REL+"/slide",
+                         Target=posixpath.relpath(by_id[destination], posixpath.dirname(part)))
         parts[part] = xml_bytes(slide)
         parts[rel_part] = xml_bytes(rels)
     with ZipFile(target, "w", ZIP_DEFLATED) as archive:
-        for name, data in parts.items():
-            archive.writestr(name, data)
+        for part, data in parts.items():
+            archive.writestr(part, data)
 
 
-def wire_pdf(source, target, slides, main_only=False):
-    if source.resolve() == target.resolve():
-        raise ValueError("Use separate source and output PDF files")
-    if main_only:
-        slides = [slide for slide in slides if slide["role"] != "backup"]
-    page_index = {slide["id"]: index for index, slide in enumerate(slides)}
+def resolved_links(pptx, slides):
+    with ZipFile(pptx) as archive:
+        by_id = dict(zip((s["id"] for s in slides), ordered_slides(archive), strict=True))
+        size = etree.fromstring(archive.read("ppt/presentation.xml")).find("p:sldSz", NS)
+        width, height = (float(size.get(k)) for k in ("cx","cy"))
+        for page, destination, name, _ in link_specs(slides):
+            part = by_id[page]
+            root = etree.fromstring(archive.read(part))
+            shape = named_shape(root, name)
+            click = shape.find("p:nvSpPr/p:cNvPr/a:hlinkClick", NS)
+            assert click is not None and click.get("action") == JUMP, (page, name)
+            rid = click.get("{"+REL+"}id")
+            rels = etree.fromstring(archive.read(rel_path(part)))
+            rel = next(r for r in rels if r.get("Id") == rid)
+            target = posixpath.normpath(posixpath.join(posixpath.dirname(part), rel.get("Target")))
+            assert target == by_id[destination], (page, name, destination)
+            transform = shape.find("p:spPr/a:xfrm", NS)
+            offset, extent = transform.find("a:off", NS), transform.find("a:ext", NS)
+            x0, y0 = (int(offset.get(k)) for k in ("x","y"))
+            w, h = (int(extent.get(k)) for k in ("cx","cy"))
+            assert 0 <= x0 < x0+w <= width and 0 <= y0 < y0+h <= height, (page, name)
+            yield page, destination, name, (x0/width, y0/height, (x0+w)/width, (y0+h)/height)
+
+
+def wire_pdf(source, target, pptx, slides, main_only=False):
+    page_index = {s["id"]:i for i, s in enumerate(
+        s for s in slides if not main_only or s["role"] != "backup"
+    )}
+    links = [item for item in resolved_links(pptx, slides) if item[0] in page_index and item[1] in page_index]
     with fitz.open(source) as document:
-        if document.page_count != len(slides):
+        if document.page_count != len(page_index):
             raise ValueError("PDF page count differs from slide sequence")
-        affected = {page_index[src] for src, _, _, _ in link_specs()}
-        for index in affected:
+        for index in set(page_index[page] for page, _, _, _ in links):
             page = document[index]
-            for existing in page.get_links():
-                if existing["kind"] == fitz.LINK_GOTO:
-                    page.delete_link(existing)
-        for page_id, destination, _, (x,y,w,h) in link_specs():
-            page = document[page_index[page_id]]
-            sx, sy = page.rect.width/1280, page.rect.height/720
-            page.insert_link({"kind":fitz.LINK_GOTO,
-                              "from":fitz.Rect(x*sx,y*sy,(x+w)*sx,(y+h)*sy),
+            for item in page.get_links():
+                if item["kind"] == fitz.LINK_GOTO:
+                    page.delete_link(item)
+        for origin, destination, _, (x0,y0,x1,y1) in links:
+            page = document[page_index[origin]]
+            w,h = page.rect.width,page.rect.height
+            page.insert_link({"kind":fitz.LINK_GOTO, "from":fitz.Rect(x0*w,y0*h,x1*w,y1*h),
                               "page":page_index[destination], "to":fitz.Point(0,0)})
         document.save(target, garbage=3, deflate=True)
+    with fitz.open(target) as document:
+        for s, t, name, (x0,y0,x1,y1) in links:
+            page = document[page_index[s]]
+            match = fitz.Rect(x0*page.rect.width,y0*page.rect.height,x1*page.rect.width,y1*page.rect.height)
+            actual = [l for l in page.get_links() if l["kind"]==fitz.LINK_GOTO
+                      and l["page"]==page_index[t] and (l["from"]&match).get_area() > match.get_area()*.98]
+            assert len(actual)==1, (s,t,name)
+    return len(links)
 
 
 def main():
@@ -120,13 +164,19 @@ def main():
     parser.add_argument("input", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--deck", type=Path, default=Path("content/deck.json"))
+    parser.add_argument("--pptx", type=Path, help="Wired editable PPTX used for matching PDF links")
     parser.add_argument("--main-only", action="store_true")
     args = parser.parse_args()
+    if args.input.resolve() == args.output.resolve():
+        parser.error("Input and output must be separate files")
     slides = json.loads(args.deck.read_text(encoding="utf-8"))["slides"]
     if args.input.suffix.lower() == ".pptx":
         wire_pptx(args.input, args.output, slides)
+        print(len(list(resolved_links(args.output, slides))), "PowerPoint navigation targets verified")
+    elif args.pptx is not None:
+        print(wire_pdf(args.input, args.output, args.pptx, slides, args.main_only), "PDF navigation targets verified")
     else:
-        wire_pdf(args.input, args.output, slides, args.main_only)
+        parser.error("--pptx is required for PDF output")
 
 
 if __name__ == "__main__":

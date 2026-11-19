@@ -17,7 +17,7 @@ const template=opt('--template',process.env.OLFACTION_TEMPLATE);
 if(!template)throw new Error('Provide the selected original --template for font/reference verification');
 const referencePath=path.resolve(template);
 const referenceSha256=crypto.createHash('sha256').update(await fs.readFile(referencePath)).digest('hex');
-const SKILL=process.env.PRESENTATION_SKILL_DIR || 'C:/Users/Cyh29hao/.codex/plugins/cache/openai-primary-runtime/presentations/26.1026.10807/skills/presentations';
+const SKILL=process.env.PRESENTATION_SKILL_DIR || 'C:/Users/Cyh29hao/.codex/plugins/cache/openai-primary-runtime/presentations/26.1112.11217/skills/presentations';
 process.env.RUNTIME_NODE_MODULES=process.env.RUNTIME_NODE_MODULES || 'C:/Users/Cyh29hao/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
 const {finalizePresentation}=await import(pathToFileURL(path.join(SKILL,'container_tools/artifact_tool_utils.mjs')).href);
 await fs.mkdir(path.dirname(finalPath),{recursive:true});
