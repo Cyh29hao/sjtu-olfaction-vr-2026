@@ -111,7 +111,7 @@ function base(d,n) {
   if (d.role === 'backup') s.hidden=true;
   if (d.layout !== 'cover') {
     // Reuse the template master/layout; custom content does not change the shared master.
-    if(source.version === 'v3') {
+    if(['v3','v4'].includes(source.version)) {
       const chapter = d.role === 'backup' ? '备课与来源' : d.role === 'contributions' ? '小组协作' : ({'01':'01  嗅觉感知的科学基础','02':'02  虚拟嗅觉的技术实现','03':'03  应用与意义'}[d.group] || (d.id.startsWith('C')?'04  体验途径与效果判断':'气味、VR与虚拟感官'));
       text(s,d.section_heading || chapter,104,16,1092,25,16,C.muted,false,'chapter-location');
       text(s,d.title,104,51,1092,77,43,C.blue,true,'headline');
