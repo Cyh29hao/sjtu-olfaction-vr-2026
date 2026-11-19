@@ -1,20 +1,20 @@
 {
   "version": "v3",
-  "main_slides": 16,
+  "main_slides": 15,
   "backup_slides": 8,
-  "last_slide": "11人分工",
+  "last_slide": "答辩总结",
   "speakers": 4,
   "design_seconds": 720,
-  "spoken_seconds_budget": 685,
-  "transition_reserve_seconds": 35,
+  "spoken_seconds_budget": 675,
+  "transition_reserve_seconds": 45,
   "presentation_seconds": 720,
   "synthesized_reading_seconds": null,
   "human_rehearsal": false,
   "artifacts": [
     {
       "path": "release/v3/olfaction-vr-v3.pptx",
-      "bytes": 1255915,
-      "sha256": "3526c522c06c4113727f361800eab6fb5614be6921464da1c313d26aab91c8a5"
+      "bytes": 3034812,
+      "sha256": "3d1668bfa5b39280b605128b40634155fbbacfdb393add1b78429f9f93a5cc7f"
     },
     {
       "path": "release/v3/group-01-science.pptx",
@@ -33,8 +33,8 @@
     },
     {
       "path": "release/v3/olfaction-vr-v3.pdf",
-      "bytes": 827776,
-      "sha256": "2abb6e075d7ec387d14e99195fc7e88cb15cb05788f1336466740c67aa06dcd9"
+      "bytes": 1213593,
+      "sha256": "51cb6b5b0f66fa4cb7fdd2fbb0b3d6768a6e55c3711a77c4343c26a670bf3bd2"
     },
     {
       "path": "release/v3/group-01-science.pdf",
@@ -53,18 +53,18 @@
     },
     {
       "path": "release/v3/olfaction-vr-v3-main.pdf",
-      "bytes": 1047655,
-      "sha256": "18f21983efa79e6f6accf9e0c44d302b0427f31b84ed8f519d9c84839e5929e4"
+      "bytes": 1142777,
+      "sha256": "f1f48635e7caa83276e8e1c4466f87eaeac2e132710c948f97a2eead1766988d"
     },
     {
       "path": "release/v3/全场口播.pdf",
-      "bytes": 265358,
-      "sha256": "13fd38a32d5d0bba72ebfb8d9ceb84d09e587c948b33b0572d411314acdeff50"
+      "bytes": 261404,
+      "sha256": "b35aa45b764b46d19059e2cd9e534cff7b3c7cf6fe9f834ffc7bac587b9df7fe"
     },
     {
       "path": "release/v3/问答与备课.pdf",
-      "bytes": 316057,
-      "sha256": "24d498c730c3c66fb10917f1f83889e94842e1893a5d4118999814ef147020a7"
+      "bytes": 329969,
+      "sha256": "d986e782a256f4ef7f32eb3ff02cae1abe0f7d8c089d47e625f38fc92e91d7f2"
     }
   ]
 }
