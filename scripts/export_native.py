@@ -23,6 +23,7 @@ def main() -> None:
     parser.add_argument('--pdf', type=Path)
     parser.add_argument('--main-count', type=int)
     parser.add_argument('--append-last', action='store_true', help='Append the final contribution page to the main PDF')
+    parser.add_argument('--append-tail', type=int, default=0, help='Append the final N pages, e.g. contributions and Q&A summary')
     parser.add_argument('--width', type=int, default=1600)
     args = parser.parse_args()
     source = args.pptx.resolve(strict=True)
@@ -74,8 +75,10 @@ def main() -> None:
                     raise RuntimeError(f'PDF has {full.page_count} pages, expected {count}')
                 with fitz.open() as subset:
                     subset.insert_pdf(full, from_page=0, to_page=args.main_count - 1)
-                    if args.append_last and args.main_count < count:
-                        subset.insert_pdf(full, from_page=count - 1, to_page=count - 1)
+                    tail=args.append_tail or int(args.append_last)
+                    if tail:
+                        assert 0 < tail <= count-args.main_count
+                        subset.insert_pdf(full, from_page=count-tail, to_page=count-1)
                     subset.save(main_path)
             report['main_pdf'] = str(main_path)
             report['main_slides'] = args.main_count

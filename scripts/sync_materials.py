@@ -64,16 +64,17 @@ def main():
         write(master, json.dumps(deck, ensure_ascii=False, indent=2) + '\n')
     ids = [s['id'] for s in deck['slides']]
     assert len(set(ids)) == len(ids)
-    assert deck['slides'][-1]['role'] == 'contributions'
+    assert deck['slides'][-1]['role'] == 'contributions' or (deck['slides'][-1]['role']=='qa' and deck['slides'][-2]['role']=='contributions')
     sources = deck['sources']
     main_slides = [s for s in deck['slides'] if s['role'] == 'main']
-    spoken_seconds = sum(s['seconds'] for s in main_slides)
+    qa_slides = [s for s in deck['slides'] if s['role']=='qa']
+    spoken_seconds = sum(s['seconds'] for s in main_slides+qa_slides)
     total_budget = deck.get('presentation_seconds', 720)
     reserve = deck.get('transition_reserve_seconds', total_budget - spoken_seconds)
     assert 0 <= reserve and spoken_seconds + reserve <= total_budget, (spoken_seconds, reserve, total_budget)
     full = ['# 全场口播', '', f"对应{version}的{len(main_slides)}页主讲，{deck.get('speaker_count', 4)}人讲述。内容设计预算{spoken_seconds}秒，另留{reserve}秒换人和停顿；问答另计2–3分钟。真人计时后再调整。", '', '第0组负责开场与收束；其余三位依次讲科学原理、技术设备、多感官与应用。具体发言人由组内决定。页脚来源无需朗读。', '']
     for group, folder in GROUPS.items():
-        selected = [s for s in main_slides if s['group'] == group]
+        selected = [s for s in main_slides+qa_slides if s['group'] == group]
         seconds = sum(s['seconds'] for s in selected)
         lines = [f'# 本组文稿：{LABELS[group]}', '', f'设计内容预算：{seconds}秒。页面与全场口播来自同一份内容；可直接改文字、标注意见，或交回本组PPT副本。', '', '## 这段接住什么、交给下一段什么', '']
         handoffs = deck.get('group_handoffs', {})
@@ -91,7 +92,7 @@ def main():
         lines.extend(['', 'AI已按记录范围查阅。小组核改时，请成员亲自打开关键原始来源；把实际复核人和日期写在建议或PR里。', ''])
         write(ROOT / 'groups' / folder / '本组文稿.md', '\n'.join(lines))
     # Restore real presentation order: group 0's closing belongs at the end.
-    for slide in main_slides:
+    for slide in main_slides+qa_slides:
         n = ids.index(slide['id']) + 1
         full.extend([f"## {n:02} {slide['title']}（{slide['id']}，预算{slide['seconds']}秒）", '', slide['script'], ''])
     compression = deck.get('compression_notes', '优先保留闻花动作、完整释香流程、放松试验的对照与结尾。赶时间时先缩短S03的模型例子和T05的两种形态比较。视频或动画仅辅助解释，静态画面即可完成讲述。' if version == 'v1' else '先按全场预算试讲，由统筹确定需要压缩的位置。')

@@ -29,7 +29,7 @@ if (!Array.isArray(source.slides) || !source.slides.length) throw new Error('dec
 const ids = source.slides.map(s => s.id);
 if (new Set(ids).size !== ids.length) throw new Error('Slide IDs must be unique');
 const last = source.slides.at(-1);
-if (source.slides.length > 1 && last.layout !== 'contributions') throw new Error('The last physical slide must be contributions');
+if (source.slides.length > 1 && last.layout !== 'contributions' && !(last.role==='qa' && source.slides.at(-2)?.layout==='contributions')) throw new Error('End with contributions, optionally followed by the Q&A summary');
 const p = await PresentationFile.importPptx(await FileBlob.load(path.resolve(template)));
 const generalLayout = p.layouts.items.find(x => x.name === '标题和内容（一般样式）');
 const blankLayout = p.layouts.items.find(x => x.name === '空白（纯白，无底边）');

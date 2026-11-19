@@ -87,8 +87,9 @@ def check_deck(path, expected, sources, is_full=False):
                 check_chart(archive,part,slide)
                 charts += 1
         if is_full:
-            assert expected[-1]['id'] == 'TEAM' and expected[-1]['role'] == 'contributions'
-            last = E.fromstring(archive.read(ordered[-1]))
+            team_index=next(i for i,s in enumerate(expected) if s['id']=='TEAM')
+            assert team_index==len(expected)-1 or (team_index==len(expected)-2 and expected[-1]['role']=='qa')
+            last = E.fromstring(archive.read(ordered[team_index]))
             rows = last.xpath('//a:tbl/a:tr',namespaces=NS)
             assert len(rows) == len(PEOPLE)+1, ('TEAM needs header and eleven person rows',len(rows))
             row_text = [''.join(r.xpath('.//a:t/text()',namespaces=NS)) for r in rows[1:]]
@@ -135,7 +136,8 @@ def main():
         charts += check_deck(path,slides,deck['sources'],name==f'olfaction-vr-{version}')
         artifacts.append(path)
     pdf_counts = {name:len(slides) for name,slides in expected_decks.items()}
-    pdf_counts[f'olfaction-vr-{version}-main'] = len(main_slides)+1
+    tail_count=1+sum(s['role']=='qa' for s in deck['slides'])
+    pdf_counts[f'olfaction-vr-{version}-main'] = len(main_slides)+tail_count
     for name in [*pdf_counts,'全场口播','问答与备课']:
         path = release/f'{name}.pdf'
         with fitz.open(path) as pdf:
@@ -144,7 +146,7 @@ def main():
             assert pdf.page_count > 0 and all(page.get_text().strip() for page in pdf), (name,'empty page')
             if name == f'olfaction-vr-{version}-main':
                 for person in PEOPLE:
-                    assert person in pdf[-1].get_text(), ('main PDF contribution page',person)
+                    assert person in pdf[-tail_count].get_text(), ('main PDF contribution page',person)
         artifacts.append(path)
     missing = []
     links = 0
@@ -169,7 +171,7 @@ def main():
         papers = json.loads(papers_path.read_text(encoding='utf-8'))['papers']
         paper_count = len(papers)
         assert len({p['doi'] for p in papers}) == paper_count, 'Duplicate paper DOI'
-    spoken = sum(s['seconds'] for s in main_slides)
+    spoken = sum(s['seconds'] for s in deck['slides'] if s['role'] in ['main','qa'])
     total_budget = deck.get('presentation_seconds',720)
     reserve = deck.get('transition_reserve_seconds',total_budget-spoken)
     assert 0 <= reserve and spoken+reserve <= total_budget
@@ -177,7 +179,7 @@ def main():
     assert 1 <= speakers <= 4
     manifest = {'version':version,'main_slides':len(main_slides),
                 'backup_slides':sum(s['role']=='backup' for s in deck['slides']),
-                'last_slide':'11人分工','speakers':speakers,
+                'last_slide':'答辩总结' if deck['slides'][-1]['role']=='qa' else '11人分工','speakers':speakers,
                 'design_seconds':spoken+reserve,'spoken_seconds_budget':spoken,
                 'transition_reserve_seconds':reserve,
                 'presentation_seconds':deck.get('presentation_seconds',720),

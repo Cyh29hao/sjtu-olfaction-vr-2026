@@ -21,13 +21,13 @@
 | judgment | question、alternatives数组（label、text） |
 | closing | lines、caption |
 | references | entries数组（label、text、url） |
-| contributions | table，作为全套最后一页 |
+| contributions | table；本轮之后接QA答辩总结 |
 
 图片路径均相对仓库根目录，image可以是字符串或`{path,alt,fit,crop}`。图表数据、表格、过程与受体组合示意保留为可编辑对象。`elements`可补充text/image/arrow/rect对象，但优先使用对应内容布局。
 
 图片会实际读取为字节后嵌入，而非只登记本地路径。构建与最终整理均检查媒体非空并解码栅格图片；这仍需配合正式PowerPoint渲染，确认图片确实显示。
 
-备份页在PPT中标为隐藏。后台PDF导出会纳入全部页面，便于查阅。`--main-count`另导出连续主讲页PDF，配合`--append-last`在主讲PDF末尾再附全套最后的分工表。实际贡献由组内填写和核实。
+备份页在PPT中标为隐藏。后台PDF导出会纳入全部页面，便于查阅。`--main-count`另导出连续主讲页PDF，本轮配合`--append-tail 2`附上分工与答辩总结；旧版本仍可使用`--append-last`。实际贡献由组内填写和核实。
 
 ## 运行顺序
 
