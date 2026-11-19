@@ -152,6 +152,34 @@ async function render(d,n) {
       if(source.version==='v3')text(s,'研究演示帧：Liu等，2023，Movie3 · CC BY 4.0',687,666,560,36,13,C.white);
       break;
     }
+    case 'narrative-map': {
+      const detail=d.map_mode==='detail';
+      rect(s,92,145,1104,506,'none',C.blue,'narrative-frame');
+      const xs=[260,568,876];
+      const science=[['真实分子与结构',detail?'香芹酮：空间排列不同\n典型气味可能不同':'分子与结构影响气味'],['到达与感知',detail?'分子到达嗅觉区域\n受体识别、神经元传信号':'刺激怎样进入嗅觉通路'],['组合响应',detail?'多类受体组合响应\n浓度可能改变响应':'不同刺激怎样被区分']];
+      const engineering=[['选择材料',detail?'预装香料与石蜡载体\n面罩内九个发生器':'提供真实含香材料'],['安排到达与时机',detail?'近鼻布局，动作触发\n加热释香与温度反馈':'让气味配合虚拟动作'],['管理刺激与切换',detail?'停止、散热与散味\n管理残留和连续切换':'处理残留与下一次呈现']];
+      text(s,'科学基础',110,169,142,45,24,C.blue,true);
+      text(s,'装置实现',110,314,142,45,24,C.blue,true);
+      text(s,'实际应用',110,452,142,45,24,C.blue,true);
+      for(let i=0;i<3;i++){
+        text(s,science[i][0],xs[i],166,280,35,25,C.blue,true);
+        text(s,science[i][1],xs[i],207,280,67,22,C.ink);
+        s.shapes.add({geometry:'downArrow',position:{left:xs[i]+120,top:276,width:26,height:25},fill:C.green,line:{fill:'none',width:0}});
+        text(s,engineering[i][0],xs[i],310,280,35,25,C.blue,true);
+        text(s,engineering[i][1],xs[i],351,280,63,22,C.ink);
+        line(s,xs[i]+132,414,2,C.green,14);
+      }
+      line(s,392,428,616,C.green,2);
+      for(const cx of [470,940])s.shapes.add({geometry:'downArrow',position:{left:cx,top:429,width:22,height:15},fill:C.green,line:{fill:'none',width:0}});
+      text(s,detail?'酒窖辨香｜手柄系统':'辨香：气味作为题目',260,448,435,34,24,C.blue,true);
+      text(s,detail?'12人，比较单味与混合配方\n单味最高、三味等比最低\n第2、3类差异未显著':'闻香、作答与反馈\n用任务表现评价用途',260,486,435,83,21,C.ink);
+      text(s,detail?'放松比较｜环境扩香':'放松：气味作为附加刺激',730,448,435,34,24,C.blue,true);
+      text(s,detail?'136人，薰衣草环境扩香\n同触觉条件下比较有香与无香\n未检出额外放松优势':'同条件比较有香与无香\n看是否增加放松收益',730,486,435,83,21,C.ink);
+      line(s,110,576,1068,C.green,2);
+      text(s,'总结意义',110,592,142,38,24,C.blue,true);
+      text(s,detail?'科学约束呈现，任务决定指标\n装置能力与应用收益分别检验':'从感知条件到可控呈现\n再用任务与比较证据判断价值',260,584,900,63,25,C.ink,true);
+      break;
+    }
     case 'agenda': {
       (d.sections || []).forEach((section,i)=>{
         const y=177+i*104;
