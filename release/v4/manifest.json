@@ -1,0 +1,70 @@
+{
+  "version": "v4",
+  "main_slides": 16,
+  "backup_slides": 11,
+  "last_slide": "答辩总结",
+  "speakers": 4,
+  "design_seconds": 720,
+  "spoken_seconds_budget": 660,
+  "transition_reserve_seconds": 60,
+  "presentation_seconds": 720,
+  "synthesized_reading_seconds": null,
+  "human_rehearsal": false,
+  "artifacts": [
+    {
+      "path": "release/v4/olfaction-vr-v4.pptx",
+      "bytes": 4822635,
+      "sha256": "6af0f80782760b1e31ed142792bfad74c903a972b19d9369cd3a67ebc85cb524"
+    },
+    {
+      "path": "release/v4/group-01-science.pptx",
+      "bytes": 52457,
+      "sha256": "7416dcdca55637581c75690c40d740ed747fc149a239fdf977e0214371ed91ea"
+    },
+    {
+      "path": "release/v4/group-02-technology.pptx",
+      "bytes": 283603,
+      "sha256": "ae3b5268ecc097041cf704f8279351711ec848de0ed6ad874aa4dc6640ca46f9"
+    },
+    {
+      "path": "release/v4/group-03-applications.pptx",
+      "bytes": 1434617,
+      "sha256": "40f255df9953724beaedc3acf9a5273fc7733e8af91560300e9c5377f925d9a6"
+    },
+    {
+      "path": "release/v4/olfaction-vr-v4.pdf",
+      "bytes": 1393687,
+      "sha256": "ce1c7894afe0d6bbeaa71aaf6c216ad85d86e606937716494b0246d088eec8a4"
+    },
+    {
+      "path": "release/v4/group-01-science.pdf",
+      "bytes": 202262,
+      "sha256": "cca52e466f1fb13f2c2f89d6499510fa1b58d7e864a113e88f7e3c87d8aaaa3b"
+    },
+    {
+      "path": "release/v4/group-02-technology.pdf",
+      "bytes": 239171,
+      "sha256": "4e51e78d86c488b71f45e8de7cff4ec0e690e83967a5182a2b1b19255d2370b3"
+    },
+    {
+      "path": "release/v4/group-03-applications.pdf",
+      "bytes": 448318,
+      "sha256": "cd12b348bb88e8da390819fe168256ba3a2d38d0ac4a445a7ec513b59a35cf6e"
+    },
+    {
+      "path": "release/v4/olfaction-vr-v4-main.pdf",
+      "bytes": 1521819,
+      "sha256": "2137a04c84cd94ced1cfd29913686e91e6815ee72ac2c9a8de3d8b1fc99414ec"
+    },
+    {
+      "path": "release/v4/全场口播.pdf",
+      "bytes": 257235,
+      "sha256": "86ab6036dde21b4212f175abcf7dff1236599604a52db76e2fe248a409d57e27"
+    },
+    {
+      "path": "release/v4/问答与备课.pdf",
+      "bytes": 342429,
+      "sha256": "d5b916abe0b6bb3177918023a44a1de18ce2df5daf0ac98dd15dc61dae030ffa"
+    }
+  ]
+}
