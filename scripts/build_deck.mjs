@@ -152,6 +152,99 @@ async function render(d,n) {
       if(source.version==='v3')text(s,'研究演示帧：Liu等，2023，Movie3 · CC BY 4.0',687,666,560,36,13,C.white);
       break;
     }
+    case 'talk-roadmap': {
+      const sections = d.sections || [];
+      const width = 244;
+      for (const [index, item] of sections.entries()) {
+        const x = 104 + index * 282;
+        line(s,x,285,width,index===3?C.blue:C.green,5);
+        text(s,item.label,x,313,width,72,51,C.blue,true);
+        text(s,item.text,x,411,width,58,25,C.muted);
+        if (index < sections.length-1) arrow(s,x+width+7,343,24,C.blue);
+      }
+      break;
+    }
+    case 'science-bridge': {
+      text(s,'科学基础',104,153,435,39,26,C.blue,true);
+      text(s,'虚拟嗅觉如何实现',660,153,510,39,26,C.blue,true);
+      for (const [index,row] of d.bridge_rows.entries()) {
+        const y = 205 + index * 128;
+        rect(s,104,y,450,104,'#F2F6F9');
+        rect(s,660,y,536,104,'#F0F7E9');
+        text(s,row.science,122,y+9,414,36,25,C.blue,true);
+        text(s,row.detail,122,y+47,414,50,22,C.ink);
+        arrow(s,583,y+43,47,C.blue);
+        text(s,row.implementation,681,y+18,494,77,26,C.ink,true);
+      }
+      text(s,d.caption,104,610,1092,38,24,C.blue,true);
+      break;
+    }
+    case 'presence-result': {
+      text(s,d.intro,104,146,1092,39,24,C.muted);
+      await picture(s,d.image,104,196,708,434,'contain');
+      for (const [index,row] of d.result_rows.entries()) {
+        const y=212+index*122;
+        rect(s,834,y,362,108,index===0?'#EDF5FB':'#F2F5F6');
+        text(s,row.label,851,y+8,328,32,24,C.blue,true);
+        text(s,row.from+' → '+row.to,851,y+40,328,42,34,C.ink,true);
+        text(s,row.text,851,y+82,328,23,17,C.muted);
+      }
+      text(s,'橙线：始终有香　黄线：始终无香',834,457,362,32,19,C.muted);
+      text(s,d.caption,834,500,362,72,21,C.blue,true);
+      text(s,d.sample_note,834,578,362,60,19,C.muted);
+      break;
+    }
+    case 'application-verdict': {
+      for (const [index,row] of d.verdict_rows.entries()) {
+        const y=174+index*145;
+        rect(s,104,y,6,102,index<2?C.green:'#A5B8C2');
+        text(s,row.label,126,y+7,430,49,29,C.blue,true);
+        text(s,row.evidence,570,y+6,620,100,26,C.ink);
+        if(index<d.verdict_rows.length-1) line(s,126,y+116,1067,C.line,1);
+      }
+      text(s,d.caption,126,612,1067,42,23,C.muted);
+      break;
+    }
+    case 'answer-map': {
+      const columns = [245,569,893];
+      const columnWidth = 303;
+      const cells = [
+        ['分子与结构','香芹酮构型不同，香型可不同','选择材料','预装香料与石蜡载体'],
+        ['到达与感知','真实分子到达嗅觉区域','控制到达与时机','近鼻布局，动作触发释香'],
+        ['组合响应','刺激组成与浓度可改变感知','管理残留与切换','停止加热后，等待散味'],
+      ];
+      text(s,'理论',104,161,112,38,26,C.blue,true);
+      text(s,'装置',104,282,112,38,26,C.blue,true);
+      text(s,'应用',104,421,112,38,26,C.blue,true);
+      for (const [index,[science,description,device,implementation]] of cells.entries()) {
+        const x=columns[index];
+        rect(s,x,148,columnWidth,82,'#F1F6FA');
+        rect(s,x,270,columnWidth,82,'#EFF6E9');
+        text(s,science,x+12,155,279,34,25,C.blue,true);
+        text(s,description,x+12,193,279,29,20,C.ink);
+        s.shapes.add({geometry:'downArrow',position:{left:x+139,top:237,width:24,height:26},fill:C.green,line:{fill:'none',width:0}});
+        text(s,device,x+12,277,279,34,25,C.blue,true);
+        text(s,implementation,x+12,315,279,29,20,C.ink);
+      }
+      line(s,245,367,951,C.line,1);
+      text(s,'三项独立研究',245,377,951,28,19,C.muted,true);
+      const studies = [
+        ['酒窖辨香 · 12人','单味得分最高，三味等比最低\n能设计难度，训练增益待证'],
+        ['主观在场感 · 60人','加香组上升，撤香组下降\n两种量表报告显著交互'],
+        ['放松对照 · 136人','相同视听程序加入薰衣草\n未检出额外放松优势'],
+      ];
+      for (const [index,[heading,outcome]] of studies.entries()) {
+        const x=columns[index];
+        rect(s,x,413,columnWidth,117,index===1?'#E7F2F8':'#F4F7F8');
+        text(s,heading,x+12,419,279,33,23,C.blue,true);
+        text(s,outcome,x+12,458,279,60,20,C.ink);
+      }
+      rect(s,104,548,1092,62,C.blue);
+      text(s,'意义',118,563,108,34,24,C.white,true);
+      text(s,'真实嗅闻已可进入交互，部分场景观察到在场感收益。',245,563,933,36,24,C.white,true);
+      text(s,'答辩跳页',104,621,130,30,19,C.muted,true);
+      break;
+    }
     case 'narrative-map': {
       const detail=d.map_mode==='detail';
       rect(s,92,145,1104,506,'none',C.blue,'narrative-frame');
