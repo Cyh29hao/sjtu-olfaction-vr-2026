@@ -35,7 +35,7 @@
 2. 用捆绑Node运行`build_deck.mjs --input content/deck.json --template <本机模板路径> --output .git/production-20261101/build/candidate.pptx --subdecks`。
 3. 运行`finalize_deck.mjs --candidate <候选路径> --manifest <build-manifest.json路径> --template <原模板路径> --output <新的正式PPTX路径>`。校验器保留候选、另写正式文件；存在的正式输出不会覆盖。修订使用新候选及新输出名，验收后再更新稳定入口。
 4. 运行`python -X utf8 -B scripts/export_native.py <正式PPTX路径> --out-dir <PDF目录> --png-dir <私有检查图目录> --main-count <实际主讲页数>`。
-5. 合稿内的答辩导航使用 `python -X utf8 -B scripts/link_answer_map.py <未加导航的PPTX> <带导航的PPTX>` 加入五组按钮，再用上一步从带导航的PPTX导出。对导出的全稿和主讲PDF各用同一命令指定输入、输出PDF，主讲版额外传入 `--main-only`，按各自页序写入跳转。分组副本使用未加导航的版本。
+5. 合稿内的答辩导航使用 `python -X utf8 -B scripts/link_answer_map.py <未加导航的PPTX> <带导航的PPTX>` 加入五组按钮，再用上一步从带导航的PPTX导出。对导出的全稿和主讲PDF指定输入、输出PDF，并用 --pptx <带导航的PPTX> 读取实际点击区域，主讲版额外传入 `--main-only`，按各自页序写入跳转。分组副本使用未加导航的版本。
 6. 查看改动页的导出画面，核查科学内容、口播、备注、PDF、跳转与分组材料，再发布。
 
 `--subdecks`会在候选旁输出第一、二、三组PPTX，按group字段筛选，保留原全场页码便于定位。分组文件也要按各自实际页数与原生对象重新校验、导出，不能直接套用总稿manifest。
