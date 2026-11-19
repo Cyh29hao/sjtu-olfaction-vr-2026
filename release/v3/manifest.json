@@ -13,13 +13,13 @@
   "artifacts": [
     {
       "path": "release/v3/olfaction-vr-v3.pptx",
-      "bytes": 4813904,
-      "sha256": "d876c7134e52225c48034d06b422353721ca4c001e1645525dc37cef4e2530e2"
+      "bytes": 4822629,
+      "sha256": "b81baa3fe11e040b64b0d8a3de0c7a38af6711a102515c97707dcc003c8f056e"
     },
     {
       "path": "release/v3/group-01-science.pptx",
-      "bytes": 52114,
-      "sha256": "78be907a30fbb02ba6a1666c8eed41921fb965ea12a9ebefc489b699afbf2c24"
+      "bytes": 52457,
+      "sha256": "7416dcdca55637581c75690c40d740ed747fc149a239fdf977e0214371ed91ea"
     },
     {
       "path": "release/v3/group-02-technology.pptx",
@@ -33,13 +33,13 @@
     },
     {
       "path": "release/v3/olfaction-vr-v3.pdf",
-      "bytes": 1258966,
-      "sha256": "ea3ad5db1640423ec96eacd406f4e40d3c5c9dd70c05c1b355c26582d894af8d"
+      "bytes": 1393514,
+      "sha256": "440a22c4a5133f97beb2ff83bc63e360fd72ca888b9a35cd5e6eac337270a5b0"
     },
     {
       "path": "release/v3/group-01-science.pdf",
-      "bytes": 195585,
-      "sha256": "cc912d5df6058f412ab1326d78fb2d510c5b3fe457b0fe7cc7ea4dbd46959b13"
+      "bytes": 202262,
+      "sha256": "cca52e466f1fb13f2c2f89d6499510fa1b58d7e864a113e88f7e3c87d8aaaa3b"
     },
     {
       "path": "release/v3/group-02-technology.pdf",
@@ -53,18 +53,18 @@
     },
     {
       "path": "release/v3/olfaction-vr-v3-main.pdf",
-      "bytes": 1398516,
-      "sha256": "0aa02e2fc0bd3d0d340b935729d07b4e5b39f932b76116365b7ccba8468049ac"
+      "bytes": 1521465,
+      "sha256": "c9143633d57bd4ff8b2966c13b5a27fb0700c3a6ebd9109ccc19ef2110822f54"
     },
     {
       "path": "release/v3/全场口播.pdf",
-      "bytes": 251635,
-      "sha256": "eced3c064fd3ee03cea8501ac9ff02bae362872772e1f17adee025ed24989b9a"
+      "bytes": 257235,
+      "sha256": "f33a74d44227591c7010698d089593d669cbb8f4c807167f84ea7794f958bad4"
     },
     {
       "path": "release/v3/问答与备课.pdf",
-      "bytes": 341722,
-      "sha256": "88f24f99249a9c3cdf581d80e3971a0a694a040249001a5f9b5ca0edf7ca4bf5"
+      "bytes": 342429,
+      "sha256": "1642b6bc42829350d69996ebfb6040796cad5bdc6f5602a5c5745f50223c2419"
     }
   ]
 }

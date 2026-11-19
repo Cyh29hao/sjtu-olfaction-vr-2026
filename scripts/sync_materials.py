@@ -19,6 +19,12 @@ def as_text(value):
         return '\n\n'.join(f'{labels.get(key, key)}：{as_text(item)}' for key, item in value.items())
     return str(value) if value is not None else ''
 
+def timing_label(slide):
+    if slide.get('in_reserve_seconds'):
+        return f"约{slide['in_reserve_seconds']}秒，计入转场与分工时间"
+    return f"预算{slide['seconds']}秒"
+
+
 def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding='utf-8')
@@ -73,8 +79,9 @@ def main():
     reserve = deck.get('transition_reserve_seconds', total_budget - spoken_seconds)
     assert 0 <= reserve and spoken_seconds + reserve <= total_budget, (spoken_seconds, reserve, total_budget)
     full = ['# 全场口播', '', f"对应{version}的{len(main_slides)}页主讲，{deck.get('speaker_count', 4)}人讲述。内容设计预算{spoken_seconds}秒，另留{reserve}秒换人和停顿；问答另计2–3分钟。真人计时后再调整。", '', '第0组负责开场与收束；其余三位依次讲科学原理、技术设备、多感官与应用。具体发言人由组内决定。页脚来源无需朗读。', '']
+    spoken_slides = [s for s in deck['slides'] if s['role'] in ('main', 'qa') or s.get('in_reserve_seconds')]
     for group, folder in GROUPS.items():
-        selected = [s for s in main_slides+qa_slides if s['group'] == group]
+        selected = [s for s in spoken_slides if s['group'] == group]
         seconds = sum(s['seconds'] for s in selected)
         lines = [f'# 本组文稿：{LABELS[group]}', '', f'设计内容预算：{seconds}秒。页面与全场口播来自同一份内容；可直接改文字、标注意见，或交回本组PPT副本。', '', '## 这段接住什么、交给下一段什么', '']
         handoffs = deck.get('group_handoffs', {})
@@ -83,7 +90,7 @@ def main():
         lines.extend([as_text(handoff) if handoff is not None else fallback, '', '## 可直接讲的口播', ''])
         for slide in selected:
             n = ids.index(slide['id']) + 1
-            block = [f"### {n:02} {slide['title']}（{slide['id']}，预算{slide['seconds']}秒）", '', slide['script'], '']
+            block = [f"### {n:02} {slide['title']}（{slide['id']}，{timing_label(slide)}）", '', slide['script'], '']
             lines.extend(block)
             lines.extend(['看图提示：' + visual_hint(slide), '', '来源定位：' + '；'.join(slide.get('source_locations', [])), ''])
         used = list(dict.fromkeys(i for s in selected for i in s['source_ids']))
@@ -92,9 +99,9 @@ def main():
         lines.extend(['', 'AI已按记录范围查阅。小组核改时，请成员亲自打开关键原始来源；把实际复核人和日期写在建议或PR里。', ''])
         write(ROOT / 'groups' / folder / '本组文稿.md', '\n'.join(lines))
     # Restore real presentation order: group 0's closing belongs at the end.
-    for slide in main_slides+qa_slides:
+    for slide in spoken_slides:
         n = ids.index(slide['id']) + 1
-        full.extend([f"## {n:02} {slide['title']}（{slide['id']}，预算{slide['seconds']}秒）", '', slide['script'], ''])
+        full.extend([f"## {n:02} {slide['title']}（{slide['id']}，{timing_label(slide)}）", '', slide['script'], ''])
     compression = deck.get('compression_notes', '优先保留闻花动作、完整释香流程、放松试验的对照与结尾。赶时间时先缩短S03的模型例子和T05的两种形态比较。视频或动画仅辅助解释，静态画面即可完成讲述。' if version == 'v1' else '先按全场预算试讲，由统筹确定需要压缩的位置。')
     full.extend(['## 试讲时怎么压缩', '', as_text(compression), ''])
     write(release / '全场口播.md', '\n'.join(full))
