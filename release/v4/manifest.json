@@ -59,12 +59,12 @@
     {
       "path": "release/v4/全场口播.pdf",
       "bytes": 257235,
-      "sha256": "86ab6036dde21b4212f175abcf7dff1236599604a52db76e2fe248a409d57e27"
+      "sha256": "6a4e2531e3dc7e13f6c05a390c7adac5dae6aa36783090861050d97c1219d9e5"
     },
     {
       "path": "release/v4/问答与备课.pdf",
-      "bytes": 342429,
-      "sha256": "d5b916abe0b6bb3177918023a44a1de18ce2df5daf0ac98dd15dc61dae030ffa"
+      "bytes": 344729,
+      "sha256": "87084caf75aec59d729243046a44086108c04d2d5d24355b7970ff2aab789826"
     }
   ]
 }

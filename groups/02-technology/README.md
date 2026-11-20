@@ -8,10 +8,10 @@
 
 | 要做什么 | 入口 |
 | --- | --- |
-| 先看全场与本组位置 | [主讲PDF](../../release/v3/olfaction-vr-v3-main.pdf) · [全场口播](../../release/v3/全场口播.md) |
+| 先看全场与本组位置 | [主讲PDF](../../release/v4/olfaction-vr-v4-main.pdf) · [全场口播](../../release/v4/全场口播.md) |
 | 改文稿或提意见 | [本组文稿](本组文稿.md) · [本组建议](建议.md) |
-| 直接改页面 | [本组PPTX](../../release/v3/group-02-technology.pptx) · [本组PDF](../../release/v3/group-02-technology.pdf) |
-| 核查依据与交接 | [来源手册](../../release/v3/来源手册.md) · [叙事与合稿基准](../../docs/叙事与合稿基准.md) |
+| 直接改页面 | [本组PPTX](../../release/v4/group-02-technology.pptx) · [本组PDF](../../release/v4/group-02-technology.pdf) |
+| 核查依据与交接 | [来源手册](../../release/v4/来源手册.md) · [叙事与合稿基准](../../docs/叙事与合稿基准.md) |
 | 看分工与交稿办法 | [贡献表](../../docs/team.md#实际贡献记录) · [怎样参与](../../CONTRIBUTING.md) · [协作办法](../../docs/协作合稿.md) |
 
 当前参考稿为 **T01–T04**，内容预算 **3分05秒**。这是本轮排法，页数、例子和讲法可以调整，合稿以理解、证据和全场时长为准。

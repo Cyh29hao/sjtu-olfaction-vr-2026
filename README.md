@@ -4,13 +4,15 @@
 
 ## 当前整合版 · 发言人从这里开始
 
-**v4 · 2026 年 11 月 19 日更新。** 这是目前整合后比较完善的一版，已完成整场审阅，可以用来准备演讲和答辩。请先领取本组材料，再到全场稿里确认前后如何交接。
+**v4 · 2026 年 11 月 21 日更新。** 这是目前整合后比较完善的一版，已完成整场审阅，可以用来准备演讲和答辩。请先领取本组材料，再到全场稿里确认前后如何交接。
 
-**全场文件** [完整 PPTX（含隐藏备课页）](release/v4/olfaction-vr-v4.pptx) · [全场口播](release/v4/全场口播.md) · [19 页主讲 PDF](release/v4/olfaction-vr-v4-main.pdf)
+**[下载课堂放映 PPTX（交大模板）](https://github.com/Cyh29hao/sjtu-olfaction-vr-2026/raw/refs/heads/main/release/v4/olfaction-vr-v4-show.pptx)** · [全场口播](release/v4/全场口播.md) · [主讲预览 PDF](release/v4/olfaction-vr-v4-main.pdf)
+
+开讲前停在交大封面，开讲切到闻花视频。对照讲稿时看正文右下角编号，封面无编号。 [封面预览](release/v4/preview/sjtu-cover.jpg) · [全部 v4 文件](release/v4/README.md)
 
 | 讲述部分 | 发言人 | PPTX | 逐页讲稿 |
 | --- | --- | --- | --- |
-| 第 0 组 · 开场、分工与总结 | 陈云海（总组长） | [全场 PPTX](release/v4/olfaction-vr-v4.pptx) | [第 0 组讲稿](groups/00-integration/本组文稿.md) |
+| 第 0 组 · 开场、分工与总结 | 陈云海（总组长） | [课堂放映 PPTX](release/v4/olfaction-vr-v4-show.pptx) | [第 0 组讲稿](groups/00-integration/本组文稿.md) |
 | 第 1 组 · 科学原理 | 朱轶宸（第一组组长） | [第一组 PPTX](release/v4/group-01-science.pptx) | [第一组讲稿](groups/01-science/本组文稿.md) |
 | 第 2 组 · 装置实现 | 蔡天怿 | [第二组 PPTX](release/v4/group-02-technology.pptx) | [第二组讲稿](groups/02-technology/本组文稿.md) |
 | 第 3 组 · 应用与意义 | 陈柔羽 | [第三组 PPTX](release/v4/group-03-applications.pptx) | [第三组讲稿](groups/03-applications/本组文稿.md) |
@@ -19,7 +21,7 @@
 
 - **演讲**。按本组讲稿练一遍，核对关键图要指哪里，以及最后一句怎样交给下一位。全场按 **12 分钟讲述＋2–3 分钟问答**准备，实际用时在合练中确认。
 - **答辩**。请准备本段的细节，包括原理怎样解释、装置怎样工作，或实验结果怎样读。总组长陈云海也会参与，主要回答需要把理论、装置和应用串起来的问题。
-- **答辩用完整 PPTX**。主讲 PDF 省去了隐藏备课页。放映停在最后一页总图后，点内容标题进正文，再点对应小标题查备课。右上角小房子回总图，备课页左箭头回正文。 [问答与备课](release/v4/问答与备课.md) · [答辩总图预览](release/v4/preview/narrative-summary.png)
+- **答辩用课堂放映 PPTX**。主讲 PDF 省去了隐藏备课页。放映停在最后一页总图后，点内容标题进正文，再点对应小标题查备课。右上角小房子回总图，备课页左箭头回正文。 [问答与备课](release/v4/问答与备课.md) · [答辩总图预览](release/v4/preview/narrative-summary.png)
 
 **有疑问或想改的地方，请随时微信联系我（陈云海）。** 告诉我是哪一页、哪一句或哪张图，我会把修改同步到全场稿。
 
@@ -34,7 +36,9 @@
 [来源手册](release/v4/来源手册.md) · [课程要求](docs/requirements.md)
 
 <details>
-<summary>核源、备课和历史稿</summary>
+<summary>课程提交、备课和历史稿</summary>
+
+- [课程提交 PDF（末页为分工表）](release/v4/olfaction-vr-v4-submission.pdf) · [课程要求](docs/requirements.md)。小组长在课程平台上传。
 
 - [完整 PDF（含备课页）](release/v4/olfaction-vr-v4.pdf) · [全场口播打印 PDF](release/v4/全场口播.pdf) · [来源手册](release/v4/来源手册.md) · [课堂演示与分享](release/v4/课堂演示与分享.md)
 - [组员及贡献记录](docs/team.md) · [协作与合稿](docs/协作合稿.md) · [v3 及此前合稿记录](release/v3/PR合稿记录.md)
