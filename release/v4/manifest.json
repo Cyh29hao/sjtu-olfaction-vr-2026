@@ -13,8 +13,8 @@
   "artifacts": [
     {
       "path": "release/v4/olfaction-vr-v4.pptx",
-      "bytes": 4822635,
-      "sha256": "6af0f80782760b1e31ed142792bfad74c903a972b19d9369cd3a67ebc85cb524"
+      "bytes": 4823170,
+      "sha256": "c96081ac65e3db6090b30c7ec988ab575d9517b5f54f9d3c0e4c2a7fc0078e7d"
     },
     {
       "path": "release/v4/group-01-science.pptx",

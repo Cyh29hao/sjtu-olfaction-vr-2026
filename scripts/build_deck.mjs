@@ -677,7 +677,23 @@ async function render(d,n) {
       break;
     }
     case 'contributions': {
-      nativeTable(s,d,n,{left:104,top:160,width:1092,height:470});
+      if (!d.collaboration) {
+        nativeTable(s,d,n,{left:104,top:160,width:1092,height:470});
+        break;
+      }
+      d.collaboration.milestones.forEach(([date,label],i)=>{
+        const x=104+i*370;
+        text(s,date+'  '+label,x,150,328,31,22,C.blue,true);
+        if(i<2)arrow(s,x+296,157,29,C.green);
+      });
+      const table=nativeTable(s,d,n,{left:104,top:195,width:1092,height:431});
+      d.table.rows.forEach((row,i)=>{
+        if(row[2]!=='主讲')return;
+        const cell=table.getCell(i+1,2);
+        cell.fill='#EAF4E2';
+        cell.text.style={typeface:FONT,fontSize:d.table.fontSize,color:C.blue,bold:true};
+      });
+      text(s,d.collaboration.link_label,104,659,1050,29,18,C.blue,false,'work-process-link');
       break;
     }
     default: {
