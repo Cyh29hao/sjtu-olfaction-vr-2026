@@ -1,39 +1,30 @@
 # 气味、VR与虚拟感官
 
-上海交通大学《气味科学中的健康密码》小组汇报
+上海交通大学《气味科学中的健康密码》课程汇报 · **第三组**
 
-## 当前整合版 · 发言人从这里开始
+## 课前公告 · 11 月 25 日（周三）
 
-**v4 · 2026 年 11 月 23 日更新。** 这是目前整合后比较完善的一版，已完成整场审阅，可以用来准备演讲和答辩。请先领取本组材料，再到全场稿里确认前后如何交接。
+**汇报材料已提交 Canvas。第三组将在 11 月 25 日（周三）课上汇报。**
 
-**[下载课堂放映 PPTX（交大模板）](https://github.com/Cyh29hao/sjtu-olfaction-vr-2026/raw/refs/heads/main/release/v4/olfaction-vr-v4-show.pptx)** · [全场口播](release/v4/全场口播.md) · [主讲预览 PDF](release/v4/olfaction-vr-v4-main.pdf)
+老师要求**每组汇报 12 分钟，超时扣分，另有 2–3 分钟互动提问**。每组上台最多 4 人。试讲时把开场视频和换人交接一起计入 12 分钟。 [课程要求](docs/requirements.md)
 
-开讲前停在交大封面，开讲切到闻花视频。对照讲稿时看正文右下角编号，封面无编号。 [封面预览](release/v4/preview/sjtu-cover.jpg) · [全部 v4 文件](release/v4/README.md)
+## 主讲分工与材料
+
+**[全场口播](release/v4/全场口播.md)** · [v4 放映参考 PPTX](https://github.com/Cyh29hao/sjtu-olfaction-vr-2026/raw/refs/heads/main/release/v4/olfaction-vr-v4-show.pptx) · [主讲预览 PDF](release/v4/olfaction-vr-v4-main.pdf) · [全部 v4 文件](release/v4/README.md)
 
 | 讲述部分 | 发言人 | PPTX | 逐页讲稿 |
 | --- | --- | --- | --- |
-| 第 0 组 · 开场、分工与总结 | 陈云海（总组长） | [课堂放映 PPTX](release/v4/olfaction-vr-v4-show.pptx) | [第 0 组讲稿](groups/00-integration/本组文稿.md) |
-| 第 1 组 · 科学原理 | 朱轶宸（第一组组长） | [第一组 PPTX](release/v4/group-01-science.pptx) | [第一组讲稿](groups/01-science/本组文稿.md) |
-| 第 2 组 · 装置实现 | 蔡天怿 | [第二组 PPTX](release/v4/group-02-technology.pptx) | [第二组讲稿](groups/02-technology/本组文稿.md) |
-| 第 3 组 · 应用与意义 | 陈柔羽 | [第三组 PPTX](release/v4/group-03-applications.pptx) | [第三组讲稿](groups/03-applications/本组文稿.md) |
+| 开场、分工与总结 | 陈云海 | [全场 PPTX](release/v4/olfaction-vr-v4-show.pptx) | [讲稿](groups/00-integration/本组文稿.md) |
+| 科学原理 | 朱轶宸 | [科学原理 PPTX](release/v4/group-01-science.pptx) | [讲稿](groups/01-science/本组文稿.md) |
+| 装置实现 | 蔡天怿 | [装置实现 PPTX](release/v4/group-02-technology.pptx) | [讲稿](groups/02-technology/本组文稿.md) |
+| 应用与意义 | 陈柔羽 | [应用与意义 PPTX](release/v4/group-03-applications.pptx) | [讲稿](groups/03-applications/本组文稿.md) |
 
-### 演讲与答辩怎么准备
+### 上台前确认
 
-- **演讲**。按本组讲稿练一遍，核对关键图要指哪里，以及最后一句怎样交给下一位。全场按 **12 分钟讲述＋2–3 分钟问答**准备，实际用时在合练中确认。
-- **答辩**。请准备本段的细节，包括原理怎样解释、装置怎样工作，或实验结果怎样读。总组长陈云海也会参与，主要回答需要把理论、装置和应用串起来的问题。
-- **答辩用课堂放映 PPTX**。主讲 PDF 省去了隐藏备课页。放映停在最后一页总图后，点内容标题进正文，再点对应小标题查备课。右上角小房子回总图，备课页左箭头回正文。 [问答与备课](release/v4/问答与备课.md) · [答辩总图预览](release/v4/preview/narrative-summary.png)
+- **试讲与交接。** 四位主讲按全场顺序计时，确认每段的指图位置和交接句。上台用 Canvas 提交的 PPTX，课前在放映模式确认第 2 页视频能播放。
+- **备好答辩。** 各主讲复核本段关键图表和文献出处，陈云海负责跨部分问题。答辩停在总结页，点标题可回到正文，再点对应小标题可打开隐藏备课页。主讲预览 PDF 只含可见页。 [问答与备课](release/v4/问答与备课.md) · [来源手册](release/v4/来源手册.md)
 
-**有疑问或想改的地方，请随时微信联系我（陈云海）。** 告诉我是哪一页、哪一句或哪张图，我会把修改同步到全场稿。
-
-## 请各组组长组织这三件事
-
-各组内容已合入 v4，整场审阅基本通过。请各组组长和本组发言人按下面三步准备。
-
-1. **对照整合 PPT 核稿。** 逐页确认本组标题、图表、结论和交接句。发现出入时，微信发总稿页码、具体位置和建议改法。
-2. **回到原文核查。** 分工查本组关键图表和数字，记录出处页码或图表号，并核对结论是否说得过头。同步给本组发言人做答辩准备。
-3. **发言人微调文稿并独立试讲。** 把口播改成自己讲得顺的话，带着 PPT 走一遍并计时。标出需要删减的句子、指图处和交给下一位的最后一句。
-
-[来源手册](release/v4/来源手册.md) · [课程要求](docs/requirements.md)
+如有需要协调的地方，请微信联系陈云海，附上页码和具体问题。
 
 ## 小组工作过程
 
@@ -46,7 +37,7 @@
 <details>
 <summary>课程提交、备课和历史稿</summary>
 
-- [课程提交 PDF（末页为分工表）](release/v4/olfaction-vr-v4-submission.pdf) · [课程要求](docs/requirements.md)。小组长在课程平台上传。
+- [排版备查 PDF（末页为分工表）](release/v4/olfaction-vr-v4-submission.pdf) · [Canvas 作业页面](https://oc.sjtu.edu.cn/courses/92950/assignments/436118)
 
 - [完整 PDF（含备课页）](release/v4/olfaction-vr-v4.pdf) · [全场口播打印 PDF](release/v4/全场口播.pdf) · [来源手册](release/v4/来源手册.md) · [课堂演示与分享](release/v4/课堂演示与分享.md)
 - [组员及贡献记录](docs/team.md) · [协作与合稿](docs/协作合稿.md) · [v3 及此前合稿记录](release/v3/PR合稿记录.md)
